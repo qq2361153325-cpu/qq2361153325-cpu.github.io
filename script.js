@@ -114,7 +114,7 @@ if(workGrid&&layoutOptions.length){
 const workFilters=[...document.querySelectorAll('[data-work-filter]')];
 if(workGrid&&workFilters.length){
   const workItems=[...workGrid.children];
-  const categoryBase={mobile:100,desktop:200,dashboard:300,hmi:400,aigc:500,visual:600};
+  const categoryBase={vibe:100,mobile:200,desktop:300,dashboard:400,visual:500};
   const setWorkFilter=(category,shouldScroll=false)=>{
     workItems.forEach(item=>{
       if(item.dataset.category){
