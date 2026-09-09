@@ -1,0 +1,521 @@
+:root{--navy:#081d54;--blue:#11399f;--cyan:#2dc4e5;--sky:#e7f7ff;--yellow:#ffdf42;--ink:#0c1c3a;--muted:#63708a;--paper:#f7fafc;--line:#d9e5ec;--shell:min(1280px,calc(100% - 72px));--radius:30px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;overflow-x:hidden}body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;width:100%}.shell{width:var(--shell);margin-inline:auto}.page-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:90}.page-progress span{display:block;width:0;height:100%;background:var(--yellow)}.case-header{position:fixed;z-index:80;top:20px;left:50%;translate:-50% 0;width:var(--shell);height:66px;padding:0 16px 0 12px;border:1px solid rgba(255,255,255,.2);border-radius:999px;display:flex;align-items:center;justify-content:space-between;color:#fff;background:rgba(4,21,64,.58);backdrop-filter:blur(16px);transition:.3s}.case-header.scrolled{top:10px;background:rgba(6,24,70,.88);box-shadow:0 12px 35px rgba(0,0,0,.17)}.case-brand{display:flex;align-items:center;gap:11px}.case-brand span{display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:var(--yellow);color:var(--navy);font-size:12px;font-weight:900}.case-brand b{font-size:11px;letter-spacing:.15em}.case-header-nav{display:flex;align-items:center;gap:28px;font-size:13px}.case-header-nav a{opacity:.75}.case-header-nav a:hover{opacity:1}.back-link{padding:12px 17px;border-radius:999px;background:#fff;color:var(--navy);opacity:1!important;font-weight:800}.menu-toggle{display:none;border:0;background:none;padding:8px}.menu-toggle i{display:block;width:23px;height:1.5px;background:#fff;margin:6px}.case-hero{position:relative;min-height:930px;background:linear-gradient(135deg,#061847 0%,#0a2a80 68%,#1743a6 100%);color:#fff;overflow:hidden}.hero-grid{min-height:930px;padding:165px 0 100px;display:grid;grid-template-columns:.86fr 1.14fr;gap:60px;align-items:center}.hero-kicker,.kicker{margin:0 0 20px;font-size:12px;letter-spacing:.16em;font-weight:800}.hero-kicker{color:#8de9ff}.hero-copy h1{margin:0;font-size:clamp(64px,7vw,112px);line-height:.92;letter-spacing:-.065em}.hero-copy h1 span{display:block;margin-top:26px;font-size:.38em;line-height:1.22;letter-spacing:-.035em;color:#ccefff}.hero-summary{font-size:19px;line-height:1.8;max-width:590px;color:#d2defa;margin:34px 0}.hero-tags{display:flex;gap:9px;flex-wrap:wrap}.hero-tags span{border:1px solid rgba(255,255,255,.23);border-radius:999px;padding:10px 13px;font-size:11px}.hero-stage{height:700px;position:relative;perspective:1400px;transition:transform .18s}.phone{position:absolute;border:14px solid #071741;border-radius:50px;overflow:hidden;background:#fff;box-shadow:0 40px 80px rgba(0,0,0,.34)}.phone img{height:100%;object-fit:cover;object-position:top}.phone-home{width:355px;height:690px;left:230px;top:10px;rotate:-5deg;z-index:3}.phone-map{width:305px;height:625px;right:0;top:90px;rotate:7deg;z-index:2}.phone-event{width:255px;height:520px;left:10px;bottom:0;rotate:-9deg}.hero-stamp{position:absolute;left:10px;top:40px;width:165px;height:165px;border-radius:50%;background:var(--yellow);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;rotate:-10deg;z-index:5;box-shadow:0 25px 50px rgba(0,0,0,.2)}.hero-stamp strong{font-size:22px}.hero-stamp span{font-size:10px;line-height:1.5;margin-top:8px;letter-spacing:.08em;text-transform:uppercase}.hero-orb{position:absolute;border-radius:50%}.orb-a{width:540px;height:540px;background:rgba(47,202,232,.12);right:-120px;top:-110px}.orb-b{width:380px;height:380px;background:rgba(255,223,66,.1);left:-160px;bottom:-180px}.project-meta{background:var(--yellow);color:var(--navy)}.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:33px 0}.meta-grid div{border-left:1px solid rgba(8,29,84,.22);padding-left:18px}.meta-grid span{display:block;font-size:10px;letter-spacing:.15em;margin-bottom:8px}.meta-grid b{font-size:14px}.case-section{padding:135px 0}.section-label{font-size:11px;letter-spacing:.17em;font-weight:900;padding-bottom:22px;border-bottom:1px solid var(--line)}.section-label.light{border-color:rgba(255,255,255,.17);color:#8de9ff}.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:110px;padding:70px 0 65px}.overview-title h2,.evolution-head h2,.journey-head h2,.feature-copy h2,.booking-head h2,.principles-head h2,.gallery-head h2,.conclusion-grid h2{font-size:clamp(48px,5vw,78px);line-height:1.08;letter-spacing:-.055em;margin:0}.overview-copy p{color:var(--muted);font-size:17px;line-height:1.85;margin:0 0 18px}.overview-copy .lead{font-size:25px;line-height:1.62;color:var(--ink);letter-spacing:-.02em}.challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.challenge-grid article{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:31px}.challenge-grid span{font-size:12px;font-weight:900;color:var(--blue)}.challenge-grid h3{font-size:26px;margin:45px 0 10px}.challenge-grid p{margin:0;color:var(--muted);line-height:1.7}.evolution{padding:135px 0;background:var(--navy);color:#fff}.evolution-head{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:end;padding:62px 0}.evolution-head p{color:#aebfe9;line-height:1.8;margin:0}.version-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.version-card{background:#10265f;border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:16px 16px 28px}.version-card.final{background:#fff;color:var(--navy)}.version-tag{font-size:10px;letter-spacing:.14em;font-weight:900;padding:10px 8px 17px}.phone-preview{width:100%;height:610px;border:0;border-radius:21px;overflow:hidden;background:#f5f7fb;padding:0;cursor:zoom-in}.phone-preview img{height:100%;object-fit:cover;object-position:top;transition:.6s}.version-card:hover img{transform:scale(1.02)}.version-card h3{font-size:25px;margin:24px 10px 8px}.version-card p{margin:0 10px;color:#aebfe9;line-height:1.7}.version-card.final p{color:#607095}.decision-note{margin-top:28px;border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:25px 30px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center}.decision-note b{font-size:20px;color:var(--yellow)}.decision-note p{margin:0;color:#c7d3ef;line-height:1.7}.journey{padding:135px 0}.journey-head{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end;padding:62px 0}.journey-head p{margin:0;color:var(--muted);line-height:1.8}.journey-nav{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:24px;overflow:hidden}.journey-nav a{padding:25px;border-right:1px solid var(--line);display:grid;gap:8px;transition:.25s}.journey-nav a:last-child{border-right:0}.journey-nav a:hover,.journey-nav a.active{background:var(--sky)}.journey-nav b{font-size:11px;color:var(--blue)}.journey-nav span{font-size:18px;font-weight:800}.journey-nav small{color:var(--muted)}.feature-section{padding:130px 0;display:grid;grid-template-columns:.78fr 1.22fr;gap:100px;align-items:center}.feature-section.alt{display:block;background:var(--sky)}.feature-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:100px;align-items:center;padding:130px 0}.feature-grid.reverse .feature-copy{order:2}.section-number{display:block;font-size:64px;line-height:1;font-weight:900;color:var(--cyan);margin-bottom:28px}.feature-copy>p{font-size:17px;line-height:1.85;color:var(--muted)}.insights{display:grid;gap:12px;margin-top:30px}.insights article{border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:140px 1fr;gap:20px}.insights p{margin:0;color:var(--muted)}.screen-duo{position:relative;min-height:740px;display:flex;align-items:flex-end;justify-content:center;gap:28px}.device{width:330px;height:690px;border:13px solid var(--navy);border-radius:46px;overflow:hidden;background:#fff;padding:0;box-shadow:0 30px 70px rgba(24,52,90,.18);cursor:zoom-in}.device.tall{height:720px;transform:translateY(30px)}.device img{height:100%;object-fit:cover;object-position:top}.feature-list{list-style:none;padding:0;margin:34px 0 0;border-top:1px solid #bdd7e5}.feature-list li{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid #bdd7e5}.feature-list b{font-size:16px}.feature-list span{color:var(--muted);line-height:1.65}.booking-section{background:var(--navy);color:#fff;padding:135px 0}.booking-head{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}.booking-head>p{color:#bdcae7;line-height:1.8;margin:0}.flow-track{display:flex;align-items:center;justify-content:center;gap:18px;margin:55px 0 45px;flex-wrap:wrap}.flow-track span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:12px 18px;font-size:13px}.flow-track i{color:var(--yellow);font-style:normal}.phone-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:start}.flow-phone{border:0;background:#10265f;color:#fff;border-radius:24px;padding:10px 10px 18px;overflow:hidden;cursor:zoom-in}.flow-phone img{height:480px;object-fit:cover;object-position:top;border-radius:18px}.flow-phone span{display:block;padding:14px 8px 0;font-size:11px;letter-spacing:.08em}.place-types{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.place-types span,.summary-pills span{border-radius:999px;padding:10px 14px;background:var(--sky);font-size:12px;font-weight:800;color:var(--blue)}.place-collage{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.place-screen{border:0;border-radius:24px;background:var(--paper);padding:12px;overflow:hidden;cursor:zoom-in;box-shadow:0 20px 50px rgba(24,52,90,.08)}.place-screen:nth-child(2),.place-screen:nth-child(4){transform:translateY(40px)}.place-screen img{height:520px;object-fit:cover;object-position:top;border-radius:17px}.commerce-collage{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;align-items:center}.commerce-collage .device{width:100%;height:570px;border-width:10px;border-radius:35px}.commerce-collage .device:nth-child(2){transform:translateY(35px)}.account-strip{display:grid;grid-template-columns:120px 120px 1fr;gap:14px;align-items:center;margin-top:35px;padding-top:25px;border-top:1px solid #bdd7e5}.mini-phone{height:245px;border:7px solid var(--navy);border-radius:24px;overflow:hidden;padding:0;background:#fff;cursor:zoom-in}.mini-phone img{height:100%;object-fit:cover;object-position:top}.account-strip b{font-size:20px}.account-strip p{margin:8px 0 0!important;font-size:14px!important}.principles{padding:135px 0}.principles-head{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end;padding:62px 0}.principles-head p{color:var(--muted);line-height:1.8;margin:0}.principle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.principle-grid article{min-height:310px;border-radius:25px;padding:28px;background:var(--paper);border:1px solid var(--line)}.principle-grid article:nth-child(2){background:var(--yellow)}.principle-grid article:nth-child(3){background:var(--sky)}.principle-grid span{font-size:12px;font-weight:900;color:var(--blue)}.principle-grid h3{font-size:27px;margin:100px 0 10px}.principle-grid p{color:var(--muted);line-height:1.7;margin:0}.gallery-section{padding:135px 0;background:var(--navy);color:#fff}.gallery-head{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:end;padding:62px 0}.gallery-head>p{color:#b7c6e5;line-height:1.8;margin:0}.gallery-filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}.gallery-filters button{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:11px 15px;background:transparent;color:#fff;cursor:pointer}.gallery-filters button.active{background:var(--yellow);color:var(--navy);border-color:var(--yellow)}.gallery-filters span{opacity:.6;margin-left:5px}.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.gallery-item{border:0;border-radius:22px;background:#10265f;color:#fff;padding:10px;text-align:left;cursor:zoom-in;min-width:0}.gallery-item[hidden]{display:none}.gallery-index{display:block;font-size:10px;letter-spacing:.13em;padding:5px 5px 10px;color:#79e0f1}.gallery-image{display:block;height:430px;border-radius:16px;overflow:hidden;background:#fff}.gallery-image img{height:100%;object-fit:cover;object-position:top;transition:.5s}.gallery-item:hover img{transform:scale(1.025)}.gallery-meta{display:block;padding:15px 5px 8px}.gallery-meta b{display:block;font-size:17px;margin-bottom:6px}.gallery-meta small{color:#aebfe9;line-height:1.5}.case-conclusion{padding:135px 0 90px}.conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:110px;padding:62px 0 90px}.conclusion-grid p{color:var(--muted);line-height:1.85}.conclusion-grid .lead{font-size:25px;color:var(--ink);line-height:1.6}.summary-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}.next-project{display:grid;grid-template-columns:1fr 1fr;gap:16px}.next-project a{border-radius:25px;background:var(--paper);border:1px solid var(--line);padding:27px;display:grid;grid-template-columns:1fr auto;gap:10px}.next-project span{grid-column:1/-1;font-size:10px;letter-spacing:.15em;color:var(--muted)}.next-project b{font-size:22px}.next-project i{font-style:normal;font-size:25px}.case-footer{background:#061847;color:#fff}.case-footer .shell{padding:34px 0;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em}.reveal{opacity:0;transform:translateY(30px);transition:.75s ease}.reveal.visible{opacity:1;transform:none}.lightbox{width:min(1500px,calc(100vw - 30px));height:94vh;border:0;border-radius:25px;padding:0;background:rgba(6,20,58,.96);color:#fff;overflow:hidden}.lightbox::backdrop{background:rgba(0,0,0,.8);backdrop-filter:blur(12px)}.lightbox figure{height:100%;margin:0;overflow:auto;padding:60px 85px 95px}.lightbox img{max-width:1125px;margin:0 auto;height:auto;border-radius:16px;background:#fff}.lightbox figcaption{max-width:1125px;margin:18px auto 0;text-align:center;color:#b8c7e7}.lightbox-close,.lightbox-nav{position:fixed;z-index:3;border:0;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--navy);cursor:pointer}.lightbox-close{right:32px;top:28px;width:48px;height:48px;font-size:28px}.lightbox-nav{top:50%;width:48px;height:48px;font-size:22px}.lightbox-nav.prev{left:34px}.lightbox-nav.next{right:34px}
+@media(max-width:1100px){:root{--shell:min(100% - 42px,980px)}.case-header-nav{gap:17px}.hero-grid{grid-template-columns:1fr;min-height:auto;padding-bottom:70px}.case-hero,.hero-grid{min-height:1180px}.hero-stage{width:min(760px,100%);margin:auto}.meta-grid{grid-template-columns:1fr 1fr}.overview-grid,.evolution-head,.journey-head,.feature-section,.feature-grid,.booking-head,.principles-head,.gallery-head,.conclusion-grid{grid-template-columns:1fr;gap:38px}.version-grid{grid-template-columns:repeat(3,1fr)}.phone-preview{height:520px}.journey-nav{grid-template-columns:repeat(5,1fr)}.feature-grid.reverse .feature-copy{order:0}.phone-flow{grid-template-columns:repeat(3,1fr)}.principle-grid{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){:root{--shell:calc(100% - 28px);--radius:22px}.case-header{height:58px;top:10px}.case-brand b{display:none}.case-header-nav{position:fixed;left:14px;right:14px;top:76px;border-radius:22px;background:#071741;padding:22px;display:none;flex-direction:column;align-items:stretch}.case-header-nav.open{display:flex}.menu-toggle{display:block}.case-hero,.hero-grid{min-height:950px}.hero-grid{padding-top:120px;gap:20px}.hero-copy h1{font-size:58px}.hero-copy h1 span{font-size:.42em}.hero-summary{font-size:16px}.hero-stage{height:530px}.phone-home{width:245px;height:480px;left:26%;top:10px}.phone-map{width:205px;height:430px;right:0;top:80px}.phone-event{width:175px;height:350px;left:0}.hero-stamp{width:105px;height:105px;left:0;top:15px}.hero-stamp strong{font-size:15px}.hero-stamp span{font-size:7px}.meta-grid{grid-template-columns:1fr 1fr;gap:22px}.case-section,.evolution,.journey,.feature-section,.feature-grid,.booking-section,.principles,.gallery-section,.case-conclusion{padding:90px 0}.overview-title h2,.evolution-head h2,.journey-head h2,.feature-copy h2,.booking-head h2,.principles-head h2,.gallery-head h2,.conclusion-grid h2{font-size:42px}.overview-grid{padding:45px 0}.overview-copy .lead,.conclusion-grid .lead{font-size:21px}.challenge-grid,.version-grid{grid-template-columns:1fr}.phone-preview{height:600px}.decision-note{grid-template-columns:1fr;gap:10px}.journey-nav{grid-template-columns:1fr 1fr}.journey-nav a:nth-child(2n){border-right:0}.journey-nav a:last-child{grid-column:1/-1}.screen-duo{min-height:560px;gap:10px}.device{width:49%;height:520px;border-width:8px;border-radius:28px}.device.tall{height:540px}.insights article{grid-template-columns:1fr}.phone-flow{grid-template-columns:1fr 1fr}.flow-phone img{height:420px}.place-collage{grid-template-columns:1fr 1fr}.place-screen img{height:420px}.commerce-collage{gap:8px}.commerce-collage .device{height:450px;border-width:6px}.account-strip{grid-template-columns:90px 90px 1fr}.mini-phone{height:190px}.principle-grid{grid-template-columns:1fr}.principle-grid article{min-height:230px}.principle-grid h3{margin-top:55px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-image{height:360px}.next-project{grid-template-columns:1fr}.lightbox figure{padding:70px 18px 90px}.lightbox-nav{top:auto;bottom:20px}.lightbox-nav.prev{left:calc(50% - 58px)}.lightbox-nav.next{right:calc(50% - 58px)}}
+@media(max-width:480px){.hero-copy h1{font-size:48px}.hero-stage{height:450px}.phone-home{width:205px;height:400px;left:24%}.phone-map{width:170px;height:355px}.phone-event{width:145px;height:290px}.hero-stamp{display:none}.meta-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;gap:9px}.gallery-image{height:290px}.gallery-meta b{font-size:14px}.gallery-meta small{font-size:10px}.phone-flow{grid-template-columns:1fr 1fr;gap:9px}.flow-phone img{height:340px}.place-screen img{height:330px}.commerce-collage{grid-template-columns:1fr 1fr}.commerce-collage .device:nth-child(3){grid-column:1/-1;width:55%;justify-self:center}.account-strip{grid-template-columns:75px 75px 1fr}.mini-phone{height:155px}.case-footer .shell{gap:15px;flex-direction:column}}
+
+/* ===== V1.5 visual QA: accurate device ratios and uncropped artwork ===== */
+.phone,
+.device,
+.phone-preview,
+.flow-phone,
+.place-screen,
+.mini-phone,
+.gallery-item,
+.gallery-image {
+  box-sizing: border-box;
+}
+
+/* Hero devices: keep the original mobile-screen proportion instead of forcing a crop. */
+.phone {
+  height: auto !important;
+  aspect-ratio: 750 / 1624;
+  border-width: 10px;
+  padding: 3px;
+  border-radius: 46px;
+  background: #080f27;
+  box-shadow:
+    0 36px 80px rgba(3, 13, 43, .32),
+    inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.phone img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border-radius: 33px;
+  background: #fff;
+}
+@media (min-width: 761px) {
+  .phone-home { width: 318px; }
+  .phone-map { width: 276px; }
+  .phone-event { width: 228px; }
+}
+
+/* Homepage iteration: the screenshot itself becomes a complete phone mockup. */
+.phone-preview {
+  height: 620px !important;
+  padding: 24px 18px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(84, 219, 241, .18), transparent 38%),
+    #081a4b;
+  overflow: visible;
+}
+.phone-preview img {
+  width: auto !important;
+  max-width: 100%;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 9px solid #080f27;
+  border-radius: 36px;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, .34);
+  background: #fff;
+}
+.version-card:hover .phone-preview img { transform: translateY(-5px); }
+
+/* Core feature phones: fixed by aspect ratio, never by arbitrary height. */
+.device {
+  height: auto !important;
+  aspect-ratio: 750 / 1624;
+  padding: 4px;
+  border-width: 10px;
+  border-radius: 43px;
+  overflow: hidden;
+  background: #08122f;
+}
+.device img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border-radius: 30px;
+  background: #fff;
+}
+.screen-duo {
+  min-height: 0 !important;
+  align-items: center;
+}
+.commerce-collage .device {
+  height: auto !important;
+  aspect-ratio: 750 / 1624;
+}
+
+/* Booking sequence: each card shows a complete phone viewport. */
+.flow-phone {
+  padding: 10px 10px 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 28px;
+}
+.flow-phone img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 750 / 1624;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border: 7px solid #07122e;
+  border-radius: 28px;
+  background: #fff;
+}
+
+/* Long list/detail pages are shown as complete sheets rather than cropped thumbnails. */
+.place-screen {
+  min-height: 610px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #f5f9ff, #e9f1fb);
+  overflow: hidden;
+}
+.place-screen img {
+  width: 100%;
+  height: 580px !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 35px rgba(24,52,90,.10);
+}
+
+.mini-phone {
+  height: auto !important;
+  aspect-ratio: 750 / 1624;
+  padding: 2px;
+  background: #08122f;
+}
+.mini-phone img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border-radius: 15px;
+  background: #fff;
+}
+
+/* Gallery thumbnails preserve the full composition; the lightbox still shows native size. */
+.gallery-image {
+  height: 430px !important;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(235,242,255,.98));
+}
+.gallery-image img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(6,24,71,.12);
+}
+.gallery-item:hover .gallery-image img { transform: translateY(-3px) scale(1.008); }
+
+/* Lightbox safety: no image clipping on short laptop screens. */
+.lightbox figure {
+  display: block;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.lightbox img {
+  width: auto;
+  max-width: min(1125px, 100%);
+  height: auto !important;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .phone-preview { height: 560px !important; }
+  .place-screen { min-height: 540px; }
+  .place-screen img { height: 510px !important; }
+  .gallery-image { height: 390px !important; }
+}
+
+@media (max-width: 760px) {
+  .phone { border-width: 7px; padding: 2px; border-radius: 34px; }
+  .phone img { border-radius: 25px; }
+  .phone-preview { height: 540px !important; padding: 18px 12px; }
+  .phone-preview img { border-width: 7px; border-radius: 30px; }
+  .device { border-width: 7px; padding: 3px; border-radius: 31px; }
+  .device img { border-radius: 22px; }
+  .flow-phone img { border-width: 5px; border-radius: 23px; }
+  .place-screen { min-height: 445px; }
+  .place-screen img { height: 415px !important; }
+  .gallery-image { height: 350px !important; padding: 8px; }
+}
+
+@media (max-width: 480px) {
+  .phone-preview { height: 500px !important; }
+  .place-screen { min-height: 350px; }
+  .place-screen img { height: 324px !important; }
+  .gallery-image { height: 285px !important; }
+}
+
+/* =========================================================
+   V1.7 — Remove device mockups; use clean black/white outlines
+   ========================================================= */
+.phone::after,
+.phone-preview::after,
+.device::after,
+.flow-device::after,
+.mini-phone::after {
+  content: none !important;
+  display: none !important;
+}
+
+.phone,
+.phone-preview,
+.device,
+.flow-device,
+.mini-phone {
+  --plain-frame: #0b1b45;
+  position: relative !important;
+  isolation: auto !important;
+  aspect-ratio: auto !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border: 5px solid var(--plain-frame) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 22px 48px rgba(7, 25, 67, .16) !important;
+}
+
+.phone > img,
+.phone-preview > img,
+.device > img,
+.flow-device > img,
+.mini-phone > img {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  border: 0 !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+  transform: none !important;
+}
+
+/* Dark sections use a white outline; light sections use a navy outline. */
+.hero-stage .phone,
+.version-card:not(.final) .phone-preview,
+.booking-section .flow-device {
+  --plain-frame: #fff;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, .26) !important;
+}
+.version-card.final .phone-preview,
+.screen-duo .device,
+.commerce-collage .device,
+.account-strip .mini-phone {
+  --plain-frame: #0b1b45;
+}
+
+/* Hero composition stays layered but screenshots remain complete. */
+.phone-home { width: 300px !important; height: auto !important; left: 220px; top: 12px; }
+.phone-map { width: 255px !important; height: auto !important; right: 6px; top: 92px; }
+.phone-event { width: 210px !important; height: auto !important; left: 12px; bottom: 12px; }
+
+/* Homepage iterations: image and copy are clearly separated. */
+.version-card { grid-template-rows: auto auto auto !important; }
+.version-visual {
+  min-height: 0 !important;
+  padding: 24px 24px 34px !important;
+}
+.phone-preview {
+  width: min(250px, 80%) !important;
+  height: auto !important;
+  cursor: zoom-in;
+}
+.version-card:hover .phone-preview > img { transform: none !important; }
+.version-copy { position: relative; z-index: 2; }
+
+/* Feature and commerce pages use one consistent outline system. */
+.device {
+  width: 330px;
+  height: auto !important;
+  cursor: zoom-in;
+}
+.device.tall { height: auto !important; }
+.commerce-collage .device { width: 100% !important; height: auto !important; }
+.mini-phone { width: 100% !important; height: auto !important; }
+
+/* Booking sequence keeps labels outside the framed screenshot. */
+.flow-phone {
+  overflow: visible !important;
+  padding: 12px 10px 18px !important;
+}
+.flow-device {
+  display: block;
+  width: 100%;
+  height: auto !important;
+}
+.flow-phone > span:last-child {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 16px 8px 0;
+}
+.flow-phone:hover .flow-device > img { transform: none !important; }
+
+@media (max-width: 1100px) {
+  .phone-home { width: 280px !important; }
+  .phone-map { width: 235px !important; }
+  .phone-event { width: 195px !important; }
+  .phone-preview { width: min(225px, 82%) !important; }
+}
+
+@media (max-width: 760px) {
+  .phone,
+  .phone-preview,
+  .device,
+  .flow-device,
+  .mini-phone {
+    border-width: 4px !important;
+    border-radius: 22px !important;
+  }
+  .phone > img,
+  .phone-preview > img,
+  .device > img,
+  .flow-device > img,
+  .mini-phone > img { border-radius: 17px !important; }
+
+  .phone-home { width: 218px !important; left: 24%; top: 12px; }
+  .phone-map { width: 178px !important; right: 0; top: 86px; }
+  .phone-event { width: 148px !important; left: 0; bottom: 14px; }
+  .phone-preview { width: min(290px, 84%) !important; }
+  .device { width: 49% !important; height: auto !important; }
+}
+
+@media (max-width: 480px) {
+  .phone-home { width: 182px !important; left: 23%; }
+  .phone-map { width: 148px !important; }
+  .phone-event { width: 122px !important; }
+  .phone-preview { width: min(270px, 88%) !important; }
+}
+
+/* V1.77 — Section 03 uses the full copy width for five aligned screens. */
+#booking .booking-head {
+  width: 100%;
+  grid-template-columns: minmax(0, 720px) minmax(300px, 420px);
+  justify-content: space-between;
+  gap: 72px;
+  align-items: end;
+}
+#booking .booking-head h2 { max-width: 720px; }
+#booking .booking-summary {
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+}
+#booking .booking-summary > p {
+  margin: 0;
+  color: #bdcae7;
+  font-size: 17px;
+  line-height: 1.8;
+}
+#booking .booking-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+#booking .booking-points span {
+  padding: 7px 10px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 760;
+}
+#booking .flow-track {
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin: 0 0 28px;
+  white-space: nowrap;
+}
+#booking .flow-track span {
+  padding: 9px 14px;
+  border-color: rgba(141,233,255,.3);
+  background: rgba(255,255,255,.06);
+  font-size: 11px;
+  font-weight: 760;
+}
+#booking .flow-track i { color: #8de9ff; }
+#booking .phone-flow {
+  width: 100%;
+  margin-inline: 0;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+#booking .booking-card { min-width: 0; }
+#booking .flow-device {
+  width: 100%;
+  padding: 0;
+  border: 4px solid #fff !important;
+  border-radius: 26px !important;
+  background: #fff;
+  box-shadow: 0 22px 48px rgba(0,0,0,.24) !important;
+  cursor: zoom-in;
+}
+#booking .booking-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 13px 3px 0;
+}
+#booking .booking-label b { font-size: 12px; }
+#booking .booking-label span {
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .15em;
+  opacity: .55;
+}
+
+@media (max-width: 1100px) {
+  #booking .booking-head { grid-template-columns: 1fr; gap: 28px; }
+  #booking .booking-summary { max-width: 620px; justify-self: start; }
+  #booking .phone-flow {
+    width: min(100%, 780px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  #booking .booking-card:nth-child(4),
+  #booking .booking-card:nth-child(5) { width: calc((200% - 16px) / 3); }
+  #booking .booking-card:nth-child(4) { justify-self: end; transform: translateX(54%); }
+  #booking .booking-card:nth-child(5) { transform: translateX(54%); }
+}
+
+@media (max-width: 760px) {
+  #booking .flow-track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  #booking .phone-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+  #booking .booking-card:nth-child(4),
+  #booking .booking-card:nth-child(5) { width: auto; transform: none; }
+  #booking .booking-card:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 13px) / 2);
+    justify-self: center;
+  }
+  #booking .booking-label { margin-top: 9px; }
+  #booking .booking-label b { font-size: 10px; }
+  #booking .booking-label span { display: none; }
+}
+
+/* =========================================================
+   V1.8 — Align place-service screens and add personal center
+   ========================================================= */
+.journey-nav { grid-template-columns: repeat(6, 1fr); }
+
+/* Section 04 now uses the same framed screen language as sections 02 and 05. */
+.place-collage {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.place-collage .device {
+  width: 100% !important;
+  height: auto !important;
+  transform: none !important;
+}
+.place-collage .device > img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+}
+
+/* Standalone personal-center chapter. */
+.personal-section {
+  border-top: 1px solid var(--line);
+}
+.profile-visual {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+}
+.profile-visual .device {
+  width: min(370px, 100%) !important;
+  height: auto !important;
+}
+
+@media (max-width: 1100px) {
+  .journey-nav { grid-template-columns: repeat(3, 1fr); }
+  .journey-nav a:nth-child(3n) { border-right: 0; }
+}
+
+@media (max-width: 760px) {
+  .journey-nav { grid-template-columns: 1fr 1fr; }
+  .journey-nav a:nth-child(3n) { border-right: 1px solid var(--line); }
+  .journey-nav a:nth-child(2n) { border-right: 0; }
+  .journey-nav a:last-child { grid-column: auto; }
+  .place-collage { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .place-collage .device { width: 100% !important; }
+  .profile-visual .device { width: min(330px, 88%) !important; }
+}
+
+@media (max-width: 480px) {
+  .place-collage { gap: 8px; }
+  .profile-visual .device { width: min(300px, 92%) !important; }
+}

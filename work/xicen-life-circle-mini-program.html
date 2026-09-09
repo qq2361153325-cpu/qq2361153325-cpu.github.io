@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="青浦西岑生活圈小程序 UI/UX 项目案例。" />
+  <title>青浦西岑生活圈小程序｜杨双军 UI/UX 作品集</title>
+  <link rel="stylesheet" href="xicen-life-circle-mini-program.css" />
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html#works"><span>YSJ</span><b>XICEN LIFE CIRCLE</b></a>
+    <button class="menu-toggle" type="button" aria-label="展开导航" aria-expanded="false"><i></i><i></i></button>
+    <nav class="case-header-nav" aria-label="案例导航">
+      <a href="#overview">项目概览</a><a href="#journey">体验路径</a><a href="#chapters">核心设计</a><a href="#gallery">精选页面</a><a class="back-link" href="../index.html#works">返回案例</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">QINGPU XICEN · LIFE CIRCLE MINI PROGRAM</p>
+          <h1>西岑生活圈<span>城市生活与企业服务小程序</span></h1>
+          <p class="hero-lead">围绕西岑片区的生活消费、景点游览、地图导览、票务预订与企业 VIP 认证，建立连接居民、企业员工与本地商户的一站式生活入口。</p>
+          <div class="hero-tags"><span>Mini Program</span><span>Local Service</span><span>Map Experience</span><span>Enterprise VIP</span></div>
+        </div>
+        <div class="hero-stage reveal" data-parallax>
+          <button class="screen-frame hero-main zoomable" data-src="../assets/xicen/home-main.webp" data-caption="西岑生活圈首页" type="button"><img src="../assets/xicen/home-main.webp" alt="西岑生活圈首页" /></button>
+          <button class="screen-frame hero-side top zoomable" data-src="../assets/xicen/map-main.webp" data-caption="西岑生活地图" type="button"><img src="../assets/xicen/map-main.webp" alt="西岑生活地图" /></button>
+          <button class="screen-frame hero-side bottom zoomable" data-src="../assets/xicen/vip-netease.webp" data-caption="企业 VIP 认证" type="button"><img src="../assets/xicen/vip-netease.webp" alt="企业 VIP 认证" /></button>
+          <div class="hero-wordmark" aria-hidden="true">XICEN<br/>LIFE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-meta"><div class="shell meta-grid">
+      <div><span>Project</span><b>青浦西岑生活圈</b></div><div><span>Role</span><b>UI / UX Design</b></div><div><span>Platform</span><b>WeChat Mini Program</b></div><div><span>Scope</span><b>发现 · 地图 · 交易 · 认证</b></div>
+    </div></section>
+
+    <section class="overview shell" id="overview">
+      <div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+      <div class="overview-grid">
+        <div class="overview-title reveal"><p class="kicker">A LOCAL LIFE OPERATING SYSTEM</p><h2>让片区生活信息、消费服务和企业权益集中在同一个入口。</h2></div>
+        <div class="overview-copy reveal"><p class="lead">项目不是单一的旅游或商城产品，而是服务西岑居民、企业员工与到访游客的生活圈平台。</p><p>用户可以发现本地商户与活动、购买景点门票、查看生活地图、完成日期与票种选择，也能通过企业身份认证获得专属权益。设计需要同时兼顾内容浏览、工具效率和会员经营。</p></div>
+      </div>
+      <div class="challenge-grid">
+        <article class="reveal"><span>01</span><h3>服务类型复杂</h3><p>美食、旅游、民宿、教育、医疗、配套服务与人才公寓需要统一组织。</p></article>
+        <article class="reveal"><span>02</span><h3>地图与内容联动</h3><p>用户既要在地图上查找点位，也要快速进入列表、筛选和详情。</p></article>
+        <article class="reveal"><span>03</span><h3>企业权益独立</h3><p>VIP 认证既要完成企业与员工身份校验，也要保持流程清楚可信。</p></article>
+      </div>
+    </section>
+
+    <section class="service-spectrum" id="journey"><div class="shell">
+      <div class="section-label light reveal">02 / LIFE CIRCLE PATH</div>
+      <div class="spectrum-head reveal"><p class="kicker light">DISCOVER · LOCATE · BOOK · VERIFY</p><h2>以生活地图为中轴，连接五类核心任务。</h2></div>
+      <div class="spectrum-grid">
+        <a href="#chapter-home"><span>01</span><b>发现西岑</b><small>首页 / 内容聚合</small></a>
+        <a href="#chapter-commerce"><span>02</span><b>探索商户</b><small>商户 / 套餐 / 优惠</small></a>
+        <a href="#chapter-ticket"><span>03</span><b>预订票务</b><small>景点 / 日期 / 票种</small></a>
+        <a href="#chapter-map"><span>04</span><b>地图导览</b><small>分类 / 点位 / 列表</small></a>
+        <a href="#chapter-vip"><span>05</span><b>认证权益</b><small>企业 / 员工 / 会员</small></a>
+      </div>
+    </div></section>
+
+    <section class="chapters" id="chapters">
+      <article class="chapter chapter-sand" id="chapter-home"><div class="shell chapter-grid">
+        <div class="chapter-copy reveal"><span class="section-number">01</span><p class="kicker">DISCOVERY HUB</p><h2>首页先建立片区印象，再把高频生活任务前置。</h2><p>首屏用区域视觉和生活地图、景点购票、活动召集等入口形成快速分流；长页面继续承载每日特惠、旅游、美食、住宿和精彩推荐。</p><ul><li><b>区域识别</b><span>以青浦与西岑视觉建立明确的在地感。</span></li><li><b>高频入口</b><span>地图、购票、活动和公共服务优先展示。</span></li><li><b>内容续接</b><span>特惠、游玩、餐饮与住宿支持持续运营。</span></li></ul></div>
+        <div class="screen-pair reveal"><button class="screen-frame zoomable" data-src="../assets/xicen/home-main.webp" data-caption="首页首屏" type="button"><img src="../assets/xicen/home-main.webp" alt="首页首屏" /></button><button class="screen-frame zoomable" data-src="../assets/xicen/home-long.webp" data-caption="首页长页" type="button"><img src="../assets/xicen/home-long-viewport.webp" alt="首页长页" /></button></div>
+      </div></article>
+
+      <article class="chapter chapter-dark" id="chapter-commerce"><div class="shell chapter-grid reverse">
+        <div class="screen-pair reveal"><button class="screen-frame white zoomable" data-src="../assets/xicen/merchant-detail.webp" data-caption="商户详情与优惠套餐" type="button"><img src="../assets/xicen/merchant-detail-viewport.webp" alt="商户详情" /></button><button class="screen-frame white zoomable" data-src="../assets/xicen/merchant-detail-long.webp" data-caption="商户详情长页" type="button"><img src="../assets/xicen/merchant-detail-long-viewport.webp" alt="商户详情长页" /></button></div>
+        <div class="chapter-copy reveal"><span class="section-number">02</span><p class="kicker light">LOCAL COMMERCE</p><h2>把商户信息、优惠套餐和到店服务放在一条决策路径中。</h2><p>详情页先给出营业状态、价格、位置和服务标签，再承接套餐、商品、活动与商家介绍，帮助用户快速判断是否值得到店或购买。</p><ul><li><b>信息集中</b><span>位置、营业时间、电话与服务标签一屏可见。</span></li><li><b>优惠分层</b><span>到店套餐、单品特惠和企业权益形成不同转化入口。</span></li><li><b>内容增强</b><span>图文介绍补充商户氛围和区域故事。</span></li></ul></div>
+      </div></article>
+
+      <article class="chapter chapter-cream" id="chapter-ticket"><div class="shell">
+        <div class="chapter-head reveal"><div><span class="section-number">03</span><p class="kicker">SCENIC TICKETING</p><h2>景点购票拆分为详情、日期和票种三个稳定阶段。</h2></div><p>用户先了解景点内容与价格，再选择日期、场次和数量，避免在同一页面一次性承担过多决策。</p></div>
+        <div class="story-row three reveal">
+          <button class="story-card zoomable" data-src="../assets/xicen/scenic-detail.webp" data-caption="景点详情" type="button"><span>01 / 了解</span><div class="screen-frame"><img src="../assets/xicen/scenic-detail.webp" alt="景点详情" /></div><b>景点详情</b></button>
+          <button class="story-card zoomable" data-src="../assets/xicen/date-calendar.webp" data-caption="日期选择" type="button"><span>02 / 日期</span><div class="screen-frame"><img src="../assets/xicen/date-calendar.webp" alt="日期选择" /></div><b>日期选择</b></button>
+          <button class="story-card zoomable" data-src="../assets/xicen/ticket-quantity.webp" data-caption="票种与数量" type="button"><span>03 / 票种</span><div class="screen-frame"><img src="../assets/xicen/ticket-quantity-viewport.webp" alt="票种与数量" /></div><b>票种与数量</b></button>
+        </div>
+      </div></article>
+
+      <article class="chapter chapter-green" id="chapter-map"><div class="shell chapter-grid">
+        <div class="chapter-copy reveal"><span class="section-number">04</span><p class="kicker light">MAP EXPERIENCE</p><h2>地图不是独立工具，而是连接生活分类和具体点位的主入口。</h2><p>地图页在保持空间定位的同时，通过底部分类面板快速切换美食、旅游、民宿、购物、医疗教育和配套服务，并支持上滑展开列表。</p><ul><li><b>空间查找</b><span>图标与点位建立清楚的区域分布感。</span></li><li><b>分类切换</b><span>生活类别以图形化入口快速切换。</span></li><li><b>地图转列表</b><span>上滑面板让用户从位置浏览进入内容浏览。</span></li></ul></div>
+        <div class="screen-pair reveal"><button class="screen-frame white zoomable" data-src="../assets/xicen/map-main.webp" data-caption="西岑生活地图" type="button"><img src="../assets/xicen/map-main.webp" alt="西岑生活地图" /></button><button class="screen-frame white zoomable" data-src="../assets/xicen/map-sheet.webp" data-caption="地图上滑列表" type="button"><img src="../assets/xicen/map-sheet-viewport.webp" alt="地图上滑列表" /></button></div>
+      </div></article>
+
+      <article class="chapter chapter-sky" id="chapter-vip"><div class="shell">
+        <div class="chapter-head reveal"><div><span class="section-number">05</span><p class="kicker">ENTERPRISE VIP</p><h2>企业认证使用清晰的四步结构建立可信度。</h2></div><p>用户依次选择所属企业、填写手机号、上传工作证件并确认认证结果，减少复杂表单带来的不确定感。</p></div>
+        <div class="story-row four reveal">
+          <button class="story-card zoomable" data-src="../assets/xicen/vip-company.webp" data-caption="选择所属企业" type="button"><span>01 / 企业</span><div class="screen-frame"><img src="../assets/xicen/vip-company.webp" alt="选择所属企业" /></div><b>选择企业</b></button>
+          <button class="story-card zoomable" data-src="../assets/xicen/vip-company-selected.webp" data-caption="确认所属企业" type="button"><span>02 / 确认</span><div class="screen-frame"><img src="../assets/xicen/vip-company-selected.webp" alt="确认企业" /></div><b>确认企业</b></button>
+          <button class="story-card zoomable" data-src="../assets/xicen/vip-huawei.webp" data-caption="填写手机号与上传证件" type="button"><span>03 / 资料</span><div class="screen-frame"><img src="../assets/xicen/vip-huawei.webp" alt="填写认证资料" /></div><b>填写资料</b></button>
+          <button class="story-card zoomable" data-src="../assets/xicen/vip-netease.webp" data-caption="认证信息确认" type="button"><span>04 / 完成</span><div class="screen-frame"><img src="../assets/xicen/vip-netease.webp" alt="认证完成" /></div><b>认证确认</b></button>
+        </div>
+      </article>
+
+      <article class="chapter chapter-sand" id="chapter-profile"><div class="shell chapter-grid reverse">
+        <div class="screen-pair reveal"><button class="screen-frame zoomable" data-src="../assets/xicen/profile.webp" data-caption="个人中心默认状态" type="button"><img src="../assets/xicen/profile.webp" alt="个人中心" /></button><button class="screen-frame zoomable" data-src="../assets/xicen/profile-vip.webp" data-caption="VIP 用户个人中心" type="button"><img src="../assets/xicen/profile-vip.webp" alt="VIP个人中心" /></button></div>
+        <div class="chapter-copy reveal"><span class="section-number">06</span><p class="kicker">PROFILE & RIGHTS</p><h2>个人中心区分普通用户和认证用户的权益状态。</h2><p>页面集中订单、票券、收藏和认证入口，并通过积分、权益数量和 VIP 标识展示用户在平台内的身份与资产。</p><ul><li><b>状态可见</b><span>普通与认证状态通过视觉和权益数据明确区分。</span></li><li><b>资产集中</b><span>订单、票券、收藏与积分在同一页面管理。</span></li><li><b>认证引导</b><span>未认证用户保留清楚的升级入口。</span></li></ul></div>
+      </div></article>
+    </section>
+
+    <section class="gallery-section" id="gallery"><div class="shell">
+      <div class="section-label light reveal">03 / SELECTED CORE SCREENS</div>
+      <div class="gallery-head reveal"><div><p class="kicker light">CORE PAGE COLLECTION</p><h2>精选 26 个页面，<br/>覆盖生活圈主要业务场景。</h2></div><p>长页面在列表中仅展示单屏内容，点击后查看完整设计稿。页面按首页、商户、票务、地图、VIP 和账户六类整理。</p></div>
+      <div class="gallery-filters reveal" role="group" aria-label="核心页面筛选">
+        <button class="active" data-gallery-filter="all" type="button">全部 <span>26</span></button><button data-gallery-filter="home" type="button">首页 <span>3</span></button><button data-gallery-filter="commerce" type="button">商户 <span>5</span></button><button data-gallery-filter="ticket" type="button">票务 <span>5</span></button><button data-gallery-filter="map" type="button">地图 <span>6</span></button><button data-gallery-filter="vip" type="button">VIP <span>5</span></button><button data-gallery-filter="account" type="button">账户 <span>2</span></button>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/xicen/home-main.webp" data-caption="首页首屏：核心服务与区域内容入口" type="button">
+          <span class="gallery-index">01</span><span class="gallery-image"><img src="../assets/xicen/home-main.webp" alt="首页首屏" loading="lazy" /></span>
+          <span class="gallery-meta"><b>首页首屏</b><small>核心服务与区域内容入口</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/xicen/home-long.webp" data-caption="首页长页：特惠、游玩、餐饮与住宿" type="button">
+          <span class="gallery-index">02</span><span class="gallery-image"><img src="../assets/xicen/home-long-viewport.webp" alt="首页长页" loading="lazy" /></span>
+          <span class="gallery-meta"><b>首页长页</b><small>特惠、游玩、餐饮与住宿</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/xicen/content-list-long.webp" data-caption="内容列表：城市内容与商户推荐" type="button">
+          <span class="gallery-index">03</span><span class="gallery-image"><img src="../assets/xicen/content-list-long-viewport.webp" alt="内容列表" loading="lazy" /></span>
+          <span class="gallery-meta"><b>内容列表</b><small>城市内容与商户推荐</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/xicen/merchant-detail.webp" data-caption="商户详情：营业信息与优惠套餐" type="button">
+          <span class="gallery-index">04</span><span class="gallery-image"><img src="../assets/xicen/merchant-detail-viewport.webp" alt="商户详情" loading="lazy" /></span>
+          <span class="gallery-meta"><b>商户详情</b><small>营业信息与优惠套餐</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/xicen/merchant-detail-long.webp" data-caption="商户长页：商品与品牌内容" type="button">
+          <span class="gallery-index">05</span><span class="gallery-image"><img src="../assets/xicen/merchant-detail-long-viewport.webp" alt="商户长页" loading="lazy" /></span>
+          <span class="gallery-meta"><b>商户长页</b><small>商品与品牌内容</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/xicen/detail-page.webp" data-caption="内容详情：图文介绍与收藏分享" type="button">
+          <span class="gallery-index">06</span><span class="gallery-image"><img src="../assets/xicen/detail-page.webp" alt="内容详情" loading="lazy" /></span>
+          <span class="gallery-meta"><b>内容详情</b><small>图文介绍与收藏分享</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/xicen/quantity-select.webp" data-caption="数量选择：商品或套餐数量调整" type="button">
+          <span class="gallery-index">07</span><span class="gallery-image"><img src="../assets/xicen/quantity-select-viewport.webp" alt="数量选择" loading="lazy" /></span>
+          <span class="gallery-meta"><b>数量选择</b><small>商品或套餐数量调整</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/xicen/date-select.webp" data-caption="日期选择：到店日期确认" type="button">
+          <span class="gallery-index">08</span><span class="gallery-image"><img src="../assets/xicen/date-select.webp" alt="日期选择" loading="lazy" /></span>
+          <span class="gallery-meta"><b>日期选择</b><small>到店日期确认</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="ticket" data-src="../assets/xicen/scenic-detail.webp" data-caption="景点详情：介绍、票价与购买入口" type="button">
+          <span class="gallery-index">09</span><span class="gallery-image"><img src="../assets/xicen/scenic-detail.webp" alt="景点详情" loading="lazy" /></span>
+          <span class="gallery-meta"><b>景点详情</b><small>介绍、票价与购买入口</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="ticket" data-src="../assets/xicen/date-calendar.webp" data-caption="日期日历：多月日期选择" type="button">
+          <span class="gallery-index">10</span><span class="gallery-image"><img src="../assets/xicen/date-calendar.webp" alt="日期日历" loading="lazy" /></span>
+          <span class="gallery-meta"><b>日期日历</b><small>多月日期选择</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="ticket" data-src="../assets/xicen/ticket-quantity.webp" data-caption="票种数量：成人、学生与老人票" type="button">
+          <span class="gallery-index">11</span><span class="gallery-image"><img src="../assets/xicen/ticket-quantity-viewport.webp" alt="票种数量" loading="lazy" /></span>
+          <span class="gallery-meta"><b>票种数量</b><small>成人、学生与老人票</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="ticket" data-src="../assets/xicen/map-filter-a.webp" data-caption="景点筛选：地图中的内容筛选" type="button">
+          <span class="gallery-index">12</span><span class="gallery-image"><img src="../assets/xicen/map-filter-a.webp" alt="景点筛选" loading="lazy" /></span>
+          <span class="gallery-meta"><b>景点筛选</b><small>地图中的内容筛选</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="ticket" data-src="../assets/xicen/map-filter-b.webp" data-caption="景点筛选状态：分类与结果联动" type="button">
+          <span class="gallery-index">13</span><span class="gallery-image"><img src="../assets/xicen/map-filter-b.webp" alt="景点筛选状态" loading="lazy" /></span>
+          <span class="gallery-meta"><b>景点筛选状态</b><small>分类与结果联动</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-main.webp" data-caption="生活地图：生活分类与点位" type="button">
+          <span class="gallery-index">14</span><span class="gallery-image"><img src="../assets/xicen/map-main.webp" alt="生活地图" loading="lazy" /></span>
+          <span class="gallery-meta"><b>生活地图</b><small>生活分类与点位</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-sheet.webp" data-caption="地图上滑列表：地图与列表联动" type="button">
+          <span class="gallery-index">15</span><span class="gallery-image"><img src="../assets/xicen/map-sheet-viewport.webp" alt="地图上滑列表" loading="lazy" /></span>
+          <span class="gallery-meta"><b>地图上滑列表</b><small>地图与列表联动</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-sheet-alt.webp" data-caption="地图上滑方案：另一种内容布局" type="button">
+          <span class="gallery-index">16</span><span class="gallery-image"><img src="../assets/xicen/map-sheet-alt-viewport.webp" alt="地图上滑方案" loading="lazy" /></span>
+          <span class="gallery-meta"><b>地图上滑方案</b><small>另一种内容布局</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-overview-a.webp" data-caption="地图总览 A：区域服务点位" type="button">
+          <span class="gallery-index">17</span><span class="gallery-image"><img src="../assets/xicen/map-overview-a.webp" alt="地图总览 A" loading="lazy" /></span>
+          <span class="gallery-meta"><b>地图总览 A</b><small>区域服务点位</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-overview-b.webp" data-caption="地图总览 B：点位展示方案" type="button">
+          <span class="gallery-index">18</span><span class="gallery-image"><img src="../assets/xicen/map-overview-b.webp" alt="地图总览 B" loading="lazy" /></span>
+          <span class="gallery-meta"><b>地图总览 B</b><small>点位展示方案</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/xicen/map-filter-a.webp" data-caption="地图筛选 A：分类与结果" type="button">
+          <span class="gallery-index">19</span><span class="gallery-image"><img src="../assets/xicen/map-filter-a.webp" alt="地图筛选 A" loading="lazy" /></span>
+          <span class="gallery-meta"><b>地图筛选 A</b><small>分类与结果</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="vip" data-src="../assets/xicen/vip-company.webp" data-caption="企业选择：选择所属企业" type="button">
+          <span class="gallery-index">20</span><span class="gallery-image"><img src="../assets/xicen/vip-company.webp" alt="企业选择" loading="lazy" /></span>
+          <span class="gallery-meta"><b>企业选择</b><small>选择所属企业</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="vip" data-src="../assets/xicen/vip-company-selected.webp" data-caption="企业确认：选择状态与继续认证" type="button">
+          <span class="gallery-index">21</span><span class="gallery-image"><img src="../assets/xicen/vip-company-selected.webp" alt="企业确认" loading="lazy" /></span>
+          <span class="gallery-meta"><b>企业确认</b><small>选择状态与继续认证</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="vip" data-src="../assets/xicen/vip-company-selected-alt.webp" data-caption="企业确认方案：另一认证状态" type="button">
+          <span class="gallery-index">22</span><span class="gallery-image"><img src="../assets/xicen/vip-company-selected-alt.webp" alt="企业确认方案" loading="lazy" /></span>
+          <span class="gallery-meta"><b>企业确认方案</b><small>另一认证状态</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="vip" data-src="../assets/xicen/vip-huawei.webp" data-caption="华为认证：手机号与证件上传" type="button">
+          <span class="gallery-index">23</span><span class="gallery-image"><img src="../assets/xicen/vip-huawei.webp" alt="华为认证" loading="lazy" /></span>
+          <span class="gallery-meta"><b>华为认证</b><small>手机号与证件上传</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="vip" data-src="../assets/xicen/vip-netease.webp" data-caption="网易认证：认证资料确认" type="button">
+          <span class="gallery-index">24</span><span class="gallery-image"><img src="../assets/xicen/vip-netease.webp" alt="网易认证" loading="lazy" /></span>
+          <span class="gallery-meta"><b>网易认证</b><small>认证资料确认</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/xicen/profile.webp" data-caption="个人中心：普通用户状态" type="button">
+          <span class="gallery-index">25</span><span class="gallery-image"><img src="../assets/xicen/profile.webp" alt="个人中心" loading="lazy" /></span>
+          <span class="gallery-meta"><b>个人中心</b><small>普通用户状态</small></span>
+        </button>
+        <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/xicen/profile-vip.webp" data-caption="VIP个人中心：认证用户权益状态" type="button">
+          <span class="gallery-index">26</span><span class="gallery-image"><img src="../assets/xicen/profile-vip.webp" alt="VIP个人中心" loading="lazy" /></span>
+          <span class="gallery-meta"><b>VIP个人中心</b><small>认证用户权益状态</small></span>
+        </button>
+      </div>
+    </div></section>
+
+    <section class="case-conclusion"><div class="shell conclusion-grid reveal"><div><p class="kicker">PROJECT SUMMARY</p><h2>把生活地图、商户消费、票务和企业权益组织成一个可持续运营的生活圈平台。</h2></div><div><p class="lead">项目通过统一的信息层级和交易结构，让用户可以在内容浏览、空间查找和权益认证之间自然切换。</p><p>当前功能说明基于页面进行初步整理，待全部项目完成后再统一校准业务描述与最终文案。</p></div></div></section>
+  </main>
+
+  <footer class="case-footer"><div class="shell"><span>杨双军 · UI/UX Designer</span><a href="../index.html#works">返回全部案例 ↗</a></div></footer>
+
+  <dialog class="lightbox"><button class="lightbox-close" type="button" aria-label="关闭">×</button><button class="lightbox-nav prev" type="button" aria-label="上一张">←</button><figure><img alt="" /><figcaption></figcaption></figure><button class="lightbox-nav next" type="button" aria-label="下一张">→</button></dialog>
+  <script src="xicen-life-circle-mini-program.js"></script>
+</body>
+</html>

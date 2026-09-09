@@ -1,0 +1,132 @@
+/*
+ * 吉利案例采用站酷 PC 作品页常见的完整画布展示方式：
+ * 设计稿按原始比例展开，不使用西九票务案例中的固定高度裁切。
+ */
+
+.split-section {
+  grid-template-columns: minmax(300px, .62fr) minmax(0, 1.38fr);
+}
+
+.split-section.reverse {
+  grid-template-columns: minmax(0, 1.38fr) minmax(300px, .62fr);
+}
+
+.split-section .screen-card,
+.split-section .screen-card.checkout-card,
+.screen-pair .screen-card,
+.checkout-card {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.split-section .screen-card img,
+.screen-pair .screen-card img,
+.checkout-card img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+}
+
+.screen-pair {
+  align-items: start;
+}
+
+.view-chip,
+.screen-label {
+  position: static;
+  display: inline-flex;
+  margin: 12px 4px 3px;
+  background: #111;
+}
+
+/* 作品总览改为连续长图画布，确保每个页面从顶部到底部完整呈现。 */
+.all-screens {
+  background: #e7e5df;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(20, 20, 20, .08);
+}
+
+.gallery-thumb {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: #fff;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+  transform: none !important;
+}
+
+.gallery-meta {
+  position: static;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(16px);
+}
+
+.module-full > .screen-card,
+.ticketing-section > .shell > .screen-card {
+  height: auto;
+  max-height: none;
+}
+
+.module-full > .screen-card img,
+.ticketing-section > .shell > .screen-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.module-soft {
+  background: #eeeae2;
+}
+
+@media (max-width: 1000px) {
+  .split-section,
+  .split-section.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section .screen-card,
+  .screen-pair .screen-card,
+  .checkout-card {
+    height: auto;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-item {
+    border-radius: 14px;
+  }
+
+  .gallery-meta {
+    position: static;
+  }
+}

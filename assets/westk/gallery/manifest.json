@@ -1,0 +1,1994 @@
+[
+  {
+    "id": 1,
+    "src": "../assets/westk/gallery/g001.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "full Overlay",
+    "path": "主要页面及购票流程/项目详情页/full Overlay.png"
+  },
+  {
+    "id": 2,
+    "src": "../assets/westk/gallery/g002.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "Project details page-1",
+    "path": "主要页面及购票流程/项目详情页/Project details page-1.png"
+  },
+  {
+    "id": 3,
+    "src": "../assets/westk/gallery/g003.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "Project details page",
+    "path": "主要页面及购票流程/项目详情页/Project details page.png"
+  },
+  {
+    "id": 4,
+    "src": "../assets/westk/gallery/g004.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "rightside-sticky-maininfo-1",
+    "path": "主要页面及购票流程/项目详情页/rightside-sticky-maininfo-1.png"
+  },
+  {
+    "id": 5,
+    "src": "../assets/westk/gallery/g005.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "rightside-sticky-maininfo",
+    "path": "主要页面及购票流程/项目详情页/rightside-sticky-maininfo.png"
+  },
+  {
+    "id": 6,
+    "src": "../assets/westk/gallery/g006.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "已登录 - 单选实名",
+    "path": "主要页面及购票流程/项目详情页/已登录 - 单选实名.png"
+  },
+  {
+    "id": 7,
+    "src": "../assets/westk/gallery/g007.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "Calendar",
+    "path": "主要页面及购票流程/首页/Calendar.png"
+  },
+  {
+    "id": 8,
+    "src": "../assets/westk/gallery/g008.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "Drawer. Menu",
+    "path": "主要页面及购票流程/首页/Drawer. Menu.png"
+  },
+  {
+    "id": 9,
+    "src": "../assets/westk/gallery/g009.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "Homepage",
+    "path": "主要页面及购票流程/首页/Homepage.png"
+  },
+  {
+    "id": 10,
+    "src": "../assets/westk/gallery/g010.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "phone.Homepage-1",
+    "path": "主要页面及购票流程/首页/phone.Homepage-1.png"
+  },
+  {
+    "id": 11,
+    "src": "../assets/westk/gallery/g011.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "phone.Homepage",
+    "path": "主要页面及购票流程/首页/phone.Homepage.png"
+  },
+  {
+    "id": 12,
+    "src": "../assets/westk/gallery/g012.webp",
+    "category": "discover",
+    "categoryLabel": "内容发现",
+    "title": "【默认登录样式】邮箱+密码 - 未输入",
+    "path": "登录注册/🚩   注册/登录/新闻中心/【默认登录样式】邮箱+密码 - 未输入.png"
+  },
+  {
+    "id": 13,
+    "src": "../assets/westk/gallery/g013.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Result . Processing Payment...",
+    "path": "主要页面及购票流程/单场结算/Result . Processing Payment....png"
+  },
+  {
+    "id": 14,
+    "src": "../assets/westk/gallery/g014.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Result . successful",
+    "path": "主要页面及购票流程/单场结算/Result . successful.png"
+  },
+  {
+    "id": 15,
+    "src": "../assets/westk/gallery/g015.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "一单一证",
+    "path": "主要页面及购票流程/单场结算/一单一证.png"
+  },
+  {
+    "id": 16,
+    "src": "../assets/westk/gallery/g016.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "仅快递但无法配送",
+    "path": "主要页面及购票流程/单场结算/仅快递但无法配送.png"
+  },
+  {
+    "id": 17,
+    "src": "../assets/westk/gallery/g017.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "单场 - 优惠券使用",
+    "path": "主要页面及购票流程/单场结算/单场 - 优惠券使用.png"
+  },
+  {
+    "id": 18,
+    "src": "../assets/westk/gallery/g018.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "情况列举",
+    "path": "主要页面及购票流程/单场结算/情况列举.png"
+  },
+  {
+    "id": 19,
+    "src": "../assets/westk/gallery/g019.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "联系信息已填写",
+    "path": "主要页面及购票流程/单场结算/联系信息已填写.png"
+  },
+  {
+    "id": 20,
+    "src": "../assets/westk/gallery/g020.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "联系信息未填写",
+    "path": "主要页面及购票流程/单场结算/联系信息未填写.png"
+  },
+  {
+    "id": 21,
+    "src": "../assets/westk/gallery/g021.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "选择地址",
+    "path": "主要页面及购票流程/单场结算/选择地址.png"
+  },
+  {
+    "id": 22,
+    "src": "../assets/westk/gallery/g022.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "booking process-1",
+    "path": "主要页面及购票流程/站票-选座/booking process-1.png"
+  },
+  {
+    "id": 23,
+    "src": "../assets/westk/gallery/g023.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "booking process",
+    "path": "主要页面及购票流程/站票-选座/booking process.png"
+  },
+  {
+    "id": 24,
+    "src": "../assets/westk/gallery/g024.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "order . Summary . card-1",
+    "path": "主要页面及购票流程/站票-选座/order . Summary . card-1.png"
+  },
+  {
+    "id": 25,
+    "src": "../assets/westk/gallery/g025.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "order . Summary . card",
+    "path": "主要页面及购票流程/站票-选座/order . Summary . card.png"
+  },
+  {
+    "id": 26,
+    "src": "../assets/westk/gallery/g026.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "座位位置",
+    "path": "主要页面及购票流程/站票-选座/Overlay/座位位置.png"
+  },
+  {
+    "id": 27,
+    "src": "../assets/westk/gallery/g027.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "价格维度缺货",
+    "path": "主要页面及购票流程/站票-选座/价格维度缺货.png"
+  },
+  {
+    "id": 28,
+    "src": "../assets/westk/gallery/g028.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "会员卡优惠前置",
+    "path": "主要页面及购票流程/站票-选座/会员卡优惠前置.png"
+  },
+  {
+    "id": 29,
+    "src": "../assets/westk/gallery/g029.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "单屏浮层状态",
+    "path": "主要页面及购票流程/站票-选座/单屏浮层状态.png"
+  },
+  {
+    "id": 30,
+    "src": "../assets/westk/gallery/g030.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "单票价选中 - 优惠特殊样式 - 套票提醒",
+    "path": "主要页面及购票流程/站票-选座/单票价选中 - 优惠特殊样式 - 套票提醒.png"
+  },
+  {
+    "id": 31,
+    "src": "../assets/westk/gallery/g031.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "单维度筛选",
+    "path": "主要页面及购票流程/站票-选座/单维度筛选.png"
+  },
+  {
+    "id": 32,
+    "src": "../assets/westk/gallery/g032.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "场次维度缺货",
+    "path": "主要页面及购票流程/站票-选座/场次维度缺货.png"
+  },
+  {
+    "id": 33,
+    "src": "../assets/westk/gallery/g033.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "座位异常",
+    "path": "主要页面及购票流程/站票-选座/座位异常.png"
+  },
+  {
+    "id": 34,
+    "src": "../assets/westk/gallery/g034.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "座位放大",
+    "path": "主要页面及购票流程/站票-选座/座位放大.png"
+  },
+  {
+    "id": 35,
+    "src": "../assets/westk/gallery/g035.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "无座套票 - 已选中",
+    "path": "主要页面及购票流程/站票-选座/无座套票 - 已选中.png"
+  },
+  {
+    "id": 36,
+    "src": "../assets/westk/gallery/g036.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "无座套票 - 选择票价区域亮起",
+    "path": "主要页面及购票流程/站票-选座/无座套票 - 选择票价区域亮起.png"
+  },
+  {
+    "id": 37,
+    "src": "../assets/westk/gallery/g037.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "日历模式 - 已择日期未选票",
+    "path": "主要页面及购票流程/站票-选座/日历模式 - 已择日期未选票.png"
+  },
+  {
+    "id": 38,
+    "src": "../assets/westk/gallery/g038.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "日历模式 - 已选票",
+    "path": "主要页面及购票流程/站票-选座/日历模式 - 已选票.png"
+  },
+  {
+    "id": 39,
+    "src": "../assets/westk/gallery/g039.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "日历模式 - 选择日期",
+    "path": "主要页面及购票流程/站票-选座/日历模式 - 选择日期.png"
+  },
+  {
+    "id": 40,
+    "src": "../assets/westk/gallery/g040.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "显示座位号",
+    "path": "主要页面及购票流程/站票-选座/显示座位号.png"
+  },
+  {
+    "id": 41,
+    "src": "../assets/westk/gallery/g041.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "普通座位-1",
+    "path": "主要页面及购票流程/站票-选座/普通座位-1.png"
+  },
+  {
+    "id": 42,
+    "src": "../assets/westk/gallery/g042.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "普通座位-2",
+    "path": "主要页面及购票流程/站票-选座/普通座位-2.png"
+  },
+  {
+    "id": 43,
+    "src": "../assets/westk/gallery/g043.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "普通座位",
+    "path": "主要页面及购票流程/站票-选座/普通座位.png"
+  },
+  {
+    "id": 44,
+    "src": "../assets/westk/gallery/g044.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "未选择座位",
+    "path": "主要页面及购票流程/站票-选座/未选择座位.png"
+  },
+  {
+    "id": 45,
+    "src": "../assets/westk/gallery/g045.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "生成轮椅座位",
+    "path": "主要页面及购票流程/站票-选座/生成轮椅座位.png"
+  },
+  {
+    "id": 46,
+    "src": "../assets/westk/gallery/g046.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "确认生成座位",
+    "path": "主要页面及购票流程/站票-选座/确认生成座位.png"
+  },
+  {
+    "id": 47,
+    "src": "../assets/westk/gallery/g047.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "站票场次模式 - 已选择票",
+    "path": "主要页面及购票流程/站票-选座/站票场次模式 - 已选择票.png"
+  },
+  {
+    "id": 48,
+    "src": "../assets/westk/gallery/g048.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "站票场次模式 - 默认选中日期未选择票",
+    "path": "主要页面及购票流程/站票-选座/站票场次模式 - 默认选中日期未选择票.png"
+  },
+  {
+    "id": 49,
+    "src": "../assets/westk/gallery/g049.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "筛选价格属性",
+    "path": "主要页面及购票流程/站票-选座/筛选价格属性.png"
+  },
+  {
+    "id": 50,
+    "src": "../assets/westk/gallery/g050.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "选择座位",
+    "path": "主要页面及购票流程/站票-选座/选择座位.png"
+  },
+  {
+    "id": 51,
+    "src": "../assets/westk/gallery/g051.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "选择无座票",
+    "path": "主要页面及购票流程/站票-选座/选择无座票.png"
+  },
+  {
+    "id": 52,
+    "src": "../assets/westk/gallery/g052.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "选择普通座位",
+    "path": "主要页面及购票流程/站票-选座/选择普通座位.png"
+  },
+  {
+    "id": 53,
+    "src": "../assets/westk/gallery/g053.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "选择轮椅座",
+    "path": "主要页面及购票流程/站票-选座/选择轮椅座.png"
+  },
+  {
+    "id": 54,
+    "src": "../assets/westk/gallery/g054.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Event Discounts - 优惠券使用",
+    "path": "主要页面及购票流程/购物车-商品加购/Event Discounts - 优惠券使用.png"
+  },
+  {
+    "id": 55,
+    "src": "../assets/westk/gallery/g055.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Promo Code - 优惠码使用选择场次",
+    "path": "主要页面及购票流程/购物车-商品加购/Promo Code - 优惠码使用选择场次.png"
+  },
+  {
+    "id": 56,
+    "src": "../assets/westk/gallery/g056.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Result . successful",
+    "path": "主要页面及购票流程/购物车-商品加购/Result . successful.png"
+  },
+  {
+    "id": 57,
+    "src": "../assets/westk/gallery/g057.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "加购的商品订单 - 快递",
+    "path": "主要页面及购票流程/购物车-商品加购/加购的商品订单 - 快递.png"
+  },
+  {
+    "id": 58,
+    "src": "../assets/westk/gallery/g058.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "加购的商品订单 - 自提电子码",
+    "path": "主要页面及购票流程/购物车-商品加购/加购的商品订单 - 自提电子码.png"
+  },
+  {
+    "id": 59,
+    "src": "../assets/westk/gallery/g059.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "已经选择商品",
+    "path": "主要页面及购票流程/购物车-商品加购/已经选择商品.png"
+  },
+  {
+    "id": 60,
+    "src": "../assets/westk/gallery/g060.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "普通订单",
+    "path": "主要页面及购票流程/购物车-商品加购/普通订单.png"
+  },
+  {
+    "id": 61,
+    "src": "../assets/westk/gallery/g061.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "没有选择商品",
+    "path": "主要页面及购票流程/购物车-商品加购/没有选择商品.png"
+  },
+  {
+    "id": 62,
+    "src": "../assets/westk/gallery/g062.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "票务商品都选择快递",
+    "path": "主要页面及购票流程/购物车-商品加购/票务商品都选择快递.png"
+  },
+  {
+    "id": 63,
+    "src": "../assets/westk/gallery/g063.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "订单列表",
+    "path": "主要页面及购票流程/购物车-商品加购/订单列表.png"
+  },
+  {
+    "id": 64,
+    "src": "../assets/westk/gallery/g064.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 一单一证",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 一单一证.png"
+  },
+  {
+    "id": 65,
+    "src": "../assets/westk/gallery/g065.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 完成可结算",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 完成可结算.png"
+  },
+  {
+    "id": 66,
+    "src": "../assets/westk/gallery/g066.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 未完成实名",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 未完成实名.png"
+  },
+  {
+    "id": 67,
+    "src": "../assets/westk/gallery/g067.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 结算 - 已勾选使用优惠码-1",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 结算 - 已勾选使用优惠码-1.png"
+  },
+  {
+    "id": 68,
+    "src": "../assets/westk/gallery/g068.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 结算 - 已勾选使用优惠码",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 结算 - 已勾选使用优惠码.png"
+  },
+  {
+    "id": 69,
+    "src": "../assets/westk/gallery/g069.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "购物车 - 结算 - 未使用优惠码",
+    "path": "主要页面及购票流程/购物车-商品加购/购物车 - 结算 - 未使用优惠码.png"
+  },
+  {
+    "id": 70,
+    "src": "../assets/westk/gallery/g070.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "预览商品",
+    "path": "主要页面及购票流程/购物车-商品加购/预览商品.png"
+  },
+  {
+    "id": 71,
+    "src": "../assets/westk/gallery/g071.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "Project details page",
+    "path": "主要页面及购票流程/购票校验资格/Project details page.png"
+  },
+  {
+    "id": 72,
+    "src": "../assets/westk/gallery/g072.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "regular session",
+    "path": "主要页面及购票流程/购票校验资格/regular session.png"
+  },
+  {
+    "id": 73,
+    "src": "../assets/westk/gallery/g073.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "regular",
+    "path": "主要页面及购票流程/购票校验资格/regular.png"
+  },
+  {
+    "id": 74,
+    "src": "../assets/westk/gallery/g074.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "rightside-1",
+    "path": "主要页面及购票流程/购票校验资格/rightside-1.png"
+  },
+  {
+    "id": 75,
+    "src": "../assets/westk/gallery/g075.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "rightside-2",
+    "path": "主要页面及购票流程/购票校验资格/rightside-2.png"
+  },
+  {
+    "id": 76,
+    "src": "../assets/westk/gallery/g076.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "rightside",
+    "path": "主要页面及购票流程/购票校验资格/rightside.png"
+  },
+  {
+    "id": 77,
+    "src": "../assets/westk/gallery/g077.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "rigjtside-1",
+    "path": "主要页面及购票流程/购票校验资格/rigjtside-1.png"
+  },
+  {
+    "id": 78,
+    "src": "../assets/westk/gallery/g078.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "rigjtside",
+    "path": "主要页面及购票流程/购票校验资格/rigjtside.png"
+  },
+  {
+    "id": 79,
+    "src": "../assets/westk/gallery/g079.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "satisfied",
+    "path": "主要页面及购票流程/购票校验资格/satisfied.png"
+  },
+  {
+    "id": 80,
+    "src": "../assets/westk/gallery/g080.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "unmet conditions",
+    "path": "主要页面及购票流程/购票校验资格/unmet conditions.png"
+  },
+  {
+    "id": 81,
+    "src": "../assets/westk/gallery/g081.webp",
+    "category": "purchase",
+    "categoryLabel": "购票流程",
+    "title": "日历模式 - 已选票",
+    "path": "主要页面及购票流程/购票校验资格/日历模式 - 已选票.png"
+  },
+  {
+    "id": 82,
+    "src": "../assets/westk/gallery/g082.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "profile.My Tickets-1",
+    "path": "主要页面及购票流程/票夹/profile.My Tickets-1.png"
+  },
+  {
+    "id": 83,
+    "src": "../assets/westk/gallery/g083.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "profile.My Tickets",
+    "path": "主要页面及购票流程/票夹/profile.My Tickets.png"
+  },
+  {
+    "id": 84,
+    "src": "../assets/westk/gallery/g084.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票-1",
+    "path": "主要页面及购票流程/票夹/QR code/电子票-1.png"
+  },
+  {
+    "id": 85,
+    "src": "../assets/westk/gallery/g085.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票",
+    "path": "主要页面及购票流程/票夹/QR code/电子票.png"
+  },
+  {
+    "id": 86,
+    "src": "../assets/westk/gallery/g086.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "section-1",
+    "path": "主要页面及购票流程/票夹/section-1.png"
+  },
+  {
+    "id": 87,
+    "src": "../assets/westk/gallery/g087.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "section",
+    "path": "主要页面及购票流程/票夹/section.png"
+  },
+  {
+    "id": 88,
+    "src": "../assets/westk/gallery/g088.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Transfer History",
+    "path": "主要页面及购票流程/票夹/Transfer History.png"
+  },
+  {
+    "id": 89,
+    "src": "../assets/westk/gallery/g089.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Confirmed . Courier Delivery . Awaiting Shipment",
+    "path": "主要页面及购票流程/订单详情/Order Details . Confirmed . Courier Delivery . Awaiting Shipment.png"
+  },
+  {
+    "id": 90,
+    "src": "../assets/westk/gallery/g090.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Confirmed . Courier Delivery . Shipped",
+    "path": "主要页面及购票流程/订单详情/Order Details . Confirmed . Courier Delivery . Shipped.png"
+  },
+  {
+    "id": 91,
+    "src": "../assets/westk/gallery/g091.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Confirmed . E-Ticket . Hide QR Code",
+    "path": "主要页面及购票流程/订单详情/Order Details . Confirmed . E-Ticket . Hide QR Code.png"
+  },
+  {
+    "id": 92,
+    "src": "../assets/westk/gallery/g092.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Confirmed . E-Ticket . Show QR Code",
+    "path": "主要页面及购票流程/订单详情/Order Details . Confirmed . E-Ticket . Show QR Code.png"
+  },
+  {
+    "id": 93,
+    "src": "../assets/westk/gallery/g093.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Unpaid . Cart Order",
+    "path": "主要页面及购票流程/订单详情/Order Details . Unpaid . Cart Order.png"
+  },
+  {
+    "id": 94,
+    "src": "../assets/westk/gallery/g094.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "Order Details . Unpaid . Order",
+    "path": "主要页面及购票流程/订单详情/Order Details . Unpaid . Order.png"
+  },
+  {
+    "id": 95,
+    "src": "../assets/westk/gallery/g095.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "profile.My Orders . Tickets",
+    "path": "主要页面及购票流程/订单详情/profile.My Orders . Tickets.png"
+  },
+  {
+    "id": 96,
+    "src": "../assets/westk/gallery/g096.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票-1",
+    "path": "主要页面及购票流程/订单详情/QR code/电子票-1.png"
+  },
+  {
+    "id": 97,
+    "src": "../assets/westk/gallery/g097.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票-2",
+    "path": "主要页面及购票流程/订单详情/QR code/电子票-2.png"
+  },
+  {
+    "id": 98,
+    "src": "../assets/westk/gallery/g098.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票-3",
+    "path": "主要页面及购票流程/订单详情/QR code/电子票-3.png"
+  },
+  {
+    "id": 99,
+    "src": "../assets/westk/gallery/g099.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "电子票",
+    "path": "主要页面及购票流程/订单详情/QR code/电子票.png"
+  },
+  {
+    "id": 100,
+    "src": "../assets/westk/gallery/g100.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "数字码",
+    "path": "主要页面及购票流程/订单详情/数字码.png"
+  },
+  {
+    "id": 101,
+    "src": "../assets/westk/gallery/g101.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "01",
+    "path": "主要页面及购票流程/转赠/01.png"
+  },
+  {
+    "id": 102,
+    "src": "../assets/westk/gallery/g102.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "02",
+    "path": "主要页面及购票流程/转赠/02.png"
+  },
+  {
+    "id": 103,
+    "src": "../assets/westk/gallery/g103.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "03",
+    "path": "主要页面及购票流程/转赠/03.png"
+  },
+  {
+    "id": 104,
+    "src": "../assets/westk/gallery/g104.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "04",
+    "path": "主要页面及购票流程/转赠/04.png"
+  },
+  {
+    "id": 105,
+    "src": "../assets/westk/gallery/g105.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "二次确认",
+    "path": "主要页面及购票流程/转赠/二次确认.png"
+  },
+  {
+    "id": 106,
+    "src": "../assets/westk/gallery/g106.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "已登录 - 单选实名",
+    "path": "主要页面及购票流程/转赠/已登录 - 单选实名.png"
+  },
+  {
+    "id": 107,
+    "src": "../assets/westk/gallery/g107.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠 - 提示",
+    "path": "主要页面及购票流程/转赠/转赠 - 提示.png"
+  },
+  {
+    "id": 108,
+    "src": "../assets/westk/gallery/g108.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-实名领取-1",
+    "path": "主要页面及购票流程/转赠/转赠-实名领取-1.png"
+  },
+  {
+    "id": 109,
+    "src": "../assets/westk/gallery/g109.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-实名领取",
+    "path": "主要页面及购票流程/转赠/转赠-实名领取.png"
+  },
+  {
+    "id": 110,
+    "src": "../assets/westk/gallery/g110.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-已过期",
+    "path": "主要页面及购票流程/转赠/转赠-已过期.png"
+  },
+  {
+    "id": 111,
+    "src": "../assets/westk/gallery/g111.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-已领取",
+    "path": "主要页面及购票流程/转赠/转赠-已领取.png"
+  },
+  {
+    "id": 112,
+    "src": "../assets/westk/gallery/g112.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-未领取",
+    "path": "主要页面及购票流程/转赠/转赠-未领取.png"
+  },
+  {
+    "id": 113,
+    "src": "../assets/westk/gallery/g113.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "转赠-被他人领取",
+    "path": "主要页面及购票流程/转赠/转赠-被他人领取.png"
+  },
+  {
+    "id": 114,
+    "src": "../assets/westk/gallery/g114.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "家庭卡 - 已激活 - 副卡 - 已转赠",
+    "path": "会员卡/家庭卡 - 已激活 - 副卡 - 已转赠.png"
+  },
+  {
+    "id": 115,
+    "src": "../assets/westk/gallery/g115.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "联票订单详情-1",
+    "path": "联票/联票订单详情-1.png"
+  },
+  {
+    "id": 116,
+    "src": "../assets/westk/gallery/g116.webp",
+    "category": "orders",
+    "categoryLabel": "票券与订单",
+    "title": "联票订单详情-2",
+    "path": "联票/联票订单详情-2.png"
+  },
+  {
+    "id": 117,
+    "src": "../assets/westk/gallery/g117.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Order Details . Confirmed . Request Refund . Refund Details",
+    "path": "主要页面及购票流程/退款/Order Details . Confirmed . Request Refund . Refund Details.png"
+  },
+  {
+    "id": 118,
+    "src": "../assets/westk/gallery/g118.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Order Details . Confirmed . Request Refund",
+    "path": "主要页面及购票流程/退款/Order Details . Confirmed . Request Refund.png"
+  },
+  {
+    "id": 119,
+    "src": "../assets/westk/gallery/g119.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Order Details . Request Refund",
+    "path": "主要页面及购票流程/退款/Order Details . Request Refund.png"
+  },
+  {
+    "id": 120,
+    "src": "../assets/westk/gallery/g120.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Refund Handling Fee Rules",
+    "path": "主要页面及购票流程/退款/Refund Handling Fee Rules.png"
+  },
+  {
+    "id": 121,
+    "src": "../assets/westk/gallery/g121.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "old order",
+    "path": "主要页面及购票流程/选座改签/old order.png"
+  },
+  {
+    "id": 122,
+    "src": "../assets/westk/gallery/g122.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-1",
+    "path": "主要页面及购票流程/选座改签/Reschedule Booking  门票改签-1.png"
+  },
+  {
+    "id": 123,
+    "src": "../assets/westk/gallery/g123.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-2",
+    "path": "主要页面及购票流程/选座改签/Reschedule Booking  门票改签-2.png"
+  },
+  {
+    "id": 124,
+    "src": "../assets/westk/gallery/g124.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-3",
+    "path": "主要页面及购票流程/选座改签/Reschedule Booking  门票改签-3.png"
+  },
+  {
+    "id": 125,
+    "src": "../assets/westk/gallery/g125.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签",
+    "path": "主要页面及购票流程/选座改签/Reschedule Booking  门票改签.png"
+  },
+  {
+    "id": 126,
+    "src": "../assets/westk/gallery/g126.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Result . successful",
+    "path": "主要页面及购票流程/选座改签/Result . successful.png"
+  },
+  {
+    "id": 127,
+    "src": "../assets/westk/gallery/g127.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "单屏浮层状态-1",
+    "path": "主要页面及购票流程/选座改签/单屏浮层状态-1.png"
+  },
+  {
+    "id": 128,
+    "src": "../assets/westk/gallery/g128.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "单屏浮层状态",
+    "path": "主要页面及购票流程/选座改签/单屏浮层状态.png"
+  },
+  {
+    "id": 129,
+    "src": "../assets/westk/gallery/g129.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "实名已补充",
+    "path": "主要页面及购票流程/选座改签/实名已补充.png"
+  },
+  {
+    "id": 130,
+    "src": "../assets/westk/gallery/g130.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "改签确认",
+    "path": "主要页面及购票流程/选座改签/改签确认.png"
+  },
+  {
+    "id": 131,
+    "src": "../assets/westk/gallery/g131.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "补充实名",
+    "path": "主要页面及购票流程/选座改签/补充实名.png"
+  },
+  {
+    "id": 132,
+    "src": "../assets/westk/gallery/g132.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "New order",
+    "path": "主要页面及购票流程/门票改签/New order.png"
+  },
+  {
+    "id": 133,
+    "src": "../assets/westk/gallery/g133.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "old order",
+    "path": "主要页面及购票流程/门票改签/old order.png"
+  },
+  {
+    "id": 134,
+    "src": "../assets/westk/gallery/g134.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-1",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签-1.png"
+  },
+  {
+    "id": 135,
+    "src": "../assets/westk/gallery/g135.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-2",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签-2.png"
+  },
+  {
+    "id": 136,
+    "src": "../assets/westk/gallery/g136.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-3",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签-3.png"
+  },
+  {
+    "id": 137,
+    "src": "../assets/westk/gallery/g137.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-4",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签-4.png"
+  },
+  {
+    "id": 138,
+    "src": "../assets/westk/gallery/g138.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签-5",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签-5.png"
+  },
+  {
+    "id": 139,
+    "src": "../assets/westk/gallery/g139.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Reschedule Booking  门票改签",
+    "path": "主要页面及购票流程/门票改签/Reschedule Booking  门票改签.png"
+  },
+  {
+    "id": 140,
+    "src": "../assets/westk/gallery/g140.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "Result . successful",
+    "path": "主要页面及购票流程/门票改签/Result . successful.png"
+  },
+  {
+    "id": 141,
+    "src": "../assets/westk/gallery/g141.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "View Reschedule Details",
+    "path": "主要页面及购票流程/门票改签/View Reschedule Details.png"
+  },
+  {
+    "id": 142,
+    "src": "../assets/westk/gallery/g142.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "实名已补充",
+    "path": "主要页面及购票流程/门票改签/实名已补充.png"
+  },
+  {
+    "id": 143,
+    "src": "../assets/westk/gallery/g143.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "改签确认",
+    "path": "主要页面及购票流程/门票改签/改签确认.png"
+  },
+  {
+    "id": 144,
+    "src": "../assets/westk/gallery/g144.webp",
+    "category": "service",
+    "categoryLabel": "改签与退款",
+    "title": "补充实名",
+    "path": "主要页面及购票流程/门票改签/补充实名.png"
+  },
+  {
+    "id": 145,
+    "src": "../assets/westk/gallery/g145.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "profile.My Orders .Membership-1",
+    "path": "会员卡/profile.My Orders .Membership-1.png"
+  },
+  {
+    "id": 146,
+    "src": "../assets/westk/gallery/g146.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "profile.My Orders .Membership",
+    "path": "会员卡/profile.My Orders .Membership.png"
+  },
+  {
+    "id": 147,
+    "src": "../assets/westk/gallery/g147.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Review Your Membership-1",
+    "path": "会员卡/Review Your Membership-1.png"
+  },
+  {
+    "id": 148,
+    "src": "../assets/westk/gallery/g148.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Review Your Membership-2",
+    "path": "会员卡/Review Your Membership-2.png"
+  },
+  {
+    "id": 149,
+    "src": "../assets/westk/gallery/g149.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Review Your Membership",
+    "path": "会员卡/Review Your Membership.png"
+  },
+  {
+    "id": 150,
+    "src": "../assets/westk/gallery/g150.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Select Voucher",
+    "path": "会员卡/Select Voucher.png"
+  },
+  {
+    "id": 151,
+    "src": "../assets/westk/gallery/g151.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "两个 BU 都有会员卡激活后，不可激活新卡",
+    "path": "会员卡/两个 BU 都有会员卡激活后，不可激活新卡.png"
+  },
+  {
+    "id": 152,
+    "src": "../assets/westk/gallery/g152.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Get Membership - 01",
+    "path": "会员卡/会员卡列表 - 标品/Get Membership - 01.png"
+  },
+  {
+    "id": 153,
+    "src": "../assets/westk/gallery/g153.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Get Membership - 02",
+    "path": "会员卡/会员卡列表 - 标品/Get Membership - 02.png"
+  },
+  {
+    "id": 154,
+    "src": "../assets/westk/gallery/g154.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "权益查看-1",
+    "path": "会员卡/会员卡列表 - 标品/权益查看-1.png"
+  },
+  {
+    "id": 155,
+    "src": "../assets/westk/gallery/g155.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "权益查看",
+    "path": "会员卡/会员卡列表 - 标品/权益查看.png"
+  },
+  {
+    "id": 156,
+    "src": "../assets/westk/gallery/g156.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "取消 - 家庭卡订单",
+    "path": "会员卡/取消 - 家庭卡订单.png"
+  },
+  {
+    "id": 157,
+    "src": "../assets/westk/gallery/g157.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "取消 - 普通卡订单",
+    "path": "会员卡/取消 - 普通卡订单.png"
+  },
+  {
+    "id": 158,
+    "src": "../assets/westk/gallery/g158.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "家庭卡 - 已激活 - 主卡",
+    "path": "会员卡/家庭卡 - 已激活 - 主卡.png"
+  },
+  {
+    "id": 159,
+    "src": "../assets/westk/gallery/g159.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "家庭卡 - 已激活 - 副卡",
+    "path": "会员卡/家庭卡 - 已激活 - 副卡.png"
+  },
+  {
+    "id": 160,
+    "src": "../assets/westk/gallery/g160.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "家庭卡 - 未激活 (按钮浮层样式)",
+    "path": "会员卡/家庭卡 - 未激活 (按钮浮层样式).png"
+  },
+  {
+    "id": 161,
+    "src": "../assets/westk/gallery/g161.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "家庭卡 - 未激活",
+    "path": "会员卡/家庭卡 - 未激活.png"
+  },
+  {
+    "id": 162,
+    "src": "../assets/westk/gallery/g162.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "家庭卡（多成员）激活",
+    "path": "会员卡/家庭卡（多成员）激活.png"
+  },
+  {
+    "id": 163,
+    "src": "../assets/westk/gallery/g163.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "已激活",
+    "path": "会员卡/已激活.png"
+  },
+  {
+    "id": 164,
+    "src": "../assets/westk/gallery/g164.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "弹窗提醒",
+    "path": "会员卡/弹窗提醒.png"
+  },
+  {
+    "id": 165,
+    "src": "../assets/westk/gallery/g165.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "当前 bu 已有卡片激活 (或者无需激活) - 提示购买成功",
+    "path": "会员卡/当前 bu 已有卡片激活 (或者无需激活) - 提示购买成功.png"
+  },
+  {
+    "id": 166,
+    "src": "../assets/westk/gallery/g166.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "当前 bu 无卡片激活 - 提示去激活",
+    "path": "会员卡/当前 bu 无卡片激活 - 提示去激活.png"
+  },
+  {
+    "id": 167,
+    "src": "../assets/westk/gallery/g167.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "待支付",
+    "path": "会员卡/待支付.png"
+  },
+  {
+    "id": 168,
+    "src": "../assets/westk/gallery/g168.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "成功 - 家庭卡订单",
+    "path": "会员卡/成功 - 家庭卡订单.png"
+  },
+  {
+    "id": 169,
+    "src": "../assets/westk/gallery/g169.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "成功 - 普通卡订单-1",
+    "path": "会员卡/成功 - 普通卡订单-1.png"
+  },
+  {
+    "id": 170,
+    "src": "../assets/westk/gallery/g170.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "成功 - 普通卡订单",
+    "path": "会员卡/成功 - 普通卡订单.png"
+  },
+  {
+    "id": 171,
+    "src": "../assets/westk/gallery/g171.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "普通卡 - 已激活-1",
+    "path": "会员卡/普通卡 - 已激活-1.png"
+  },
+  {
+    "id": 172,
+    "src": "../assets/westk/gallery/g172.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "普通卡 - 已激活",
+    "path": "会员卡/普通卡 - 已激活.png"
+  },
+  {
+    "id": 173,
+    "src": "../assets/westk/gallery/g173.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "普通卡 - 未激活",
+    "path": "会员卡/普通卡 - 未激活.png"
+  },
+  {
+    "id": 174,
+    "src": "../assets/westk/gallery/g174.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "普通卡激活",
+    "path": "会员卡/普通卡激活.png"
+  },
+  {
+    "id": 175,
+    "src": "../assets/westk/gallery/g175.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "未登录",
+    "path": "会员卡/未登录.png"
+  },
+  {
+    "id": 176,
+    "src": "../assets/westk/gallery/g176.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "本地订单-1",
+    "path": "会员卡/本地订单-1.png"
+  },
+  {
+    "id": 177,
+    "src": "../assets/westk/gallery/g177.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "本地订单",
+    "path": "会员卡/本地订单.png"
+  },
+  {
+    "id": 178,
+    "src": "../assets/westk/gallery/g178.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "查询-成功-单个结果",
+    "path": "会员卡/查询-成功-单个结果.png"
+  },
+  {
+    "id": 179,
+    "src": "../assets/westk/gallery/g179.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "查询-成功-多个结果",
+    "path": "会员卡/查询-成功-多个结果.png"
+  },
+  {
+    "id": 180,
+    "src": "../assets/westk/gallery/g180.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "查询-未查询到",
+    "path": "会员卡/查询-未查询到.png"
+  },
+  {
+    "id": 181,
+    "src": "../assets/westk/gallery/g181.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "没有任何一张卡片激活时",
+    "path": "会员卡/没有任何一张卡片激活时.png"
+  },
+  {
+    "id": 182,
+    "src": "../assets/westk/gallery/g182.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "激活二次确认提示",
+    "path": "会员卡/激活二次确认提示.png"
+  },
+  {
+    "id": 183,
+    "src": "../assets/westk/gallery/g183.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "message",
+    "path": "会员卡/激活成功 - 自动跳转/message.png"
+  },
+  {
+    "id": 184,
+    "src": "../assets/westk/gallery/g184.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "第三方订单-查询 1",
+    "path": "会员卡/第三方订单-查询 1.png"
+  },
+  {
+    "id": 185,
+    "src": "../assets/westk/gallery/g185.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "第三方订单-查询 2",
+    "path": "会员卡/第三方订单-查询 2.png"
+  },
+  {
+    "id": 186,
+    "src": "../assets/westk/gallery/g186.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "订单会员升级入口",
+    "path": "会员卡/订单会员升级入口.png"
+  },
+  {
+    "id": 187,
+    "src": "../assets/westk/gallery/g187.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "购卡显示不可取消优惠",
+    "path": "会员卡/购卡显示不可取消优惠.png"
+  },
+  {
+    "id": 188,
+    "src": "../assets/westk/gallery/g188.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "profile.My Orders . Tickets",
+    "path": "联票/profile.My Orders . Tickets.png"
+  },
+  {
+    "id": 189,
+    "src": "../assets/westk/gallery/g189.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Project details page",
+    "path": "联票/Project details page.png"
+  },
+  {
+    "id": 190,
+    "src": "../assets/westk/gallery/g190.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "Result . successful",
+    "path": "联票/Result . successful.png"
+  },
+  {
+    "id": 191,
+    "src": "../assets/westk/gallery/g191.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "手动选座-匹配可结算",
+    "path": "联票/手动选座-匹配可结算.png"
+  },
+  {
+    "id": 192,
+    "src": "../assets/westk/gallery/g192.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "手动选座-选择座位多于套数",
+    "path": "联票/手动选座-选择座位多于套数.png"
+  },
+  {
+    "id": 193,
+    "src": "../assets/westk/gallery/g193.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "手动选座-选择座位少于套数",
+    "path": "联票/手动选座-选择座位少于套数.png"
+  },
+  {
+    "id": 194,
+    "src": "../assets/westk/gallery/g194.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "未选择主项目日期",
+    "path": "联票/未选择主项目日期.png"
+  },
+  {
+    "id": 195,
+    "src": "../assets/westk/gallery/g195.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "票种模式+日历模式-1",
+    "path": "联票/票种模式+日历模式-1.png"
+  },
+  {
+    "id": 196,
+    "src": "../assets/westk/gallery/g196.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "票种模式+日历模式-2",
+    "path": "联票/票种模式+日历模式-2.png"
+  },
+  {
+    "id": 197,
+    "src": "../assets/westk/gallery/g197.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "票种模式+日历模式-3",
+    "path": "联票/票种模式+日历模式-3.png"
+  },
+  {
+    "id": 198,
+    "src": "../assets/westk/gallery/g198.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "票种模式+日历模式",
+    "path": "联票/票种模式+日历模式.png"
+  },
+  {
+    "id": 199,
+    "src": "../assets/westk/gallery/g199.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "票种选择根据实际规则控制可选日期",
+    "path": "联票/票种选择根据实际规则控制可选日期.png"
+  },
+  {
+    "id": 200,
+    "src": "../assets/westk/gallery/g200.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "自动选座-匹配可结算",
+    "path": "联票/自动选座-匹配可结算.png"
+  },
+  {
+    "id": 201,
+    "src": "../assets/westk/gallery/g201.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "自动选座-选择座位多于套数",
+    "path": "联票/自动选座-选择座位多于套数.png"
+  },
+  {
+    "id": 202,
+    "src": "../assets/westk/gallery/g202.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "自动选座-选择座位少于套数",
+    "path": "联票/自动选座-选择座位少于套数.png"
+  },
+  {
+    "id": 203,
+    "src": "../assets/westk/gallery/g203.webp",
+    "category": "membership",
+    "categoryLabel": "会员与联票",
+    "title": "购物车 - 结算 - 已勾选使用优惠码",
+    "path": "联票/购物车 - 结算 - 已勾选使用优惠码.png"
+  },
+  {
+    "id": 204,
+    "src": "../assets/westk/gallery/g204.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "My Orders",
+    "path": "个人中心/My Orders.png"
+  },
+  {
+    "id": 205,
+    "src": "../assets/westk/gallery/g205.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Overlay-1",
+    "path": "个人中心/Overlay-1.png"
+  },
+  {
+    "id": 206,
+    "src": "../assets/westk/gallery/g206.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Overlay",
+    "path": "个人中心/Overlay.png"
+  },
+  {
+    "id": 207,
+    "src": "../assets/westk/gallery/g207.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Personal Information-1",
+    "path": "个人中心/Personal Information-1.png"
+  },
+  {
+    "id": 208,
+    "src": "../assets/westk/gallery/g208.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Personal Information",
+    "path": "个人中心/Personal Information.png"
+  },
+  {
+    "id": 209,
+    "src": "../assets/westk/gallery/g209.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Points Details",
+    "path": "个人中心/Points Details.png"
+  },
+  {
+    "id": 210,
+    "src": "../assets/westk/gallery/g210.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Account Settings-1",
+    "path": "个人中心/profile.Account Settings-1.png"
+  },
+  {
+    "id": 211,
+    "src": "../assets/westk/gallery/g211.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Account Settings-2",
+    "path": "个人中心/profile.Account Settings-2.png"
+  },
+  {
+    "id": 212,
+    "src": "../assets/westk/gallery/g212.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Account Settings",
+    "path": "个人中心/profile.Account Settings.png"
+  },
+  {
+    "id": 213,
+    "src": "../assets/westk/gallery/g213.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Delete Account.Account Deletion",
+    "path": "个人中心/profile.Delete Account.Account Deletion.png"
+  },
+  {
+    "id": 214,
+    "src": "../assets/westk/gallery/g214.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Delete Account.Phone Verification-1",
+    "path": "个人中心/profile.Delete Account.Phone Verification-1.png"
+  },
+  {
+    "id": 215,
+    "src": "../assets/westk/gallery/g215.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Delete Account.Phone Verification-2",
+    "path": "个人中心/profile.Delete Account.Phone Verification-2.png"
+  },
+  {
+    "id": 216,
+    "src": "../assets/westk/gallery/g216.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Delete Account.Phone Verification",
+    "path": "个人中心/profile.Delete Account.Phone Verification.png"
+  },
+  {
+    "id": 217,
+    "src": "../assets/westk/gallery/g217.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.My Coupons.expand",
+    "path": "个人中心/profile.My Coupons.expand.png"
+  },
+  {
+    "id": 218,
+    "src": "../assets/westk/gallery/g218.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.My Coupons.Unused.Expiring Soon",
+    "path": "个人中心/profile.My Coupons.Unused.Expiring Soon.png"
+  },
+  {
+    "id": 219,
+    "src": "../assets/westk/gallery/g219.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.My Coupons.Unused",
+    "path": "个人中心/profile.My Coupons.Unused.png"
+  },
+  {
+    "id": 220,
+    "src": "../assets/westk/gallery/g220.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.My Coupons.Upcoming",
+    "path": "个人中心/profile.My Coupons.Upcoming.png"
+  },
+  {
+    "id": 221,
+    "src": "../assets/westk/gallery/g221.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.My Coupons.Used",
+    "path": "个人中心/profile.My Coupons.Used.png"
+  },
+  {
+    "id": 222,
+    "src": "../assets/westk/gallery/g222.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Personal Information-1",
+    "path": "个人中心/profile.Personal Information-1.png"
+  },
+  {
+    "id": 223,
+    "src": "../assets/westk/gallery/g223.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile.Personal Information",
+    "path": "个人中心/profile.Personal Information.png"
+  },
+  {
+    "id": 224,
+    "src": "../assets/westk/gallery/g224.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "profile",
+    "path": "个人中心/profile.png"
+  },
+  {
+    "id": 225,
+    "src": "../assets/westk/gallery/g225.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Get Point-1",
+    "path": "个人中心/profile.Points Details/Get Point-1.png"
+  },
+  {
+    "id": 226,
+    "src": "../assets/westk/gallery/g226.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "Get Point",
+    "path": "个人中心/profile.Points Details/Get Point.png"
+  },
+  {
+    "id": 227,
+    "src": "../assets/westk/gallery/g227.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "My Order-1",
+    "path": "个人中心/profile/My Order-1.png"
+  },
+  {
+    "id": 228,
+    "src": "../assets/westk/gallery/g228.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "My Order",
+    "path": "个人中心/profile/My Order.png"
+  },
+  {
+    "id": 229,
+    "src": "../assets/westk/gallery/g229.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "邮件退订",
+    "path": "个人中心/邮件退订.png"
+  },
+  {
+    "id": 230,
+    "src": "../assets/westk/gallery/g230.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "一单一证实名-1",
+    "path": "主要页面及购票流程/实名/一单一证实名-1.png"
+  },
+  {
+    "id": 231,
+    "src": "../assets/westk/gallery/g231.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "一单一证实名",
+    "path": "主要页面及购票流程/实名/一单一证实名.png"
+  },
+  {
+    "id": 232,
+    "src": "../assets/westk/gallery/g232.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "仅实名",
+    "path": "主要页面及购票流程/实名/仅实名.png"
+  },
+  {
+    "id": 233,
+    "src": "../assets/westk/gallery/g233.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "仅表单",
+    "path": "主要页面及购票流程/实名/仅表单.png"
+  },
+  {
+    "id": 234,
+    "src": "../assets/westk/gallery/g234.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "填写完成-1",
+    "path": "主要页面及购票流程/实名/填写完成-1.png"
+  },
+  {
+    "id": 235,
+    "src": "../assets/westk/gallery/g235.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "填写完成",
+    "path": "主要页面及购票流程/实名/填写完成.png"
+  },
+  {
+    "id": 236,
+    "src": "../assets/westk/gallery/g236.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "多选实名信息",
+    "path": "主要页面及购票流程/实名/多选实名信息.png"
+  },
+  {
+    "id": 237,
+    "src": "../assets/westk/gallery/g237.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "实名+表单均需要填写",
+    "path": "主要页面及购票流程/实名/实名+表单均需要填写.png"
+  },
+  {
+    "id": 238,
+    "src": "../assets/westk/gallery/g238.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "已登录 - 单选实名",
+    "path": "主要页面及购票流程/实名/已登录 - 单选实名.png"
+  },
+  {
+    "id": 239,
+    "src": "../assets/westk/gallery/g239.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "未登录 - 手动填写",
+    "path": "主要页面及购票流程/实名/未登录 - 手动填写.png"
+  },
+  {
+    "id": 240,
+    "src": "../assets/westk/gallery/g240.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "未登录 - 直接手动填写",
+    "path": "主要页面及购票流程/实名/未登录 - 直接手动填写.png"
+  },
+  {
+    "id": 241,
+    "src": "../assets/westk/gallery/g241.webp",
+    "category": "account",
+    "categoryLabel": "账户与实名",
+    "title": "站票实名",
+    "path": "主要页面及购票流程/实名/站票实名.png"
+  },
+  {
+    "id": 242,
+    "src": "../assets/westk/gallery/g242.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "Option1.homepage",
+    "path": "主要页面及购票流程/Option1.homepage.png"
+  },
+  {
+    "id": 243,
+    "src": "../assets/westk/gallery/g243.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "phone.Homepage-1",
+    "path": "主要页面及购票流程/phone.Homepage-1.png"
+  },
+  {
+    "id": 244,
+    "src": "../assets/westk/gallery/g244.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "phone.Homepage-2",
+    "path": "主要页面及购票流程/phone.Homepage-2.png"
+  },
+  {
+    "id": 245,
+    "src": "../assets/westk/gallery/g245.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "phone.Homepage",
+    "path": "主要页面及购票流程/phone.Homepage.png"
+  },
+  {
+    "id": 246,
+    "src": "../assets/westk/gallery/g246.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "section.info",
+    "path": "主要页面及购票流程/缺省页/section.info.png"
+  },
+  {
+    "id": 247,
+    "src": "../assets/westk/gallery/g247.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "section.products",
+    "path": "主要页面及购票流程/缺省页/section.products.png"
+  },
+  {
+    "id": 248,
+    "src": "../assets/westk/gallery/g248.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "弹窗提醒",
+    "path": "主要页面及购票流程/缺省页/弹窗提醒.png"
+  },
+  {
+    "id": 249,
+    "src": "../assets/westk/gallery/g249.webp",
+    "category": "states",
+    "categoryLabel": "状态与其他",
+    "title": "日历模式 - 已择日期未选票",
+    "path": "主要页面及购票流程/缺省页/日历模式 - 已择日期未选票.png"
+  }
+]

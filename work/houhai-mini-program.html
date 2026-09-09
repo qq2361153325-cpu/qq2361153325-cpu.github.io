@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="看后海城市生活与文化服务小程序设计案例，覆盖生活地图、活动预约、场馆与商圈、商城、社区和个人中心，以编辑式 App Case Study 呈现完整体验。" />
+  <title>看后海小程序 · 杨双军 UI/UX 作品集</title>
+  <link rel="stylesheet" href="houhai-mini-program.css" />
+  <link rel="stylesheet" href="case-screen-system.css" />
+  <link rel="stylesheet" href="houhai-behance-v175.css" />
+</head>
+<body class="theme-houhai case-system">
+  <script>document.body.classList.add('js-enabled')</script>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html#works" aria-label="返回作品集首页">
+      <span>YSJ</span><b>PORTFOLIO</b>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><i></i><i></i></button>
+    <nav class="case-header-nav" aria-label="案例导航">
+      <a href="#overview">项目概览</a>
+      <a href="#evolution">首页迭代</a>
+      <a href="#experience">核心体验</a>
+      <a href="#gallery">核心页面</a>
+      <a class="back-link" href="../index.html#works">全部案例 ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero" id="top">
+      <div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">CITY LIFE · MINI PROGRAM · CASE STUDY</p>
+          <h1>看后海<br/><span>城市生活与文化服务小程序</span></h1>
+          <p class="hero-summary">围绕后海片区的活动、场馆、商圈、地图与生活服务，构建“发现—到达—预约—消费”的一体化城市体验。</p>
+          <div class="hero-tags"><span>Mini Program</span><span>Local Service</span><span>Map Experience</span><span>Booking</span></div>
+        </div>
+        <div class="hero-stage">
+          <button class="case-screen case-device--hero hero-device zoomable" data-src="../assets/houhai/home-final-long.webp" data-caption="看后海首页完整页面" type="button"><img src="../assets/houhai/home-final.webp" alt="看后海最终版首页" /></button>
+          <button class="case-screen case-device--hero hero-device zoomable" data-src="../assets/houhai/map-full.webp" data-caption="看后海生活地图完整页面" type="button"><img src="../assets/houhai/map-first.webp" alt="看后海生活地图" /></button>
+          <div class="hero-stamp"><strong>iHOUHAI</strong><span>Explore the city<br/>from one place</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <div class="shell meta-grid reveal">
+        <div><span>ROLE</span><b>UI/UX Designer</b></div>
+        <div><span>PLATFORM</span><b>WeChat Mini Program</b></div>
+        <div><span>SCOPE</span><b>Information Architecture / UI / Prototype</b></div>
+        <div><span>DELIVERABLE</span><b>Multi-scenario Product Experience</b></div>
+      </div>
+    </section>
+
+    <section class="case-section shell" id="overview">
+      <div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+      <div class="overview-grid">
+        <div class="overview-title reveal"><p class="kicker">PROJECT BACKGROUND</p><h2>把分散的城市内容，<br/>整理为可行动的生活入口。</h2></div>
+        <div class="overview-copy reveal">
+          <p class="lead">后海片区同时存在文化活动、公园驿站、场馆预约、商圈消费和社区交流等多类服务。项目需要在一个轻量的小程序中，让用户既能浏览内容，也能快速完成导航、预约、购票和下单。</p>
+          <p>设计重点不是单独完成某一个页面，而是让地图、内容、服务和交易共享同一套信息结构，并在高频入口与丰富内容之间取得平衡。</p>
+        </div>
+      </div>
+      <div class="challenge-grid reveal">
+        <article><span>01</span><h3>入口过多</h3><p>活动、地图、场馆、商圈、商城和社区均需要被发现，首页容易变成信息堆叠。</p></article>
+        <article><span>02</span><h3>场景跨度大</h3><p>用户可能处于“先浏览”“找地点”“预约服务”或“直接消费”等不同任务状态。</p></article>
+        <article><span>03</span><h3>路径要闭环</h3><p>从内容种草到地图到达、预约确认和订单管理，需要保持连续且可追溯。</p></article>
+      </div>
+    </section>
+
+    <section class="evolution" id="evolution">
+      <div class="shell">
+        <div class="section-label light reveal">02 / HOMEPAGE EVOLUTION</div>
+        <div class="evolution-head reveal">
+          <div><p class="kicker">DESIGN ITERATION</p><h2>首页不是选一张最好看的，<br/>而是逐步收敛主任务。</h2></div>
+          <p>素材中包含多套首页方案。案例中将它们作为设计过程保留：从功能聚合，到内容丰富，再到最终突出“生活地图”和“活动预约”两个核心入口。</p>
+        </div>
+        <div class="version-grid">
+          <article class="version-card reveal">
+            <div class="version-tag">VERSION A · 功能聚合</div>
+            <div class="version-visual">
+              <button class="phone-preview zoomable" data-src="../assets/houhai/home-early.webp" data-caption="首页早期版本：以活动预约、生活地图和便民服务等功能宫格为主" type="button"><img src="../assets/houhai/home-early.webp" alt="看后海首页早期版本"/></button>
+            </div>
+            <div class="version-copy"><h3>先覆盖服务范围</h3><p>入口完整，但功能数量较多，用户需要先理解分类，再决定下一步。</p></div>
+          </article>
+          <article class="version-card reveal">
+            <div class="version-tag">VERSION B · 内容增强</div>
+            <div class="version-visual">
+              <button class="phone-preview zoomable" data-src="../assets/houhai/home-middle.webp" data-caption="首页中期版本：强化活动、场馆和推荐内容" type="button"><img src="../assets/houhai/home-middle.webp" alt="看后海首页中期版本"/></button>
+            </div>
+            <div class="version-copy"><h3>增加城市内容密度</h3><p>活动与商圈曝光更充分，但首屏仍有多个同级模块争夺注意力。</p></div>
+          </article>
+          <article class="version-card final reveal">
+            <div class="version-tag">PLAN C · 最终方向</div>
+            <div class="version-visual">
+              <button class="phone-preview zoomable" data-src="../assets/houhai/home-final.webp" data-caption="首页最终方向：聚焦生活地图和活动预约两项主任务" type="button"><img src="../assets/houhai/home-final.webp" alt="看后海最终版首页"/></button>
+            </div>
+            <div class="version-copy"><h3>聚焦两项主任务</h3><p>用“生活地图 + 活动预约”建立明确首屏路径，热门推荐承担内容种草。</p></div>
+          </article>
+        </div>
+        <div class="decision-note reveal"><b>最终选择 Plan C</b><p>它没有删除业务，而是把低频能力放入地图分类、活动频道和个人中心中，让首页先回答“去哪里”和“做什么”。</p></div>
+      </div>
+    </section>
+
+    <section class="journey shell" id="experience">
+      <div class="section-label reveal">03 / EXPERIENCE ARCHITECTURE</div>
+      <div class="journey-head reveal"><h2>以地点和活动为双线，<br/>串联城市生活服务。</h2><p>地图解决“附近有什么、怎么到达”，内容解决“什么值得参加”，预约与商城则完成服务转化。</p></div>
+      <nav class="journey-nav reveal" aria-label="核心体验导航">
+        <a href="#home-map"><b>01</b><span>首页与地图</span><small>Discover</small></a>
+        <a href="#activities"><b>02</b><span>活动发现</span><small>Explore</small></a>
+        <a href="#booking"><b>03</b><span>场馆预约</span><small>Reserve</small></a>
+        <a href="#places"><b>04</b><span>场所服务</span><small>Navigate</small></a>
+        <a href="#commerce"><b>05</b><span>商城与订单</span><small>Purchase</small></a>
+      </nav>
+    </section>
+
+    <section class="feature-section shell" id="home-map" data-section="首页与地图">
+      <div class="feature-copy reveal">
+        <span class="section-number">01</span><p class="kicker">HOME & MAP</p>
+        <h2>首页负责选择方向，<br/>地图负责进入现场。</h2>
+        <p>最终首页使用清晰的双入口降低决策成本；地图页以类别、区域和关键词筛选地点，并支持从地图标记直接进入场馆或活动详情。</p>
+        <div class="insights"><article><b>双主入口</b><p>生活地图与活动预约占据首屏核心位置。</p></article><article><b>分类可视化</b><p>公园、咖啡、文体、服务、商场等采用统一图形编码。</p></article><article><b>地图到内容</b><p>地图标记、地点卡片与详情页保持连续跳转。</p></article></div>
+      </div>
+      <div class="screen-duo reveal">
+        <button class="device zoomable" data-src="../assets/houhai/home-final-long.webp" data-caption="最终首页完整页面：双入口、热门推荐与内容列表" type="button"><img src="../assets/houhai/home-final.webp" alt="看后海最终首页"/></button>
+        <button class="device tall zoomable" data-src="../assets/houhai/map-full.webp" data-caption="生活地图完整页面：分类筛选、地点列表与地图联动" type="button"><img src="../assets/houhai/map-first.webp" alt="看后海生活地图"/></button>
+      </div>
+    </section>
+
+    <section class="feature-section alt" id="activities" data-section="活动发现">
+      <div class="shell feature-grid reverse">
+        <div class="screen-duo reveal">
+          <button class="device zoomable" data-src="../assets/houhai/activity-list.webp" data-caption="活动列表：日期导航、搜索、分类和双列卡片" type="button"><img src="../assets/houhai/activity-list.webp" alt="活动列表"/></button>
+          <button class="device zoomable" data-src="../assets/houhai/activity-detail-info.webp" data-caption="活动详情：活动简介、购票须知和路线内容" type="button"><img src="../assets/houhai/activity-detail.webp" alt="活动详情"/></button>
+        </div>
+        <div class="feature-copy reveal"><span class="section-number">02</span><p class="kicker">ACTIVITY DISCOVERY</p><h2>把日期、地点和类型，<br/>变成可快速比较的活动信息。</h2><p>活动页通过日期滑动、关键词搜索和分类筛选提高浏览效率。详情页集中展示时间、地址、价格、活动介绍与购买须知，并保持底部购买操作持续可见。</p><ul class="feature-list"><li><b>日期优先</b><span>支持按今天、周末或日历快速定位。</span></li><li><b>标签筛选</b><span>免费、亲子、演出、LIVEHOUSE 等场景可直接切换。</span></li><li><b>转化固定</b><span>收藏与立即购买固定在底部，阅读过程中随时行动。</span></li></ul></div>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking" data-section="场馆预约">
+      <div class="shell">
+        <div class="booking-head reveal">
+          <div><span class="section-number">03</span><p class="kicker">VENUE BOOKING</p><h2>把筛选、日期、场次和人数，<br/>拆成稳定的预约步骤。</h2></div>
+          <div class="booking-summary"><p>列表适合快速比较，详情页补充距离、开放时间与场地说明；预约阶段再逐步选择日期、场次和人数，避免一次呈现过多规则。</p><div class="booking-points"><span>场馆筛选</span><span>日期场次</span><span>预约确认</span></div></div>
+        </div>
+        <div class="flow-track reveal"><span>筛选场地</span><i>→</i><span>查看详情</span><i>→</i><span>选择日期</span><i>→</i><span>选择场次</span><i>→</i><span>确认预约</span></div>
+        <div class="phone-flow flow-row-5 venue-flow reveal">
+          <article class="booking-card"><button class="flow-device zoomable" data-src="../assets/houhai/venue-list.webp" data-caption="场地预约列表" type="button"><img src="../assets/houhai/venue-list-viewport.webp" alt="场地预约列表首屏预览"/></button><div class="booking-label"><b>筛选场地</b><span>01</span></div></article>
+          <article class="booking-card"><button class="flow-device zoomable" data-src="../assets/houhai/venue-detail.webp" data-caption="场地详情与预约入口" type="button"><img src="../assets/houhai/venue-detail.webp" alt="场地详情"/></button><div class="booking-label"><b>查看详情</b><span>02</span></div></article>
+          <article class="booking-card"><button class="flow-device zoomable" data-src="../assets/houhai/venue-date.webp" data-caption="选择预约日期" type="button"><img src="../assets/houhai/venue-date.webp" alt="选择日期"/></button><div class="booking-label"><b>选择日期</b><span>03</span></div></article>
+          <article class="booking-card"><button class="flow-device zoomable" data-src="../assets/houhai/venue-session.webp" data-caption="选择预约场次" type="button"><img src="../assets/houhai/venue-session-viewport.webp" alt="选择场次首屏预览"/></button><div class="booking-label"><b>选择场次</b><span>04</span></div></article>
+          <article class="booking-card"><button class="flow-device zoomable" data-src="../assets/houhai/venue-confirm.webp" data-caption="确认预约信息" type="button"><img src="../assets/houhai/venue-confirm.webp" alt="确认预约"/></button><div class="booking-label"><b>确认预约</b><span>05</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section shell stacked-feature" id="places" data-section="场所服务">
+      <div class="chapter-head-wide reveal">
+        <div><span class="section-number">04</span><p class="kicker">LOCAL PLACES</p><h2>用一致的卡片体系，<br/>覆盖商圈、公园驿站与场馆。</h2></div>
+        <div class="chapter-note"><p>不同地点共享距离、地址、开放时间、联系方式和相关活动等信息结构。用户从地图、首页或列表进入后，都能快速判断是否值得前往。</p><div class="place-types"><span>商圈</span><span>公园驿站</span><span>场馆</span><span>咖啡</span><span>文体</span><span>服务</span></div></div>
+      </div>
+      <div class="place-collage reveal">
+        <button class="device zoomable" data-src="../assets/houhai/district-list.webp" data-caption="后海商圈列表完整页面" type="button"><img src="../assets/houhai/district-list-viewport.webp" alt="商圈列表单屏预览"/></button>
+        <button class="device zoomable" data-src="../assets/houhai/district-detail.webp" data-caption="商圈详情" type="button"><img src="../assets/houhai/district-detail.webp" alt="商圈详情"/></button>
+        <button class="device zoomable" data-src="../assets/houhai/station-list.webp" data-caption="公园驿站列表完整页面" type="button"><img src="../assets/houhai/station-list-viewport.webp" alt="公园驿站列表单屏预览"/></button>
+        <button class="device zoomable" data-src="../assets/houhai/station-detail.webp" data-caption="公园驿站详情" type="button"><img src="../assets/houhai/station-detail.webp" alt="公园驿站详情"/></button>
+      </div>
+    </section>
+
+    <section class="feature-section alt stacked-feature" id="commerce" data-section="商城与订单">
+      <div class="shell">
+        <div class="chapter-head-wide reveal">
+          <div><span class="section-number">05</span><p class="kicker">SHOP & ORDERS</p><h2>让本地文化内容，<br/>延伸到商品和订单服务。</h2></div>
+          <div class="chapter-note"><p>商城延续小程序的圆角卡片和蓝色操作体系，支持规格选择、快递或上门自提、订单确认、支付与完成状态，形成从商品浏览到交易完成的独立闭环。</p><ul class="feature-list"><li><b>商品发现</b><span>用分类、推荐与内容化卡片缩短浏览路径。</span></li><li><b>购买决策</b><span>规格、价格、配送方式和服务说明集中呈现。</span></li><li><b>订单反馈</b><span>确认、支付与完成状态保持连续且可追踪。</span></li></ul></div>
+        </div>
+        <div class="commerce-collage reveal">
+          <button class="device zoomable" data-src="../assets/houhai/shop-list.webp" data-caption="文创商城列表" type="button"><img src="../assets/houhai/shop-list.webp" alt="文创商城列表"/></button>
+          <button class="device zoomable" data-src="../assets/houhai/shop-detail.webp" data-caption="商品详情与购买说明" type="button"><img src="../assets/houhai/shop-detail.webp" alt="商品详情"/></button>
+          <button class="device zoomable" data-src="../assets/houhai/shop-checkout.webp" data-caption="快递配送确认订单" type="button"><img src="../assets/houhai/shop-checkout-viewport.webp" alt="商城确认订单首屏预览"/></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles shell">
+      <div class="section-label reveal">04 / DESIGN PRINCIPLES</div>
+      <div class="principles-head reveal"><h2>用轻量视觉承载复杂城市服务。</h2><p>设计语言保持明亮、亲和与易识别，确保地图、内容与交易页面在同一产品中仍然具有统一感。</p></div>
+      <div class="principle-grid">
+        <article class="reveal"><span>01</span><h3>任务优先</h3><p>首页突出高频入口，低频能力进入频道和个人中心。</p></article>
+        <article class="reveal"><span>02</span><h3>地点可行动</h3><p>地图标记不仅展示位置，还能直接进入地点与活动服务。</p></article>
+        <article class="reveal"><span>03</span><h3>模块复用</h3><p>活动、场馆、商圈和商品共享稳定的卡片与详情结构。</p></article>
+        <article class="reveal"><span>04</span><h3>状态明确</h3><p>筛选、日期、场次、订单和预约结果都有清晰反馈。</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-label light reveal">05 / SELECTED CORE SCREENS</div>
+        <div class="gallery-head reveal"><div><p class="kicker">CORE PAGE COLLECTION</p><h2>精选 30 个核心页面，<br/>展示完整产品覆盖度。</h2></div><p>首页不同版本保留为设计迭代，其余页面按地图、活动、预约、场所、商城和账户分类。点击任意页面可查看完整设计稿。</p></div>
+        <div class="gallery-filters reveal" role="group" aria-label="核心页面筛选">
+          <button class="active" data-gallery-filter="all" type="button">全部 <span>30</span></button>
+          <button data-gallery-filter="home" type="button">首页迭代 <span>4</span></button>
+          <button data-gallery-filter="map" type="button">地图与场所 <span>8</span></button>
+          <button data-gallery-filter="activity" type="button">活动 <span>4</span></button>
+          <button data-gallery-filter="booking" type="button">预约 <span>7</span></button>
+          <button data-gallery-filter="shop" type="button">商城与订单 <span>5</span></button>
+          <button data-gallery-filter="account" type="button">账户与社区 <span>2</span></button>
+        </div>
+        <div class="gallery-grid" data-gallery-grid>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/houhai/home-early.webp" data-caption="首页早期版本：功能聚合：活动预约、生活地图与便民服务" type="button">
+            <span class="gallery-index">01</span>
+            <span class="gallery-image"><img src="../assets/houhai/home-early.webp" alt="首页早期版本"/></span>
+            <span class="gallery-meta"><b>首页早期版本</b><small>功能聚合：活动预约、生活地图与便民服务</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/houhai/home-middle.webp" data-caption="首页中期版本：内容增强：活动、商圈与推荐内容" type="button">
+            <span class="gallery-index">02</span>
+            <span class="gallery-image"><img src="../assets/houhai/home-middle.webp" alt="首页中期版本"/></span>
+            <span class="gallery-meta"><b>首页中期版本</b><small>内容增强：活动、商圈与推荐内容</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/houhai/home-final.webp" data-caption="首页最终版本：双入口聚焦：生活地图与活动预约" type="button">
+            <span class="gallery-index">03</span>
+            <span class="gallery-image"><img src="../assets/houhai/home-final.webp" alt="首页最终版本"/></span>
+            <span class="gallery-meta"><b>首页最终版本</b><small>双入口聚焦：生活地图与活动预约</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/houhai/home-final-long.webp" data-caption="首页完整长页：最终首页完整内容" type="button">
+            <span class="gallery-index">04</span>
+            <span class="gallery-image"><img src="../assets/houhai/home-final-long.webp" alt="首页完整长页"/></span>
+            <span class="gallery-meta"><b>首页完整长页</b><small>最终首页完整内容</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/map-first.webp" data-caption="生活地图首屏：地图分类与附近地点入口" type="button">
+            <span class="gallery-index">05</span>
+            <span class="gallery-image"><img src="../assets/houhai/map-first.webp" alt="生活地图首屏"/></span>
+            <span class="gallery-meta"><b>生活地图首屏</b><small>地图分类与附近地点入口</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/map-full.webp" data-caption="生活地图列表：地图、筛选与地点卡片联动" type="button">
+            <span class="gallery-index">06</span>
+            <span class="gallery-image"><img src="../assets/houhai/map-full.webp" alt="生活地图列表"/></span>
+            <span class="gallery-meta"><b>生活地图列表</b><small>地图、筛选与地点卡片联动</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/map-selected.webp" data-caption="地图选中定位：地图标记与地点摘要卡片" type="button">
+            <span class="gallery-index">07</span>
+            <span class="gallery-image"><img src="../assets/houhai/map-selected.webp" alt="地图选中定位"/></span>
+            <span class="gallery-meta"><b>地图选中定位</b><small>地图标记与地点摘要卡片</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/location-detail.webp" data-caption="地点详情：地点介绍、开放时间与相关活动" type="button">
+            <span class="gallery-index">08</span>
+            <span class="gallery-image"><img src="../assets/houhai/location-detail.webp" alt="地点详情"/></span>
+            <span class="gallery-meta"><b>地点详情</b><small>地点介绍、开放时间与相关活动</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/district-list.webp" data-caption="商圈列表：后海商圈与距离信息" type="button">
+            <span class="gallery-index">09</span>
+            <span class="gallery-image"><img src="../assets/houhai/district-list.webp" alt="商圈列表"/></span>
+            <span class="gallery-meta"><b>商圈列表</b><small>后海商圈与距离信息</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/district-detail.webp" data-caption="商圈详情：图集、地址与开放时间" type="button">
+            <span class="gallery-index">10</span>
+            <span class="gallery-image"><img src="../assets/houhai/district-detail.webp" alt="商圈详情"/></span>
+            <span class="gallery-meta"><b>商圈详情</b><small>图集、地址与开放时间</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/station-list.webp" data-caption="公园驿站：公园服务点列表" type="button">
+            <span class="gallery-index">11</span>
+            <span class="gallery-image"><img src="../assets/houhai/station-list.webp" alt="公园驿站"/></span>
+            <span class="gallery-meta"><b>公园驿站</b><small>公园服务点列表</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/houhai/station-detail.webp" data-caption="驿站详情：地点介绍与服务信息" type="button">
+            <span class="gallery-index">12</span>
+            <span class="gallery-image"><img src="../assets/houhai/station-detail.webp" alt="驿站详情"/></span>
+            <span class="gallery-meta"><b>驿站详情</b><small>地点介绍与服务信息</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="activity" data-src="../assets/houhai/activity-list.webp" data-caption="活动列表：日期导航与双列活动卡片" type="button">
+            <span class="gallery-index">13</span>
+            <span class="gallery-image"><img src="../assets/houhai/activity-list.webp" alt="活动列表"/></span>
+            <span class="gallery-meta"><b>活动列表</b><small>日期导航与双列活动卡片</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="activity" data-src="../assets/houhai/activity-list-alt.webp" data-caption="活动筛选状态：搜索、日期与分类切换" type="button">
+            <span class="gallery-index">14</span>
+            <span class="gallery-image"><img src="../assets/houhai/activity-list-alt.webp" alt="活动筛选状态"/></span>
+            <span class="gallery-meta"><b>活动筛选状态</b><small>搜索、日期与分类切换</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="activity" data-src="../assets/houhai/activity-detail.webp" data-caption="活动详情：价格、地点、内容与购买入口" type="button">
+            <span class="gallery-index">15</span>
+            <span class="gallery-image"><img src="../assets/houhai/activity-detail.webp" alt="活动详情"/></span>
+            <span class="gallery-meta"><b>活动详情</b><small>价格、地点、内容与购买入口</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="activity" data-src="../assets/houhai/activity-detail-info.webp" data-caption="活动购票须知：活动介绍与路线内容" type="button">
+            <span class="gallery-index">16</span>
+            <span class="gallery-image"><img src="../assets/houhai/activity-detail-info.webp" alt="活动购票须知"/></span>
+            <span class="gallery-meta"><b>活动购票须知</b><small>活动介绍与路线内容</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/reservation-list.webp" data-caption="预约列表：按分类、场馆和时间筛选" type="button">
+            <span class="gallery-index">17</span>
+            <span class="gallery-image"><img src="../assets/houhai/reservation-list.webp" alt="预约列表"/></span>
+            <span class="gallery-meta"><b>预约列表</b><small>按分类、场馆和时间筛选</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/reservation-filter.webp" data-caption="预约分类筛选：快捷条件弹层" type="button">
+            <span class="gallery-index">18</span>
+            <span class="gallery-image"><img src="../assets/houhai/reservation-filter.webp" alt="预约分类筛选"/></span>
+            <span class="gallery-meta"><b>预约分类筛选</b><small>快捷条件弹层</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/venue-list.webp" data-caption="场地预约：场地列表与距离信息" type="button">
+            <span class="gallery-index">19</span>
+            <span class="gallery-image"><img src="../assets/houhai/venue-list.webp" alt="场地预约"/></span>
+            <span class="gallery-meta"><b>场地预约</b><small>场地列表与距离信息</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/venue-detail.webp" data-caption="场地详情：开放时间、介绍与预约入口" type="button">
+            <span class="gallery-index">20</span>
+            <span class="gallery-image"><img src="../assets/houhai/venue-detail.webp" alt="场地详情"/></span>
+            <span class="gallery-meta"><b>场地详情</b><small>开放时间、介绍与预约入口</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/venue-date.webp" data-caption="选择日期：月份与可预约日期" type="button">
+            <span class="gallery-index">21</span>
+            <span class="gallery-image"><img src="../assets/houhai/venue-date.webp" alt="选择日期"/></span>
+            <span class="gallery-meta"><b>选择日期</b><small>月份与可预约日期</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/venue-session.webp" data-caption="选择场次：日期与时间段联动" type="button">
+            <span class="gallery-index">22</span>
+            <span class="gallery-image"><img src="../assets/houhai/venue-session.webp" alt="选择场次"/></span>
+            <span class="gallery-meta"><b>选择场次</b><small>日期与时间段联动</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/houhai/venue-confirm.webp" data-caption="确认预约：预约日期、场次与人数" type="button">
+            <span class="gallery-index">23</span>
+            <span class="gallery-image"><img src="../assets/houhai/venue-confirm.webp" alt="确认预约"/></span>
+            <span class="gallery-meta"><b>确认预约</b><small>预约日期、场次与人数</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="shop" data-src="../assets/houhai/shop-list.webp" data-caption="商城列表：文创商品分类浏览" type="button">
+            <span class="gallery-index">24</span>
+            <span class="gallery-image"><img src="../assets/houhai/shop-list.webp" alt="商城列表"/></span>
+            <span class="gallery-meta"><b>商城列表</b><small>文创商品分类浏览</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="shop" data-src="../assets/houhai/shop-detail.webp" data-caption="商品详情：图片、价格与商品说明" type="button">
+            <span class="gallery-index">25</span>
+            <span class="gallery-image"><img src="../assets/houhai/shop-detail.webp" alt="商品详情"/></span>
+            <span class="gallery-meta"><b>商品详情</b><small>图片、价格与商品说明</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="shop" data-src="../assets/houhai/shop-spec.webp" data-caption="选择规格：颜色、规格和数量选择" type="button">
+            <span class="gallery-index">26</span>
+            <span class="gallery-image"><img src="../assets/houhai/shop-spec.webp" alt="选择规格"/></span>
+            <span class="gallery-meta"><b>选择规格</b><small>颜色、规格和数量选择</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="shop" data-src="../assets/houhai/shop-checkout.webp" data-caption="确认订单：配送、价格与支付信息" type="button">
+            <span class="gallery-index">27</span>
+            <span class="gallery-image"><img src="../assets/houhai/shop-checkout.webp" alt="确认订单"/></span>
+            <span class="gallery-meta"><b>确认订单</b><small>配送、价格与支付信息</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="shop" data-src="../assets/houhai/shop-complete.webp" data-caption="订单完成：物流订单完成状态" type="button">
+            <span class="gallery-index">28</span>
+            <span class="gallery-image"><img src="../assets/houhai/shop-complete.webp" alt="订单完成"/></span>
+            <span class="gallery-meta"><b>订单完成</b><small>物流订单完成状态</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/houhai/profile.webp" data-caption="个人中心：后海豆、订单、优惠券与收藏" type="button">
+            <span class="gallery-index">29</span>
+            <span class="gallery-image"><img src="../assets/houhai/profile.webp" alt="个人中心"/></span>
+            <span class="gallery-meta"><b>个人中心</b><small>后海豆、订单、优惠券与收藏</small></span>
+          </button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/houhai/community.webp" data-caption="社区详情：社区介绍与参与方式" type="button">
+            <span class="gallery-index">30</span>
+            <span class="gallery-image"><img src="../assets/houhai/community.webp" alt="社区详情"/></span>
+            <span class="gallery-meta"><b>社区详情</b><small>社区介绍与参与方式</small></span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="case-conclusion shell">
+      <div class="section-label reveal">06 / PROJECT SUMMARY</div>
+      <div class="conclusion-grid">
+        <div class="reveal"><p class="kicker">DESIGN SUMMARY</p><h2>从页面集合，<br/>到城市服务体验系统。</h2></div>
+        <div class="reveal"><p class="lead">看后海小程序的核心价值，是将地图、活动、预约、场所和交易从分散入口整合为连续体验。</p><p>首页多版本的迭代也反映了设计重点的变化：不是不断增加内容，而是识别真正的高频任务，再让其他服务围绕主路径自然展开。</p><div class="summary-pills"><span>30 Core Screens</span><span>5 Service Scenarios</span><span>Map + Content</span><span>Responsive Interaction</span></div></div>
+      </div>
+      <div class="next-project reveal">
+        <a href="westk-ticketing.html"><span>PREVIOUS CASE</span><b>香港西九文化区购票官网</b><i>←</i></a>
+        <a href="../index.html#works"><span>BACK TO</span><b>全部设计案例</b><i>↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="case-footer"><div class="shell"><span>© 2026 YANG SHUANGJUN</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+
+  <dialog class="lightbox">
+    <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张">←</button>
+    <figure><img src="../assets/houhai/home-final-long.webp" alt="完整设计稿"/><figcaption></figcaption></figure>
+    <button class="lightbox-nav next" type="button" aria-label="下一张">→</button>
+  </dialog>
+
+  <script src="houhai-mini-program.js"></script>
+</body>
+</html>

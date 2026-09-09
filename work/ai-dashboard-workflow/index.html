@@ -1,0 +1,3510 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#03080d">
+<title>西岸综合运营驾驶舱</title>
+<style>
+:root {
+--color-bg-canvas: #03080d;
+--color-bg-surface: rgba(5, 19, 29, 0.9);
+--color-bg-subtle: rgba(11, 39, 51, 0.68);
+--color-text-primary: #eefcff;
+--color-text-secondary: #9fb9c2;
+--color-text-muted: #66838d;
+--color-border-default: rgba(100, 209, 227, 0.22);
+--color-border-strong: rgba(87, 230, 250, 0.62);
+--color-action-primary: #32e5f3;
+--color-action-hover: #87f6ff;
+--color-accent: #d6aa5d;
+--color-accent-soft: rgba(214, 170, 93, 0.18);
+--color-blue: #4d8dff;
+--color-violet: #a477ff;
+--color-coral: #ff7468;
+--color-emerald: #53e0a4;
+--color-success: #5ee0a5;
+--color-warning: #f0b84d;
+--color-danger: #f06f6a;
+--radius-4: 4px;
+--space-4: 4px;
+--space-8: 8px;
+--space-12: 12px;
+--space-16: 16px;
+--space-20: 20px;
+--space-24: 24px;
+--motion-fast: 160ms ease;
+--motion-standard: 280ms ease;
+--shadow-depth: 0 18px 42px rgba(0, 0, 0, 0.38);
+}
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+body {
+margin: 0;
+overflow: hidden;
+color: var(--color-text-primary);
+background:
+radial-gradient(circle at 50% 8%, rgba(34, 150, 177, 0.2), transparent 29%),
+radial-gradient(circle at 18% 72%, rgba(77, 141, 255, 0.1), transparent 30%),
+radial-gradient(circle at 82% 68%, rgba(214, 170, 93, 0.08), transparent 26%),
+var(--color-bg-canvas);
+font-family: "DIN Alternate", "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+letter-spacing: 0;
+}
+button { font: inherit; letter-spacing: 0; }
+.cockpit {
+position: relative;
+width: min(100vw, 1920px);
+height: 100vh;
+min-height: 0;
+margin: 0 auto;
+overflow: hidden;
+display: grid;
+grid-template-rows: 70px minmax(0, 1fr) 88px;
+background:
+linear-gradient(90deg, rgba(1, 5, 9, 0.98), rgba(2, 10, 16, 0.82) 19%, rgba(2, 10, 16, 0.32) 50%, rgba(2, 10, 16, 0.82) 81%, rgba(1, 5, 9, 0.98)),
+repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 4px),
+#03080d;
+}
+.cockpit::before,
+.cockpit::after {
+content: "";
+position: absolute;
+inset: 0;
+pointer-events: none;
+z-index: 9;
+}
+.cockpit::before {
+background:
+linear-gradient(90deg, var(--color-action-primary), transparent 14%) top left / 30% 1px no-repeat,
+linear-gradient(-90deg, var(--color-action-primary), transparent 14%) top right / 30% 1px no-repeat,
+linear-gradient(90deg, rgba(214, 170, 93, 0.7), transparent 18%) bottom left / 24% 1px no-repeat,
+linear-gradient(-90deg, rgba(214, 170, 93, 0.7), transparent 18%) bottom right / 24% 1px no-repeat;
+opacity: 0.7;
+}
+.cockpit::after {
+box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.84);
+}
+.topbar {
+position: relative;
+z-index: 20;
+display: grid;
+grid-template-columns: 290px minmax(500px, 1fr) 290px;
+align-items: center;
+padding: 0 var(--space-20);
+border-bottom: 1px solid var(--color-border-default);
+background:
+linear-gradient(90deg, rgba(77, 141, 255, 0.07), transparent 26%, transparent 74%, rgba(214, 170, 93, 0.06)),
+linear-gradient(180deg, rgba(5, 22, 33, 1), rgba(3, 13, 21, 0.86));
+box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
+}
+.topbar::after {
+content: "";
+position: absolute;
+left: 27%;
+right: 27%;
+bottom: -1px;
+height: 2px;
+background: linear-gradient(90deg, transparent, var(--color-action-primary), var(--color-accent), var(--color-action-primary), transparent);
+box-shadow: 0 0 18px rgba(50, 229, 243, 0.55);
+}
+.brand {
+display: flex;
+align-items: center;
+gap: var(--space-12);
+min-width: 0;
+}
+.brand-mark {
+position: relative;
+width: 38px;
+height: 38px;
+flex: 0 0 38px;
+border: 1px solid rgba(214, 170, 93, 0.72);
+color: var(--color-accent);
+display: grid;
+place-items: center;
+font-size: 19px;
+font-weight: 700;
+box-shadow: inset 0 0 14px rgba(214, 170, 93, 0.12);
+}
+.brand-mark::before,
+.brand-mark::after {
+content: "";
+position: absolute;
+width: 8px;
+height: 8px;
+border-color: var(--color-action-primary);
+}
+.brand-mark::before { left: -4px; top: -4px; border-left: 1px solid; border-top: 1px solid; }
+.brand-mark::after { right: -4px; bottom: -4px; border-right: 1px solid; border-bottom: 1px solid; }
+.brand-copy { min-width: 0; }
+.brand-copy strong { display: block; font-size: 15px; font-weight: 600; white-space: nowrap; }
+.brand-copy span { display: block; margin-top: 3px; color: var(--color-text-muted); font-size: 10px; white-space: nowrap; }
+.heading {
+min-width: 0;
+text-align: center;
+}
+.heading h1 {
+margin: 0;
+font-size: 25px;
+font-weight: 600;
+text-shadow: 0 0 24px rgba(50, 229, 243, 0.48), 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+.heading p {
+margin: 4px 0 0;
+color: var(--color-text-muted);
+font-size: 10px;
+text-transform: uppercase;
+}
+.system-state {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: var(--space-12);
+color: var(--color-text-secondary);
+font-size: 11px;
+white-space: nowrap;
+}
+.live-dot {
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: var(--color-success);
+box-shadow: 0 0 12px var(--color-success);
+animation: live 1.8s ease-in-out infinite;
+}
+.workspace {
+position: relative;
+z-index: 10;
+min-height: 0;
+overflow: hidden;
+display: grid;
+grid-template-columns: 286px minmax(0, 1fr) 286px;
+gap: var(--space-12);
+padding: var(--space-12);
+}
+.side-column {
+min-height: 0;
+overflow: hidden;
+display: grid;
+gap: var(--space-12);
+}
+.side-column.left { grid-template-rows: 1.05fr 0.95fr 1fr; }
+.side-column.right { grid-template-rows: 1.1fr 0.9fr 1fr; }
+.panel {
+--panel-accent: var(--color-action-primary);
+position: relative;
+min-height: 0;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+border: 1px solid var(--color-border-default);
+border-radius: var(--radius-4);
+background:
+linear-gradient(135deg, color-mix(in srgb, var(--panel-accent) 10%, transparent), transparent 42%),
+linear-gradient(180deg, rgba(7, 25, 35, 0.96), rgba(3, 13, 21, 0.9));
+box-shadow: var(--shadow-depth), inset 0 0 28px color-mix(in srgb, var(--panel-accent) 6%, transparent);
+padding: var(--space-12);
+}
+.panel-scroll {
+min-height: 0;
+flex: 1 1 auto;
+overflow-x: hidden;
+overflow-y: auto;
+padding: 1px 4px 3px 1px;
+overscroll-behavior: contain;
+scrollbar-width: thin;
+scrollbar-color: color-mix(in srgb, var(--panel-accent) 58%, transparent) rgba(70, 112, 122, 0.12);
+}
+.panel-scroll::-webkit-scrollbar { width: 4px; }
+.panel-scroll::-webkit-scrollbar-track { background: rgba(70, 112, 122, 0.1); }
+.panel-scroll::-webkit-scrollbar-thumb {
+border-radius: 2px;
+background: color-mix(in srgb, var(--panel-accent) 58%, transparent);
+box-shadow: 0 0 7px color-mix(in srgb, var(--panel-accent) 28%, transparent);
+}
+.panel.fits-chart-content .panel-title {
+margin-bottom: 7px;
+padding-bottom: 6px;
+}
+.panel.fits-chart-content > .ticket-stats,
+.panel.fits-chart-content > .mode-metrics,
+.panel.fits-chart-content > .split-highlight { flex: 0 0 auto; }
+.panel.fits-chart-content > .mode-metrics { margin-bottom: 5px; }
+.panel.fits-chart-content > .split-highlight { margin-bottom: 5px; }
+.panel.fits-chart-content > .mode-chart-wrap {
+height: 72px;
+flex: 0 0 72px;
+}
+.panel.fits-chart-content > .mode-chart-wrap.compact {
+height: 62px;
+flex-basis: 62px;
+}
+.panel.fits-chart-content > .mode-legend { flex: 0 0 auto; margin-top: 3px; }
+.panel.fits-chart-content .age-chart {
+height: 64px;
+flex: 0 0 64px;
+margin-top: 8px;
+margin-bottom: 17px;
+}
+.panel::before,
+.panel::after {
+content: "";
+position: absolute;
+width: 28px;
+height: 6px;
+pointer-events: none;
+}
+.panel::before {
+left: -1px;
+top: -1px;
+border-left: 2px solid var(--panel-accent);
+border-top: 2px solid var(--panel-accent);
+filter: drop-shadow(0 0 5px var(--panel-accent));
+}
+.panel::after {
+right: -1px;
+bottom: -1px;
+border-right: 2px solid rgba(214, 170, 93, 0.64);
+border-bottom: 2px solid rgba(214, 170, 93, 0.64);
+}
+.panel-title {
+flex: 0 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+min-height: 24px;
+margin-bottom: var(--space-12);
+padding-bottom: var(--space-8);
+border-bottom: 1px solid var(--color-border-default);
+}
+.panel-title h2 {
+margin: 0;
+font-size: 14px;
+font-weight: 600;
+}
+.panel-title h2::before {
+content: "";
+display: inline-block;
+width: 3px;
+height: 12px;
+margin-right: 7px;
+vertical-align: -1px;
+background: var(--panel-accent);
+box-shadow: 0 0 10px var(--panel-accent);
+}
+.overview-panel { --panel-accent: var(--color-emerald); }
+.footfall-panel { --panel-accent: var(--color-blue); }
+.ticket-panel { --panel-accent: var(--color-coral); }
+.retail-panel { --panel-accent: var(--color-accent); }
+.mobility-panel { --panel-accent: var(--color-action-primary); }
+.hotel-alert-panel { --panel-accent: var(--color-violet); }
+.panel-title small {
+color: var(--color-text-muted);
+font-size: 9px;
+text-transform: uppercase;
+}
+.overview-body {
+display: grid;
+grid-template-columns: 92px minmax(0, 1fr);
+gap: var(--space-12);
+align-items: center;
+}
+.occupancy-ring,
+.parking-ring {
+position: relative;
+aspect-ratio: 1;
+border-radius: 50%;
+display: grid;
+place-items: center;
+background: conic-gradient(var(--color-emerald) 0 58%, var(--color-blue) 58% 82%, rgba(76, 114, 124, 0.18) 82% 100%);
+box-shadow: 0 0 28px rgba(83, 224, 164, 0.2);
+}
+.occupancy-ring::before,
+.parking-ring::before {
+content: "";
+position: absolute;
+inset: 8px;
+border-radius: 50%;
+background: #07141c;
+border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.ring-copy { position: relative; z-index: 1; text-align: center; }
+.ring-copy strong { display: block; font-size: 20px; color: var(--color-text-primary); }
+.ring-copy span { color: var(--color-text-muted); font-size: 9px; }
+.overview-list { display: grid; gap: var(--space-8); }
+.overview-list div,
+.detail-list div,
+.hotel-row,
+.alert-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: var(--space-8);
+}
+.overview-list div {
+padding-bottom: var(--space-8);
+border-bottom: 1px solid rgba(119, 183, 195, 0.12);
+}
+.overview-list span,
+.detail-list span,
+.hotel-row span,
+.alert-row span { color: var(--color-text-secondary); font-size: 11px; }
+.overview-list strong,
+.detail-list strong,
+.hotel-row strong { color: var(--color-action-primary); font-size: 14px; font-weight: 600; }
+.section-tag {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+margin-top: var(--space-12);
+color: var(--color-success);
+font-size: 10px;
+}
+.section-tag::before { content: ""; width: 16px; height: 1px; background: currentColor; }
+.trend-head,
+.chart-legend {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+gap: var(--space-8);
+}
+.trend-head strong { color: var(--color-action-primary); font-size: 24px; font-weight: 600; }
+.trend-head span { color: var(--color-success); font-size: 10px; }
+.canvas-wrap { position: relative; height: 96px; margin: var(--space-8) -4px 0; }
+.canvas-wrap canvas { width: 100%; height: 100%; display: block; }
+.chart-legend { color: var(--color-text-muted); font-size: 9px; }
+.chart-legend span::before { content: ""; display: inline-block; width: 12px; height: 2px; margin-right: 5px; vertical-align: middle; background: var(--color-action-primary); }
+.chart-legend span:last-child::before { background: var(--color-accent); }
+.ticket-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); }
+.ticket-stats div { padding: var(--space-8); background: rgba(25, 72, 84, 0.2); border-top: 1px solid var(--metric-color, var(--color-border-default)); }
+.ticket-stats div:nth-child(1) { --metric-color: var(--color-coral); }
+.ticket-stats div:nth-child(2) { --metric-color: var(--color-accent); }
+.ticket-stats div:nth-child(3) { --metric-color: var(--color-emerald); }
+.ticket-stats strong { display: block; color: var(--metric-color); font-size: 17px; font-weight: 600; }
+.ticket-stats span { color: var(--color-text-muted); font-size: 9px; }
+.age-chart {
+height: 78px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+align-items: end;
+gap: var(--space-8);
+margin-top: var(--space-12);
+border-bottom: 1px solid var(--color-border-default);
+}
+.age-chart div { height: var(--height); position: relative; background: linear-gradient(180deg, var(--color-coral), rgba(164, 119, 255, 0.1)); border-top: 1px solid #ffd8d4; box-shadow: 0 -5px 12px rgba(255, 116, 104, 0.12); }
+.age-chart div::after { content: attr(data-label); position: absolute; bottom: -17px; left: 50%; transform: translateX(-50%); color: var(--color-text-muted); font-size: 8px; white-space: nowrap; }
+.main-view {
+min-width: 0;
+min-height: 0;
+overflow: hidden;
+display: grid;
+grid-template-rows: 48px minmax(0, 1fr);
+gap: var(--space-8);
+}
+.modebar {
+position: relative;
+z-index: 8;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+align-items: center;
+border: 1px solid var(--color-border-default);
+background: rgba(4, 17, 26, 0.88);
+}
+.mode-button {
+height: 100%;
+border: 0;
+border-right: 1px solid var(--color-border-default);
+color: var(--color-text-secondary);
+background: transparent;
+cursor: pointer;
+font-size: 12px;
+transition: color var(--motion-fast), background var(--motion-fast), box-shadow var(--motion-fast);
+}
+.mode-button:last-child { border-right: 0; }
+.mode-button:hover { color: var(--color-text-primary); background: rgba(50, 229, 243, 0.06); }
+.mode-button:focus-visible { outline: 2px solid var(--color-action-primary); outline-offset: -3px; }
+.mode-button[aria-pressed="true"] { color: var(--color-text-primary); background: linear-gradient(180deg, rgba(50, 229, 243, 0.18), rgba(50, 229, 243, 0.03)); box-shadow: inset 0 -2px 0 var(--color-action-primary); }
+.digital-twin {
+--zone-color: var(--color-accent);
+position: relative;
+width: 100%;
+height: 100%;
+min-height: 0;
+overflow: hidden;
+contain: layout paint size;
+border: 1px solid var(--color-border-default);
+border-radius: var(--radius-4);
+background-image:
+radial-gradient(ellipse at 34% 49%, rgba(50, 229, 243, 0.2), transparent 28%),
+radial-gradient(ellipse at 43% 59%, rgba(214, 170, 93, 0.14), transparent 23%),
+linear-gradient(100deg, rgba(1, 8, 14, 0.92) 0%, rgba(2, 13, 20, 0.36) 29%, rgba(4, 14, 20, 0.08) 57%, rgba(2, 8, 13, 0.62) 100%),
+linear-gradient(180deg, rgba(3, 24, 35, 0.18), rgba(3, 10, 16, 0.46)),
+url("./assets/westbund-central-masterplan.jpg");
+background-size: cover;
+background-position: 60% 50%;
+box-shadow: 0 22px 54px rgba(0, 0, 0, 0.5), inset 0 0 96px rgba(0, 0, 0, 0.62);
+}
+.digital-twin::before {
+content: "";
+position: absolute;
+inset: 0;
+background:
+repeating-linear-gradient(0deg, rgba(152, 239, 248, 0.028) 0 1px, transparent 1px 5px),
+linear-gradient(90deg, rgba(50, 229, 243, 0.14), transparent 23%, transparent 70%, rgba(214, 170, 93, 0.08));
+mix-blend-mode: screen;
+pointer-events: none;
+z-index: 2;
+}
+.digital-twin::after {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+top: -20%;
+height: 22%;
+background: linear-gradient(180deg, transparent, rgba(113, 248, 255, 0.22), rgba(255, 255, 255, 0.42), transparent);
+filter: blur(2px);
+animation: vertical-scan 6.5s linear infinite;
+pointer-events: none;
+z-index: 3;
+}
+.depth-scrim {
+position: absolute;
+z-index: 3;
+left: 0;
+right: 0;
+bottom: 0;
+height: 42%;
+background: linear-gradient(180deg, transparent, rgba(1, 6, 10, 0.3) 48%, rgba(1, 6, 10, 0.72));
+pointer-events: none;
+}
+.core-aura {
+position: absolute;
+z-index: 3;
+left: 8%;
+top: 20%;
+width: 49%;
+height: 54%;
+background:
+radial-gradient(ellipse, color-mix(in srgb, var(--zone-color) 30%, transparent), transparent 58%),
+radial-gradient(ellipse at 48% 58%, rgba(255, 255, 255, 0.17), transparent 22%);
+filter: blur(10px);
+mix-blend-mode: screen;
+pointer-events: none;
+transition: background var(--motion-standard);
+}
+.light-beam {
+position: absolute;
+z-index: 4;
+top: 12%;
+width: 1px;
+height: 55%;
+background: linear-gradient(180deg, transparent, rgba(158, 246, 255, 0.7), transparent);
+box-shadow: 0 0 22px rgba(50, 229, 243, 0.5);
+transform-origin: top;
+pointer-events: none;
+opacity: 0.55;
+animation: beam-pulse 3.6s ease-in-out infinite;
+}
+.light-beam.one { left: 25%; transform: rotate(11deg); }
+.light-beam.two { left: 43%; transform: rotate(-9deg); animation-delay: 1.2s; }
+.zone-orbit {
+position: absolute;
+z-index: 7;
+left: 27%;
+top: 52%;
+width: 126px;
+height: 58px;
+border: 1px solid var(--zone-color);
+border-radius: 50%;
+transform: translate(-50%, -50%) rotate(-10deg);
+box-shadow: 0 0 28px color-mix(in srgb, var(--zone-color) 44%, transparent), inset 0 0 24px color-mix(in srgb, var(--zone-color) 12%, transparent);
+pointer-events: none;
+transition: left var(--motion-standard), top var(--motion-standard), border-color var(--motion-standard), box-shadow var(--motion-standard);
+}
+.zone-orbit::before,
+.zone-orbit::after {
+content: "";
+position: absolute;
+border-radius: 50%;
+border: 1px solid color-mix(in srgb, var(--zone-color) 55%, transparent);
+}
+.zone-orbit::before { inset: 8px 18px; }
+.zone-orbit::after { inset: -9px -16px; opacity: 0.42; animation: orbit-pulse 2.8s ease-out infinite; }
+.stage-frame {
+position: absolute;
+inset: 12px;
+z-index: 4;
+pointer-events: none;
+background:
+linear-gradient(var(--color-action-primary), var(--color-action-primary)) left top / 44px 1px no-repeat,
+linear-gradient(var(--color-action-primary), var(--color-action-primary)) left top / 1px 44px no-repeat,
+linear-gradient(var(--color-action-primary), var(--color-action-primary)) right top / 44px 1px no-repeat,
+linear-gradient(var(--color-action-primary), var(--color-action-primary)) right top / 1px 44px no-repeat,
+linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 44px 1px no-repeat,
+linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 1px 44px no-repeat,
+linear-gradient(var(--color-accent), var(--color-accent)) right bottom / 44px 1px no-repeat,
+linear-gradient(var(--color-accent), var(--color-accent)) right bottom / 1px 44px no-repeat;
+opacity: 0.72;
+}
+.global-kpis {
+position: absolute;
+left: 24px;
+right: 24px;
+top: 18px;
+z-index: 7;
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+border-top: 1px solid rgba(132, 225, 238, 0.24);
+border-bottom: 1px solid rgba(132, 225, 238, 0.18);
+background: linear-gradient(90deg, rgba(4, 18, 27, 0.78), rgba(5, 26, 35, 0.44), rgba(4, 18, 27, 0.72));
+backdrop-filter: blur(7px);
+}
+.global-kpis div {
+--kpi-color: var(--color-action-primary);
+position: relative;
+padding: 9px 12px;
+border-right: 1px solid rgba(132, 225, 238, 0.16);
+overflow: hidden;
+}
+.global-kpis div::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, var(--kpi-color), transparent 72%); }
+.global-kpis div:nth-child(1) { --kpi-color: var(--color-accent); }
+.global-kpis div:nth-child(2) { --kpi-color: var(--color-action-primary); }
+.global-kpis div:nth-child(3) { --kpi-color: var(--color-violet); }
+.global-kpis div:nth-child(4) { --kpi-color: var(--color-emerald); }
+.global-kpis div:nth-child(5) { --kpi-color: var(--color-coral); }
+.global-kpis div:last-child { border-right: 0; }
+.global-kpis span { display: block; color: var(--color-text-muted); font-size: 9px; }
+.global-kpis strong { display: inline-block; margin-top: 2px; color: var(--kpi-color); font-size: 18px; font-weight: 600; text-shadow: 0 0 14px color-mix(in srgb, var(--kpi-color) 34%, transparent); }
+.global-kpis em { margin-left: 6px; color: var(--color-success); font-size: 9px; font-style: normal; }
+.radar {
+position: absolute;
+left: 34%;
+top: 39%;
+width: 280px;
+aspect-ratio: 1;
+z-index: 4;
+border: 1px solid rgba(50, 229, 243, 0.2);
+border-radius: 50%;
+transform: translate(-50%, -50%) rotateX(62deg);
+box-shadow: 0 0 30px rgba(50, 229, 243, 0.12);
+pointer-events: none;
+}
+.radar::before,
+.radar::after {
+content: "";
+position: absolute;
+border-radius: 50%;
+}
+.radar::before { inset: 18%; border: 1px solid rgba(50, 229, 243, 0.22); }
+.radar::after { inset: 37%; border: 1px solid rgba(214, 170, 93, 0.28); box-shadow: 0 0 14px rgba(214, 170, 93, 0.2); }
+.radar-sweep {
+position: absolute;
+inset: 50% 50% 0 0;
+transform-origin: 100% 0;
+background: linear-gradient(90deg, transparent, rgba(75, 243, 255, 0.32));
+clip-path: polygon(100% 0, 0 0, 100% 100%);
+animation: radar 5s linear infinite;
+}
+.trace {
+position: absolute;
+z-index: 5;
+height: 1px;
+transform-origin: left center;
+background: linear-gradient(90deg, rgba(50, 229, 243, 0.08), rgba(50, 229, 243, 0.86), rgba(50, 229, 243, 0.08));
+box-shadow: 0 0 7px rgba(50, 229, 243, 0.54);
+pointer-events: none;
+}
+.trace::after {
+content: "";
+position: absolute;
+right: 0;
+top: -2px;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: #ffffff;
+box-shadow: 0 0 10px var(--color-action-primary);
+animation: data-node 2.6s ease-in-out infinite;
+}
+.trace.one { width: 24%; left: 19%; top: 42%; transform: rotate(-23deg); }
+.trace.two { width: 23%; left: 35%; top: 53%; transform: rotate(16deg); }
+.trace.three { width: 21%; left: 47%; top: 38%; transform: rotate(-17deg); }
+.hotspot {
+--zone-color: var(--color-action-primary);
+position: absolute;
+z-index: 8;
+appearance: none;
+width: 32px;
+height: 32px;
+padding: 0;
+border: 1px solid var(--zone-color);
+border-radius: 50%;
+color: var(--color-text-primary);
+background: rgba(5, 24, 32, 0.86);
+box-shadow: 0 0 0 7px color-mix(in srgb, var(--zone-color) 11%, transparent), 0 0 22px color-mix(in srgb, var(--zone-color) 42%, transparent);
+cursor: pointer;
+transition: transform var(--motion-fast), border-color var(--motion-fast), background var(--motion-fast), box-shadow var(--motion-fast);
+}
+.hotspot::before {
+content: "";
+position: absolute;
+left: 50%;
+bottom: -24px;
+width: 1px;
+height: 22px;
+background: linear-gradient(var(--zone-color), transparent);
+}
+.hotspot::after {
+content: attr(data-short);
+position: absolute;
+left: 50%;
+top: 40px;
+transform: translateX(-50%);
+min-width: max-content;
+padding: 4px 7px;
+border: 1px solid rgba(103, 222, 236, 0.28);
+border-radius: 2px;
+color: var(--color-text-secondary);
+background: rgba(4, 20, 29, 0.84);
+font-size: 10px;
+line-height: 1;
+}
+.hotspot:hover { transform: translateY(-3px) scale(1.08); border-color: #ffffff; box-shadow: 0 0 0 9px color-mix(in srgb, var(--zone-color) 18%, transparent), 0 0 34px var(--zone-color); }
+.hotspot:focus-visible { outline: 2px solid #ffffff; outline-offset: 4px; }
+.hotspot[aria-pressed="true"] { color: #071014; border-color: #ffffff; background: var(--zone-color); box-shadow: 0 0 0 10px color-mix(in srgb, var(--zone-color) 22%, transparent), 0 0 40px var(--zone-color); transform: translateY(-4px) scale(1.12); }
+.hotspot[aria-pressed="true"]::before { background: linear-gradient(var(--zone-color), transparent); }
+.hotspot[aria-pressed="true"]::after { color: #ffffff; border-color: var(--zone-color); background: rgba(5, 18, 25, 0.94); box-shadow: 0 0 18px color-mix(in srgb, var(--zone-color) 28%, transparent); }
+.hotspot.retail { --zone-color: var(--color-accent); left: 27%; top: 52%; }
+.hotspot.office { --zone-color: var(--color-blue); left: 32%; top: 29%; }
+.hotspot.hotel { --zone-color: var(--color-violet); left: 52%; top: 34%; }
+.hotspot.residence { --zone-color: var(--color-emerald); left: 62%; top: 27%; }
+.hotspot.sports { --zone-color: var(--color-coral); left: 56%; top: 64%; }
+.hotspot.parking { --zone-color: var(--color-action-primary); left: 21%; top: 67%; }
+.hotspot.culture { --zone-color: #d879ff; left: 44%; top: 57%; }
+.coordinate {
+position: absolute;
+z-index: 5;
+color: rgba(198, 231, 236, 0.5);
+font-size: 9px;
+pointer-events: none;
+}
+.coordinate.river { right: 4%; top: 52%; transform: rotate(67deg); }
+.coordinate.project { left: 22px; bottom: 18px; }
+.zone-card {
+--zone-color: var(--color-accent);
+position: absolute;
+z-index: 10;
+right: 22px;
+bottom: 24px;
+width: min(31%, 380px);
+border: 1px solid color-mix(in srgb, var(--zone-color) 68%, transparent);
+border-left: 3px solid var(--zone-color);
+border-radius: var(--radius-4);
+background:
+linear-gradient(135deg, color-mix(in srgb, var(--zone-color) 13%, transparent), transparent 46%),
+linear-gradient(135deg, rgba(5, 22, 31, 0.97), rgba(7, 16, 23, 0.94));
+box-shadow: 0 22px 54px rgba(0, 0, 0, 0.5), 0 0 28px color-mix(in srgb, var(--zone-color) 13%, transparent), inset 0 0 32px color-mix(in srgb, var(--zone-color) 6%, transparent);
+backdrop-filter: blur(12px);
+padding: var(--space-16);
+}
+.zone-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-12); }
+.zone-kicker { display: block; color: var(--zone-color); font-size: 9px; text-transform: uppercase; }
+.zone-card h2 { margin: 5px 0 0; font-size: 20px; font-weight: 600; text-shadow: 0 0 18px color-mix(in srgb, var(--zone-color) 26%, transparent); }
+.zone-index { color: color-mix(in srgb, var(--zone-color) 35%, transparent); font-size: 42px; line-height: 1; }
+.zone-card > p { margin: 10px 0 13px; color: var(--color-text-secondary); font-size: 11px; line-height: 1.6; }
+.zone-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); }
+.zone-metrics div { min-width: 0; padding: 9px; border-top: 1px solid color-mix(in srgb, var(--zone-color) 46%, transparent); background: color-mix(in srgb, var(--zone-color) 7%, transparent); }
+.zone-metrics strong { display: block; overflow: hidden; color: var(--zone-color); font-size: 17px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.zone-metrics span { display: block; margin-top: 3px; color: var(--color-text-muted); font-size: 9px; }
+.ranking { display: grid; gap: 9px; }
+.rank-row { display: grid; grid-template-columns: 18px 76px minmax(0, 1fr) 48px; gap: 7px; align-items: center; }
+.rank-row > i { color: var(--color-text-muted); font-size: 9px; font-style: normal; }
+.rank-row > span { color: var(--color-text-secondary); font-size: 10px; white-space: nowrap; }
+.rank-track { height: 5px; background: rgba(99, 133, 140, 0.16); overflow: hidden; }
+.rank-track b { display: block; width: var(--width); height: 100%; background: linear-gradient(90deg, var(--rank-color, var(--color-accent)), color-mix(in srgb, var(--rank-color, var(--color-accent)) 40%, #ffffff)); box-shadow: 0 0 8px color-mix(in srgb, var(--rank-color, var(--color-accent)) 34%, transparent); }
+.rank-row:nth-child(1) { --rank-color: var(--color-accent); }
+.rank-row:nth-child(2) { --rank-color: var(--color-coral); }
+.rank-row:nth-child(3) { --rank-color: var(--color-emerald); }
+.rank-row:nth-child(4) { --rank-color: var(--color-violet); }
+.rank-row:nth-child(5) { --rank-color: var(--color-blue); }
+.rank-row > strong { color: var(--color-text-primary); font-size: 10px; font-weight: 500; text-align: right; }
+.parking-body { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: var(--space-12); align-items: center; }
+.parking-ring { background: conic-gradient(var(--color-accent) 0 28%, var(--color-action-primary) 28% 72%, rgba(76, 114, 124, 0.18) 72% 100%); }
+.transport-bars { display: grid; gap: var(--space-12); }
+.transport-row { display: grid; grid-template-columns: 42px minmax(0, 1fr) 32px; gap: var(--space-8); align-items: center; color: var(--color-text-secondary); font-size: 10px; }
+.transport-row i { height: 5px; background: rgba(99, 133, 140, 0.18); }
+.transport-row i b { display: block; width: var(--width); height: 100%; background: var(--bar-color); }
+.transport-row strong { color: var(--color-text-primary); font-size: 10px; text-align: right; }
+.hotel-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: var(--space-12); }
+.room-block { aspect-ratio: 1; display: grid; place-items: center; border: 1px solid rgba(164, 119, 255, 0.36); color: #cdb8ff; background: rgba(164, 119, 255, 0.09); font-size: 9px; }
+.room-block:nth-child(2), .room-block:nth-child(3), .room-block:nth-child(5) { color: var(--color-emerald); border-color: rgba(83, 224, 164, 0.36); background: rgba(83, 224, 164, 0.08); }
+.room-block.warning { color: var(--color-warning); border-color: rgba(240, 184, 77, 0.36); background: rgba(240, 184, 77, 0.08); }
+.hotel-list { display: grid; gap: var(--space-8); }
+.hotel-row { padding-bottom: 7px; border-bottom: 1px solid rgba(119, 183, 195, 0.11); }
+.mode-metrics {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 6px;
+margin-bottom: 8px;
+}
+.mode-metric {
+min-width: 0;
+padding: 7px 6px;
+border-top: 1px solid var(--metric-color, var(--panel-accent));
+background: color-mix(in srgb, var(--metric-color, var(--panel-accent)) 7%, transparent);
+}
+.mode-metric strong {
+display: block;
+overflow: hidden;
+color: var(--metric-color, var(--panel-accent));
+font-size: 15px;
+font-weight: 600;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.mode-metric span { display: block; margin-top: 3px; color: var(--color-text-muted); font-size: 8px; }
+.mode-chart-wrap { position: relative; height: 86px; margin: 0 -2px; }
+.mode-chart-wrap.compact { height: 70px; }
+.mode-chart-wrap canvas { display: block; width: 100%; height: 100%; }
+canvas[data-chart-interactive="true"] { cursor: crosshair; }
+.mode-legend {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 6px;
+margin-top: 5px;
+color: var(--color-text-muted);
+font-size: 8px;
+}
+.mode-legend span::before {
+content: "";
+display: inline-block;
+width: 10px;
+height: 2px;
+margin-right: 4px;
+vertical-align: middle;
+background: var(--legend-color);
+}
+.ratio-list,
+.duration-list,
+.detail-table { display: grid; gap: 8px; }
+.ratio-row {
+display: grid;
+grid-template-columns: 62px minmax(0, 1fr) 42px;
+align-items: center;
+gap: 7px;
+color: var(--color-text-secondary);
+font-size: 9px;
+}
+.ratio-track { height: 6px; overflow: hidden; background: rgba(102, 131, 139, 0.16); }
+.ratio-track i { display: block; width: var(--width); height: 100%; background: var(--row-color, var(--panel-accent)); box-shadow: 0 0 10px color-mix(in srgb, var(--row-color, var(--panel-accent)) 30%, transparent); }
+.ratio-row strong { color: var(--row-color, var(--color-text-primary)); font-size: 10px; text-align: right; }
+.detail-row {
+display: grid;
+grid-template-columns: minmax(0, 1fr) auto;
+align-items: center;
+gap: 8px;
+padding-bottom: 7px;
+border-bottom: 1px solid rgba(119, 183, 195, 0.1);
+}
+.detail-row span { overflow: hidden; color: var(--color-text-secondary); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.detail-row strong { color: var(--row-color, var(--panel-accent)); font-size: 11px; font-weight: 600; white-space: nowrap; }
+.split-highlight {
+display: grid;
+grid-template-columns: 1.05fr 0.95fr;
+gap: 8px;
+align-items: stretch;
+margin-bottom: 9px;
+}
+.hero-stat {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 8px;
+border-left: 2px solid var(--panel-accent);
+background: color-mix(in srgb, var(--panel-accent) 9%, transparent);
+}
+.hero-stat strong { color: var(--panel-accent); font-size: 23px; font-weight: 600; }
+.hero-stat span { margin-top: 3px; color: var(--color-text-muted); font-size: 8px; }
+.mini-stat-list { display: grid; gap: 5px; }
+.mini-stat-list div { display: flex; justify-content: space-between; gap: 6px; padding-bottom: 4px; border-bottom: 1px solid rgba(119, 183, 195, 0.1); }
+.mini-stat-list span { color: var(--color-text-muted); font-size: 8px; }
+.mini-stat-list strong { color: var(--color-text-primary); font-size: 10px; font-weight: 500; }
+.occupancy-stack {
+display: flex;
+height: 12px;
+margin: 9px 0;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.occupancy-stack span { width: var(--width); background: var(--stack-color); box-shadow: inset -1px 0 rgba(3, 8, 13, 0.45); }
+.mode-note {
+margin-top: 8px;
+padding: 6px 8px;
+border-left: 2px solid var(--note-color, var(--color-warning));
+color: var(--color-text-secondary);
+background: color-mix(in srgb, var(--note-color, var(--color-warning)) 7%, transparent);
+font-size: 8px;
+line-height: 1.45;
+}
+.alerts { display: grid; gap: var(--space-8); }
+.alert-row { position: relative; padding: 7px 0 7px 12px; border-bottom: 1px solid rgba(119, 183, 195, 0.1); }
+.alert-row::before { content: ""; position: absolute; left: 0; top: 12px; width: 5px; height: 5px; background: var(--state-color); box-shadow: 0 0 8px var(--state-color); }
+.alert-row time { color: var(--color-text-muted); font-size: 9px; }
+.alert-row strong { color: var(--state-color); font-size: 9px; font-weight: 500; }
+.data-interactive {
+cursor: default;
+outline: 1px solid transparent;
+outline-offset: 2px;
+transition: filter var(--motion-fast), outline-color var(--motion-fast), transform var(--motion-fast), background var(--motion-fast);
+}
+.data-interactive:hover,
+.data-interactive:focus-visible {
+z-index: 2;
+outline-color: color-mix(in srgb, var(--panel-accent, var(--zone-color, var(--color-action-primary))) 52%, transparent);
+filter: brightness(1.2) saturate(1.08);
+transform: translateY(-2px);
+}
+.rank-row.data-interactive:hover .rank-track b,
+.rank-row.data-interactive:focus-visible .rank-track b,
+.ratio-row.data-interactive:hover .ratio-track i,
+.ratio-row.data-interactive:focus-visible .ratio-track i,
+.transport-row.data-interactive:hover i b,
+.transport-row.data-interactive:focus-visible i b {
+filter: brightness(1.45);
+transform: scaleX(1.025);
+transform-origin: left center;
+}
+.age-chart > .data-interactive:hover,
+.age-chart > .data-interactive:focus-visible {
+box-shadow: 0 -8px 20px rgba(255, 116, 104, 0.32);
+transform: translateY(-3px) scaleX(1.08);
+}
+.occupancy-stack > .data-interactive:hover,
+.occupancy-stack > .data-interactive:focus-visible {
+filter: brightness(1.5);
+transform: scaleY(1.35);
+}
+.chart-tooltip {
+position: fixed;
+z-index: 1200;
+min-width: 142px;
+max-width: 240px;
+padding: 9px 10px;
+border: 1px solid rgba(93, 225, 240, 0.42);
+border-left: 2px solid var(--tooltip-accent, var(--color-action-primary));
+border-radius: 3px;
+color: var(--color-text-primary);
+background: linear-gradient(145deg, rgba(7, 27, 37, 0.98), rgba(3, 12, 18, 0.98));
+box-shadow: 0 12px 32px rgba(0, 0, 0, 0.52), 0 0 22px color-mix(in srgb, var(--tooltip-accent, var(--color-action-primary)) 15%, transparent);
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transform: translateY(4px);
+transition: opacity 100ms ease, transform 100ms ease, visibility 100ms ease;
+backdrop-filter: blur(10px);
+}
+.chart-tooltip.is-visible {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+.chart-tooltip-title {
+display: block;
+margin-bottom: 2px;
+color: var(--color-text-primary);
+font-size: 10px;
+font-weight: 600;
+}
+.chart-tooltip-subtitle {
+display: block;
+margin-bottom: 7px;
+color: var(--color-text-muted);
+font-size: 8px;
+}
+.chart-tooltip-row {
+display: grid;
+grid-template-columns: 6px minmax(0, 1fr) auto;
+align-items: center;
+gap: 6px;
+min-height: 20px;
+border-top: 1px solid rgba(126, 184, 195, 0.1);
+font-size: 9px;
+}
+.chart-tooltip-row i {
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: var(--row-color, var(--color-action-primary));
+box-shadow: 0 0 7px var(--row-color, var(--color-action-primary));
+}
+.chart-tooltip-row span { overflow: hidden; color: var(--color-text-secondary); text-overflow: ellipsis; white-space: nowrap; }
+.chart-tooltip-row strong { color: var(--row-color, var(--color-text-primary)); font-size: 10px; font-weight: 600; white-space: nowrap; }
+.service-dock {
+position: relative;
+z-index: 20;
+display: grid;
+grid-template-columns: 160px repeat(7, minmax(0, 1fr)) 150px;
+align-items: stretch;
+padding: 0 var(--space-12) var(--space-12);
+gap: var(--space-8);
+}
+.dock-label,
+.dock-status {
+display: flex;
+flex-direction: column;
+justify-content: center;
+border-top: 1px solid var(--color-border-default);
+color: var(--color-text-secondary);
+background: rgba(4, 17, 26, 0.82);
+padding: 0 var(--space-12);
+}
+.dock-label strong { color: var(--color-text-primary); font-size: 12px; }
+.dock-label span,
+.dock-status span { margin-top: 4px; color: var(--color-text-muted); font-size: 9px; }
+.dock-status { align-items: flex-end; text-align: right; }
+.dock-status strong { color: var(--color-success); font-size: 12px; }
+.service-button {
+--zone-color: var(--color-action-primary);
+appearance: none;
+min-width: 0;
+border: 0;
+border-top: 1px solid var(--color-border-default);
+border-bottom: 1px solid transparent;
+color: var(--color-text-secondary);
+background: rgba(4, 17, 26, 0.82);
+cursor: pointer;
+text-align: left;
+padding: var(--space-8) var(--space-12);
+transition: color var(--motion-fast), background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+}
+.service-button[data-zone="retail"] { --zone-color: var(--color-accent); }
+.service-button[data-zone="office"] { --zone-color: var(--color-blue); }
+.service-button[data-zone="hotel"] { --zone-color: var(--color-violet); }
+.service-button[data-zone="residence"] { --zone-color: var(--color-emerald); }
+.service-button[data-zone="sports"] { --zone-color: var(--color-coral); }
+.service-button[data-zone="parking"] { --zone-color: var(--color-action-primary); }
+.service-button[data-zone="culture"] { --zone-color: #d879ff; }
+.service-button:hover { color: var(--color-text-primary); background: color-mix(in srgb, var(--zone-color) 9%, rgba(4, 17, 26, 0.82)); }
+.service-button:focus-visible { outline: 2px solid var(--color-action-primary); outline-offset: -3px; }
+.service-button[aria-pressed="true"] { color: #ffffff; border-top-color: var(--zone-color); border-bottom-color: color-mix(in srgb, var(--zone-color) 36%, transparent); background: linear-gradient(180deg, color-mix(in srgb, var(--zone-color) 19%, transparent), rgba(12, 31, 37, 0.92)); box-shadow: 0 -8px 20px color-mix(in srgb, var(--zone-color) 10%, transparent); transform: translateY(-3px); }
+.service-button span { display: block; overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.service-button strong { display: block; margin-top: 5px; overflow: hidden; color: var(--zone-color); font-size: 14px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.service-button[aria-pressed="true"] strong { color: var(--zone-color); text-shadow: 0 0 12px color-mix(in srgb, var(--zone-color) 46%, transparent); }
+
+/* Visual upgrade v2 */
+.topbar {
+isolation: isolate;
+border-bottom-color: rgba(99, 221, 239, 0.34);
+background:
+linear-gradient(90deg, rgba(77, 141, 255, 0.13), transparent 24%, transparent 76%, rgba(214, 170, 93, 0.11)),
+linear-gradient(180deg, rgba(7, 28, 40, 0.99), rgba(2, 12, 20, 0.94));
+box-shadow: 0 16px 38px rgba(0, 0, 0, 0.42), inset 0 -1px rgba(255, 255, 255, 0.025);
+}
+.topbar > * { position: relative; z-index: 2; }
+.topbar::before {
+content: "";
+position: absolute;
+z-index: 0;
+left: 50%;
+top: 0;
+width: min(680px, 48vw);
+height: 70px;
+transform: translateX(-50%);
+clip-path: polygon(7% 0, 93% 0, 100% 58%, 96% 100%, 4% 100%, 0 58%);
+background:
+linear-gradient(90deg, transparent, rgba(50, 229, 243, 0.13) 20%, rgba(214, 170, 93, 0.1) 50%, rgba(50, 229, 243, 0.13) 80%, transparent),
+linear-gradient(180deg, rgba(14, 49, 64, 0.88), rgba(5, 20, 30, 0.94));
+box-shadow: inset 0 -1px rgba(98, 235, 250, 0.34);
+}
+.topbar::after {
+z-index: 1;
+left: 22%;
+right: 22%;
+height: 2px;
+background: linear-gradient(90deg, transparent, var(--color-blue) 18%, var(--color-action-primary) 38%, var(--color-accent) 50%, var(--color-action-primary) 62%, var(--color-blue) 82%, transparent);
+box-shadow: 0 0 22px rgba(50, 229, 243, 0.66);
+}
+.brand-mark {
+width: 42px;
+height: 42px;
+flex-basis: 42px;
+border-color: rgba(103, 231, 246, 0.5);
+border-radius: var(--radius-4);
+color: #f1c878;
+background:
+linear-gradient(135deg, rgba(214, 170, 93, 0.2), transparent 48%),
+linear-gradient(315deg, rgba(50, 229, 243, 0.14), rgba(4, 19, 29, 0.96));
+box-shadow: inset 0 0 18px rgba(50, 229, 243, 0.12), 0 0 20px rgba(50, 229, 243, 0.1);
+}
+.brand-mark::before,
+.brand-mark::after { width: 11px; height: 11px; border-color: var(--color-accent); }
+.brand-copy strong { color: #f5fdff; font-size: 14px; font-weight: 700; }
+.brand-copy span { color: #6f96a3; font-size: 9px; }
+.heading h1 {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: var(--space-12);
+color: #f4fdff;
+font-size: 26px;
+font-weight: 700;
+text-shadow: 0 0 28px rgba(50, 229, 243, 0.58), 0 3px 16px rgba(0, 0, 0, 0.9);
+}
+.heading h1::before,
+.heading h1::after {
+content: "";
+width: 54px;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(--color-action-primary));
+box-shadow: 0 0 8px rgba(50, 229, 243, 0.55);
+}
+.heading h1::after { background: linear-gradient(90deg, var(--color-accent), transparent); }
+.heading p {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+margin-top: 3px;
+color: #b28d52;
+font-size: 9px;
+}
+.heading p::before,
+.heading p::after { content: ""; width: 24px; height: 1px; background: rgba(214, 170, 93, 0.42); }
+.system-state > span:not(.live-dot) {
+padding: 5px 7px;
+border-left: 1px solid rgba(50, 229, 243, 0.34);
+background: linear-gradient(90deg, rgba(50, 229, 243, 0.08), transparent);
+color: #a9c4cc;
+}
+.system-state > span:first-child {
+border-left-color: rgba(214, 170, 93, 0.58);
+background: linear-gradient(90deg, rgba(214, 170, 93, 0.1), transparent);
+color: #d9bd86;
+}
+.live-dot { position: relative; width: 8px; height: 8px; }
+.live-dot::before {
+content: "";
+position: absolute;
+inset: -5px;
+border: 1px solid rgba(94, 224, 165, 0.34);
+border-radius: 50%;
+}
+
+.panel {
+border-color: color-mix(in srgb, var(--panel-accent) 28%, rgba(100, 209, 227, 0.2));
+background:
+linear-gradient(90deg, color-mix(in srgb, var(--panel-accent) 7%, transparent), transparent 24%),
+repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0 1px, transparent 1px 5px),
+linear-gradient(155deg, rgba(9, 31, 42, 0.98), rgba(3, 13, 21, 0.94));
+box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34), inset 0 1px rgba(255, 255, 255, 0.025), inset 3px 0 18px color-mix(in srgb, var(--panel-accent) 4%, transparent);
+}
+.panel::before { width: 42px; height: 9px; border-width: 2px; }
+.panel::after { width: 22px; height: 8px; border-color: color-mix(in srgb, var(--panel-accent) 42%, var(--color-accent)); }
+.panel-title {
+position: relative;
+min-height: 28px;
+border-bottom: 0;
+}
+.panel-title::after {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+height: 1px;
+background: linear-gradient(90deg, var(--panel-accent), color-mix(in srgb, var(--panel-accent) 24%, transparent) 38%, rgba(107, 177, 188, 0.08));
+box-shadow: 0 0 10px color-mix(in srgb, var(--panel-accent) 24%, transparent);
+}
+.panel-title h2 { color: #f1fbfd; font-size: 14px; font-weight: 650; }
+.panel-title h2::before {
+width: 9px;
+height: 12px;
+margin-right: 8px;
+clip-path: polygon(0 0, 42% 0, 100% 100%, 58% 100%);
+background: linear-gradient(180deg, #ffffff, var(--panel-accent));
+box-shadow: 0 0 12px var(--panel-accent);
+}
+.panel-title small {
+padding: 3px 5px;
+border: 1px solid color-mix(in srgb, var(--panel-accent) 23%, transparent);
+border-radius: 2px;
+color: color-mix(in srgb, var(--panel-accent) 63%, #96afb7);
+background: color-mix(in srgb, var(--panel-accent) 6%, transparent);
+font-size: 8px;
+}
+
+.modebar {
+gap: var(--space-4);
+padding: var(--space-4);
+border-color: rgba(99, 215, 232, 0.25);
+background:
+linear-gradient(90deg, rgba(77, 141, 255, 0.07), transparent 32%, transparent 68%, rgba(214, 170, 93, 0.07)),
+rgba(3, 14, 22, 0.92);
+box-shadow: inset 0 1px rgba(255, 255, 255, 0.025), 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+.mode-button {
+--tab-color: var(--color-action-primary);
+position: relative;
+isolation: isolate;
+border: 1px solid rgba(109, 181, 192, 0.16);
+clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+color: #88a9b3;
+background: linear-gradient(180deg, rgba(13, 39, 50, 0.72), rgba(4, 18, 27, 0.84));
+font-size: 11px;
+font-weight: 600;
+}
+.mode-button:nth-child(1) { --tab-color: var(--color-accent); }
+.mode-button:nth-child(2) { --tab-color: var(--color-blue); }
+.mode-button:nth-child(3) { --tab-color: var(--color-action-primary); }
+.mode-button:nth-child(4) { --tab-color: var(--color-violet); }
+.mode-button:nth-child(5) { --tab-color: var(--color-coral); }
+.mode-button::before {
+content: "0" counter(tab-index);
+margin-right: 8px;
+color: color-mix(in srgb, var(--tab-color) 72%, #ffffff);
+font-size: 8px;
+font-weight: 600;
+}
+.mode-button:nth-child(1)::before { content: "01"; }
+.mode-button:nth-child(2)::before { content: "02"; }
+.mode-button:nth-child(3)::before { content: "03"; }
+.mode-button:nth-child(4)::before { content: "04"; }
+.mode-button:nth-child(5)::before { content: "05"; }
+.mode-button::after {
+content: "";
+position: absolute;
+z-index: -1;
+left: 14%;
+right: 14%;
+bottom: 0;
+height: 2px;
+background: var(--tab-color);
+box-shadow: 0 0 12px var(--tab-color);
+opacity: 0;
+transition: opacity var(--motion-fast), left var(--motion-fast), right var(--motion-fast);
+}
+.mode-button:last-child { border-right: 1px solid rgba(109, 181, 192, 0.16); }
+.mode-button:hover {
+color: #dff8fc;
+border-color: color-mix(in srgb, var(--tab-color) 38%, transparent);
+background: color-mix(in srgb, var(--tab-color) 10%, rgba(5, 21, 30, 0.9));
+}
+.mode-button[aria-pressed="true"] {
+color: #ffffff;
+border-color: color-mix(in srgb, var(--tab-color) 58%, transparent);
+background:
+linear-gradient(180deg, color-mix(in srgb, var(--tab-color) 19%, transparent), color-mix(in srgb, var(--tab-color) 5%, rgba(4, 18, 27, 0.92)));
+box-shadow: inset 0 1px color-mix(in srgb, var(--tab-color) 52%, transparent), 0 0 18px color-mix(in srgb, var(--tab-color) 10%, transparent);
+}
+.mode-button[aria-pressed="true"]::after { left: 6%; right: 6%; opacity: 1; }
+
+.global-kpis {
+gap: 7px;
+border: 0;
+background: transparent;
+backdrop-filter: none;
+}
+.global-kpis div {
+padding: 9px 12px 8px;
+border: 1px solid color-mix(in srgb, var(--kpi-color) 25%, rgba(104, 196, 208, 0.18));
+clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+background:
+linear-gradient(135deg, color-mix(in srgb, var(--kpi-color) 12%, transparent), transparent 45%),
+linear-gradient(180deg, rgba(7, 29, 39, 0.92), rgba(4, 16, 24, 0.9));
+box-shadow: inset 0 1px rgba(255, 255, 255, 0.025), 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.global-kpis div::before {
+left: 8px;
+right: 28%;
+height: 2px;
+background: linear-gradient(90deg, var(--kpi-color), transparent);
+box-shadow: 0 0 10px color-mix(in srgb, var(--kpi-color) 40%, transparent);
+}
+.global-kpis div::after {
+content: "";
+position: absolute;
+right: 7px;
+top: 7px;
+width: 4px;
+height: 4px;
+background: var(--kpi-color);
+box-shadow: 0 0 8px var(--kpi-color);
+}
+.global-kpis span { color: #7d9ba5; font-size: 9px; }
+.global-kpis strong {
+margin-top: 3px;
+font-size: 20px;
+font-weight: 700;
+text-shadow: 0 0 16px color-mix(in srgb, var(--kpi-color) 45%, transparent);
+}
+.global-kpis em {
+display: inline-block;
+margin-left: 5px;
+padding: 2px 4px;
+border: 1px solid rgba(94, 224, 165, 0.22);
+border-radius: 2px;
+background: rgba(94, 224, 165, 0.06);
+font-size: 8px;
+}
+
+.dock-label,
+.dock-status,
+.service-button {
+border: 1px solid rgba(93, 184, 197, 0.16);
+border-top-color: color-mix(in srgb, var(--zone-color, var(--color-action-primary)) 30%, rgba(100, 209, 227, 0.2));
+background:
+linear-gradient(180deg, color-mix(in srgb, var(--zone-color, var(--color-action-primary)) 5%, transparent), rgba(4, 17, 26, 0.9));
+}
+.dock-label { border-top-color: rgba(214, 170, 93, 0.52); }
+.dock-status { border-top-color: rgba(83, 224, 164, 0.52); }
+.service-button { position: relative; }
+.service-button::before {
+content: "";
+position: absolute;
+left: 0;
+top: -1px;
+width: 32%;
+height: 2px;
+background: var(--zone-color);
+box-shadow: 0 0 9px color-mix(in srgb, var(--zone-color) 42%, transparent);
+opacity: 0.38;
+}
+.service-button:hover::before,
+.service-button[aria-pressed="true"]::before { width: 100%; opacity: 1; }
+.service-button[aria-pressed="true"] {
+border-color: color-mix(in srgb, var(--zone-color) 42%, transparent);
+background:
+linear-gradient(180deg, color-mix(in srgb, var(--zone-color) 20%, transparent), rgba(5, 20, 29, 0.96));
+box-shadow: 0 -8px 20px color-mix(in srgb, var(--zone-color) 12%, transparent), inset 0 1px color-mix(in srgb, var(--zone-color) 36%, transparent);
+}
+
+@media (max-width: 1450px) {
+.topbar::before { height: 62px; }
+.heading h1::before,
+.heading h1::after { width: 34px; }
+.mode-button::before { margin-right: 5px; }
+}
+@media (max-width: 1120px) {
+.topbar::before { display: none; }
+.heading h1::before,
+.heading h1::after { display: none; }
+}
+@media (max-width: 720px) {
+.mode-button::before { display: none; }
+.system-state > span:not(.live-dot) { padding: 0; border: 0; background: none; }
+}
+
+/* Visual upgrade v2.1: reference-driven header and type scale */
+.topbar::before {
+width: min(760px, 54vw);
+height: 68px;
+clip-path: polygon(0 0, 100% 0, 100% 34%, 95% 100%, 72% 100%, 68% 92%, 32% 92%, 28% 100%, 5% 100%, 0 34%);
+background:
+linear-gradient(90deg, transparent 0 4%, rgba(50, 229, 243, 0.24) 18%, rgba(77, 141, 255, 0.13) 34%, rgba(214, 170, 93, 0.08) 50%, rgba(77, 141, 255, 0.13) 66%, rgba(50, 229, 243, 0.24) 82%, transparent 96%) center bottom / 100% 1px no-repeat,
+linear-gradient(180deg, rgba(13, 48, 64, 0.62), rgba(4, 19, 29, 0.93));
+box-shadow: inset 0 -1px rgba(91, 232, 250, 0.45);
+filter: drop-shadow(0 5px 10px rgba(0, 10, 16, 0.52));
+}
+.topbar::after {
+left: 0;
+right: 0;
+bottom: 0;
+height: 2px;
+background:
+linear-gradient(90deg,
+transparent 0,
+rgba(77, 141, 255, 0.7) 7%,
+rgba(50, 229, 243, 0.82) 18%,
+transparent 30%,
+transparent 39%,
+var(--color-action-primary) 46%,
+var(--color-accent) 50%,
+var(--color-action-primary) 54%,
+transparent 61%,
+transparent 70%,
+rgba(50, 229, 243, 0.82) 82%,
+rgba(77, 141, 255, 0.7) 93%,
+transparent 100%);
+box-shadow: 0 0 16px rgba(50, 229, 243, 0.46);
+}
+.topbar .heading {
+position: relative;
+isolation: isolate;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.topbar .heading::before {
+content: "";
+position: absolute;
+z-index: -1;
+left: 9%;
+right: 9%;
+top: 9px;
+bottom: 7px;
+clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0 50%);
+background:
+linear-gradient(90deg, rgba(50, 229, 243, 0.08), transparent 22%, rgba(214, 170, 93, 0.05) 50%, transparent 78%, rgba(50, 229, 243, 0.08)),
+linear-gradient(180deg, rgba(3, 18, 28, 0.88), rgba(8, 32, 43, 0.72));
+box-shadow: inset 0 1px rgba(135, 245, 255, 0.22), inset 0 -1px rgba(50, 229, 243, 0.38), 0 0 24px rgba(50, 229, 243, 0.08);
+}
+.topbar .heading h1 {
+gap: 10px;
+font-size: 25px;
+font-weight: 750;
+}
+.topbar .heading h1::before,
+.topbar .heading h1::after {
+width: 10px;
+height: 11px;
+clip-path: polygon(0 0, 42% 0, 100% 100%, 58% 100%);
+background: linear-gradient(180deg, #b9f8ff, var(--color-action-primary));
+box-shadow: 0 0 10px rgba(50, 229, 243, 0.7);
+}
+.topbar .heading h1::after {
+transform: scaleX(-1);
+background: linear-gradient(180deg, #ffe7b0, var(--color-accent));
+box-shadow: 0 0 10px rgba(214, 170, 93, 0.58);
+}
+.topbar .heading p {
+gap: 8px;
+color: #8baab4;
+font-size: 9px;
+}
+.topbar .heading p::before,
+.topbar .heading p::after {
+width: 34px;
+background: linear-gradient(90deg, transparent, rgba(50, 229, 243, 0.58));
+}
+.topbar .heading p::after { background: linear-gradient(90deg, rgba(214, 170, 93, 0.58), transparent); }
+
+.main-view .modebar .mode-button {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+font-size: 14px;
+font-weight: 650;
+}
+.main-view .modebar .mode-button::before {
+content: none;
+display: none;
+}
+.mode-button .tab-icon {
+width: 24px;
+height: 24px;
+flex: 0 0 24px;
+padding: 4px;
+border: 1px solid color-mix(in srgb, var(--tab-color) 34%, transparent);
+border-radius: var(--radius-4);
+color: color-mix(in srgb, var(--tab-color) 78%, #dffbff);
+background:
+linear-gradient(145deg, color-mix(in srgb, var(--tab-color) 23%, transparent), color-mix(in srgb, var(--tab-color) 6%, rgba(3, 16, 24, 0.88)));
+box-shadow: inset 0 1px color-mix(in srgb, var(--tab-color) 24%, transparent), 0 0 9px color-mix(in srgb, var(--tab-color) 12%, transparent);
+transition: color var(--motion-fast), border-color var(--motion-fast), background var(--motion-fast), box-shadow var(--motion-fast), transform var(--motion-fast);
+}
+.mode-button > span {
+line-height: 1;
+white-space: nowrap;
+}
+.mode-button:hover .tab-icon,
+.mode-button[aria-pressed="true"] .tab-icon {
+color: #ffffff;
+border-color: color-mix(in srgb, var(--tab-color) 74%, #ffffff);
+background: linear-gradient(145deg, color-mix(in srgb, var(--tab-color) 56%, transparent), color-mix(in srgb, var(--tab-color) 17%, rgba(3, 16, 24, 0.9)));
+box-shadow: inset 0 1px rgba(255, 255, 255, 0.22), 0 0 14px color-mix(in srgb, var(--tab-color) 42%, transparent);
+transform: scale(1.08);
+}
+.digital-twin .global-kpis div {
+padding: 10px 13px 9px;
+}
+.digital-twin .global-kpis span {
+font-size: 11px;
+font-weight: 500;
+}
+.digital-twin .global-kpis strong {
+font-size: 23px;
+line-height: 1.05;
+}
+.digital-twin .global-kpis em {
+font-size: 10px;
+font-weight: 600;
+}
+
+@media (max-width: 1450px) {
+.topbar::before { height: 60px; width: min(660px, 52vw); }
+.topbar .heading h1 { font-size: 22px; }
+.topbar .heading p { font-size: 8px; }
+.main-view .modebar .mode-button { font-size: 13px; }
+.digital-twin .global-kpis span { font-size: 10px; }
+.digital-twin .global-kpis strong { font-size: 18px; }
+.digital-twin .global-kpis em { font-size: 9px; }
+}
+@media (max-width: 1120px) {
+.topbar .heading::before { left: 2%; right: 2%; }
+.topbar .heading h1 { font-size: 20px; }
+}
+@media (max-width: 720px) {
+.topbar .heading::before { display: none; }
+.topbar .heading h1 { font-size: 17px; }
+.main-view .modebar .mode-button { font-size: 12px; }
+.digital-twin .global-kpis span { font-size: 9px; }
+.digital-twin .global-kpis strong { font-size: 16px; }
+}
+
+/* Ticket sales playback */
+.ticket-record-trigger {
+appearance: none;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+min-height: 27px;
+padding: 4px 9px;
+border: 1px solid rgba(83, 224, 164, 0.48);
+border-radius: 3px;
+color: #72edb5;
+background: linear-gradient(180deg, rgba(83, 224, 164, 0.12), rgba(5, 24, 31, 0.74));
+box-shadow: inset 0 0 12px rgba(83, 224, 164, 0.06), 0 0 12px rgba(83, 224, 164, 0.08);
+cursor: pointer;
+font-size: 10px;
+font-weight: 650;
+transition: color var(--motion-fast), border-color var(--motion-fast), background var(--motion-fast), box-shadow var(--motion-fast);
+}
+.ticket-record-trigger::before {
+content: "";
+width: 6px;
+height: 6px;
+border-radius: 1px;
+background: currentColor;
+box-shadow: 0 0 8px currentColor;
+}
+.ticket-record-trigger:hover,
+.ticket-record-trigger:focus-visible {
+color: #ffffff;
+border-color: #78f3bf;
+background: linear-gradient(180deg, rgba(83, 224, 164, 0.25), rgba(6, 35, 38, 0.9));
+box-shadow: 0 0 18px rgba(83, 224, 164, 0.2);
+outline: none;
+}
+body.ticket-modal-open { overflow: hidden; }
+.ticket-modal-shell[hidden] { display: none !important; }
+.ticket-modal-shell {
+position: fixed;
+z-index: 1500;
+inset: 0;
+display: grid;
+place-items: center;
+padding: 14px;
+}
+.ticket-modal-backdrop {
+position: absolute;
+inset: 0;
+background: rgba(1, 7, 12, 0.82);
+backdrop-filter: blur(8px);
+}
+.ticket-window {
+--ticket-accent: #53e0a4;
+position: relative;
+z-index: 1;
+width: min(1240px, calc(100vw - 28px));
+height: min(820px, calc(100vh - 28px));
+min-height: 560px;
+overflow: hidden;
+display: grid;
+grid-template-rows: auto auto minmax(0, 1fr) auto;
+border: 1px solid rgba(83, 224, 164, 0.7);
+border-radius: 6px;
+color: var(--color-text-primary);
+background:
+linear-gradient(135deg, rgba(83, 224, 164, 0.08), transparent 28%),
+repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 5px),
+linear-gradient(160deg, rgba(5, 25, 37, 0.99), rgba(2, 11, 19, 0.99));
+box-shadow: 0 28px 80px rgba(0, 0, 0, 0.68), 0 0 42px rgba(50, 229, 243, 0.14), inset 0 0 60px rgba(50, 229, 243, 0.035);
+}
+.ticket-window::before,
+.ticket-window::after {
+content: "";
+position: absolute;
+z-index: 3;
+width: 70px;
+height: 14px;
+pointer-events: none;
+}
+.ticket-window::before { left: -1px; top: -1px; border-left: 2px solid var(--color-action-primary); border-top: 2px solid var(--color-action-primary); }
+.ticket-window::after { right: -1px; bottom: -1px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); }
+.ticket-window-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: var(--space-16);
+min-height: 58px;
+padding: 11px 16px;
+border-bottom: 1px solid rgba(93, 198, 213, 0.22);
+background: linear-gradient(90deg, rgba(50, 229, 243, 0.1), transparent 46%, rgba(214, 170, 93, 0.05));
+}
+.ticket-window-title { min-width: 0; }
+.ticket-window-title small { display: block; color: var(--ticket-accent); font-size: 9px; }
+.ticket-window-title h2 { margin: 3px 0 0; font-size: 20px; font-weight: 700; }
+.ticket-close,
+.ticket-play {
+appearance: none;
+display: grid;
+place-items: center;
+border: 1px solid rgba(95, 210, 226, 0.3);
+border-radius: 3px;
+color: #a7c7cf;
+background: rgba(5, 24, 33, 0.86);
+cursor: pointer;
+}
+.ticket-close { width: 34px; height: 34px; }
+.ticket-close svg,
+.ticket-play svg { width: 17px; height: 17px; }
+.ticket-close:hover,
+.ticket-play:hover { color: #ffffff; border-color: var(--color-action-primary); background: rgba(50, 229, 243, 0.13); }
+.ticket-controls {
+display: grid;
+grid-template-columns: minmax(260px, 1fr) auto repeat(3, minmax(108px, 0.42fr));
+align-items: end;
+gap: 10px;
+padding: 10px 16px;
+border-bottom: 1px solid rgba(93, 198, 213, 0.15);
+background: rgba(3, 15, 23, 0.72);
+}
+.ticket-field-label { display: grid; gap: 5px; color: var(--color-text-muted); font-size: 9px; }
+.ticket-session-select {
+width: 100%;
+height: 34px;
+padding: 0 30px 0 10px;
+border: 1px solid rgba(95, 210, 226, 0.3);
+border-radius: 3px;
+color: #eafcff;
+background: #071b26;
+font-size: 11px;
+}
+.ticket-window-time {
+align-self: center;
+min-width: 170px;
+padding: 7px 10px;
+border-left: 2px solid var(--color-accent);
+color: #f4cf88;
+background: rgba(214, 170, 93, 0.07);
+font-size: 11px;
+font-variant-numeric: tabular-nums;
+}
+.ticket-stat {
+min-width: 0;
+padding: 7px 9px;
+border-top: 1px solid var(--stat-color, var(--ticket-accent));
+background: color-mix(in srgb, var(--stat-color, var(--ticket-accent)) 7%, transparent);
+}
+.ticket-stat strong { display: block; color: var(--stat-color, var(--ticket-accent)); font-size: 16px; }
+.ticket-stat span { display: block; margin-top: 2px; color: var(--color-text-muted); font-size: 8px; }
+.ticket-window-main {
+min-height: 0;
+display: grid;
+grid-template-columns: minmax(0, 1fr) 260px;
+gap: 12px;
+padding: 12px 16px 10px;
+}
+.seat-map-panel,
+.ticket-side-panel {
+min-height: 0;
+border: 1px solid rgba(91, 186, 200, 0.17);
+background: rgba(3, 16, 25, 0.58);
+}
+.seat-map-panel {
+display: grid;
+grid-template-rows: auto minmax(0, 1fr);
+padding: 10px;
+}
+.seat-map-head {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+padding-bottom: 8px;
+border-bottom: 1px solid rgba(91, 186, 200, 0.12);
+}
+.seat-map-head strong { font-size: 12px; }
+.seat-state-legend { display: flex; align-items: center; gap: 10px; color: var(--color-text-muted); font-size: 8px; }
+.seat-state-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.seat-state-legend i { width: 8px; height: 7px; border-radius: 2px; background: #536473; }
+.seat-state-legend .sold i { background: var(--ticket-accent); box-shadow: 0 0 7px var(--ticket-accent); }
+.seat-state-legend .refund i { border: 1px solid var(--color-coral); background: rgba(255, 116, 104, 0.12); }
+.stadium-map {
+position: relative;
+min-height: 360px;
+overflow: hidden;
+background:
+radial-gradient(ellipse at center, rgba(50, 229, 243, 0.075), transparent 55%),
+linear-gradient(rgba(62, 118, 132, 0.035) 1px, transparent 1px),
+linear-gradient(90deg, rgba(62, 118, 132, 0.035) 1px, transparent 1px);
+background-size: auto, 28px 28px, 28px 28px;
+}
+.football-field {
+position: absolute;
+z-index: 1;
+left: 20%;
+right: 20%;
+top: 29%;
+bottom: 29%;
+overflow: hidden;
+border: 1px solid rgba(83, 224, 164, 0.5);
+border-radius: 30px;
+background:
+repeating-linear-gradient(90deg, rgba(83, 224, 164, 0.095) 0 12.5%, rgba(83, 224, 164, 0.045) 12.5% 25%),
+rgba(7, 61, 53, 0.24);
+box-shadow: inset 0 0 26px rgba(83, 224, 164, 0.08), 0 0 28px rgba(83, 224, 164, 0.05);
+}
+.football-field::before {
+content: "";
+position: absolute;
+left: 50%;
+top: 0;
+bottom: 0;
+width: 1px;
+background: rgba(157, 255, 211, 0.36);
+}
+.football-field::after {
+content: "";
+position: absolute;
+left: 50%;
+top: 50%;
+width: 58px;
+height: 58px;
+border: 1px solid rgba(157, 255, 211, 0.36);
+border-radius: 50%;
+transform: translate(-50%, -50%);
+box-shadow: 0 0 12px rgba(83, 224, 164, 0.06);
+}
+.field-box {
+position: absolute;
+top: 27%;
+bottom: 27%;
+width: 13%;
+border: 1px solid rgba(157, 255, 211, 0.3);
+}
+.field-box.left { left: -1px; border-left: 0; }
+.field-box.right { right: -1px; border-right: 0; }
+.field-name {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+color: rgba(202, 255, 230, 0.4);
+font-size: 9px;
+white-space: nowrap;
+}
+.stadium-stand {
+position: absolute;
+z-index: 2;
+}
+.stadium-stand.north { left: 8%; right: 8%; top: 3%; height: 24%; }
+.stadium-stand.south { left: 8%; right: 8%; bottom: 3%; height: 24%; }
+.stadium-stand.west { left: 2%; top: 23%; bottom: 23%; width: 17%; }
+.stadium-stand.east { right: 2%; top: 23%; bottom: 23%; width: 17%; }
+.stand-label {
+position: absolute;
+z-index: 2;
+left: 50%;
+top: -2px;
+transform: translate(-50%, -100%);
+padding: 2px 6px;
+border: 1px solid rgba(103, 222, 236, 0.2);
+border-radius: 2px;
+color: #9dc1c9;
+background: rgba(4, 20, 29, 0.84);
+font-size: 8px;
+white-space: nowrap;
+}
+.stadium-stand.south .stand-label { top: auto; bottom: -2px; transform: translate(-50%, 100%); }
+.stadium-stand.west .stand-label,
+.stadium-stand.east .stand-label { top: 50%; transform: translate(-50%, -50%) rotate(-90deg); }
+.seat-grid {
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: repeat(var(--seat-cols), minmax(0, 1fr));
+grid-template-rows: repeat(var(--seat-rows), minmax(0, 1fr));
+align-items: center;
+justify-items: center;
+gap: 0.5px;
+}
+.stadium-seat {
+appearance: none;
+width: min(68%, 7.2px);
+height: min(62%, 6.4px);
+min-width: 3px;
+min-height: 3px;
+padding: 0;
+border: 1px solid rgba(151, 171, 181, 0.24);
+border-radius: 2px 2px 4px 4px;
+background: #536270;
+box-shadow: inset 0 -1px rgba(0, 0, 0, 0.35);
+cursor: pointer;
+transition: transform 90ms ease, background 90ms ease, border-color 90ms ease, box-shadow 90ms ease, opacity 90ms ease;
+}
+.stadium-seat.sold {
+border-color: color-mix(in srgb, var(--seat-color) 75%, #ffffff);
+background: var(--seat-color);
+box-shadow: 0 0 7px color-mix(in srgb, var(--seat-color) 62%, transparent), inset 0 1px rgba(255, 255, 255, 0.28);
+}
+.stadium-seat.refunded {
+border-color: rgba(255, 116, 104, 0.76);
+background: rgba(255, 116, 104, 0.12);
+box-shadow: inset 0 0 5px rgba(255, 116, 104, 0.22);
+}
+.stadium-seat:hover,
+.stadium-seat:focus-visible {
+z-index: 5;
+border-color: #ffffff;
+outline: none;
+transform: scale(1.55);
+box-shadow: 0 0 12px var(--seat-color, var(--color-action-primary));
+}
+.ticket-side-panel {
+overflow-y: auto;
+display: grid;
+align-content: start;
+gap: 12px;
+padding: 10px;
+scrollbar-width: thin;
+scrollbar-color: rgba(50, 229, 243, 0.44) rgba(64, 105, 114, 0.1);
+}
+.ticket-side-section h3 {
+margin: 0 0 8px;
+padding-bottom: 6px;
+border-bottom: 1px solid rgba(91, 186, 200, 0.14);
+font-size: 11px;
+font-weight: 650;
+}
+.ticket-zone-list,
+.ticket-event-list { display: grid; gap: 6px; }
+.ticket-zone-row {
+display: grid;
+grid-template-columns: 10px 34px minmax(0, 1fr) auto;
+align-items: center;
+gap: 6px;
+min-height: 23px;
+color: var(--color-text-secondary);
+font-size: 9px;
+}
+.ticket-zone-row i { width: 8px; height: 8px; border-radius: 2px; background: var(--zone-seat-color); box-shadow: 0 0 7px color-mix(in srgb, var(--zone-seat-color) 45%, transparent); }
+.ticket-zone-row strong { color: var(--zone-seat-color); font-size: 10px; }
+.ticket-zone-row em { color: var(--color-text-muted); font-size: 8px; font-style: normal; text-align: right; }
+.ticket-event-row {
+position: relative;
+padding: 5px 6px 5px 13px;
+border-left: 1px solid var(--event-color, var(--color-action-primary));
+background: color-mix(in srgb, var(--event-color, var(--color-action-primary)) 5%, transparent);
+}
+.ticket-event-row::before { content: ""; position: absolute; left: -3px; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--event-color); box-shadow: 0 0 7px var(--event-color); }
+.ticket-event-row time { display: block; color: var(--event-color); font-size: 8px; }
+.ticket-event-row span { display: block; margin-top: 2px; color: var(--color-text-secondary); font-size: 9px; line-height: 1.35; }
+.ticket-timeline {
+padding: 10px 16px 13px;
+border-top: 1px solid rgba(91, 186, 200, 0.18);
+background: rgba(2, 13, 21, 0.88);
+}
+.ticket-timeline-head {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+margin-bottom: 8px;
+}
+.ticket-play { width: 34px; height: 30px; }
+.ticket-play .pause-icon { display: none; }
+.ticket-play.is-playing .play-icon { display: none; }
+.ticket-play.is-playing .pause-icon { display: block; }
+.ticket-time-range { flex: 1; min-width: 0; }
+.ticket-range {
+width: 100%;
+height: 4px;
+accent-color: var(--ticket-accent);
+cursor: ew-resize;
+}
+.ticket-timeline-labels {
+display: flex;
+justify-content: space-between;
+margin-top: 5px;
+color: var(--color-text-muted);
+font-size: 8px;
+font-variant-numeric: tabular-nums;
+}
+.ticket-timeline-events {
+position: relative;
+height: 18px;
+margin: 0 2px 5px;
+}
+.ticket-timeline-events i {
+position: absolute;
+left: var(--event-position);
+bottom: 0;
+width: 1px;
+height: 9px;
+background: var(--event-color);
+box-shadow: 0 0 6px var(--event-color);
+}
+.ticket-timeline-events i::after {
+content: attr(data-label);
+position: absolute;
+left: 50%;
+bottom: 11px;
+transform: translateX(-50%);
+color: var(--event-color);
+font-size: 7px;
+white-space: nowrap;
+}
+.ticket-seat-tooltip {
+position: fixed;
+z-index: 1600;
+min-width: 150px;
+padding: 8px 9px;
+border: 1px solid var(--tooltip-seat-color, var(--color-action-primary));
+border-radius: 3px;
+color: var(--color-text-primary);
+background: rgba(3, 17, 25, 0.98);
+box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55), 0 0 18px color-mix(in srgb, var(--tooltip-seat-color) 22%, transparent);
+pointer-events: none;
+}
+.ticket-seat-tooltip[hidden] { display: none; }
+.ticket-seat-tooltip strong { display: block; color: var(--tooltip-seat-color); font-size: 11px; }
+.ticket-seat-tooltip span { display: block; margin-top: 4px; color: var(--color-text-secondary); font-size: 9px; }
+@media (max-width: 900px) {
+.ticket-window { height: calc(100vh - 16px); min-height: 0; }
+.ticket-controls { grid-template-columns: 1fr 1fr; }
+.ticket-window-main { grid-template-columns: 1fr; overflow-y: auto; }
+.seat-map-panel { min-height: 470px; }
+.ticket-side-panel { max-height: 260px; }
+}
+
+@keyframes live { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+@keyframes vertical-scan { from { transform: translateY(0); } to { transform: translateY(570%); } }
+@keyframes radar { to { transform: rotate(360deg); } }
+@keyframes data-node { 0%, 100% { opacity: 0.35; transform: scale(0.7); } 50% { opacity: 1; transform: scale(1.35); } }
+@keyframes beam-pulse { 0%, 100% { opacity: 0.18; } 50% { opacity: 0.72; } }
+@keyframes orbit-pulse { 0% { transform: scale(0.82); opacity: 0.72; } 100% { transform: scale(1.18); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+@media (max-width: 1450px) {
+.cockpit { grid-template-rows: 62px minmax(0, 1fr) 76px; }
+.topbar { grid-template-columns: 250px minmax(420px, 1fr) 250px; }
+.brand-copy strong { font-size: 13px; }
+.heading h1 { font-size: 19px; }
+.workspace { grid-template-columns: 260px minmax(0, 1fr) 260px; gap: 8px; padding: 8px; }
+.side-column { gap: 8px; }
+.panel { padding: 10px; }
+.panel-title { margin-bottom: 8px; }
+.overview-body { grid-template-columns: 78px minmax(0, 1fr); }
+.canvas-wrap { height: 78px; }
+.global-kpis { left: 18px; right: 18px; }
+.global-kpis div { padding: 7px 8px; }
+.global-kpis strong { font-size: 14px; }
+.zone-card { width: min(34%, 330px); padding: 12px; }
+.zone-card > p { margin: 7px 0 9px; line-height: 1.45; }
+.zone-card h2 { font-size: 16px; }
+.service-dock { grid-template-columns: 120px repeat(7, minmax(0, 1fr)) 120px; padding: 0 8px 8px; }
+.service-button { padding: 7px 8px; }
+.service-button strong { font-size: 12px; }
+}
+@media (max-width: 1120px) {
+body { height: auto; min-height: 100%; overflow: auto; }
+.cockpit { height: auto; min-height: 100vh; grid-template-rows: auto auto auto; overflow: visible; }
+.topbar { min-height: 64px; grid-template-columns: 1fr auto; }
+.heading { grid-column: 1 / -1; grid-row: 2; padding: 8px 0 10px; }
+.system-state span:not(.live-dot) { display: none; }
+.workspace { grid-template-columns: 1fr; overflow: visible; }
+.main-view { order: -1; min-height: 650px; overflow: visible; }
+.side-column { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none !important; overflow: visible; }
+.service-dock { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.dock-label, .dock-status { display: none; }
+.service-button { min-height: 62px; }
+}
+@media (max-width: 720px) {
+.topbar { grid-template-columns: 1fr auto; padding: 8px 12px; }
+.brand-copy span { display: none; }
+.heading h1 { font-size: 17px; }
+.heading p { display: none; }
+.workspace { padding: 8px; }
+.main-view { min-height: 570px; }
+.modebar { overflow-x: auto; grid-template-columns: repeat(5, minmax(110px, 1fr)); }
+.global-kpis { grid-template-columns: repeat(3, 1fr); }
+.global-kpis div:nth-child(4), .global-kpis div:nth-child(5) { display: none; }
+.digital-twin { background-position: 49% 50%; }
+.radar { left: 39%; width: 220px; }
+.hotspot::after { display: none; }
+.zone-card { left: 16px; right: 16px; bottom: 18px; width: auto; }
+.side-column { grid-template-columns: 1fr; }
+.service-dock { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.service-button { min-height: 64px; }
+}
+</style>
+</head>
+<body>
+<div class="cockpit">
+<header class="topbar">
+<div class="brand">
+<div class="brand-mark" aria-hidden="true">H</div>
+<div class="brand-copy">
+<strong>WESTBUND CENTRAL</strong>
+<span>SHANGHAI'S NEW DOWNTOWN</span>
+</div>
+</div>
+<div class="heading">
+<h1>西岸综合运营驾驶舱</h1>
+<p>Westbund Integrated Operations Command Center</p>
+</div>
+<div class="system-state" aria-label="系统状态">
+<span>上海 · 晴 28°C</span>
+<span id="clock">2026/07/22 14:40:01</span>
+<span class="live-dot" aria-hidden="true"></span>
+</div>
+</header>
+<main class="workspace">
+<aside class="side-column left" aria-label="左侧运营数据">
+<section class="panel overview-panel" id="leftPanel1">
+<div class="panel-title">
+<h2>园区态势</h2>
+<small>Overview</small>
+</div>
+<div class="overview-body">
+<div class="occupancy-ring">
+<div class="ring-copy"><strong>82%</strong><span>综合活跃度</span></div>
+</div>
+<div class="overview-list">
+<div><span>今日总客流</span><strong>286,920</strong></div>
+<div><span>实时在场</span><strong>68,542</strong></div>
+<div><span>运营面积</span><strong>170万㎡</strong></div>
+</div>
+</div>
+<div class="section-tag">7大业态 · 148项数据在线</div>
+</section>
+<section class="panel footfall-panel" id="leftPanel2">
+<div class="panel-title">
+<h2>实时客流</h2>
+<small>Live Footfall</small>
+</div>
+<div class="trend-head"><strong>68,542</strong><span>较昨日 +12.8%</span></div>
+<div class="canvas-wrap"><canvas id="footfallChart" aria-label="今日客流趋势折线图"></canvas></div>
+<div class="chart-legend"><span>今日客流</span><span>昨日同期</span></div>
+</section>
+<section class="panel ticket-panel" id="leftPanel3">
+<div class="panel-title">
+<h2>体育赛事票务</h2>
+<small>Sports & Wellbeing</small>
+</div>
+<div class="ticket-stats">
+<div><strong>18,426</strong><span>已售门票</span></div>
+<div><strong>86%</strong><span>售票率</span></div>
+<div><strong>12,805</strong><span>已入场</span></div>
+</div>
+<div class="age-chart" aria-label="赛事观众年龄分布">
+<div style="--height: 36%" data-label="18-24" data-tooltip-value="12%"></div>
+<div style="--height: 76%" data-label="25-34" data-tooltip-value="27%"></div>
+<div style="--height: 92%" data-label="35-44" data-tooltip-value="33%"></div>
+<div style="--height: 58%" data-label="45-54" data-tooltip-value="19%"></div>
+<div style="--height: 29%" data-label="55+" data-tooltip-value="9%"></div>
+</div>
+</section>
+</aside>
+<section class="main-view" aria-label="西岸中寰数字孪生">
+<nav class="modebar" aria-label="驾驶舱模式">
+<button class="mode-button" type="button" data-mode="overview" aria-pressed="true"><svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="8" height="9" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/><rect x="3" y="14" width="8" height="7" rx="1.5"/></svg><span>综合总览</span></button>
+<button class="mode-button" type="button" data-mode="operations" aria-pressed="false"><svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 7V3H2v18h20V7H12ZM6 19H4v-2h2v2Zm0-4H4v-2h2v2Zm0-4H4V9h2v2Zm0-4H4V5h2v2Zm4 12H8v-2h2v2Zm0-4H8v-2h2v2Zm0-4H8V9h2v2Zm0-4H8V5h2v2Zm10 12h-8V9h8v10Zm-2-8h-4v2h4v-2Zm0 4h-4v2h4v-2Z"/></svg><span>产业运营</span></button>
+<button class="mode-button" type="button" data-mode="parking" aria-pressed="false"><svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M13 3H6v18h4v-6h3a6 6 0 0 0 0-12Zm.2 8H10V7h3.2a2 2 0 0 1 0 4Z"/></svg><span>交通停车</span></button>
+<button class="mode-button" type="button" data-mode="services" aria-pressed="false"><svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M20 17h-1a7 7 0 0 0-6-6.93V8h2V5H9v3h2v2.07A7 7 0 0 0 5 17H4a2 2 0 0 0-2 2v1h20v-1a2 2 0 0 0-2-2ZM7.1 17a5 5 0 0 1 9.8 0H7.1Z"/></svg><span>智慧服务</span></button>
+<button class="mode-button" type="button" data-mode="safety" aria-pressed="false"><svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5.05 3.41 9.74 8 11 4.59-1.26 8-5.95 8-11V5l-8-3Z"/><path d="m8.4 12.4 2.1 2.1 5.1-5.1 1.4 1.4-6.5 6.5L7 13.8l1.4-1.4Z" fill="#061721"/></svg><span>安全与活动</span></button>
+</nav>
+<div class="digital-twin">
+<div class="stage-frame"></div>
+<div class="depth-scrim"></div>
+<div class="core-aura"></div>
+<span class="light-beam one"></span>
+<span class="light-beam two"></span>
+<div class="zone-orbit" id="zoneOrbit"></div>
+<div class="global-kpis" id="globalKpis" aria-label="全局关键指标">
+<div><span>商业销售额</span><strong>¥18.6M</strong><em>+9.4%</em></div>
+<div><span>停车入场</span><strong>8,934</strong><em>+6.1%</em></div>
+<div><span>酒店入住率</span><strong>91%</strong><em>+4.7%</em></div>
+<div><span>办公到岗率</span><strong>78%</strong><em>+3.2%</em></div>
+<div><span>未闭环事件</span><strong>7</strong><em style="color:var(--color-warning)">需关注</em></div>
+</div>
+<div class="radar" aria-hidden="true"><div class="radar-sweep"></div></div>
+<span class="trace one" aria-hidden="true"></span>
+<span class="trace two" aria-hidden="true"></span>
+<span class="trace three" aria-hidden="true"></span>
+<button class="hotspot retail" type="button" data-zone="retail" data-short="生活购物" aria-label="查看生活购物数据" aria-pressed="true">商</button>
+<button class="hotspot office" type="button" data-zone="office" data-short="甲级办公" aria-label="查看写字楼数据" aria-pressed="false">办</button>
+<button class="hotspot hotel" type="button" data-zone="hotel" data-short="酒店集群" aria-label="查看酒店数据" aria-pressed="false">酒</button>
+<button class="hotspot residence" type="button" data-zone="residence" data-short="滨水住宅" aria-label="查看住宅服务数据" aria-pressed="false">住</button>
+<button class="hotspot sports" type="button" data-zone="sports" data-short="赛事活动" aria-label="查看体育赛事数据" aria-pressed="false">赛</button>
+<button class="hotspot parking" type="button" data-zone="parking" data-short="停车服务" aria-label="查看停车服务数据" aria-pressed="false">P</button>
+<button class="hotspot culture" type="button" data-zone="culture" data-short="文化艺术" aria-label="查看文化艺术数据" aria-pressed="false">艺</button>
+<span class="coordinate project">WBC / DIGITAL TWIN / DEMO DATA</span>
+<article class="zone-card" aria-live="polite">
+<div class="zone-card-head">
+<div>
+<span class="zone-kicker" id="zoneKicker">Retail & Lifestyle</span>
+<h2 id="zoneTitle">零售主街与旗舰商业</h2>
+</div>
+<span class="zone-index" id="zoneIndex">01</span>
+</div>
+<p id="zoneDescription">汇聚品牌零售、餐饮与体验业态，实时联动客流热力、交易额、门店排行及活动转化。</p>
+<div class="zone-metrics" id="zoneMetrics">
+<div><strong>92,640</strong><span>零售客流</span></div>
+<div><strong>¥18.6M</strong><span>今日销售</span></div>
+<div><strong>412</strong><span>开放商户</span></div>
+</div>
+</article>
+</div>
+</section>
+<aside class="side-column right" aria-label="右侧运营数据">
+<section class="panel retail-panel" id="rightPanel1">
+<div class="panel-title">
+<h2>消费业态排行</h2>
+<small>Retail Ranking</small>
+</div>
+<div class="ranking">
+<div class="rank-row"><i>01</i><span>餐饮咖啡</span><div class="rank-track"><b style="--width: 92%"></b></div><strong>4.82M</strong></div>
+<div class="rank-row"><i>02</i><span>设计师零售</span><div class="rank-track"><b style="--width: 78%"></b></div><strong>3.76M</strong></div>
+<div class="rank-row"><i>03</i><span>运动健康</span><div class="rank-track"><b style="--width: 64%"></b></div><strong>2.93M</strong></div>
+<div class="rank-row"><i>04</i><span>美妆香氛</span><div class="rank-track"><b style="--width: 52%"></b></div><strong>2.15M</strong></div>
+<div class="rank-row"><i>05</i><span>艺术展陈</span><div class="rank-track"><b style="--width: 34%"></b></div><strong>1.08M</strong></div>
+</div>
+</section>
+<section class="panel mobility-panel" id="rightPanel2">
+<div class="panel-title">
+<h2>停车与交通</h2>
+<small>Mobility</small>
+</div>
+<div class="parking-body">
+<div class="parking-ring"><div class="ring-copy"><strong>72%</strong><span>车位占用</span></div></div>
+<div class="transport-bars">
+<div class="transport-row"><span>油车</span><i><b style="--width:64%;--bar-color:var(--color-accent)"></b></i><strong>64%</strong></div>
+<div class="transport-row"><span>电车</span><i><b style="--width:36%;--bar-color:var(--color-action-primary)"></b></i><strong>36%</strong></div>
+<div class="transport-row"><span>充电桩</span><i><b style="--width:64%;--bar-color:var(--color-success)"></b></i><strong>82/128</strong></div>
+</div>
+</div>
+</section>
+<section class="panel hotel-alert-panel" id="rightPanel3">
+<div class="panel-title">
+<h2>酒店房态与事件</h2>
+<small>Hotel & Alerts</small>
+</div>
+<div class="hotel-grid" aria-label="酒店房态概览">
+<span class="room-block">可售</span><span class="room-block">在住</span><span class="room-block">在住</span><span class="room-block warning">清洁</span><span class="room-block">在住</span>
+</div>
+<div class="hotel-list">
+<div class="hotel-row"><span>综合入住率</span><strong>91%</strong></div>
+<div class="hotel-row"><span>今日酒店收入</span><strong>¥5.42M</strong></div>
+</div>
+<div class="alerts" style="margin-top:10px">
+<div class="alert-row" style="--state-color:var(--color-warning)"><span>B2车库拥堵预警</span><time>14:32</time><strong>处理中</strong></div>
+<div class="alert-row" style="--state-color:var(--color-success)"><span>酒店工单已派发</span><time>14:18</time><strong>已响应</strong></div>
+</div>
+</section>
+</aside>
+</main>
+<footer class="service-dock" aria-label="业态快速切换">
+<div class="dock-label"><strong>业态联动中心</strong><span>点击切换建筑分区</span></div>
+<button class="service-button" type="button" data-zone="retail" aria-pressed="true"><span>生活购物</span><strong>¥18.6M</strong></button>
+<button class="service-button" type="button" data-zone="office" aria-pressed="false"><span>写字楼</span><strong>78%</strong></button>
+<button class="service-button" type="button" data-zone="hotel" aria-pressed="false"><span>酒店</span><strong>91%</strong></button>
+<button class="service-button" type="button" data-zone="residence" aria-pressed="false"><span>住宅服务</span><strong>38 工单</strong></button>
+<button class="service-button" type="button" data-zone="sports" aria-pressed="false"><span>体育赛事</span><strong>18,426 票</strong></button>
+<button class="service-button" type="button" data-zone="parking" aria-pressed="false"><span>停车服务</span><strong>2,136 辆</strong></button>
+<button class="service-button" type="button" data-zone="culture" aria-pressed="false"><span>文化艺术</span><strong>26 活动</strong></button>
+<div class="dock-status"><strong>系统正常</strong><span>演示数据 · 148/148 在线</span></div>
+</footer>
+</div>
+<div class="ticket-modal-shell" id="ticketRecordModal" aria-hidden="true" hidden>
+<div class="ticket-modal-backdrop" data-ticket-close></div>
+<section class="ticket-window" role="dialog" aria-modal="true" aria-labelledby="ticketRecordTitle">
+<header class="ticket-window-header">
+<div class="ticket-window-title">
+<small>TICKET SALES PLAYBACK</small>
+<h2 id="ticketRecordTitle">体育赛事售票记录</h2>
+</div>
+<button class="ticket-close" type="button" data-ticket-close aria-label="关闭售票记录">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+</button>
+</header>
+<div class="ticket-controls">
+<label class="ticket-field-label">选择场次
+<select class="ticket-session-select" id="ticketSessionSelect">
+<option value="derby">2026/07/26 19:30 · 西岸足球之夜</option>
+<option value="youth">2026/07/27 15:00 · 青少年冠军杯决赛</option>
+<option value="allstar">2026/07/28 20:00 · 城市全明星表演赛</option>
+</select>
+</label>
+<div class="ticket-window-time" id="ticketCurrentTime">2026/07/26 18:00</div>
+<div class="ticket-stat" style="--stat-color:#53e0a4"><strong id="ticketSoldCount">0</strong><span>当前已售座位</span></div>
+<div class="ticket-stat" style="--stat-color:#ff7468"><strong id="ticketRefundCount">0</strong><span>当前退票待售</span></div>
+<div class="ticket-stat" style="--stat-color:#d6aa5d"><strong id="ticketRevenue">¥0</strong><span>累计有效票款</span></div>
+</div>
+<div class="ticket-window-main">
+<section class="seat-map-panel" aria-label="场馆分区座位图">
+<div class="seat-map-head">
+<strong>场馆座位售卖状态</strong>
+<div class="seat-state-legend" aria-label="座位状态图例">
+<span><i></i>未售</span>
+<span class="sold"><i></i>已售</span>
+<span class="refund"><i></i>退票待售</span>
+</div>
+</div>
+<div class="stadium-map" id="stadiumMap">
+<div class="football-field" aria-hidden="true">
+<span class="field-box left"></span>
+<span class="field-box right"></span>
+<span class="field-name">WESTBUND CENTRAL STADIUM</span>
+</div>
+<section class="stadium-stand north" aria-label="北看台"><span class="stand-label">北看台 · D / F / C区</span><div class="seat-grid" id="northSeats" style="--seat-cols:48;--seat-rows:9"></div></section>
+<section class="stadium-stand south" aria-label="南看台"><span class="stand-label">南看台 · A1 / A2区</span><div class="seat-grid" id="southSeats" style="--seat-cols:48;--seat-rows:9"></div></section>
+<section class="stadium-stand west" aria-label="西看台"><span class="stand-label">西看台 · B区</span><div class="seat-grid" id="westSeats" style="--seat-cols:8;--seat-rows:21"></div></section>
+<section class="stadium-stand east" aria-label="东看台"><span class="stand-label">东看台 · C区</span><div class="seat-grid" id="eastSeats" style="--seat-cols:8;--seat-rows:21"></div></section>
+</div>
+</section>
+<aside class="ticket-side-panel">
+<section class="ticket-side-section">
+<h3>分区票价与售出</h3>
+<div class="ticket-zone-list" id="ticketZoneList"></div>
+</section>
+<section class="ticket-side-section">
+<h3>关键售票节点</h3>
+<div class="ticket-event-list" id="ticketEventList"></div>
+</section>
+</aside>
+</div>
+<footer class="ticket-timeline">
+<div class="ticket-timeline-head">
+<button class="ticket-play" id="ticketPlayButton" type="button" aria-label="播放售票时间轴">
+<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg>
+<svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6V5Zm8 0h4v14h-4V5Z"/></svg>
+</button>
+<div class="ticket-time-range">
+<div class="ticket-timeline-events" id="ticketTimelineEvents"></div>
+<input class="ticket-range" id="ticketTimeline" type="range" min="0" max="1000" step="1" value="1000" aria-label="售票记录时间轴">
+<div class="ticket-timeline-labels"><span id="ticketStartLabel">07/20 13:30 开售</span><span id="ticketEndLabel">07/26 18:00 截止</span></div>
+</div>
+</div>
+</footer>
+</section>
+<div class="ticket-seat-tooltip" id="ticketSeatTooltip" role="status" hidden></div>
+</div>
+<script>
+const zoneData = {
+retail: {
+index: "01",
+kicker: "Retail & Lifestyle",
+title: "零售主街与旗舰商业",
+focus: "商业零售热力监测",
+description: "汇聚品牌零售、餐饮与体验业态，实时联动客流热力、交易额、门店排行及活动转化。",
+metrics: [["92,640", "零售客流"], ["¥18.6M", "今日销售"], ["412", "开放商户"]]
+},
+office: {
+index: "02",
+kicker: "Premium Office",
+title: "超甲级办公集群",
+focus: "办公到岗与企业服务",
+description: "覆盖12栋办公楼的到岗、访客、会议资源、企业服务与楼宇设备运行状态。",
+metrics: [["46,820", "到岗人数"], ["78%", "到岗率"], ["3,482", "访客预约"]]
+},
+hotel: {
+index: "03",
+kicker: "Hotel Performance",
+title: "酒店与服务公寓",
+focus: "酒店经营与实时房态",
+description: "聚合房型库存、入住率、住客画像、收入、清洁进度与宾客服务工单。",
+metrics: [["91%", "综合入住率"], ["¥5.42M", "今日收入"], ["1,286", "在住客人"]]
+},
+residence: {
+index: "04",
+kicker: "Residence Services",
+title: "滨水住宅服务",
+focus: "社区服务与访客通行",
+description: "联动物业工单、家政预约、访客通行、快递服务与社区空间使用情况。",
+metrics: [["814", "访客通行"], ["38", "待处理工单"], ["2,096", "今日快递"]]
+},
+sports: {
+index: "05",
+kicker: "Sports & Wellbeing",
+title: "体育赛事与活动",
+focus: "票务核销与观众画像",
+description: "展示活动已售门票、票种结构、男女占比、年龄分布、实时入场和核销效率。",
+metrics: [["18,426", "已售门票"], ["86%", "售票完成率"], ["12,805", "已入场"]]
+},
+parking: {
+index: "06",
+kicker: "Parking Operation",
+title: "地下停车与充电",
+focus: "车位、车辆与充电服务",
+description: "监测油车与电车比例、停车时长、费用收入、车位余量和充电桩状态。",
+metrics: [["2,136", "实时在场"], ["72%", "车位占用率"], ["46/128", "空闲充电桩"]]
+},
+culture: {
+index: "07",
+kicker: "Culture & Art",
+title: "文化艺术场馆",
+focus: "活动排期与场馆客流",
+description: "跟踪展陈活动、文化场馆客流、票务预约、场地排期和公共空间热力。",
+metrics: [["26", "今日活动"], ["8,920", "场馆客流"], ["94%", "预约核销率"]]
+}
+};
+const zoneVisual = {
+retail: { x: "27%", y: "52%", color: "#d6aa5d" },
+office: { x: "32%", y: "29%", color: "#4d8dff" },
+hotel: { x: "52%", y: "34%", color: "#a477ff" },
+residence: { x: "62%", y: "27%", color: "#53e0a4" },
+sports: { x: "56%", y: "64%", color: "#ff7468" },
+parking: { x: "21%", y: "67%", color: "#32e5f3" },
+culture: { x: "44%", y: "57%", color: "#d879ff" }
+};
+const zoneKicker = document.getElementById("zoneKicker");
+const zoneTitle = document.getElementById("zoneTitle");
+const zoneIndex = document.getElementById("zoneIndex");
+const zoneDescription = document.getElementById("zoneDescription");
+const zoneMetrics = document.getElementById("zoneMetrics");
+const digitalTwin = document.querySelector(".digital-twin");
+const zoneCard = document.querySelector(".zone-card");
+const zoneOrbit = document.getElementById("zoneOrbit");
+function selectZone(zone) {
+if (zoneMetrics.matches(":hover") || zoneMetrics.contains(document.activeElement)) hideChartTooltip();
+const data = zoneData[zone] || zoneData.retail;
+const visual = zoneVisual[zone] || zoneVisual.retail;
+zoneKicker.textContent = data.kicker;
+zoneTitle.textContent = data.title;
+zoneIndex.textContent = data.index;
+zoneDescription.textContent = data.description;
+zoneMetrics.innerHTML = data.metrics.map(([value, label]) => `<div><strong>${value}</strong><span>${label}</span></div>`).join("");
+initializeDataInteractions(zoneMetrics);
+digitalTwin.style.setProperty("--zone-color", visual.color);
+zoneCard.style.setProperty("--zone-color", visual.color);
+zoneOrbit.style.left = visual.x;
+zoneOrbit.style.top = visual.y;
+if (activeDashboardMode === "overview") {
+const cycleIndex = overviewZones.indexOf(zone);
+if (cycleIndex >= 0) overviewCycleIndex = cycleIndex;
+}
+document.querySelectorAll(".hotspot, .service-button").forEach((button) => {
+button.setAttribute("aria-pressed", String(button.dataset.zone === zone));
+});
+}
+document.querySelectorAll("button[data-zone]").forEach((button) => {
+button.addEventListener("click", () => selectZone(button.dataset.zone));
+});
+const panelIds = ["leftPanel1", "leftPanel2", "leftPanel3", "rightPanel1", "rightPanel2", "rightPanel3"];
+const panels = panelIds.map((id) => document.getElementById(id));
+const globalKpis = document.getElementById("globalKpis");
+const overviewPanelMarkup = panels.map((panel) => panel.innerHTML);
+const overviewKpiMarkup = globalKpis.innerHTML;
+const panelTemplates = {
+parking: [
+`<div class="panel-title"><h2>全天车流对比</h2><small>24H Traffic</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#32e5f3"><strong>8,934</strong><span>今日入场</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>8,107</strong><span>今日出场</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>2,136</strong><span>实时在场</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="parkingFlowChart" aria-label="昨日全天与今日实时停车流量对比折线图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#32e5f3">今日实时</span><span style="--legend-color:#d6aa5d">昨日全天</span><span>截至 14:40</span></div>`,
+`<div class="panel-title"><h2>停车收入趋势</h2><small>Revenue Trend</small></div>
+<div class="split-highlight">
+<div class="hero-stat"><strong>¥186,420</strong><span>今日累计停车收入</span></div>
+<div class="mini-stat-list">
+<div><span>较昨日</span><strong style="color:#53e0a4">+7.8%</strong></div>
+<div><span>单车收入</span><strong>¥20.9</strong></div>
+<div><span>线上支付</span><strong>84%</strong></div>
+</div>
+</div>
+<div class="mode-chart-wrap compact"><canvas id="parkingRevenueChart" aria-label="停车收入趋势折线图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#d6aa5d">今日收入</span><span style="--legend-color:#4d8dff">昨日同期</span></div>`,
+`<div class="panel-title"><h2>停车时长分布</h2><small>Duration</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>2.6h</strong><span>平均时长</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>3.2</strong><span>车位周转</span></div>
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>86</strong><span>超8h车辆</span></div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#53e0a4"><span>0-1小时</span><div class="ratio-track"><i style="--width:29%"></i></div><strong>29%</strong></div>
+<div class="ratio-row" style="--row-color:#32e5f3"><span>1-2小时</span><div class="ratio-track"><i style="--width:31%"></i></div><strong>31%</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>2-4小时</span><div class="ratio-track"><i style="--width:24%"></i></div><strong>24%</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>4-8小时</span><div class="ratio-track"><i style="--width:11%"></i></div><strong>11%</strong></div>
+<div class="ratio-row" style="--row-color:#ff7468"><span>8小时以上</span><div class="ratio-track"><i style="--width:5%"></i></div><strong>5%</strong></div>
+</div>`,
+`<div class="panel-title"><h2>车辆分类占比</h2><small>Vehicle Mix</small></div>
+<div class="split-highlight">
+<div class="hero-stat"><strong>64 : 36</strong><span>油车 / 新能源车</span></div>
+<div class="mini-stat-list">
+<div><span>会员车辆</span><strong>42%</strong></div>
+<div><span>临停车</span><strong>58%</strong></div>
+<div><span>月租车辆</span><strong>1,082</strong></div>
+</div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>燃油车</span><div class="ratio-track"><i style="--width:64%"></i></div><strong>5,718</strong></div>
+<div class="ratio-row" style="--row-color:#53e0a4"><span>新能源</span><div class="ratio-track"><i style="--width:36%"></i></div><strong>3,216</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>访客车辆</span><div class="ratio-track"><i style="--width:47%"></i></div><strong>47%</strong></div>
+</div>`,
+`<div class="panel-title"><h2>车位与充电</h2><small>Capacity</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#32e5f3"><strong>3,440</strong><span>总车位</span></div>
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>2,477</strong><span>已占用</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>963</strong><span>剩余车位</span></div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>油车车位</span><div class="ratio-track"><i style="--width:74%"></i></div><strong>74%</strong></div>
+<div class="ratio-row" style="--row-color:#53e0a4"><span>新能源位</span><div class="ratio-track"><i style="--width:63%"></i></div><strong>63%</strong></div>
+<div class="ratio-row" style="--row-color:#32e5f3"><span>充电桩使用</span><div class="ratio-track"><i style="--width:64%"></i></div><strong>82/128</strong></div>
+</div>
+<div class="mode-note" style="--note-color:#53e0a4">新能源专用车位剩余 237 个，快充桩预计 16:20 出现下一轮空闲高峰。</div>`,
+`<div class="panel-title"><h2>高峰与运营提示</h2><small>Operation</small></div>
+<div class="detail-table">
+<div class="detail-row" style="--row-color:#d6aa5d"><span>全天入场峰值</span><strong>18:35 · 824辆/h</strong></div>
+<div class="detail-row" style="--row-color:#32e5f3"><span>入口平均等待</span><strong>2分18秒</strong></div>
+<div class="detail-row" style="--row-color:#a477ff"><span>停车时长 TOP 区域</span><strong>B2-C区 · 3.8h</strong></div>
+<div class="detail-row" style="--row-color:#53e0a4"><span>缴费后离场效率</span><strong>94.6%</strong></div>
+</div>
+<div class="mode-note" style="--note-color:#ff7468">B2东入口拥堵指数 78%，建议开放P3备用入口并联动场内诱导屏。</div>`
+],
+operations: [
+`<div class="panel-title"><h2>办公到岗趋势</h2><small>Attendance</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>46,820</strong><span>今日到岗</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>78%</strong><span>综合到岗率</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>3,482</strong><span>访客预约</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="officeAttendanceChart" aria-label="办公到岗趋势折线图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#4d8dff">今日到岗</span><span style="--legend-color:#53e0a4">上周同期</span></div>`,
+`<div class="panel-title"><h2>租赁经营</h2><small>Leasing</small></div>
+<div class="split-highlight">
+<div class="hero-stat"><strong>92.4%</strong><span>办公综合出租率</span></div>
+<div class="mini-stat-list">
+<div><span>入驻企业</span><strong>186家</strong></div>
+<div><span>本月新签</span><strong>12,680㎡</strong></div>
+<div><span>续租意向</span><strong>87%</strong></div>
+</div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#53e0a4"><span>A区办公</span><div class="ratio-track"><i style="--width:96%"></i></div><strong>96%</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>B区办公</span><div class="ratio-track"><i style="--width:91%"></i></div><strong>91%</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>C区办公</span><div class="ratio-track"><i style="--width:88%"></i></div><strong>88%</strong></div>
+</div>`,
+`<div class="panel-title"><h2>企业行业分布</h2><small>Tenant Mix</small></div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#4d8dff"><span>科技与AI</span><div class="ratio-track"><i style="--width:34%"></i></div><strong>34%</strong></div>
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>金融服务</span><div class="ratio-track"><i style="--width:23%"></i></div><strong>23%</strong></div>
+<div class="ratio-row" style="--row-color:#53e0a4"><span>生命健康</span><div class="ratio-track"><i style="--width:17%"></i></div><strong>17%</strong></div>
+<div class="ratio-row" style="--row-color:#ff7468"><span>文娱传媒</span><div class="ratio-track"><i style="--width:14%"></i></div><strong>14%</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>其他行业</span><div class="ratio-track"><i style="--width:12%"></i></div><strong>12%</strong></div>
+</div>
+<div class="mode-note" style="--note-color:#4d8dff">科技与AI企业本月新增 6 家，新增办公需求 8,420㎡。</div>`,
+`<div class="panel-title"><h2>楼宇使用效率</h2><small>Space Usage</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>74%</strong><span>会议室利用</span></div>
+<div class="mode-metric" style="--metric-color:#a477ff"><strong>68%</strong><span>共享空间</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>96.2%</strong><span>门禁通行率</span></div>
+</div>
+<div class="detail-table">
+<div class="detail-row"><span>高峰会议时段</span><strong>14:00-16:00</strong></div>
+<div class="detail-row"><span>可用会议室</span><strong>42 / 162</strong></div>
+<div class="detail-row"><span>共享工位剩余</span><strong>286</strong></div>
+<div class="detail-row"><span>访客平均等候</span><strong>3分12秒</strong></div>
+</div>`,
+`<div class="panel-title"><h2>企业服务工单</h2><small>Work Orders</small></div>
+<div class="split-highlight">
+<div class="hero-stat"><strong>91%</strong><span>今日工单闭环率</span></div>
+<div class="mini-stat-list">
+<div><span>已完成</span><strong>214</strong></div>
+<div><span>处理中</span><strong>23</strong></div>
+<div><span>超时</span><strong style="color:#ff7468">4</strong></div>
+</div>
+</div>
+<div class="detail-table">
+<div class="detail-row"><span>门禁权限</span><strong>42单</strong></div>
+<div class="detail-row"><span>IT与网络</span><strong>31单</strong></div>
+<div class="detail-row"><span>会议支持</span><strong>26单</strong></div>
+<div class="detail-row"><span>环境保洁</span><strong>19单</strong></div>
+</div>`,
+`<div class="panel-title"><h2>能耗与设施</h2><small>Facility</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>186MWh</strong><span>今日用电</span></div>
+<div class="mode-metric" style="--metric-color:#32e5f3"><strong>3,420m³</strong><span>今日用水</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>98.6%</strong><span>设备健康</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="officeEnergyChart" aria-label="办公楼能耗趋势图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#d6aa5d">今日能耗</span><span style="--legend-color:#4d8dff">基准值</span></div>`
+],
+services: [
+`<div class="panel-title"><h2>酒店收入趋势</h2><small>Hotel Revenue</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#a477ff"><strong>91%</strong><span>综合入住率</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>¥5.42M</strong><span>今日收入</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>1,286</strong><span>在住客人</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="hotelRevenueChart" aria-label="酒店收入趋势折线图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#a477ff">本周收入</span><span style="--legend-color:#d6aa5d">上周同期</span></div>`,
+`<div class="panel-title"><h2>房型与房态</h2><small>Room Status</small></div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#a477ff"><span>豪华房</span><div class="ratio-track"><i style="--width:94%"></i></div><strong>94%</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>江景房</span><div class="ratio-track"><i style="--width:88%"></i></div><strong>88%</strong></div>
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>套房</span><div class="ratio-track"><i style="--width:76%"></i></div><strong>76%</strong></div>
+<div class="ratio-row" style="--row-color:#53e0a4"><span>服务公寓</span><div class="ratio-track"><i style="--width:82%"></i></div><strong>82%</strong></div>
+</div>
+<div class="occupancy-stack" aria-label="酒店房态"><span style="--width:72%;--stack-color:#53e0a4" data-tooltip-label="在住" data-tooltip-value="72%"></span><span style="--width:12%;--stack-color:#d6aa5d" data-tooltip-label="待清洁" data-tooltip-value="12%"></span><span style="--width:9%;--stack-color:#ff7468" data-tooltip-label="维护中" data-tooltip-value="9%"></span><span style="--width:7%;--stack-color:#4d8dff" data-tooltip-label="可售" data-tooltip-value="7%"></span></div>
+<div class="mode-legend"><span style="--legend-color:#53e0a4">在住 72%</span><span style="--legend-color:#d6aa5d">待清洁 12%</span><span style="--legend-color:#4d8dff">可售 7%</span></div>`,
+`<div class="panel-title"><h2>住客画像</h2><small>Guest Profile</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>52%</strong><span>女性住客</span></div>
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>48%</strong><span>男性住客</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>2.8晚</strong><span>平均连住</span></div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#4d8dff"><span>商务出行</span><div class="ratio-track"><i style="--width:46%"></i></div><strong>46%</strong></div>
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>休闲度假</span><div class="ratio-track"><i style="--width:39%"></i></div><strong>39%</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>长住客人</span><div class="ratio-track"><i style="--width:15%"></i></div><strong>15%</strong></div>
+</div>`,
+`<div class="panel-title"><h2>住宅服务</h2><small>Residence</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>126</strong><span>家政预约</span></div>
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>38</strong><span>物业工单</span></div>
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>2,096</strong><span>快递入库</span></div>
+</div>
+<div class="detail-table">
+<div class="detail-row"><span>工程维修</span><strong>18单</strong></div>
+<div class="detail-row"><span>保洁服务</span><strong>12单</strong></div>
+<div class="detail-row"><span>搬运与寄存</span><strong>5单</strong></div>
+<div class="detail-row"><span>宠物友好服务</span><strong>3单</strong></div>
+</div>`,
+`<div class="panel-title"><h2>服务响应效率</h2><small>Service SLA</small></div>
+<div class="split-highlight">
+<div class="hero-stat"><strong>96.8%</strong><span>服务及时响应率</span></div>
+<div class="mini-stat-list">
+<div><span>平均响应</span><strong>4分18秒</strong></div>
+<div><span>一次解决</span><strong>88%</strong></div>
+<div><span>今日评价</span><strong>4.86 / 5</strong></div>
+</div>
+</div>
+<div class="mode-chart-wrap compact"><canvas id="serviceOrderChart" aria-label="服务工单处理趋势图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#53e0a4">已闭环</span><span style="--legend-color:#ff7468">新提交</span></div>`,
+`<div class="panel-title"><h2>访客与礼宾</h2><small>Concierge</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>814</strong><span>住宅访客</span></div>
+<div class="mode-metric" style="--metric-color:#a477ff"><strong>326</strong><span>礼宾服务</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>94%</strong><span>预约核验率</span></div>
+</div>
+<div class="detail-table">
+<div class="detail-row"><span>高峰到访时段</span><strong>17:30-19:00</strong></div>
+<div class="detail-row"><span>行李寄存</span><strong>68件</strong></div>
+<div class="detail-row"><span>车辆代泊</span><strong>42次</strong></div>
+<div class="detail-row"><span>专车预约</span><strong>31单</strong></div>
+</div>`
+],
+safety: [
+`<div class="panel-title"><h2>活动入场趋势</h2><button class="ticket-record-trigger" type="button" aria-haspopup="dialog" aria-controls="ticketRecordModal">售票记录</button></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>18,426</strong><span>活动已售票</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>12,805</strong><span>已核销入场</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>32</strong><span>今日场次</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="eventAdmissionChart" aria-label="赛事活动实时入场趋势图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#ff7468">实时入场</span><span style="--legend-color:#d6aa5d">预计曲线</span></div>`,
+`<div class="panel-title"><h2>区域客流密度</h2><small>Crowd Density</small></div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#ff7468"><span>零售主街</span><div class="ratio-track"><i style="--width:86%"></i></div><strong>高 86%</strong></div>
+<div class="ratio-row" style="--row-color:#d6aa5d"><span>赛事中心</span><div class="ratio-track"><i style="--width:78%"></i></div><strong>中高</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>文化场馆</span><div class="ratio-track"><i style="--width:64%"></i></div><strong>中 64%</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>办公大堂</span><div class="ratio-track"><i style="--width:52%"></i></div><strong>中 52%</strong></div>
+<div class="ratio-row" style="--row-color:#53e0a4"><span>滨水空间</span><div class="ratio-track"><i style="--width:41%"></i></div><strong>低 41%</strong></div>
+</div>
+<div class="mode-note" style="--note-color:#ff7468">零售主街东段接近舒适容量阈值，已启动单向人流引导。</div>`,
+`<div class="panel-title"><h2>观众结构</h2><small>Audience</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>61%</strong><span>女性观众</span></div>
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>39%</strong><span>男性观众</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>86%</strong><span>售票完成率</span></div>
+</div>
+<div class="ratio-list">
+<div class="ratio-row" style="--row-color:#53e0a4"><span>18-24岁</span><div class="ratio-track"><i style="--width:18%"></i></div><strong>18%</strong></div>
+<div class="ratio-row" style="--row-color:#32e5f3"><span>25-34岁</span><div class="ratio-track"><i style="--width:36%"></i></div><strong>36%</strong></div>
+<div class="ratio-row" style="--row-color:#4d8dff"><span>35-44岁</span><div class="ratio-track"><i style="--width:29%"></i></div><strong>29%</strong></div>
+<div class="ratio-row" style="--row-color:#a477ff"><span>45岁以上</span><div class="ratio-track"><i style="--width:17%"></i></div><strong>17%</strong></div>
+</div>`,
+`<div class="panel-title"><h2>安防设备在线</h2><small>Security Devices</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#4d8dff"><strong>1,280</strong><span>监控摄像机</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>99.2%</strong><span>设备在线率</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>2,436</strong><span>环境传感器</span></div>
+</div>
+<div class="detail-table">
+<div class="detail-row"><span>消防系统</span><strong style="color:#53e0a4">正常 684</strong></div>
+<div class="detail-row"><span>门禁系统</span><strong style="color:#53e0a4">正常 936</strong></div>
+<div class="detail-row"><span>离线设备</span><strong style="color:#ff7468">10</strong></div>
+<div class="detail-row"><span>待巡检点位</span><strong style="color:#d6aa5d">23</strong></div>
+</div>`,
+`<div class="panel-title"><h2>告警与响应</h2><small>Incident Trend</small></div>
+<div class="mode-metrics">
+<div class="mode-metric" style="--metric-color:#ff7468"><strong>7</strong><span>当前告警</span></div>
+<div class="mode-metric" style="--metric-color:#53e0a4"><strong>91%</strong><span>今日闭环率</span></div>
+<div class="mode-metric" style="--metric-color:#d6aa5d"><strong>4m26s</strong><span>平均响应</span></div>
+</div>
+<div class="mode-chart-wrap"><canvas id="safetyAlertChart" aria-label="安全告警趋势图"></canvas></div>
+<div class="mode-legend"><span style="--legend-color:#ff7468">告警发生</span><span style="--legend-color:#53e0a4">已闭环</span></div>`,
+`<div class="panel-title"><h2>实时事件队列</h2><small>Live Queue</small></div>
+<div class="alerts">
+<div class="alert-row" style="--state-color:#ff7468"><span>零售东区客流高位</span><time>14:38</time><strong>处置中</strong></div>
+<div class="alert-row" style="--state-color:#d6aa5d"><span>B2车库入口排队</span><time>14:32</time><strong>已派单</strong></div>
+<div class="alert-row" style="--state-color:#a477ff"><span>C馆设备离线</span><time>14:21</time><strong>检修中</strong></div>
+<div class="alert-row" style="--state-color:#53e0a4"><span>酒店消防巡检完成</span><time>14:06</time><strong>已闭环</strong></div>
+</div>
+<div class="mode-note" style="--note-color:#53e0a4">安保力量在岗 186 人，应急队伍 4 组，关键点位覆盖正常。</div>`
+]
+};
+const modeKpis = {
+operations: [["办公到岗", "46,820", "+5.8%"], ["综合出租率", "92.4%", "+1.2%"], ["入驻企业", "186", "+6"], ["会议室利用", "74%", "+8.3%"], ["待处理工单", "23", "4超时"]],
+parking: [["今日入场", "8,934", "+6.1%"], ["实时在场", "2,136", "+4.8%"], ["车位占用", "72%", "余963"], ["停车收入", "¥186K", "+7.8%"], ["空闲充电桩", "46", "128总量"]],
+services: [["酒店入住率", "91%", "+4.7%"], ["酒店收入", "¥5.42M", "+9.2%"], ["住宅工单", "38", "91%闭环"], ["访客通行", "814", "+12.4%"], ["服务及时率", "96.8%", "+1.6%"]],
+safety: [["活动已售票", "18,426", "86%售票率"], ["实时已入场", "12,805", "69.5%"], ["设备在线率", "99.2%", "10离线"], ["当前告警", "7", "需关注"], ["平均响应", "4m26s", "-38s"]]
+};
+const overviewZones = ["retail", "office", "hotel", "residence", "sports", "parking", "culture"];
+const modeZoneMap = {
+operations: "office",
+parking: "parking",
+services: "hotel",
+safety: "sports"
+};
+let activeDashboardMode = "overview";
+let overviewCycleIndex = 0;
+let overviewCycleTimer = null;
+function stopOverviewCycle() {
+if (overviewCycleTimer !== null) {
+clearInterval(overviewCycleTimer);
+overviewCycleTimer = null;
+}
+}
+function startOverviewCycle(resetSelection) {
+stopOverviewCycle();
+if (resetSelection) {
+overviewCycleIndex = 0;
+selectZone(overviewZones[overviewCycleIndex]);
+}
+overviewCycleTimer = setInterval(() => {
+overviewCycleIndex = (overviewCycleIndex + 1) % overviewZones.length;
+selectZone(overviewZones[overviewCycleIndex]);
+}, 5000);
+}
+function renderKpis(items) {
+return items.map(([label, value, change], index) => {
+const warning = index === 4 && (activeDashboardMode === "operations" || activeDashboardMode === "safety");
+return '<div><span>' + label + '</span><strong>' + value + '</strong><em' + (warning ? ' style="color:var(--color-warning)"' : '') + '>' + change + '</em></div>';
+}).join("");
+}
+function selectMode(mode) {
+if (mode !== "overview" && !panelTemplates[mode]) return;
+hideChartTooltip();
+stopOverviewCycle();
+activeDashboardMode = mode;
+document.querySelector(".cockpit").dataset.mode = mode;
+const markup = mode === "overview" ? overviewPanelMarkup : panelTemplates[mode];
+panels.forEach((panel, index) => {
+panel.innerHTML = markup[index];
+});
+globalKpis.innerHTML = mode === "overview" ? overviewKpiMarkup : renderKpis(modeKpis[mode]);
+document.querySelectorAll(".mode-button").forEach((button) => {
+button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
+});
+if (mode === "overview") {
+startOverviewCycle(true);
+} else {
+selectZone(modeZoneMap[mode]);
+}
+requestAnimationFrame(renderActiveCharts);
+}
+document.querySelectorAll(".mode-button").forEach((button) => {
+button.addEventListener("click", () => selectMode(button.dataset.mode));
+});
+const clock = document.getElementById("clock");
+function updateClock() {
+const now = new Date();
+const pad = (value) => String(value).padStart(2, "0");
+clock.textContent = `${now.getFullYear()}/${pad(now.getMonth() + 1)}/${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+const ticketRecordModal = document.getElementById("ticketRecordModal");
+const ticketRecordTitle = document.getElementById("ticketRecordTitle");
+const ticketSessionSelect = document.getElementById("ticketSessionSelect");
+const ticketCurrentTime = document.getElementById("ticketCurrentTime");
+const ticketSoldCount = document.getElementById("ticketSoldCount");
+const ticketRefundCount = document.getElementById("ticketRefundCount");
+const ticketRevenue = document.getElementById("ticketRevenue");
+const ticketZoneList = document.getElementById("ticketZoneList");
+const ticketEventList = document.getElementById("ticketEventList");
+const ticketTimelineEvents = document.getElementById("ticketTimelineEvents");
+const ticketTimeline = document.getElementById("ticketTimeline");
+const ticketStartLabel = document.getElementById("ticketStartLabel");
+const ticketEndLabel = document.getElementById("ticketEndLabel");
+const ticketPlayButton = document.getElementById("ticketPlayButton");
+const ticketSeatTooltip = document.getElementById("ticketSeatTooltip");
+const ticketSeatContainers = {
+north: document.getElementById("northSeats"),
+south: document.getElementById("southSeats"),
+west: document.getElementById("westSeats"),
+east: document.getElementById("eastSeats")
+};
+const ticketZoneConfig = {
+A1: { label: "A1区", color: "#53e0a4", price: 1280 },
+A2: { label: "A2区", color: "#26d9c7", price: 1080 },
+B: { label: "B区", color: "#4d8dff", price: 880 },
+C: { label: "C区", color: "#ff8a3d", price: 680 },
+D: { label: "D区", color: "#ec5cc6", price: 480 },
+F: { label: "F区", color: "#ff4d4f", price: 380 }
+};
+const ticketSessions = {
+derby: {
+title: "西岸足球之夜",
+seed: 11,
+start: "2026-07-20T13:30:00+08:00",
+soldOut: "2026-07-20T13:40:00+08:00",
+refundStart: "2026-07-25T09:30:00+08:00",
+end: "2026-07-26T18:00:00+08:00",
+events: [
+["2026-07-20T13:30:00+08:00", "开售", "全部分区同步开售", "#32e5f3"],
+["2026-07-20T13:32:00+08:00", "C区冲刺", "性价比席位快速售出超过 70%", "#ff8a3d"],
+["2026-07-20T13:35:00+08:00", "F区跟进", "低价外围席位进入集中购买", "#ff4d4f"],
+["2026-07-20T13:40:00+08:00", "基本售罄", "1200 个演示席位完成主要售卖", "#53e0a4"],
+["2026-07-25T09:30:00+08:00", "退票释放", "部分座位退票后重新开放", "#ff7468"],
+["2026-07-26T18:00:00+08:00", "截止", "线上售票通道关闭", "#d6aa5d"]
+]
+},
+youth: {
+title: "青少年冠军杯决赛",
+seed: 29,
+start: "2026-07-21T10:00:00+08:00",
+soldOut: "2026-07-21T10:10:00+08:00",
+refundStart: "2026-07-26T09:00:00+08:00",
+end: "2026-07-27T12:00:00+08:00",
+events: [
+["2026-07-21T10:00:00+08:00", "开售", "会员与公众票同步开放", "#32e5f3"],
+["2026-07-21T10:02:00+08:00", "C区冲刺", "视野与价格均衡区率先抢购", "#ff8a3d"],
+["2026-07-21T10:05:00+08:00", "F区跟进", "低价席位售卖速度保持第二梯队", "#ff4d4f"],
+["2026-07-21T10:10:00+08:00", "基本售罄", "全部演示席位完成主要售卖", "#53e0a4"],
+["2026-07-26T09:00:00+08:00", "退票释放", "认证退票座位重新上架", "#ff7468"],
+["2026-07-27T12:00:00+08:00", "截止", "线上售票通道关闭", "#d6aa5d"]
+]
+},
+allstar: {
+title: "城市全明星表演赛",
+seed: 47,
+start: "2026-07-22T12:00:00+08:00",
+soldOut: "2026-07-22T12:10:00+08:00",
+refundStart: "2026-07-27T10:00:00+08:00",
+end: "2026-07-28T17:00:00+08:00",
+events: [
+["2026-07-22T12:00:00+08:00", "开售", "早鸟与普通票同步开放", "#32e5f3"],
+["2026-07-22T12:02:00+08:00", "C区冲刺", "性价比席位快速售出超过 70%", "#ff8a3d"],
+["2026-07-22T12:05:00+08:00", "F区跟进", "低价外围席位进入集中购买", "#ff4d4f"],
+["2026-07-22T12:10:00+08:00", "基本售罄", "全部演示席位完成主要售卖", "#53e0a4"],
+["2026-07-27T10:00:00+08:00", "退票释放", "部分退票座位再次开放", "#ff7468"],
+["2026-07-28T17:00:00+08:00", "截止", "线上售票通道关闭", "#d6aa5d"]
+]
+}
+};
+let activeTicketSession = null;
+let ticketSeats = [];
+let ticketPlaybackTimer = null;
+let ticketLastTrigger = null;
+const ticketSaleWindowShare = 0.74;
+const ticketZoneSaleCurves = {
+C: { burstShare: 0.72, burstMinutes: 2, finishMinutes: 5.8, power: 0.42 },
+F: { burstShare: 0.62, burstMinutes: 2, finishMinutes: 6.8, power: 0.5 },
+A2: { burstShare: 0.38, burstMinutes: 3.2, finishMinutes: 8.2, power: 0.68 },
+B: { burstShare: 0.34, burstMinutes: 4, finishMinutes: 8.8, power: 0.72 },
+D: { burstShare: 0.3, burstMinutes: 4.4, finishMinutes: 9.2, power: 0.78 },
+A1: { burstShare: 0.22, burstMinutes: 5, finishMinutes: 9.8, power: 0.9 }
+};
+
+function ticketHash(value) {
+let hash = 2166136261;
+for (let index = 0; index < value.length; index += 1) {
+hash ^= value.charCodeAt(index);
+hash = Math.imul(hash, 16777619);
+}
+return hash >>> 0;
+}
+function formatTicketDate(timestamp, withYear = true) {
+const date = new Date(timestamp);
+const pad = (value) => String(value).padStart(2, "0");
+const prefix = withYear ? `${date.getFullYear()}/` : "";
+return `${prefix}${pad(date.getMonth() + 1)}/${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+function formatTicketMoney(value) {
+return value >= 10000 ? `¥${(value / 10000).toFixed(1)}万` : `¥${value.toLocaleString("zh-CN")}`;
+}
+function getTicketSession(key = ticketSessionSelect.value) {
+const source = ticketSessions[key] || ticketSessions.derby;
+return {
+...source,
+startAt: Date.parse(source.start),
+soldOutAt: Date.parse(source.soldOut),
+refundStartAt: Date.parse(source.refundStart),
+endAt: Date.parse(source.end)
+};
+}
+function getTicketSeatState(seat, timestamp) {
+if (timestamp < seat.soldAt) return "unsold";
+if (seat.refundAt && timestamp >= seat.refundAt && (!seat.resoldAt || timestamp < seat.resoldAt)) return "refunded";
+return "sold";
+}
+function getTicketTimelineTime() {
+if (!activeTicketSession) return Date.now();
+const ratio = Number(ticketTimeline.value) / Number(ticketTimeline.max);
+if (ratio <= ticketSaleWindowShare) {
+return activeTicketSession.startAt + (activeTicketSession.soldOutAt - activeTicketSession.startAt) * (ratio / ticketSaleWindowShare);
+}
+return activeTicketSession.soldOutAt + (activeTicketSession.endAt - activeTicketSession.soldOutAt) * ((ratio - ticketSaleWindowShare) / (1 - ticketSaleWindowShare));
+}
+function getTicketTimelinePosition(timestamp) {
+if (!activeTicketSession) return 0;
+if (timestamp <= activeTicketSession.soldOutAt) {
+return (timestamp - activeTicketSession.startAt) / (activeTicketSession.soldOutAt - activeTicketSession.startAt) * ticketSaleWindowShare * 100;
+}
+return (ticketSaleWindowShare + (timestamp - activeTicketSession.soldOutAt) / (activeTicketSession.endAt - activeTicketSession.soldOutAt) * (1 - ticketSaleWindowShare)) * 100;
+}
+function getTicketZoneSaleMinutes(zone, normalized, hash) {
+const curve = ticketZoneSaleCurves[zone] || ticketZoneSaleCurves.B;
+const jitter = ((hash % 97) / 96 - 0.5) * 0.28;
+let minute;
+if (normalized <= curve.burstShare) {
+minute = Math.pow(normalized / curve.burstShare, curve.power) * curve.burstMinutes;
+} else {
+const tailProgress = (normalized - curve.burstShare) / (1 - curve.burstShare);
+minute = curve.burstMinutes + Math.pow(tailProgress, 1.38) * (curve.finishMinutes - curve.burstMinutes);
+}
+return Math.max(0.08, Math.min(9.92, minute + jitter));
+}
+function createTicketSeatSchedule(seat) {
+const hash = ticketHash(`${activeTicketSession.seed}-${seat.id}`);
+const normalized = (hash % 10000) / 10000;
+const saleMinute = getTicketZoneSaleMinutes(seat.zone, normalized, hash);
+seat.soldAt = activeTicketSession.startAt + saleMinute * 60 * 1000;
+seat.refundAt = null;
+seat.resoldAt = null;
+if (hash % 17 === 0) {
+const refundHash = ticketHash(`${seat.id}-refund-${activeTicketSession.seed}`);
+const refundWindow = Math.max(1, activeTicketSession.endAt - activeTicketSession.refundStartAt - 3 * 60 * 60 * 1000);
+seat.refundAt = activeTicketSession.refundStartAt + (refundHash % 1000) / 1000 * refundWindow;
+if (hash % 4 !== 0) {
+const delayHours = 0.5 + (refundHash % 550) / 100;
+const proposedResale = seat.refundAt + delayHours * 60 * 60 * 1000;
+if (proposedResale < activeTicketSession.endAt - 30 * 60 * 1000) seat.resoldAt = proposedResale;
+}
+}
+}
+function getTicketZoneForSeat(stand, column) {
+if (stand === "north") {
+if (column < 16) return "D";
+if (column < 32) return "F";
+return "C";
+}
+if (stand === "south") return column < 24 ? "A1" : "A2";
+return stand === "west" ? "B" : "C";
+}
+function buildTicketStand(stand, columns, rows) {
+const container = ticketSeatContainers[stand];
+const fragment = document.createDocumentFragment();
+for (let rowIndex = 0; rowIndex < rows; rowIndex += 1) {
+for (let columnIndex = 0; columnIndex < columns; columnIndex += 1) {
+const zone = getTicketZoneForSeat(stand, columnIndex);
+const zoneConfig = ticketZoneConfig[zone];
+const row = String.fromCharCode(65 + rowIndex);
+const seatNumber = columnIndex + 1;
+const seat = {
+id: `${stand}-${zone}-${row}-${seatNumber}`,
+stand,
+standLabel: { north: "北看台", south: "南看台", west: "西看台", east: "东看台" }[stand],
+zone,
+row,
+seatNumber,
+price: zoneConfig.price
+};
+createTicketSeatSchedule(seat);
+const button = document.createElement("button");
+button.type = "button";
+button.className = "stadium-seat";
+button.style.setProperty("--seat-color", zoneConfig.color);
+button.setAttribute("aria-label", `${zoneConfig.label} ${row}排 ${seatNumber}座`);
+button.addEventListener("pointerenter", (event) => showTicketSeatTooltip(seat, event.clientX, event.clientY));
+button.addEventListener("pointermove", (event) => positionTicketSeatTooltip(event.clientX, event.clientY));
+button.addEventListener("pointerleave", hideTicketSeatTooltip);
+button.addEventListener("focus", () => {
+const bounds = button.getBoundingClientRect();
+showTicketSeatTooltip(seat, bounds.left + bounds.width / 2, bounds.top);
+});
+button.addEventListener("blur", hideTicketSeatTooltip);
+seat.element = button;
+ticketSeats.push(seat);
+fragment.appendChild(button);
+}
+}
+container.replaceChildren(fragment);
+}
+function buildTicketZoneList() {
+ticketZoneList.replaceChildren();
+Object.entries(ticketZoneConfig).forEach(([zone, config]) => {
+const row = document.createElement("div");
+row.className = "ticket-zone-row";
+row.style.setProperty("--zone-seat-color", config.color);
+const swatch = document.createElement("i");
+const name = document.createElement("strong");
+name.textContent = config.label;
+const price = document.createElement("span");
+price.textContent = `¥${config.price} / 张`;
+const count = document.createElement("em");
+count.dataset.ticketZoneCount = zone;
+row.append(swatch, name, price, count);
+ticketZoneList.appendChild(row);
+});
+}
+function buildTicketEvents() {
+ticketEventList.replaceChildren();
+ticketTimelineEvents.replaceChildren();
+activeTicketSession.events.forEach(([timestamp, label, detail, color]) => {
+const eventTime = Date.parse(timestamp);
+const row = document.createElement("div");
+row.className = "ticket-event-row";
+row.style.setProperty("--event-color", color);
+const time = document.createElement("time");
+time.textContent = formatTicketDate(eventTime, false);
+const copy = document.createElement("span");
+copy.textContent = `${label} · ${detail}`;
+row.append(time, copy);
+ticketEventList.appendChild(row);
+const marker = document.createElement("i");
+const position = getTicketTimelinePosition(eventTime);
+marker.style.setProperty("--event-position", `${Math.max(2, Math.min(98, position))}%`);
+marker.style.setProperty("--event-color", color);
+marker.dataset.label = label;
+ticketTimelineEvents.appendChild(marker);
+});
+}
+function buildTicketSession() {
+activeTicketSession = getTicketSession();
+ticketRecordTitle.textContent = `${activeTicketSession.title} · 售票记录`;
+ticketSeats = [];
+Object.values(ticketSeatContainers).forEach((container) => container.replaceChildren());
+buildTicketStand("north", 48, 9);
+buildTicketStand("south", 48, 9);
+buildTicketStand("west", 8, 21);
+buildTicketStand("east", 8, 21);
+buildTicketZoneList();
+buildTicketEvents();
+ticketStartLabel.textContent = `${formatTicketDate(activeTicketSession.startAt, false)} 开售`;
+ticketEndLabel.textContent = `${formatTicketDate(activeTicketSession.endAt, false)} 截止`;
+ticketTimeline.value = ticketTimeline.max;
+renderTicketTimeline();
+}
+function renderTicketTimeline() {
+if (!activeTicketSession) return;
+const timestamp = getTicketTimelineTime();
+const zoneTotals = {};
+const zoneSold = {};
+let sold = 0;
+let refunded = 0;
+let revenue = 0;
+ticketSeats.forEach((seat) => {
+const state = getTicketSeatState(seat, timestamp);
+seat.element.classList.toggle("sold", state === "sold");
+seat.element.classList.toggle("refunded", state === "refunded");
+seat.element.dataset.state = state;
+zoneTotals[seat.zone] = (zoneTotals[seat.zone] || 0) + 1;
+if (state === "sold") {
+sold += 1;
+revenue += seat.price;
+zoneSold[seat.zone] = (zoneSold[seat.zone] || 0) + 1;
+}
+if (state === "refunded") refunded += 1;
+});
+ticketCurrentTime.textContent = formatTicketDate(timestamp);
+ticketSoldCount.textContent = sold.toLocaleString("zh-CN");
+ticketRefundCount.textContent = refunded.toLocaleString("zh-CN");
+ticketRevenue.textContent = formatTicketMoney(revenue);
+Object.keys(ticketZoneConfig).forEach((zone) => {
+const count = ticketZoneList.querySelector(`[data-ticket-zone-count="${zone}"]`);
+if (count) count.textContent = `${zoneSold[zone] || 0} / ${zoneTotals[zone] || 0} 已售`;
+});
+}
+function describeTicketSeat(seat, timestamp) {
+const state = getTicketSeatState(seat, timestamp);
+const title = `${ticketZoneConfig[seat.zone].label} · ${seat.row}排 ${seat.seatNumber}座`;
+if (state === "unsold") return { title, status: "尚未售出", time: "等待购买", color: "#8b9aa7" };
+if (state === "refunded") {
+return {
+title,
+status: `退票待售 · ¥${seat.price}`,
+time: `退票时间 ${formatTicketDate(seat.refundAt)}`,
+color: "#ff7468"
+};
+}
+const isResale = seat.resoldAt && timestamp >= seat.resoldAt;
+return {
+title,
+status: `${isResale ? "再次售出" : "已售出"} · ¥${seat.price}`,
+time: `售卖时间 ${formatTicketDate(isResale ? seat.resoldAt : seat.soldAt)}`,
+color: ticketZoneConfig[seat.zone].color
+};
+}
+function showTicketSeatTooltip(seat, x, y) {
+const detail = describeTicketSeat(seat, getTicketTimelineTime());
+ticketSeatTooltip.replaceChildren();
+ticketSeatTooltip.style.setProperty("--tooltip-seat-color", detail.color);
+const title = document.createElement("strong");
+title.textContent = detail.title;
+const status = document.createElement("span");
+status.textContent = detail.status;
+const time = document.createElement("span");
+time.textContent = detail.time;
+ticketSeatTooltip.append(title, status, time);
+ticketSeatTooltip.hidden = false;
+positionTicketSeatTooltip(x, y);
+}
+function positionTicketSeatTooltip(x, y) {
+if (ticketSeatTooltip.hidden) return;
+const margin = 12;
+const bounds = ticketSeatTooltip.getBoundingClientRect();
+const left = Math.min(window.innerWidth - bounds.width - margin, Math.max(margin, x + 14));
+const top = Math.min(window.innerHeight - bounds.height - margin, Math.max(margin, y - bounds.height - 12));
+ticketSeatTooltip.style.left = `${left}px`;
+ticketSeatTooltip.style.top = `${top}px`;
+}
+function hideTicketSeatTooltip() {
+ticketSeatTooltip.hidden = true;
+}
+function stopTicketPlayback() {
+if (ticketPlaybackTimer) {
+clearInterval(ticketPlaybackTimer);
+ticketPlaybackTimer = null;
+}
+ticketPlayButton.classList.remove("is-playing");
+ticketPlayButton.setAttribute("aria-label", "播放售票时间轴");
+}
+function startTicketPlayback() {
+if (Number(ticketTimeline.value) >= Number(ticketTimeline.max)) ticketTimeline.value = 0;
+stopTicketPlayback();
+ticketPlayButton.classList.add("is-playing");
+ticketPlayButton.setAttribute("aria-label", "暂停售票时间轴");
+ticketPlaybackTimer = setInterval(() => {
+const nextValue = Number(ticketTimeline.value) + 5;
+ticketTimeline.value = Math.min(Number(ticketTimeline.max), nextValue);
+renderTicketTimeline();
+if (nextValue >= Number(ticketTimeline.max)) stopTicketPlayback();
+}, 90);
+}
+function openTicketRecord(trigger, focusClose = false) {
+ticketLastTrigger = trigger || ticketLastTrigger;
+if (!activeTicketSession) buildTicketSession();
+ticketRecordModal.hidden = false;
+ticketRecordModal.setAttribute("aria-hidden", "false");
+document.body.classList.add("ticket-modal-open");
+renderTicketTimeline();
+if (focusClose) requestAnimationFrame(() => ticketRecordModal.querySelector(".ticket-close").focus());
+}
+function closeTicketRecord() {
+stopTicketPlayback();
+hideTicketSeatTooltip();
+ticketRecordModal.hidden = true;
+ticketRecordModal.setAttribute("aria-hidden", "true");
+document.body.classList.remove("ticket-modal-open");
+if (ticketLastTrigger) ticketLastTrigger.focus({ preventScroll: true });
+}
+function initializeTicketRecordTriggers() {
+document.querySelectorAll(".ticket-record-trigger").forEach((trigger) => {
+if (trigger.dataset.ticketBound === "true") return;
+trigger.dataset.ticketBound = "true";
+trigger.addEventListener("click", () => openTicketRecord(trigger, true));
+trigger.addEventListener("mouseenter", () => openTicketRecord(trigger, false));
+});
+}
+ticketRecordModal.querySelectorAll("[data-ticket-close]").forEach((control) => {
+control.addEventListener("click", closeTicketRecord);
+});
+ticketSessionSelect.addEventListener("change", () => {
+stopTicketPlayback();
+buildTicketSession();
+});
+ticketTimeline.addEventListener("input", () => {
+stopTicketPlayback();
+renderTicketTimeline();
+});
+ticketPlayButton.addEventListener("click", () => {
+if (ticketPlaybackTimer) stopTicketPlayback();
+else startTicketPlayback();
+});
+document.addEventListener("keydown", (event) => {
+if (event.key === "Escape" && !ticketRecordModal.hidden) closeTicketRecord();
+});
+
+function makeHourLabels(start, count) {
+return Array.from({ length: count }, (_, index) => `${String((start + index) % 24).padStart(2, "0")}:00`);
+}
+const chartConfigs = {
+footfallChart: {
+max: 80,
+unit: "千人",
+hoverLabels: makeHourLabels(8, 12),
+series: [
+{ name: "昨日同期", values: [13, 18, 16, 24, 26, 34, 39, 44, 52, 49, 56, 55], color: "#d6aa5d", dash: true },
+{ name: "今日客流", values: [16, 22, 19, 31, 28, 42, 52, 48, 64, 58, 72, 68], color: "#32e5f3", fill: "rgba(50,229,243,0.24)" }
+]
+},
+parkingFlowChart: {
+max: 900,
+unit: "辆/h",
+hoverLabels: makeHourLabels(0, 24),
+labels: [[0, "00"], [6, "06"], [12, "12"], [18, "18"], [23, "24"]],
+series: [
+{ name: "昨日全天", values: [86, 54, 36, 28, 42, 108, 286, 612, 784, 653, 486, 522, 718, 696, 574, 498, 556, 742, 861, 824, 648, 436, 268, 142], color: "#d6aa5d", dash: true },
+{ name: "今日实时", values: [92, 58, 42, 31, 48, 126, 318, 646, 812, 704, 512, 558, 746, 728, 624, null, null, null, null, null, null, null, null, null], color: "#32e5f3", fill: "rgba(50,229,243,0.24)" }
+]
+},
+parkingRevenueChart: {
+max: 36,
+unit: "千元",
+hoverLabels: makeHourLabels(8, 12),
+labels: [[0, "08"], [3, "11"], [6, "14"], [9, "17"], [11, "19"]],
+series: [
+{ name: "昨日同期", values: [8, 11, 15, 18, 20, 24, 23, 27, 26, 31, 29, 34], color: "#4d8dff", dash: true },
+{ name: "今日收入", values: [9, 12, 16, 19, 23, 26, 25, 29, 28, 33, 31, 36], color: "#d6aa5d", fill: "rgba(214,170,93,0.2)" }
+]
+},
+officeAttendanceChart: {
+max: 52,
+unit: "千人",
+hoverLabels: makeHourLabels(7, 12),
+labels: [[0, "07"], [3, "10"], [6, "13"], [9, "16"], [11, "18"]],
+series: [
+{ name: "上周同期", values: [4, 12, 28, 41, 45, 46, 47, 46, 48, 47, 45, 42], color: "#53e0a4", dash: true },
+{ name: "今日到岗", values: [5, 14, 31, 44, 47, 48, 49, 48, 50, 49, 47, 44], color: "#4d8dff", fill: "rgba(77,141,255,0.22)" }
+]
+},
+officeEnergyChart: {
+max: 230,
+unit: "MWh",
+hoverLabels: makeHourLabels(8, 12),
+labels: [[0, "08"], [3, "11"], [6, "14"], [9, "17"], [11, "19"]],
+series: [
+{ name: "基准值", values: [112, 128, 141, 152, 164, 177, 183, 192, 205, 196, 188, 174], color: "#4d8dff", dash: true },
+{ name: "今日能耗", values: [106, 121, 136, 148, 158, 169, 176, 186, 194, 188, 181, 166], color: "#d6aa5d", fill: "rgba(214,170,93,0.18)" }
+]
+},
+hotelRevenueChart: {
+max: 6.2,
+unit: "百万元",
+hoverLabels: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+labels: [[0, "一"], [1, "二"], [2, "三"], [3, "四"], [4, "五"], [5, "六"], [6, "日"]],
+series: [
+{ name: "上周同期", values: [4.1, 4.3, 4.6, 4.8, 5.0, 5.3, 5.1], color: "#d6aa5d", dash: true },
+{ name: "本周收入", values: [4.4, 4.7, 4.9, 5.2, 5.42, 5.8, 5.6], color: "#a477ff", fill: "rgba(164,119,255,0.22)" }
+]
+},
+serviceOrderChart: {
+max: 70,
+unit: "单",
+hoverLabels: makeHourLabels(8, 12),
+labels: [[0, "08"], [3, "11"], [6, "14"], [9, "17"], [11, "19"]],
+series: [
+{ name: "已闭环", values: [8, 14, 17, 22, 28, 31, 36, 42, 45, 52, 58, 62], color: "#53e0a4", fill: "rgba(83,224,164,0.18)" },
+{ name: "新提交", values: [6, 11, 19, 17, 24, 22, 30, 28, 34, 31, 38, 35], color: "#ff7468", dash: true }
+]
+},
+eventAdmissionChart: {
+max: 15,
+unit: "千人",
+hoverLabels: ["10:00", "10:45", "11:30", "12:15", "13:00", "13:45", "14:30", "15:15", "16:00", "16:40", "17:20", "18:00"],
+labels: [[0, "10"], [3, "12"], [6, "14"], [9, "16"], [11, "18"]],
+series: [
+{ name: "预计曲线", values: [0.4, 1.1, 2.2, 3.8, 5.4, 7.2, 8.9, 10.6, 11.8, 12.7, 13.8, 14.6], color: "#d6aa5d", dash: true },
+{ name: "实时入场", values: [0.3, 1.0, 2.5, 4.1, 5.9, 7.8, 9.6, 11.1, 12.0, 12.8, null, null], color: "#ff7468", fill: "rgba(255,116,104,0.2)" }
+]
+},
+safetyAlertChart: {
+max: 12,
+unit: "件",
+hoverLabels: makeHourLabels(8, 12),
+labels: [[0, "08"], [3, "11"], [6, "14"], [9, "17"], [11, "19"]],
+series: [
+{ name: "告警发生", values: [2, 3, 4, 3, 5, 7, 6, 8, 7, 9, 8, 7], color: "#ff7468", fill: "rgba(255,116,104,0.16)" },
+{ name: "已闭环", values: [1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 8, 9], color: "#53e0a4", dash: true }
+]
+}
+};
+const chartTooltip = document.createElement("div");
+chartTooltip.className = "chart-tooltip";
+chartTooltip.setAttribute("role", "status");
+chartTooltip.setAttribute("aria-hidden", "true");
+document.body.appendChild(chartTooltip);
+function positionChartTooltip(clientX, clientY) {
+const gap = 14;
+const edge = 10;
+chartTooltip.style.left = "0px";
+chartTooltip.style.top = "0px";
+const rect = chartTooltip.getBoundingClientRect();
+let left = clientX + gap;
+let top = clientY + gap;
+if (left + rect.width > window.innerWidth - edge) left = clientX - rect.width - gap;
+if (top + rect.height > window.innerHeight - edge) top = clientY - rect.height - gap;
+chartTooltip.style.left = `${Math.max(edge, left)}px`;
+chartTooltip.style.top = `${Math.max(edge, top)}px`;
+}
+function showChartTooltip({ title, subtitle = "", rows, accent }, clientX, clientY) {
+chartTooltip.replaceChildren();
+chartTooltip.style.setProperty("--tooltip-accent", accent || "#32e5f3");
+const titleNode = document.createElement("strong");
+titleNode.className = "chart-tooltip-title";
+titleNode.textContent = title;
+chartTooltip.appendChild(titleNode);
+if (subtitle) {
+const subtitleNode = document.createElement("span");
+subtitleNode.className = "chart-tooltip-subtitle";
+subtitleNode.textContent = subtitle;
+chartTooltip.appendChild(subtitleNode);
+}
+rows.forEach((row) => {
+const rowNode = document.createElement("div");
+rowNode.className = "chart-tooltip-row";
+rowNode.style.setProperty("--row-color", row.color || accent || "#32e5f3");
+const marker = document.createElement("i");
+const label = document.createElement("span");
+const value = document.createElement("strong");
+label.textContent = row.label;
+value.textContent = row.value;
+rowNode.append(marker, label, value);
+chartTooltip.appendChild(rowNode);
+});
+chartTooltip.classList.add("is-visible");
+chartTooltip.setAttribute("aria-hidden", "false");
+positionChartTooltip(clientX, clientY);
+}
+function hideChartTooltip() {
+chartTooltip.classList.remove("is-visible");
+chartTooltip.setAttribute("aria-hidden", "true");
+}
+const dataItemSelector = [
+".global-kpis > div",
+".zone-metrics > div",
+".overview-list > div",
+".detail-list > div",
+".occupancy-ring",
+".parking-ring",
+".trend-head",
+".ticket-stats > div",
+".age-chart > div",
+".rank-row",
+".transport-row",
+".room-block",
+".hotel-row",
+".alert-row",
+".mode-metric",
+".ratio-row",
+".detail-row",
+".hero-stat",
+".mini-stat-list > div",
+".occupancy-stack > span"
+].join(",");
+function directChild(element, selector) {
+return Array.from(element.children).find((child) => child.matches(selector)) || null;
+}
+const scrollablePanelTitles = new Set(["酒店房态与事件", "企业服务工单", "实时事件队列", "访客与礼宾"]);
+const fittedChartPanelTitles = new Set(["体育赛事票务", "能耗与设施", "服务响应效率", "告警与响应"]);
+function prepareScrollablePanels(root = document) {
+const panelNodes = [];
+if (root.matches && root.matches(".panel")) panelNodes.push(root);
+panelNodes.push(...root.querySelectorAll(".panel"));
+panelNodes.forEach((panel) => {
+const title = directChild(panel, ".panel-title");
+const titleText = title?.querySelector("h2")?.textContent.trim() || "";
+const existingScrollArea = directChild(panel, ".panel-scroll");
+panel.classList.toggle("fits-chart-content", fittedChartPanelTitles.has(titleText));
+if (!scrollablePanelTitles.has(titleText)) {
+panel.classList.remove("has-local-scroll");
+if (existingScrollArea) {
+Array.from(existingScrollArea.children).forEach((node) => panel.appendChild(node));
+existingScrollArea.remove();
+}
+return;
+}
+panel.classList.add("has-local-scroll");
+if (existingScrollArea) return;
+const contentNodes = Array.from(panel.children).filter((child) => child !== title);
+if (!contentNodes.length) return;
+const scrollArea = document.createElement("div");
+scrollArea.className = "panel-scroll";
+contentNodes.forEach((node) => scrollArea.appendChild(node));
+panel.appendChild(scrollArea);
+});
+}
+function getDataItemTooltip(item) {
+const panel = item.closest(".panel");
+const panelTitle = panel ? panel.querySelector(".panel-title h2") : null;
+const ringLabel = item.querySelector(".ring-copy span");
+const ringValue = item.querySelector(".ring-copy strong");
+const directLabel = directChild(item, "span");
+const directValue = directChild(item, "strong");
+const directMeta = directChild(item, "em, time");
+const roomIndex = item.matches(".room-block") ? Array.from(item.parentElement.children).indexOf(item) + 1 : 0;
+const title = panelTitle
+? panelTitle.textContent.trim()
+: item.closest(".zone-card")
+? zoneTitle.textContent.trim()
+: item.closest(".global-kpis")
+? "全局关键指标"
+: "数据详情";
+const label = item.matches(".trend-head")
+? "实时数值"
+: item.dataset.tooltipLabel
+|| item.dataset.label
+|| (roomIndex ? `房态单元 ${String(roomIndex).padStart(2, "0")}` : "")
+|| (ringLabel ? ringLabel.textContent.trim() : "")
+|| (directLabel ? directLabel.textContent.trim() : "当前数据");
+const valueNode = directValue || ringValue;
+const value = item.dataset.tooltipValue
+|| (valueNode ? valueNode.textContent.trim() : "")
+|| (item.matches(".room-block") ? item.textContent.trim() : "查看状态");
+const accent = valueNode
+? getComputedStyle(valueNode).color
+: getComputedStyle(item).getPropertyValue("--stack-color").trim() || getComputedStyle(item).color;
+return {
+title,
+subtitle: item.matches(".trend-head") && directLabel
+? directLabel.textContent.trim()
+: directMeta
+? directMeta.textContent.trim()
+: "",
+accent,
+rows: [{ label, value, color: accent }]
+};
+}
+function initializeDataInteractions(root = document) {
+const candidates = [];
+if (root.matches && root.matches(dataItemSelector)) candidates.push(root);
+candidates.push(...root.querySelectorAll(dataItemSelector));
+candidates.forEach((item) => {
+if (item.dataset.dataInteractive === "true") return;
+item.dataset.dataInteractive = "true";
+item.classList.add("data-interactive");
+if (!item.hasAttribute("tabindex")) item.tabIndex = 0;
+const tooltipData = getDataItemTooltip(item);
+if (!item.hasAttribute("aria-label")) {
+item.setAttribute("aria-label", `${tooltipData.rows[0].label} ${tooltipData.rows[0].value}`);
+}
+item.addEventListener("mouseenter", (event) => {
+showChartTooltip(getDataItemTooltip(item), event.clientX, event.clientY);
+});
+item.addEventListener("mousemove", (event) => positionChartTooltip(event.clientX, event.clientY));
+item.addEventListener("mouseleave", hideChartTooltip);
+item.addEventListener("focus", () => {
+const rect = item.getBoundingClientRect();
+showChartTooltip(getDataItemTooltip(item), rect.left + rect.width / 2, rect.top + rect.height / 2);
+});
+item.addEventListener("blur", hideChartTooltip);
+});
+}
+function formatChartValue(value, config) {
+if (value === null || value === undefined) return "暂无实时数据";
+const formatted = Number.isInteger(value) ? value.toLocaleString("zh-CN") : value.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+return `${formatted}${config.unit || ""}`;
+}
+function showCanvasTooltip(canvas, config, index, clientX, clientY) {
+const panelTitle = canvas.closest(".panel")?.querySelector(".panel-title h2")?.textContent.trim() || canvas.getAttribute("aria-label") || "趋势数据";
+const subtitle = config.hoverLabels?.[index] || `第 ${String(index + 1).padStart(2, "0")} 时段`;
+const rows = config.series.map((series, seriesIndex) => ({
+label: series.name || `数据系列 ${seriesIndex + 1}`,
+value: formatChartValue(series.values[index], config),
+color: series.color
+}));
+const accentSeries = config.series.find((series) => series.values[index] !== null && series.values[index] !== undefined && !series.dash)
+|| config.series.find((series) => series.values[index] !== null && series.values[index] !== undefined)
+|| config.series[0];
+showChartTooltip({ title: panelTitle, subtitle, rows, accent: accentSeries.color }, clientX, clientY);
+}
+function bindCanvasInteraction(canvas, config) {
+if (canvas.dataset.chartInteractive === "true") return;
+canvas.dataset.chartInteractive = "true";
+canvas.tabIndex = 0;
+function updateIndex(index, clientX, clientY) {
+const count = config.series[0].values.length;
+const nextIndex = Math.max(0, Math.min(count - 1, index));
+if (canvas.__hoverIndex !== nextIndex) {
+canvas.__hoverIndex = nextIndex;
+drawLineChart(canvas, config);
+}
+showCanvasTooltip(canvas, config, nextIndex, clientX, clientY);
+}
+canvas.addEventListener("pointermove", (event) => {
+const rect = canvas.getBoundingClientRect();
+const count = config.series[0].values.length;
+const normalizedX = Math.max(0, Math.min(rect.width, event.clientX - rect.left));
+const index = Math.round((normalizedX / Math.max(1, rect.width)) * (count - 1));
+updateIndex(index, event.clientX, event.clientY);
+});
+canvas.addEventListener("pointerleave", () => {
+canvas.__hoverIndex = null;
+drawLineChart(canvas, config);
+hideChartTooltip();
+});
+canvas.addEventListener("focus", () => {
+const count = config.series[0].values.length;
+const index = Math.floor((count - 1) / 2);
+const rect = canvas.getBoundingClientRect();
+updateIndex(index, rect.left + rect.width / 2, rect.top + rect.height / 2);
+});
+canvas.addEventListener("keydown", (event) => {
+if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+event.preventDefault();
+const direction = event.key === "ArrowRight" ? 1 : -1;
+const count = config.series[0].values.length;
+const index = Number.isInteger(canvas.__hoverIndex) ? canvas.__hoverIndex + direction : Math.floor((count - 1) / 2);
+const rect = canvas.getBoundingClientRect();
+const nextIndex = Math.max(0, Math.min(count - 1, index));
+const x = rect.left + (nextIndex / Math.max(1, count - 1)) * rect.width;
+updateIndex(nextIndex, x, rect.top + rect.height / 2);
+});
+canvas.addEventListener("blur", () => {
+canvas.__hoverIndex = null;
+drawLineChart(canvas, config);
+hideChartTooltip();
+});
+}
+function drawLineChart(canvas, config) {
+const context = canvas.getContext("2d");
+const ratio = window.devicePixelRatio || 1;
+const width = canvas.clientWidth;
+const height = canvas.clientHeight;
+const top = 6;
+const bottom = config.labels ? 14 : 6;
+const plotHeight = Math.max(1, height - top - bottom);
+canvas.width = Math.max(1, Math.floor(width * ratio));
+canvas.height = Math.max(1, Math.floor(height * ratio));
+context.setTransform(ratio, 0, 0, ratio, 0, 0);
+context.clearRect(0, 0, width, height);
+context.strokeStyle = "rgba(111,166,176,0.14)";
+context.lineWidth = 1;
+for (let row = 0; row <= 3; row += 1) {
+const y = top + (plotHeight / 3) * row;
+context.beginPath();
+context.moveTo(0, y);
+context.lineTo(width, y);
+context.stroke();
+}
+if (config.labels) {
+context.fillStyle = "rgba(159,185,194,0.68)";
+context.font = "8px Arial";
+config.labels.forEach(([index, label]) => {
+const count = config.series[0].values.length;
+const x = (index / (count - 1)) * width;
+context.textAlign = index === 0 ? "left" : index === count - 1 ? "right" : "center";
+context.fillText(label, x, height - 2);
+});
+}
+config.series.forEach((series) => {
+const validPoints = [];
+const step = width / Math.max(1, series.values.length - 1);
+series.values.forEach((value, index) => {
+if (value === null || value === undefined) return;
+validPoints.push({
+x: index * step,
+y: top + plotHeight - (value / config.max) * plotHeight
+});
+});
+if (!validPoints.length) return;
+if (series.fill) {
+const gradient = context.createLinearGradient(0, top, 0, top + plotHeight);
+gradient.addColorStop(0, series.fill);
+gradient.addColorStop(1, "rgba(3,8,13,0)");
+context.beginPath();
+validPoints.forEach((point, index) => {
+if (index === 0) context.moveTo(point.x, point.y); else context.lineTo(point.x, point.y);
+});
+context.lineTo(validPoints[validPoints.length - 1].x, top + plotHeight);
+context.lineTo(validPoints[0].x, top + plotHeight);
+context.closePath();
+context.fillStyle = gradient;
+context.fill();
+}
+context.beginPath();
+validPoints.forEach((point, index) => {
+if (index === 0) context.moveTo(point.x, point.y); else context.lineTo(point.x, point.y);
+});
+context.setLineDash(series.dash ? [4, 4] : []);
+context.strokeStyle = series.color;
+context.lineWidth = series.dash ? 1.2 : 1.8;
+context.shadowColor = series.color;
+context.shadowBlur = series.dash ? 0 : 5;
+context.stroke();
+context.setLineDash([]);
+context.shadowBlur = 0;
+const last = validPoints[validPoints.length - 1];
+context.beginPath();
+context.arc(last.x, last.y, series.dash ? 2 : 2.8, 0, Math.PI * 2);
+context.fillStyle = series.color;
+context.fill();
+});
+const pointCount = config.series[0].values.length;
+if (Number.isInteger(canvas.__hoverIndex) && pointCount > 1) {
+const hoverIndex = Math.max(0, Math.min(pointCount - 1, canvas.__hoverIndex));
+const hoverX = (hoverIndex / (pointCount - 1)) * width;
+context.save();
+context.setLineDash([2, 3]);
+context.strokeStyle = "rgba(220,250,255,0.52)";
+context.lineWidth = 1;
+context.beginPath();
+context.moveTo(hoverX, top);
+context.lineTo(hoverX, top + plotHeight);
+context.stroke();
+context.setLineDash([]);
+config.series.forEach((series) => {
+const value = series.values[hoverIndex];
+if (value === null || value === undefined) return;
+const y = top + plotHeight - (value / config.max) * plotHeight;
+context.beginPath();
+context.arc(hoverX, y, 4.5, 0, Math.PI * 2);
+context.fillStyle = "rgba(3,13,19,0.96)";
+context.fill();
+context.lineWidth = 1.5;
+context.strokeStyle = series.color;
+context.shadowColor = series.color;
+context.shadowBlur = 9;
+context.stroke();
+context.beginPath();
+context.arc(hoverX, y, 2, 0, Math.PI * 2);
+context.fillStyle = series.color;
+context.fill();
+});
+context.restore();
+}
+}
+function renderActiveCharts() {
+prepareScrollablePanels();
+initializeDataInteractions();
+initializeTicketRecordTriggers();
+document.querySelectorAll("canvas").forEach((canvas) => {
+const config = chartConfigs[canvas.id];
+if (config) {
+drawLineChart(canvas, config);
+bindCanvasInteraction(canvas, config);
+}
+});
+}
+renderActiveCharts();
+startOverviewCycle(false);
+window.addEventListener("resize", renderActiveCharts);
+</script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="香港西九文化区购票官网 UI/UX 设计案例：覆盖内容发现、项目详情、选票选座、结算支付、电子票、会员、联票和售后体验。" name="description"/>
+<title>香港西九文化区购票官网｜杨双军作品集 V1.3</title>
+<link href="westk-ticketing.css" rel="stylesheet"/>
+</head>
+<body>
+<div aria-hidden="true" class="page-progress"><span></span></div>
+<div aria-hidden="true" class="noise"></div>
+<header class="case-header">
+<a aria-label="返回作品集首页" class="brand" href="../index.html">
+<span class="brand-mark">YSJ</span>
+<span class="brand-copy">UI/UX Designer</span>
+</a>
+<nav aria-label="案例导航" class="case-header-nav">
+<a href="#overview">项目概览</a>
+<a href="#experience">核心体验</a>
+<a href="#system">设计原则</a>
+<a href="#gallery">精选页面</a>
+<a class="back-link" href="../index.html#works">返回全部案例 ↗</a>
+</nav>
+<button aria-expanded="false" aria-label="打开菜单" class="menu-toggle" type="button"><span></span><span></span></button>
+</header>
+<main>
+<section class="case-hero shell" id="top">
+<div class="hero-copy reveal">
+<p class="eyebrow"><span></span> CASE STUDY · TICKETING EXPERIENCE</p>
+<h1>香港西九文化区<br/><em>购票官网</em></h1>
+<p class="hero-lead">为文化演出、展览与活动建立统一的发现、选票、支付、出票和售后体验，让复杂票务规则在网页端保持清晰、稳定并可理解。</p>
+<div aria-label="项目标签" class="hero-tags">
+<span>Responsive Web</span><span>Ticketing</span><span>Service Design</span><span>Design System</span>
+</div>
+</div>
+<div aria-label="项目概览信息" class="hero-meta reveal">
+<dl><dt>ROLE</dt><dd>UI / UX Design</dd></dl>
+<dl><dt>PLATFORM</dt><dd>Desktop &amp; Mobile Web</dd></dl>
+<dl><dt>BUSINESS</dt><dd>M+ / HKPM / PA</dd></dl>
+<dl><dt>SCOPE</dt><dd>购票、会员与票务服务</dd></dl>
+</div>
+<figure class="hero-cover reveal" data-parallax="">
+<img alt="香港西九文化区购票官网桌面端、移动端与项目详情页面组合" src="../assets/westk/westk-cover.webp"/>
+<figcaption><span>WestK Ticketing Website</span><span>Desktop · Mobile</span></figcaption>
+</figure>
+</section>
+<section class="project-overview shell" id="overview">
+<div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+<div class="overview-grid">
+<div class="overview-heading reveal">
+<h2>统一入口背后，<br/>是一个多业务票务系统。</h2>
+</div>
+<div class="overview-copy reveal">
+<p class="lead">项目需要承载演出、展览、活动、会员与联票等多类型商品，并贯通从内容发现到电子票核验的完整链路。</p>
+<p>设计的重点不是单个页面是否好看，而是如何让日期、场次、票种、价格区域、座位、实名信息、优惠、配送与售后规则在不同场景中保持一致，同时兼顾桌面端与移动端浏览。</p>
+<p class="note">页面中的演出信息、图片和业务数据为设计稿示意内容，部分信息已脱敏。</p>
+</div>
+</div>
+<div class="project-stats reveal">
+<article><strong>249</strong><span>导出页面与状态素材</span></article>
+<article><strong>7</strong><span>核心购票体验阶段</span></article>
+<article><strong>3</strong><span>文化业务入口</span></article>
+<article><strong>2</strong><span>桌面与移动端体验</span></article>
+</div>
+</section>
+<section aria-labelledby="challenge-title" class="challenge-section">
+<div class="shell">
+<div class="section-label light reveal">02 / DESIGN CHALLENGE</div>
+<div class="challenge-head reveal">
+<h2 id="challenge-title">把复杂规则放在后台，<br/>把明确选择留给用户。</h2>
+<p>票务产品的复杂度来自大量条件组合。设计需要在用户决策过程中逐步呈现信息，而不是一次性暴露全部规则。</p>
+</div>
+<div class="challenge-grid">
+<article class="challenge-card reveal"><span>01</span><h3>多类型项目</h3><p>展览、演出、活动、联票和会员卡拥有不同的售卖逻辑、有效期与入场规则。</p></article>
+<article class="challenge-card reveal"><span>02</span><h3>长链路购票</h3><p>日期、场次、票种、座位、实名、优惠、配送和支付，每一步都可能产生状态分支。</p></article>
+<article class="challenge-card reveal"><span>03</span><h3>购后服务</h3><p>电子票、转赠、改签、退款和会员激活需要与原订单保持可追溯的一致体验。</p></article>
+</div>
+</div>
+</section>
+<section class="experience-map shell" id="experience">
+<div class="section-label reveal">03 / EXPERIENCE MAP</div>
+<div class="map-head reveal"><h2>围绕一次完整观演旅程，<br/>重组票务体验。</h2><p>从“发现内容”开始，到“持票入场”和“售后处理”结束，页面结构与状态反馈都围绕用户当前任务展开。</p></div>
+<nav aria-label="体验阶段快速导航" class="journey-nav reveal">
+<a href="#discover"><b>01</b><span>发现</span><small>Explore</small></a>
+<a href="#decision"><b>02</b><span>决策</span><small>Decide</small></a>
+<a href="#ticketing"><b>03</b><span>选票</span><small>Select</small></a>
+<a href="#checkout"><b>04</b><span>结算</span><small>Checkout</small></a>
+<a href="#ticket"><b>05</b><span>持票</span><small>Ticket</small></a>
+<a href="#extension"><b>06</b><span>扩展</span><small>Extend</small></a>
+<a href="#service"><b>07</b><span>售后</span><small>Service</small></a>
+</nav>
+</section>
+<section class="case-section shell" data-section="发现" id="discover">
+<div class="section-number reveal">01</div>
+<div class="section-intro reveal">
+<p class="kicker">CONTENT DISCOVERY</p>
+<h2>让用户先看到值得参与的内容，<br/>再进入购票决策。</h2>
+<p>首页通过主推荐、即将开售、活动列表和日历入口组织内容。桌面端强调横向浏览效率，移动端则将内容转为连续卡片流，保持活动类型、日期、地点和价格信息的识别顺序。</p>
+</div>
+<div class="device-switcher reveal" data-switcher="">
+<div class="switcher-toolbar">
+<div><button class="active" data-view="desktop">桌面端</button><button data-view="mobile">移动端</button></div>
+<span class="switcher-note">点击页面可查看完整设计稿</span>
+</div>
+<button class="screen-stage zoomable desktop-view" data-caption="首页 · 桌面端：主视觉、即将开售、活动列表与日历入口" data-src="../assets/westk/home-desktop.webp" type="button">
+<img alt="西九购票官网桌面端首页" src="../assets/westk/home-desktop.webp"/>
+</button>
+<button class="phone-stage zoomable mobile-view" data-caption="首页 · 移动端：将桌面内容重组为纵向活动卡片流" data-src="../assets/westk/home-mobile.webp" hidden="" type="button">
+<span class="phone-shell"><img alt="西九购票官网移动端首页" src="../assets/westk/home-mobile.webp"/></span>
+</button>
+</div>
+<div class="insight-row reveal">
+<article><b>主次分层</b><p>首屏聚焦当前重点项目，避免活动信息在同一层级竞争注意力。</p></article>
+<article><b>快速扫读</b><p>卡片固定呈现类型、日期、场地与起售价，支持快速比较。</p></article>
+<article><b>响应式重组</b><p>移动端不是等比缩放，而是重排信息并减少横向依赖。</p></article>
+</div>
+</section>
+<section class="case-section shell split-section" data-section="决策" id="decision">
+<div class="split-copy reveal">
+<span class="section-number small">02</span>
+<p class="kicker">EVENT DECISION</p>
+<h2>项目详情页同时承担内容阅读与购票转化。</h2>
+<p>页面将主视觉、价格、日期、场地、服务保障与优惠信息集中在首屏。右侧购买摘要保持稳定位置，让用户阅读项目介绍时随时可以继续购买。</p>
+<ul class="feature-list">
+<li><span>01</span><div><b>核心信息前置</b><p>价格、场地、日期和可售场次无需滚动即可确认。</p></div></li>
+<li><span>02</span><div><b>可信信息可见</b><p>出票方式、电子发票、选座与退款规则明确展示。</p></div></li>
+<li><span>03</span><div><b>推荐形成闭环</b><p>详情末尾延续同类活动推荐，降低浏览中断。</p></div></li>
+</ul>
+</div>
+<button class="screen-card zoomable reveal" data-caption="项目详情页：内容介绍、购票摘要、优惠与相关推荐" data-src="../assets/westk/event-detail.webp" type="button">
+<img alt="西九购票官网项目详情页" loading="lazy" src="../assets/westk/event-detail.webp"/>
+<span class="view-chip">查看完整页面 ↗</span>
+</button>
+</section>
+<section class="ticketing-section" data-section="选票" id="ticketing">
+<div class="shell">
+<div class="section-number reveal">03</div>
+<div class="ticketing-head reveal">
+<div><p class="kicker">TICKETING ENGINE</p><h2>通过渐进式选择，<br/>管理日期、场次、票种与座位。</h2></div>
+<p>把选择过程拆成稳定的步骤，并在右侧持续反馈已选内容、价格和异常状态。用户不需要理解后台规则，只需完成当前一步。</p>
+</div>
+<div class="screen-pair">
+<button class="screen-card zoomable reveal" data-caption="票种选择：日期、场次、价格区域与数量" data-src="../assets/westk/ticket-selection.webp" type="button">
+<img alt="票种与场次选择页面" loading="lazy" src="../assets/westk/ticket-selection.webp"/>
+<span class="screen-label">A · 票种模式</span>
+</button>
+<button class="screen-card zoomable reveal" data-caption="座位选择：价格分区、轮椅座、遮挡座和订单摘要" data-src="../assets/westk/seat-map.webp" type="button">
+<img alt="选座页面与座位图" loading="lazy" src="../assets/westk/seat-map.webp"/>
+<span class="screen-label">B · 选座模式</span>
+</button>
+</div>
+<div class="logic-grid reveal">
+<article><span>DATE</span><h3>日期与场次联动</h3><p>可售、即将售罄与售罄状态使用文字和颜色共同表达。</p></article>
+<article><span>PRICE</span><h3>价格区域可追踪</h3><p>价格颜色贯穿筛选、座位图与订单摘要，降低映射成本。</p></article>
+<article><span>ACCESS</span><h3>无障碍席位纳入主流程</h3><p>轮椅座、遮挡座等特殊属性直接进入座位选择和结算信息。</p></article>
+<article><span>SUMMARY</span><h3>选择结果即时反馈</h3><p>右侧摘要同步展示票数、座位、票种与小计，减少回退确认。</p></article>
+</div>
+</div>
+</section>
+<section class="case-section shell split-section reverse" data-section="结算" id="checkout">
+<button class="screen-card checkout-card zoomable reveal" data-caption="结算页面：订单明细、联系信息、出票方式、优惠、捐赠与支付" data-src="../assets/westk/checkout.webp" type="button">
+<img alt="西九购票官网结算页面" loading="lazy" src="../assets/westk/checkout.webp"/>
+<span class="view-chip">查看完整页面 ↗</span>
+</button>
+<div class="split-copy reveal">
+<span class="section-number small">04</span>
+<p class="kicker">CHECKOUT</p>
+<h2>结算页把复杂条件转化为可检查的任务清单。</h2>
+<p>订单明细、优惠、联系信息、出票方式、配送地址、附加偏好、捐赠与支付被拆成独立区块。固定摘要持续显示费用变化，避免用户在长表单中失去方向。</p>
+<div class="mini-cards">
+<article><b>价格透明</b><p>优惠、服务费和总价逐项显示。</p></article>
+<article><b>配送灵活</b><p>电子票、现场领取与快递动态切换。</p></article>
+<article><b>时间提醒</b><p>锁座倒计时与错误状态保持可见。</p></article>
+</div>
+</div>
+</section>
+<section class="ticket-life" data-section="持票" id="ticket">
+<div class="shell">
+<div class="section-number reveal">05</div>
+<div class="ticket-life-head reveal"><div><p class="kicker">TICKET OWNERSHIP</p><h2>支付完成不是终点，<br/>票夹才是服务入口。</h2></div><p>用户可以在统一票夹查看项目、座位、二维码与转赠状态。电子票与订单详情使用一致的信息层级，让“查看、使用、转赠”成为自然连续的动作。</p></div>
+<div class="ticket-collage">
+<button class="screen-card wallet zoomable reveal" data-caption="我的票夹：订单卡片、二维码入口和转赠操作" data-src="../assets/westk/ticket-wallet.webp" type="button">
+<img alt="我的票夹页面" loading="lazy" src="../assets/westk/ticket-wallet.webp"/>
+</button>
+<button class="screen-card eticket zoomable reveal" data-caption="订单详情与电子票二维码" data-src="../assets/westk/eticket.webp" type="button">
+<img alt="订单详情和电子票二维码" loading="lazy" src="../assets/westk/eticket.webp"/>
+</button>
+<button class="transfer-card zoomable reveal" data-caption="移动端转赠票券：适合分享与实名领取场景" data-src="../assets/westk/transfer.webp" type="button">
+<span class="phone-shell dark"><img alt="移动端票券转赠凭证" loading="lazy" src="../assets/westk/transfer.webp"/></span>
+<span class="screen-label">Ticket Transfer Pass</span>
+</button>
+</div>
+</div>
+</section>
+<section class="case-section shell" data-section="扩展" id="extension">
+<div class="section-number reveal">06</div>
+<div class="section-intro compact reveal"><p class="kicker">BUSINESS EXTENSIONS</p><h2>在主购票链路之外，<br/>建立会员与联票的统一表达。</h2><p>平台不仅销售单场门票，还需要承载跨场馆会员卡、家庭卡、联票组合与优惠权益。通过复用卡片、价格、状态和摘要结构，减少新业务对用户学习成本的影响。</p></div>
+<div class="extension-grid">
+<button class="screen-card zoomable reveal" data-caption="会员卡列表：按业务品牌与会员类型组织产品" data-src="../assets/westk/membership.webp" type="button">
+<img alt="西九会员卡产品列表" loading="lazy" src="../assets/westk/membership.webp"/>
+<span class="screen-label">Membership</span>
+</button>
+<button class="screen-card zoomable reveal" data-caption="联票项目详情：主项目与组合票优惠并行展示" data-src="../assets/westk/combo-ticket.webp" type="button">
+<img alt="联票项目详情页面" loading="lazy" src="../assets/westk/combo-ticket.webp"/>
+<span class="screen-label">Combo Ticket</span>
+</button>
+</div>
+</section>
+<section class="service-section" data-section="售后" id="service">
+<div class="shell">
+<div class="section-number reveal">07</div>
+<div class="service-head reveal"><div><p class="kicker">AFTER-SALES SERVICE</p><h2>让改签与退款保持可控、可追溯。</h2></div><p>售后流程延续原订单结构：先选择可操作票券，再确认新场次或退款规则，最后提供清晰结果反馈。复杂条件通过分步页面呈现，降低误操作风险。</p></div>
+<div class="service-grid">
+<button class="screen-card zoomable reveal" data-caption="改签流程：先选择需要改签的票券" data-src="../assets/westk/reschedule.webp" type="button">
+<img alt="门票改签页面" loading="lazy" src="../assets/westk/reschedule.webp"/>
+<span class="screen-label">Reschedule</span>
+</button>
+<button class="screen-card zoomable reveal" data-caption="退款流程：显示可退款票券、费用规则与退款明细" data-src="../assets/westk/refund.webp" type="button">
+<img alt="门票退款页面" loading="lazy" src="../assets/westk/refund.webp"/>
+<span class="screen-label">Refund</span>
+</button>
+</div>
+</div>
+</section>
+<section class="principles shell" id="system">
+<div class="section-label reveal">04 / DESIGN PRINCIPLES</div>
+<div class="principles-head reveal"><h2>贯穿全链路的四个设计原则。</h2><p>页面数量很多，但用户感知到的应该是一套稳定、可预测的系统，而不是分散的功能集合。</p></div>
+<div class="principle-list">
+<article class="reveal"><span>01</span><div><h3>渐进式披露</h3><p>只在当前步骤展示必要规则，避免用户一次面对所有业务条件。</p></div><b>Progressive Disclosure</b></article>
+<article class="reveal"><span>02</span><div><h3>状态双重表达</h3><p>颜色与文字标签同时描述可售、售罄、优惠、异常和特殊席位。</p></div><b>Accessible States</b></article>
+<article class="reveal"><span>03</span><div><h3>摘要持续可见</h3><p>在选择和结算阶段持续同步订单内容与金额，降低记忆负担。</p></div><b>Persistent Summary</b></article>
+<article class="reveal"><span>04</span><div><h3>模块跨业务复用</h3><p>活动、联票和会员共享卡片、标签、价格与操作语言，保证扩展性。</p></div><b>Scalable System</b></article>
+</div>
+</section>
+<section class="all-screens" id="gallery">
+<div class="shell">
+<div class="section-label reveal">05 / SELECTED CORE SCREENS</div>
+<div class="gallery-head reveal">
+<div>
+<p class="kicker">CORE PAGE COLLECTION</p>
+<h2>精选核心页面，<br/>完整串联购票体验。</h2>
+</div>
+<div class="gallery-summary">
+<p>从完整项目素材中精选 <strong>27</strong> 个核心页面，覆盖登录、首页、活动浏览、活动详情、购票、选座、购物车、订单、支付、会员卡、个人中心与联票等主要场景。每个关键环节仅保留一至两个代表页面，便于快速了解系统结构与体验闭环。</p>
+<span>点击任意页面可查看大图，并使用方向键连续浏览。</span>
+</div>
+</div>
+<div aria-label="精选页面分类筛选" class="gallery-filters reveal" role="group">
+<button class="active" data-gallery-filter="all" type="button">全部精选 <span>27</span></button>
+<button data-gallery-filter="entry" type="button">登录与首页 <span>3</span></button>
+<button data-gallery-filter="events" type="button">活动与详情 <span>4</span></button>
+<button data-gallery-filter="booking" type="button">购票与选座 <span>5</span></button>
+<button data-gallery-filter="checkout" type="button">购物车·订单·支付 <span>6</span></button>
+<button data-gallery-filter="membership" type="button">会员卡 <span>4</span></button>
+<button data-gallery-filter="account" type="button">个人中心 <span>2</span></button>
+<button data-gallery-filter="combo" type="button">联票 <span>3</span></button>
+</div>
+<div class="gallery-grid" data-gallery-grid="">
+<button class="gallery-item zoomable reveal" data-caption="登录 · 邮箱与密码登录" data-gallery-category="entry" data-src="../assets/westk/gallery/g012.webp" type="button">
+<span class="gallery-thumb"><img alt="邮箱与密码登录" loading="lazy" src="../assets/westk/gallery/g012.webp"/></span>
+<span class="gallery-meta"><b>01</b><span><strong>邮箱与密码登录</strong><small>登录</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="首页 · 桌面端首页" data-gallery-category="entry" data-src="../assets/westk/gallery/g009.webp" type="button">
+<span class="gallery-thumb"><img alt="桌面端首页" loading="lazy" src="../assets/westk/gallery/g009.webp"/></span>
+<span class="gallery-meta"><b>02</b><span><strong>桌面端首页</strong><small>首页</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="首页 · 移动端首页" data-gallery-category="entry" data-src="../assets/westk/gallery/g011.webp" type="button">
+<span class="gallery-thumb"><img alt="移动端首页" loading="lazy" src="../assets/westk/gallery/g011.webp"/></span>
+<span class="gallery-meta"><b>03</b><span><strong>移动端首页</strong><small>首页</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="活动页 · 活动日历与筛选" data-gallery-category="events" data-src="../assets/westk/gallery/g007.webp" type="button">
+<span class="gallery-thumb"><img alt="活动日历与筛选" loading="lazy" src="../assets/westk/gallery/g007.webp"/></span>
+<span class="gallery-meta"><b>04</b><span><strong>活动日历与筛选</strong><small>活动页</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="活动页 · 活动列表页" data-gallery-category="events" data-src="../assets/westk/gallery/g247.webp" type="button">
+<span class="gallery-thumb"><img alt="活动列表页" loading="lazy" src="../assets/westk/gallery/g247.webp"/></span>
+<span class="gallery-meta"><b>05</b><span><strong>活动列表页</strong><small>活动页</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="活动详情 · 普通活动详情" data-gallery-category="events" data-src="../assets/westk/gallery/g002.webp" type="button">
+<span class="gallery-thumb"><img alt="普通活动详情" loading="lazy" src="../assets/westk/gallery/g002.webp"/></span>
+<span class="gallery-meta"><b>06</b><span><strong>普通活动详情</strong><small>活动详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="活动详情 · 站票活动详情" data-gallery-category="events" data-src="../assets/westk/gallery/g003.webp" type="button">
+<span class="gallery-thumb"><img alt="站票活动详情" loading="lazy" src="../assets/westk/gallery/g003.webp"/></span>
+<span class="gallery-meta"><b>07</b><span><strong>站票活动详情</strong><small>活动详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="购票 · 日期与场次选择" data-gallery-category="booking" data-src="../assets/westk/gallery/g037.webp" type="button">
+<span class="gallery-thumb"><img alt="日期与场次选择" loading="lazy" src="../assets/westk/gallery/g037.webp"/></span>
+<span class="gallery-meta"><b>08</b><span><strong>日期与场次选择</strong><small>购票</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="购票 · 票种与数量确认" data-gallery-category="booking" data-src="../assets/westk/gallery/g038.webp" type="button">
+<span class="gallery-thumb"><img alt="票种与数量确认" loading="lazy" src="../assets/westk/gallery/g038.webp"/></span>
+<span class="gallery-meta"><b>09</b><span><strong>票种与数量确认</strong><small>购票</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="购票 · 票价与优惠选择" data-gallery-category="booking" data-src="../assets/westk/gallery/g030.webp" type="button">
+<span class="gallery-thumb"><img alt="票价与优惠选择" loading="lazy" src="../assets/westk/gallery/g030.webp"/></span>
+<span class="gallery-meta"><b>10</b><span><strong>票价与优惠选择</strong><small>购票</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="选座 · 座位图与区域选择" data-gallery-category="booking" data-src="../assets/westk/gallery/g050.webp" type="button">
+<span class="gallery-thumb"><img alt="座位图与区域选择" loading="lazy" src="../assets/westk/gallery/g050.webp"/></span>
+<span class="gallery-meta"><b>11</b><span><strong>座位图与区域选择</strong><small>选座</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="选座 · 已选座位确认" data-gallery-category="booking" data-src="../assets/westk/gallery/g052.webp" type="button">
+<span class="gallery-thumb"><img alt="已选座位确认" loading="lazy" src="../assets/westk/gallery/g052.webp"/></span>
+<span class="gallery-meta"><b>12</b><span><strong>已选座位确认</strong><small>选座</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="加购物车 · 增值商品选择" data-gallery-category="checkout" data-src="../assets/westk/gallery/g059.webp" type="button">
+<span class="gallery-thumb"><img alt="增值商品选择" loading="lazy" src="../assets/westk/gallery/g059.webp"/></span>
+<span class="gallery-meta"><b>13</b><span><strong>增值商品选择</strong><small>加购物车</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="加购物车 · 购物车可结算状态" data-gallery-category="checkout" data-src="../assets/westk/gallery/g065.webp" type="button">
+<span class="gallery-thumb"><img alt="购物车可结算状态" loading="lazy" src="../assets/westk/gallery/g065.webp"/></span>
+<span class="gallery-meta"><b>14</b><span><strong>购物车可结算状态</strong><small>加购物车</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="订单详情 · 待支付订单" data-gallery-category="checkout" data-src="../assets/westk/gallery/g093.webp" type="button">
+<span class="gallery-thumb"><img alt="待支付订单" loading="lazy" src="../assets/westk/gallery/g093.webp"/></span>
+<span class="gallery-meta"><b>15</b><span><strong>待支付订单</strong><small>订单详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="订单详情 · 已确认电子票订单" data-gallery-category="checkout" data-src="../assets/westk/gallery/g092.webp" type="button">
+<span class="gallery-thumb"><img alt="已确认电子票订单" loading="lazy" src="../assets/westk/gallery/g092.webp"/></span>
+<span class="gallery-meta"><b>16</b><span><strong>已确认电子票订单</strong><small>订单详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="支付 · 支付处理中" data-gallery-category="checkout" data-src="../assets/westk/gallery/g013.webp" type="button">
+<span class="gallery-thumb"><img alt="支付处理中" loading="lazy" src="../assets/westk/gallery/g013.webp"/></span>
+<span class="gallery-meta"><b>17</b><span><strong>支付处理中</strong><small>支付</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="支付 · 支付成功" data-gallery-category="checkout" data-src="../assets/westk/gallery/g014.webp" type="button">
+<span class="gallery-thumb"><img alt="支付成功" loading="lazy" src="../assets/westk/gallery/g014.webp"/></span>
+<span class="gallery-meta"><b>18</b><span><strong>支付成功</strong><small>支付</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="会员卡 · 会员卡列表" data-gallery-category="membership" data-src="../assets/westk/gallery/g152.webp" type="button">
+<span class="gallery-thumb"><img alt="会员卡列表" loading="lazy" src="../assets/westk/gallery/g152.webp"/></span>
+<span class="gallery-meta"><b>19</b><span><strong>会员卡列表</strong><small>会员卡</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="会员卡 · 会员卡产品选择" data-gallery-category="membership" data-src="../assets/westk/gallery/g153.webp" type="button">
+<span class="gallery-thumb"><img alt="会员卡产品选择" loading="lazy" src="../assets/westk/gallery/g153.webp"/></span>
+<span class="gallery-meta"><b>20</b><span><strong>会员卡产品选择</strong><small>会员卡</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="卡详情 · 会员权益详情" data-gallery-category="membership" data-src="../assets/westk/gallery/g154.webp" type="button">
+<span class="gallery-thumb"><img alt="会员权益详情" loading="lazy" src="../assets/westk/gallery/g154.webp"/></span>
+<span class="gallery-meta"><b>21</b><span><strong>会员权益详情</strong><small>卡详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="卡详情 · 已激活会员卡" data-gallery-category="membership" data-src="../assets/westk/gallery/g171.webp" type="button">
+<span class="gallery-thumb"><img alt="已激活会员卡" loading="lazy" src="../assets/westk/gallery/g171.webp"/></span>
+<span class="gallery-meta"><b>22</b><span><strong>已激活会员卡</strong><small>卡详情</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="个人中心 · 个人中心导航" data-gallery-category="account" data-src="../assets/westk/gallery/g224.webp" type="button">
+<span class="gallery-thumb"><img alt="个人中心导航" loading="lazy" src="../assets/westk/gallery/g224.webp"/></span>
+<span class="gallery-meta"><b>23</b><span><strong>个人中心导航</strong><small>个人中心</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="个人中心 · 账户设置" data-gallery-category="account" data-src="../assets/westk/gallery/g212.webp" type="button">
+<span class="gallery-thumb"><img alt="账户设置" loading="lazy" src="../assets/westk/gallery/g212.webp"/></span>
+<span class="gallery-meta"><b>24</b><span><strong>账户设置</strong><small>个人中心</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="联票 · 联票详情页" data-gallery-category="combo" data-src="../assets/westk/gallery/g189.webp" type="button">
+<span class="gallery-thumb"><img alt="联票详情页" loading="lazy" src="../assets/westk/gallery/g189.webp"/></span>
+<span class="gallery-meta"><b>25</b><span><strong>联票详情页</strong><small>联票</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="联票 · 联票日期与票种选择" data-gallery-category="combo" data-src="../assets/westk/gallery/g195.webp" type="button">
+<span class="gallery-thumb"><img alt="联票日期与票种选择" loading="lazy" src="../assets/westk/gallery/g195.webp"/></span>
+<span class="gallery-meta"><b>26</b><span><strong>联票日期与票种选择</strong><small>联票</small></span><i>↗</i></span>
+</button>
+<button class="gallery-item zoomable reveal" data-caption="联票 · 联票订单详情" data-gallery-category="combo" data-src="../assets/westk/gallery/g115.webp" type="button">
+<span class="gallery-thumb"><img alt="联票订单详情" loading="lazy" src="../assets/westk/gallery/g115.webp"/></span>
+<span class="gallery-meta"><b>27</b><span><strong>联票订单详情</strong><small>联票</small></span><i>↗</i></span>
+</button>
+</div>
+<div class="gallery-actions gallery-actions--compact reveal">
+<p>本合集只展示主要业务路径中的代表页面，异常状态、边界条件与大量组件状态已从公开页面中精简。</p>
+</div>
+</div>
+</section>
+<section class="project-close">
+<div class="shell close-grid">
+<div class="reveal"><p class="kicker">PROJECT SUMMARY</p><h2>从“购买一张票”，<br/>延伸为完整的文化参与体验。</h2></div>
+<div class="close-copy reveal"><p>本项目覆盖内容发现、项目决策、选票选座、实名校验、优惠与支付、电子票、会员、联票、转赠、改签和退款等场景。设计通过稳定的信息结构和组件语言，把不同业务规则收敛为一套可持续扩展的购票体验。</p><a href="../index.html#works">返回全部设计案例 <span>↗</span></a></div>
+</div>
+</section>
+</main>
+<footer class="case-footer shell">
+<span>© 2026 YANG SHUANGJUN</span>
+<a href="#top">BACK TO TOP ↑</a>
+</footer>
+<dialog aria-label="查看完整设计稿" class="lightbox">
+<button aria-label="关闭" class="lightbox-close" type="button">×</button>
+<button aria-label="上一张" class="lightbox-nav prev" type="button">←</button>
+<figure><img alt="" src=""/><figcaption></figcaption></figure>
+<button aria-label="下一张" class="lightbox-nav next" type="button">→</button>
+</dialog>
+<script src="westk-ticketing.js"></script>
+</body>
+</html>

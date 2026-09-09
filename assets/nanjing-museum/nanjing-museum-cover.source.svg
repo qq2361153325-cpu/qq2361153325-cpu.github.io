@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080a0c"/>
+      <stop offset="0.54" stop-color="#141313"/>
+      <stop offset="1" stop-color="#210b0d"/>
+    </linearGradient>
+    <radialGradient id="redGlow">
+      <stop offset="0" stop-color="#d92d36" stop-opacity=".9"/>
+      <stop offset=".38" stop-color="#a4141e" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#53080e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmGlow">
+      <stop offset="0" stop-color="#f3c887" stop-opacity=".7"/>
+      <stop offset=".45" stop-color="#c78a38" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#8e511d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ede4d8"/><stop offset=".18" stop-color="#5b5652"/>
+      <stop offset=".48" stop-color="#f3eee8"/><stop offset=".72" stop-color="#4d4845"/>
+      <stop offset="1" stop-color="#e5ddd4"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#c9c1b7"/><stop offset=".35" stop-color="#5d5955"/>
+      <stop offset="1" stop-color="#242322"/>
+    </linearGradient>
+    <linearGradient id="podium" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6c5b4c"/><stop offset=".12" stop-color="#312c28"/>
+      <stop offset="1" stop-color="#11100f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f6d89b"/><stop offset=".45" stop-color="#be8545"/><stop offset="1" stop-color="#6f421d"/>
+    </linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#fff" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="220%">
+      <feDropShadow dx="0" dy="34" stdDeviation="28" flood-color="#000" flood-opacity=".68"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="tinySoft"><feGaussianBlur stdDeviation="8"/></filter>
+    <clipPath id="mainScreen"><rect x="691" y="161" width="818" height="552" rx="9"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <ellipse cx="1250" cy="490" rx="640" ry="600" fill="url(#redGlow)"/>
+  <ellipse cx="1120" cy="890" rx="620" ry="210" fill="url(#warmGlow)" opacity=".7"/>
+
+  <g opacity=".2" stroke="#e2c69b" stroke-width="1">
+    <path d="M0 760h1600M0 806h1600M0 852h1600"/>
+    <path d="M1012 0 660 1000M1158 0 806 1000M1304 0 952 1000M1450 0 1098 1000"/>
+  </g>
+  <path d="M-60 754C250 632 454 680 690 774s506 84 970-76" fill="none" stroke="#b48551" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M-30 781C254 682 462 717 686 801s524 70 955-69" fill="none" stroke="#d0a36a" stroke-opacity=".09" stroke-width="1"/>
+
+  <g transform="translate(96 94)">
+    <path d="M0 35h20c30 0 42-22 55-49 13 27 25 49 55 49h20" fill="none" stroke="#c3b8aa" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="147" cy="-2" r="20" fill="#a41d27"/>
+    <text x="147" y="6" text-anchor="middle" fill="#f2e9dc" font-family="Songti SC,STSong,serif" font-size="17" font-weight="700">博</text>
+    <text x="0" y="87" fill="#f5f1ea" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif" font-size="23" font-weight="650" letter-spacing="4">南京市博物总馆</text>
+    <text x="0" y="118" fill="#9b948b" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="600" letter-spacing="3">NANJING MUSEUM ADMINISTRATION</text>
+  </g>
+
+  <g transform="translate(96 286)" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif">
+    <text x="0" y="0" fill="#b99868" font-size="13" font-weight="700" letter-spacing="5">CULTURAL DIGITAL EXPERIENCE</text>
+    <text x="0" y="100" fill="#f6f3ee" font-size="80" font-weight="760" letter-spacing="-4">让文物与城市</text>
+    <text x="0" y="188" fill="#f6f3ee" font-size="80" font-weight="760" letter-spacing="-4">在数字空间相遇</text>
+    <rect x="0" y="229" width="54" height="5" rx="2.5" fill="#b51e28"/>
+    <text x="0" y="282" fill="#aaa39a" font-size="20" font-weight="430" letter-spacing="2">南京市博物总馆官网体验设计</text>
+    <text x="0" y="316" fill="#6f6a64" font-size="14" letter-spacing="1.4">MUSEUM WEBSITE · COLLECTION · PUBLIC EDUCATION</text>
+  </g>
+
+  <g transform="translate(96 685)" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif">
+    <g>
+      <circle cx="30" cy="30" r="30" fill="#252120" stroke="#59463b"/>
+      <path d="M17 37h26M20 32l10-11 10 11M22 37v9m16-9v9" fill="none" stroke="#d4ad76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="0" y="88" fill="#e5ded5" font-size="16" font-weight="650">展览导览</text>
+      <text x="0" y="113" fill="#78716b" font-size="12">Exhibition</text>
+    </g>
+    <g transform="translate(142)">
+      <circle cx="30" cy="30" r="30" fill="#252120" stroke="#59463b"/>
+      <path d="M18 22h24v17c0 8-24 8-24 0Zm0 7c0 7 24 7 24 0" fill="none" stroke="#d4ad76" stroke-width="2"/>
+      <text x="0" y="88" fill="#e5ded5" font-size="16" font-weight="650">典藏文物</text>
+      <text x="0" y="113" fill="#78716b" font-size="12">Collection</text>
+    </g>
+    <g transform="translate(284)">
+      <circle cx="30" cy="30" r="30" fill="#252120" stroke="#59463b"/>
+      <path d="M17 23c9-5 18 0 18 0v23s-9-5-18 0Zm18 0s9-5 18 0v23c-9-5-18 0-18 0Z" fill="none" stroke="#d4ad76" stroke-width="2" stroke-linejoin="round"/>
+      <text x="0" y="88" fill="#e5ded5" font-size="16" font-weight="650">公共教育</text>
+      <text x="0" y="113" fill="#78716b" font-size="12">Education</text>
+    </g>
+  </g>
+
+  <ellipse cx="1110" cy="892" rx="455" ry="84" fill="#000" opacity=".7" filter="url(#soft)"/>
+  <ellipse cx="1110" cy="858" rx="392" ry="106" fill="none" stroke="#b72830" stroke-opacity=".58" stroke-width="9" filter="url(#tinySoft)"/>
+  <ellipse cx="1110" cy="854" rx="400" ry="112" fill="#171413" stroke="url(#gold)" stroke-width="3"/>
+  <ellipse cx="1110" cy="845" rx="400" ry="112" fill="#24201d" stroke="#786044" stroke-width="1.5"/>
+  <path d="M710 845v76c0 62 800 62 800 0v-76c-78 77-721 77-800 0Z" fill="url(#podium)" stroke="#3f352d"/>
+  <ellipse cx="1110" cy="845" rx="352" ry="82" fill="#090909" stroke="#b72b33" stroke-opacity=".44" stroke-width="2"/>
+  <ellipse cx="1110" cy="845" rx="282" ry="58" fill="none" stroke="#c99b60" stroke-opacity=".3" stroke-width="2"/>
+
+  <g transform="rotate(-1.25 1100 505)" filter="url(#shadow)">
+    <rect x="675" y="145" width="850" height="600" rx="21" fill="url(#frame)"/>
+    <rect x="682" y="152" width="836" height="586" rx="15" fill="#090909"/>
+    <rect x="691" y="161" width="818" height="552" rx="9" fill="#f2f2f2"/>
+    <image x="691" y="161" width="818" height="552" preserveAspectRatio="xMidYMin slice" clip-path="url(#mainScreen)" href="14-展览资讯.webp"/>
+    <path d="M702 166h796" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+    <circle cx="1100" cy="726" r="3.5" fill="#b89152"/>
+    <rect x="1060" y="744" width="80" height="96" rx="5" fill="url(#metal)"/>
+    <path d="M1007 835h186l70 30c16 7 11 23-8 23H945c-19 0-24-16-8-23Z" fill="url(#frame)"/>
+    <path d="M1015 839h170l35 15H980Z" fill="#191817" opacity=".7"/>
+    <path d="M704 174 1188 713H970L691 399V175Z" fill="#fff" opacity=".035"/>
+  </g>
+
+  <g transform="translate(1450 160)" opacity=".72">
+    <rect width="92" height="28" rx="14" fill="#241b1a" stroke="#68433e"/>
+    <circle cx="17" cy="14" r="4" fill="#b6232c"/>
+    <text x="31" y="18" fill="#c7bdb2" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" letter-spacing="1.8">WEB UI</text>
+  </g>
+
+  <g opacity=".86">
+    <circle cx="690" cy="170" r="6" fill="#bd2630"/><circle cx="1490" cy="224" r="4" fill="#d0aa6e"/>
+    <circle cx="1530" cy="760" r="5" fill="#b9222c"/><circle cx="681" cy="840" r="3" fill="#d3ae78"/>
+  </g>
+  <text x="1515" y="950" text-anchor="end" fill="#6f6256" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="4">01 / DIGITAL MUSEUM</text>
+</svg>

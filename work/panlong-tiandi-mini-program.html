@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="蟠龙天地生活小程序 UI/UX 项目案例，涵盖社区内容、活动预约、地图导览、商城积分与票夹订单。" />
+  <title>蟠龙天地小程序｜杨双军 UI/UX 作品集</title>
+  <link rel="stylesheet" href="panlong-tiandi-mini-program.css" />
+  <link rel="stylesheet" href="case-screen-system.css" />
+</head>
+<body class="theme-panlong case-system">
+  <script>document.body.classList.add('js-enabled')</script>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html#works"><span>YSJ</span><b>PANLONG TIANDI</b></a>
+    <button class="menu-toggle" type="button" aria-label="展开导航" aria-expanded="false"><i></i><i></i></button>
+    <nav class="case-header-nav" aria-label="案例导航">
+      <a href="#overview">项目概览</a>
+      <a href="#journey">体验路径</a>
+      <a href="#chapters">核心设计</a>
+      <a href="#gallery">精选页面</a>
+      <a class="back-link" href="../index.html#works">返回案例</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow">LIFESTYLE MINI PROGRAM · 2025</p>
+          <h1>蟠龙天地小程序<span>社区内容、活动票务与园区服务一体化体验</span></h1>
+          <p class="hero-lead">围绕“内容种草 + 活动预约 + 地图导览 + 商业转化”四条主线，把社区首页、活动报名、票夹订单、餐饮排队、积分商城和园区地图整合进同一套轻量体验中。</p>
+          <div class="hero-tags"><span>Mini Program</span><span>Community</span><span>Event & Ticketing</span><span>Map Service</span></div>
+        </div>
+        <div class="hero-stage">
+          <button class="case-screen case-device--hero hero-device zoomable" data-src="../assets/panlong/community-home.webp" data-caption="社区首页：内容聚合与便捷服务入口" type="button"><img src="../assets/panlong/community-home.webp" alt="社区首页" /></button>
+          <button class="case-screen case-device--hero hero-device zoomable" data-src="../assets/panlong/map-home.webp" data-caption="导览地图：园区点位与分类导航" type="button"><img src="../assets/panlong/map-home.webp" alt="导览地图" /></button>
+          <div class="hero-wordmark" aria-hidden="true">PANLONG<br/>TIANDI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <div class="shell meta-grid">
+        <div><span>Project</span><b>蟠龙天地生活小程序</b></div>
+        <div><span>Role</span><b>UI / UX Design</b></div>
+        <div><span>Platform</span><b>WeChat Mini Program</b></div>
+        <div><span>Scope</span><b>社区 · 活动 · 地图 · 商城 · 订单</b></div>
+      </div>
+    </section>
+
+    <section class="overview shell" id="overview">
+      <div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+      <div class="overview-grid">
+        <div class="overview-title reveal"><p class="kicker">A PARK LIFE ENTRY</p><h2>以小程序承接园区内容传播、活动服务与消费转化。</h2></div>
+        <div class="overview-copy reveal"><p class="lead">产品不只是展示活动信息，更需要让用户在园区游逛、预约、下单和到场使用之间自由切换。</p><p>因此设计重点不是单点页面美化，而是让社区内容、活动票务、线上商城、地图导览、排队预约、积分兑换和订单管理形成统一路径，让不同任务都能被快速理解并完成。</p></div>
+      </div>
+      <div class="challenge-grid">
+        <article class="reveal"><span>01</span><h3>业务类型多</h3><p>社区内容、票务预约、商户消费、地图导览与个人订单同时存在。</p></article>
+        <article class="reveal"><span>02</span><h3>逛与办并存</h3><p>既要营造园区生活氛围，也要保证工具类操作足够直接高效。</p></article>
+        <article class="reveal"><span>03</span><h3>状态链路长</h3><p>报名、购票、排队、兑换、核验与订单状态需要统一反馈机制。</p></article>
+      </div>
+    </section>
+
+    <section class="service-spectrum" id="journey">
+      <div class="shell">
+        <div class="section-label light reveal">02 / EXPERIENCE SPECTRUM</div>
+        <div class="spectrum-head reveal"><p class="kicker light">DISCOVER · DECIDE · ARRIVE · RETURN</p><h2>六条路径，覆盖园区生活的主要任务场景。</h2></div>
+        <div class="spectrum-grid">
+          <a href="#chapter-home"><span>01</span><b>社区首页</b><small>内容聚合 / 便捷服务</small></a>
+          <a href="#chapter-event"><span>02</span><b>活动票务</b><small>报名 / 场次 / 票种</small></a>
+          <a href="#chapter-commerce"><span>03</span><b>商城积分</b><small>商品 / 兑换 / 下单</small></a>
+          <a href="#chapter-service"><span>04</span><b>餐饮排队</b><small>预约 / 排号 / 到店</small></a>
+          <a href="#chapter-map"><span>05</span><b>地图导览</b><small>点位 / 导航 / 商户</small></a>
+          <a href="#chapter-order"><span>06</span><b>票夹订单</b><small>票券 / 订单 / 行程</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapters" id="chapters">
+      <article class="chapter chapter-sand" id="chapter-home">
+        <div class="shell chapter-grid">
+          <div class="chapter-copy reveal"><span class="section-number">01</span><p class="kicker">COMMUNITY HOME</p><h2>首页以“内容种草 + 服务入口”构建园区第一印象。</h2><p>首屏通过视觉内容营造品牌气质，中部承接租户推荐、活动日历与社区内容，下方加入停车、自助积分、商场优惠和商户列表等便捷入口，让浏览与行动在同一个页面自然切换。</p><ul><li><b>氛围建立</b><span>大图内容与专题推荐强化园区生活感。</span></li><li><b>服务可达</b><span>高频入口稳定放置，降低查找成本。</span></li><li><b>持续浏览</b><span>活动、租户与社区模块支持内容更新与运营。</span></li></ul></div>
+          <div class="screen-pair reveal">
+            <button class="screen-frame zoomable" data-src="../assets/panlong/community-home.webp" data-caption="社区首页：内容聚合与便捷服务入口" type="button"><img src="../assets/panlong/community-home.webp" alt="社区首页" /></button>
+            <button class="screen-frame zoomable" data-src="../assets/panlong/campaign-list.webp" data-caption="活动宣传列表：专题活动与内容传播" type="button"><img src="../assets/panlong/campaign-list.webp" alt="活动宣传列表" /></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter chapter-dark" id="chapter-event">
+        <div class="shell chapter-grid reverse">
+          <div class="screen-pair reveal">
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/event-list.webp" data-caption="购票列表：活动筛选与内容列表" type="button"><img src="../assets/panlong/event-list.webp" alt="购票列表" /></button>
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/event-detail.webp" data-caption="活动详情：项目信息、须知与报名入口" type="button"><img src="../assets/panlong/event-detail.webp" alt="活动详情" /></button>
+          </div>
+          <div class="chapter-copy reveal"><span class="section-number">02</span><p class="kicker light">EVENT & TICKETING</p><h2>从活动发现到预约购票，信息与决策在单路径内闭环。</h2><p>用户可按活动列表进入详情页，再完成场次选择、票种确认与预约下单。核心设计强调信息层级清晰、行动按钮稳定、状态反馈明确，减少在复杂活动规则中的理解成本。</p><ul><li><b>内容发现</b><span>活动列表支持筛选与快速浏览。</span></li><li><b>报名决策</b><span>详情页聚合时间、说明、须知和行动入口。</span></li><li><b>状态闭环</b><span>场次、票种与下单步骤保持连续反馈。</span></li></ul></div>
+        </div>
+      </article>
+
+      <article class="chapter chapter-cream" id="chapter-commerce">
+        <div class="shell">
+          <div class="chapter-head reveal"><div><span class="section-number">03</span><p class="kicker">SHOPPING & POINTS</p><h2>商城与积分采用统一卡片结构，兼顾消费与兑换。</h2></div><p>无论是直接购买商品，还是通过积分商城进行兑换，都沿用列表 → 详情 → 确认下单的稳定路径，降低多业务带来的认知跳跃。</p></div>
+          <div class="story-row four reveal">
+            <button class="story-card zoomable" data-src="../assets/panlong/shop-home.webp" data-caption="线上商城：商品列表与推荐内容" type="button"><span>01 / 浏览</span><div class="screen-frame"><img src="../assets/panlong/shop-home.webp" alt="线上商城" /></div><b>线上商城</b></button>
+            <button class="story-card zoomable" data-src="../assets/panlong/shop-detail.webp" data-caption="商品详情：图文介绍与购买信息" type="button"><span>02 / 详情</span><div class="screen-frame"><img src="../assets/panlong/shop-detail.webp" alt="商品详情" /></div><b>商品详情</b></button>
+            <button class="story-card zoomable" data-src="../assets/panlong/shop-checkout.webp" data-caption="确认下单：购买信息与价格确认" type="button"><span>03 / 下单</span><div class="screen-frame"><img src="../assets/panlong/shop-checkout.webp" alt="确认下单" /></div><b>确认下单</b></button>
+            <button class="story-card zoomable" data-src="../assets/panlong/points-list.webp" data-caption="积分商城：积分商品与兑换入口" type="button"><span>04 / 兑换</span><div class="screen-frame"><img src="../assets/panlong/points-list.webp" alt="积分商城" /></div><b>积分商城</b></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter chapter-green" id="chapter-service">
+        <div class="shell chapter-grid">
+          <div class="chapter-copy reveal"><span class="section-number">04</span><p class="kicker light">DINING & QUEUE</p><h2>预约与排队保持低门槛，让线下到店更顺畅。</h2><p>餐饮相关场景通过预约信息、取号入口和号单详情，让用户在到店前即可完成时间选择与排队管理。界面重点突出状态、人数与关键操作，保证现场效率。</p><ul><li><b>快速预约</b><span>预约信息表单清晰收束，减少填写负担。</span></li><li><b>排队透明</b><span>号单状态、顺位与提示信息清晰可见。</span></li><li><b>线下联动</b><span>从线上预约到到店取号形成连续体验。</span></li></ul></div>
+          <div class="screen-pair reveal">
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/food-booking.webp" data-caption="美食预约：餐饮预约内容与排期" type="button"><img src="../assets/panlong/food-booking.webp" alt="美食预约" /></button>
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/queue-ticket.webp" data-caption="排队取号：快速取号与排队规则" type="button"><img src="../assets/panlong/queue-ticket.webp" alt="排队取号" /></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter chapter-sky" id="chapter-map">
+        <div class="shell chapter-grid reverse">
+          <div class="screen-pair reveal">
+            <button class="screen-frame zoomable" data-src="../assets/panlong/map-home.webp" data-caption="导览地图：园区点位与分类导航" type="button"><img src="../assets/panlong/map-home.webp" alt="导览地图" /></button>
+            <button class="screen-frame zoomable" data-src="../assets/panlong/map-route.webp" data-caption="地图导航：路线引导与起终点信息" type="button"><img src="../assets/panlong/map-route.webp" alt="地图导航" /></button>
+          </div>
+          <div class="chapter-copy reveal"><span class="section-number">05</span><p class="kicker">MAP & NAVIGATION</p><h2>导览地图承担“找得到、看得懂、走得去”的核心任务。</h2><p>地图覆盖商户、活动、停车与景点等多类点位，并通过搜索、选点和导航等动作支持用户在园区中的即时决策。视觉上强调点位图标统一、信息卡片简洁，避免在复杂地图中迷失。</p><ul><li><b>分类清晰</b><span>不同点位采用统一图标语言便于识别。</span></li><li><b>信息直达</b><span>选中点位即可查看对应商户与服务信息。</span></li><li><b>到达可控</b><span>导航状态与路线展示帮助线下行动完成。</span></li></ul></div>
+        </div>
+      </article>
+
+      <article class="chapter chapter-member" id="chapter-order">
+        <div class="shell chapter-grid">
+          <div class="chapter-copy reveal"><span class="section-number">06</span><p class="kicker light">ORDERS & PASSES</p><h2>把票夹、订单与行程集中管理，减少重复查找。</h2><p>购票结果、预约信息、通票记录与行程安排都需要在个人中心中被快速找到。通过统一状态标签、卡片信息结构与重点按钮，让“查看、使用、再次操作”形成一眼可懂的管理体验。</p><ul><li><b>票券聚合</b><span>票夹集中展示可使用的票券与入口码。</span></li><li><b>订单统一</b><span>不同业务订单在一个列表中保持一致结构。</span></li><li><b>行程辅助</b><span>预约后的路线与时间安排可继续承接到访体验。</span></li></ul></div>
+          <div class="screen-pair reveal member-pair">
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/ticket-wallet.webp" data-caption="我的票夹：票券集合与使用入口" type="button"><img src="../assets/panlong/ticket-wallet.webp" alt="我的票夹" /></button>
+            <button class="screen-frame white zoomable" data-src="../assets/panlong/order-list.webp" data-caption="订单列表：统一管理购票、商城与预约订单" type="button"><img src="../assets/panlong/order-list.webp" alt="订单列表" /></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="principles shell">
+      <div class="section-label reveal">03 / DESIGN PRINCIPLES</div>
+      <div class="principles-head reveal"><div><p class="kicker">ONE SYSTEM, MULTIPLE TASKS</p><h2>以统一组件与结构，支撑多业务并存的小程序体验。</h2></div><p>项目在视觉气质上偏自然与生活化，但在交互骨架上保持清晰克制。列表、详情、表单、状态和底部行动区采用统一逻辑，让不同业务也能快速迁移理解。</p></div>
+      <div class="principle-grid">
+        <article class="reveal"><span>01</span><h3>内容先吸引</h3><p>通过大图与专题模块建立园区内容氛围，再引导进入服务与交易。</p></article>
+        <article class="reveal"><span>02</span><h3>工具要直接</h3><p>地图、预约、排队和票夹场景保持直达，不增加额外理解成本。</p></article>
+        <article class="reveal"><span>03</span><h3>状态可追踪</h3><p>预约、购票、排队、兑换等关键状态在列表与详情中都保持一致。</p></article>
+        <article class="reveal"><span>04</span><h3>页面可扫描</h3><p>长页面通过卡片分组与信息分层，支持快速浏览与重点定位。</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-label light reveal">04 / SELECTED CORE SCREENS</div>
+        <div class="gallery-head reveal"><div><p class="kicker light">CORE PAGE COLLECTION</p><h2>精选 24 个核心页面，覆盖园区生活完整链路。</h2></div><p>长页面在列表中展示单屏缩略，点击后可查看完整设计稿。桌面端每排展示四个页面。</p></div>
+        <div class="gallery-filters reveal" role="group" aria-label="核心页面筛选">
+          <button class="active" data-gallery-filter="all" type="button">全部 <span>24</span></button>
+          <button data-gallery-filter="home" type="button">首页与内容 <span>4</span></button>
+          <button data-gallery-filter="event" type="button">活动票务 <span>4</span></button>
+          <button data-gallery-filter="commerce" type="button">商城积分 <span>4</span></button>
+          <button data-gallery-filter="service" type="button">餐饮排队 <span>4</span></button>
+          <button data-gallery-filter="map" type="button">地图导览 <span>4</span></button>
+          <button data-gallery-filter="order" type="button">票夹订单 <span>4</span></button>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/panlong/login.webp" data-caption="登录页：品牌登录与协议确认" type="button">
+            <span class="gallery-index">01</span><span class="gallery-image"><img src="../assets/panlong/login.webp" alt="登录页" /></span>
+            <span class="gallery-meta"><b>登录页</b><small>品牌登录与协议确认</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/panlong/community-home.webp" data-caption="社区首页：内容聚合与便捷服务入口" type="button">
+            <span class="gallery-index">02</span><span class="gallery-image"><img src="../assets/panlong/community-home.webp" alt="社区首页" /></span>
+            <span class="gallery-meta"><b>社区首页</b><small>内容聚合与便捷服务入口</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/panlong/campaign-list.webp" data-caption="活动宣传列表：活动内容与专题推荐" type="button">
+            <span class="gallery-index">03</span><span class="gallery-image"><img src="../assets/panlong/campaign-list.webp" alt="活动宣传列表" /></span>
+            <span class="gallery-meta"><b>活动宣传列表</b><small>活动内容与专题推荐</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/panlong/trip.webp" data-caption="我的行程：到访路线与时间安排" type="button">
+            <span class="gallery-index">04</span><span class="gallery-image"><img src="../assets/panlong/trip.webp" alt="我的行程" /></span>
+            <span class="gallery-meta"><b>我的行程</b><small>到访路线与时间安排</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="event" data-src="../assets/panlong/event-list.webp" data-caption="购票列表：活动筛选与内容列表" type="button">
+            <span class="gallery-index">05</span><span class="gallery-image"><img src="../assets/panlong/event-list.webp" alt="购票列表" /></span>
+            <span class="gallery-meta"><b>购票列表</b><small>活动筛选与内容列表</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="event" data-src="../assets/panlong/event-detail.webp" data-caption="活动详情：项目介绍与报名信息" type="button">
+            <span class="gallery-index">06</span><span class="gallery-image"><img src="../assets/panlong/event-detail.webp" alt="活动详情" /></span>
+            <span class="gallery-meta"><b>活动详情</b><small>项目介绍与报名信息</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="event" data-src="../assets/panlong/event-session.webp" data-caption="选择场次：按日期与时段预约活动" type="button">
+            <span class="gallery-index">07</span><span class="gallery-image"><img src="../assets/panlong/event-session.webp" alt="选择场次" /></span>
+            <span class="gallery-meta"><b>选择场次</b><small>按日期与时段预约活动</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="event" data-src="../assets/panlong/event-ticket.webp" data-caption="票种选择：选择票种与数量" type="button">
+            <span class="gallery-index">08</span><span class="gallery-image"><img src="../assets/panlong/event-ticket.webp" alt="票种选择" /></span>
+            <span class="gallery-meta"><b>票种选择</b><small>选择票种与数量</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/panlong/shop-home.webp" data-caption="线上商城：商品列表与推荐内容" type="button">
+            <span class="gallery-index">09</span><span class="gallery-image"><img src="../assets/panlong/shop-home.webp" alt="线上商城" /></span>
+            <span class="gallery-meta"><b>线上商城</b><small>商品列表与推荐内容</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/panlong/shop-detail.webp" data-caption="商品详情：商品介绍与购买信息" type="button">
+            <span class="gallery-index">10</span><span class="gallery-image"><img src="../assets/panlong/shop-detail.webp" alt="商品详情" /></span>
+            <span class="gallery-meta"><b>商品详情</b><small>商品介绍与购买信息</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/panlong/shop-checkout.webp" data-caption="确认下单：下单信息与价格确认" type="button">
+            <span class="gallery-index">11</span><span class="gallery-image"><img src="../assets/panlong/shop-checkout.webp" alt="确认下单" /></span>
+            <span class="gallery-meta"><b>确认下单</b><small>下单信息与价格确认</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="commerce" data-src="../assets/panlong/points-list.webp" data-caption="积分商城：积分商品与兑换入口" type="button">
+            <span class="gallery-index">12</span><span class="gallery-image"><img src="../assets/panlong/points-list.webp" alt="积分商城" /></span>
+            <span class="gallery-meta"><b>积分商城</b><small>积分商品与兑换入口</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="service" data-src="../assets/panlong/food-booking.webp" data-caption="美食预约：餐饮预约内容与排期" type="button">
+            <span class="gallery-index">13</span><span class="gallery-image"><img src="../assets/panlong/food-booking.webp" alt="美食预约" /></span>
+            <span class="gallery-meta"><b>美食预约</b><small>餐饮预约内容与排期</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="service" data-src="../assets/panlong/food-form.webp" data-caption="预约信息：填写预约人与用餐信息" type="button">
+            <span class="gallery-index">14</span><span class="gallery-image"><img src="../assets/panlong/food-form.webp" alt="预约信息" /></span>
+            <span class="gallery-meta"><b>预约信息</b><small>填写预约人与用餐信息</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="service" data-src="../assets/panlong/queue-ticket.webp" data-caption="排队取号：快速取号与排队规则" type="button">
+            <span class="gallery-index">15</span><span class="gallery-image"><img src="../assets/panlong/queue-ticket.webp" alt="排队取号" /></span>
+            <span class="gallery-meta"><b>排队取号</b><small>快速取号与排队规则</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="service" data-src="../assets/panlong/queue-detail.webp" data-caption="号单详情：排队进度与到号状态" type="button">
+            <span class="gallery-index">16</span><span class="gallery-image"><img src="../assets/panlong/queue-detail.webp" alt="号单详情" /></span>
+            <span class="gallery-meta"><b>号单详情</b><small>排队进度与到号状态</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/panlong/map-home.webp" data-caption="导览地图：园区地图与点位分类" type="button">
+            <span class="gallery-index">17</span><span class="gallery-image"><img src="../assets/panlong/map-home.webp" alt="导览地图" /></span>
+            <span class="gallery-meta"><b>导览地图</b><small>园区地图与点位分类</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/panlong/map-merchant.webp" data-caption="商户点位：选中商户查看位置与卡片" type="button">
+            <span class="gallery-index">18</span><span class="gallery-image"><img src="../assets/panlong/map-merchant.webp" alt="商户点位" /></span>
+            <span class="gallery-meta"><b>商户点位</b><small>选中商户查看位置与卡片</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/panlong/map-route.webp" data-caption="地图导航：到目的地的路线引导" type="button">
+            <span class="gallery-index">19</span><span class="gallery-image"><img src="../assets/panlong/map-route.webp" alt="地图导航" /></span>
+            <span class="gallery-meta"><b>地图导航</b><small>到目的地的路线引导</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/panlong/map-store-detail.webp" data-caption="商户详情页：商户信息、活动与服务说明" type="button">
+            <span class="gallery-index">20</span><span class="gallery-image"><img src="../assets/panlong/map-store-detail.webp" alt="商户详情页" /></span>
+            <span class="gallery-meta"><b>商户详情页</b><small>商户信息、活动与服务说明</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="order" data-src="../assets/panlong/ticket-wallet.webp" data-caption="我的票夹：票券集合与使用入口" type="button">
+            <span class="gallery-index">21</span><span class="gallery-image"><img src="../assets/panlong/ticket-wallet.webp" alt="我的票夹" /></span>
+            <span class="gallery-meta"><b>我的票夹</b><small>票券集合与使用入口</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="order" data-src="../assets/panlong/order-list.webp" data-caption="订单列表：统一管理购票、商城与预约订单" type="button">
+            <span class="gallery-index">22</span><span class="gallery-image"><img src="../assets/panlong/order-list.webp" alt="订单列表" /></span>
+            <span class="gallery-meta"><b>订单列表</b><small>统一管理购票、商城与预约订单</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="order" data-src="../assets/panlong/order-detail.webp" data-caption="购票订单详情：订单状态、核验码与操作" type="button">
+            <span class="gallery-index">23</span><span class="gallery-image"><img src="../assets/panlong/order-detail.webp" alt="购票订单详情" /></span>
+            <span class="gallery-meta"><b>购票订单详情</b><small>订单状态、核验码与操作</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="order" data-src="../assets/panlong/pass-order.webp" data-caption="通票预约详情：预约结果与入场信息" type="button">
+            <span class="gallery-index">24</span><span class="gallery-image"><img src="../assets/panlong/pass-order.webp" alt="通票预约详情" /></span>
+            <span class="gallery-meta"><b>通票预约详情</b><small>预约结果与入场信息</small></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcome shell">
+      <div class="section-label reveal">05 / PROJECT SUMMARY</div>
+      <div class="outcome-grid reveal"><h2>围绕园区生活核心场景，建立统一、轻量、可扩展的小程序体验框架。</h2><div><p>蟠龙天地小程序覆盖社区首页、活动报名、活动票务、商城下单、积分兑换、餐饮预约、排队取号、地图导览、票夹订单与行程管理等关键场景。</p><p>案例重点展示如何在生活方式与工具效率之间取得平衡：既保留内容气质与品牌氛围，又让预约、购票、导航和订单等功能保持清晰直接，便于后续业务继续扩展。</p></div></div>
+      <div class="next-project reveal">
+        <a href="xicen-life-circle-mini-program.html"><span>PREVIOUS PROJECT</span><b>← 青浦西岑生活圈小程序</b></a>
+        <a href="../index.html#works"><span>ALL PROJECTS</span><b>返回全部设计案例 →</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>杨双军 · UI/UX DESIGNER</span><span>PANLONG TIANDI · 2025</span></div></footer>
+
+  <dialog class="lightbox">
+    <button class="lightbox-close" type="button" aria-label="关闭">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张">←</button>
+    <figure><img src="../assets/panlong/community-home.webp" alt="完整设计稿" /><figcaption></figcaption></figure>
+    <button class="lightbox-nav next" type="button" aria-label="下一张">→</button>
+  </dialog>
+  <script src="panlong-tiandi-mini-program.js"></script>
+</body>
+</html>

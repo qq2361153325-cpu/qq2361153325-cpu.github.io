@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="西岸生活小程序 UI/UX 设计案例：城市地图、文化内容、停车导航、场馆预约、酒店预订与会员服务。" />
+  <title>西岸生活小程序 · 杨双军 UI/UX 作品集</title>
+  <link rel="stylesheet" href="westbund-life-mini-program.css" />
+</head>
+<body class="westbund-case">
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html#works" aria-label="返回作品集首页"><span>YSJ</span><b>WEST BUND LIFE</b></a>
+    <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false"><i></i><i></i></button>
+    <nav class="case-header-nav" aria-label="案例导航">
+      <a href="#overview">项目概览</a>
+      <a href="#experience">体验路径</a>
+      <a href="#chapters">核心设计</a>
+      <a href="#gallery">页面合集</a>
+      <a class="back-link" href="../index.html#works">全部案例 ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy shell">
+        <p class="eyebrow">WEST BUND LIFE · 2026</p>
+        <h1>西岸生活<small>一张地图，连接城市文化与日常服务</small></h1>
+        <p class="hero-lead">从一次内容发现，到真实抵达、预约、支付与会员沉淀，让复杂的西岸服务拥有清晰、连续的移动体验。</p>
+        <div class="hero-tags"><span>UI / UX</span><span>城市地图</span><span>服务设计</span><span>微信小程序</span></div>
+      </div>
+      <div class="hero-stage shell" data-parallax>
+        <span class="hero-wordmark" aria-hidden="true">WEST BUND</span>
+        <span class="hero-glow one" aria-hidden="true"></span>
+        <span class="hero-glow two" aria-hidden="true"></span>
+        <button class="device hero-device hero-main zoomable" data-src="../assets/westbund/home.webp" data-caption="西岸生活首页：城市服务、文化内容与会员权益总入口" type="button">
+          <img src="../assets/westbund/home.webp" alt="西岸生活首页" />
+        </button>
+        <button class="device hero-device hero-side zoomable" data-src="../assets/westbund/map-01.webp" data-caption="全域地图：文化、停车、餐饮与公共服务点位" type="button">
+          <img src="../assets/westbund/map-01.webp" alt="西岸生活全域地图" />
+        </button>
+        <div class="hero-note"><b>ONE MAP · EVERY MOMENT</b><span>发现 / 到达 / 预约 / 会员</span></div>
+      </div>
+    </section>
+
+    <section class="project-meta">
+      <div class="shell meta-grid">
+        <div><span>ROLE</span><b>UI / UX Designer</b></div>
+        <div><span>PLATFORM</span><b>微信小程序</b></div>
+        <div><span>SCOPE</span><b>地图 / 内容 / 交易 / 会员</b></div>
+        <div><span>DESIGN SYSTEM</span><b>38 个核心页面</b></div>
+      </div>
+    </section>
+
+    <section class="overview shell" id="overview">
+      <div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+      <div class="overview-grid">
+        <div class="overview-copy reveal">
+          <p class="kicker">PROJECT BACKGROUND</p>
+          <h2>不是把服务堆在一起，而是重新组织一段西岸生活。</h2>
+          <p>西岸区域拥有密集的美术馆、演出、公共空间、商业、体育、停车与住宿资源。用户在真实出行中，却常常需要在多个平台之间切换。</p>
+          <p>项目以“地图发现”为主轴，把内容浏览、地点到达、活动预约、停车服务、酒店预订与会员权益连接起来，形成从出发前规划到现场核验的完整体验。</p>
+        </div>
+        <div class="overview-data reveal">
+          <article><span>Core</span><strong>地图做主轴</strong><p>不同业务共享位置、距离、筛选和导航能力</p></article>
+          <article><span>Journey</span><strong>线上线下闭环</strong><p>发现、预约、支付、到场与核验连续衔接</p></article>
+          <article><span>Content</span><strong>文化内容运营</strong><p>展览、演出、活动与生活方式持续更新</p></article>
+          <article><span>Loyalty</span><strong>会员长期经营</strong><p>活力值、等级、礼遇与票券集中管理</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="challenge-band">
+      <div class="shell challenge-grid">
+        <div class="challenge-title reveal">
+          <p class="kicker light">DESIGN CHALLENGES</p>
+          <h2>服务越复杂，体验越需要保持克制。</h2>
+        </div>
+        <div class="challenge-list">
+          <article class="reveal"><b>01</b><div><h3>服务类型多</h3><p>文化、交通、住宿与会员业务并存，需要统一但不混淆的信息架构。</p></div></article>
+          <article class="reveal"><b>02</b><div><h3>地图信息密集</h3><p>有限屏幕内同时处理点位聚合、筛选、卡片详情与导航操作。</p></div></article>
+          <article class="reveal"><b>03</b><div><h3>状态链路长</h3><p>预约、支付、票码、会员卡与活力值必须支持现场快速识别。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience shell" id="experience">
+      <div class="section-label reveal">02 / EXPERIENCE MAP</div>
+      <div class="experience-head reveal">
+        <div><p class="kicker">END-TO-END JOURNEY</p><h2>六个动作，构成一条完整的城市体验链路。</h2></div>
+        <p>体验不只解决“看什么”，还覆盖“怎么去、如何预约、怎样核验”，并把一次访问沉淀为持续的会员关系。</p>
+      </div>
+      <div class="journey reveal">
+        <article><span>01</span><b>发现内容</b><small>首页 / 推荐 / 展览演出</small></article><i>→</i>
+        <article><span>02</span><b>地图探索</b><small>全域点位 / 筛选 / 详情</small></article><i>→</i>
+        <article><span>03</span><b>规划到达</b><small>停车 / 导航 / 公共服务</small></article><i>→</i>
+        <article><span>04</span><b>预约预订</b><small>活动 / 场馆 / 酒店</small></article><i>→</i>
+        <article><span>05</span><b>现场核验</b><small>二维码 / 活力码 / 票券</small></article><i>→</i>
+        <article><span>06</span><b>会员沉淀</b><small>等级 / 权益 / 活力值</small></article>
+      </div>
+      <nav class="journey-nav reveal" aria-label="核心章节导航">
+        <a href="#home">首页入口</a>
+        <a href="#map">全域地图</a>
+        <a href="#culture">文化与出行</a>
+        <a href="#booking">预约核验</a>
+        <a href="#hotel">酒店预订</a>
+        <a href="#member">会员体系</a>
+      </nav>
+    </section>
+
+    <div class="chapters" id="chapters">
+      <section class="chapter chapter-dark" id="home">
+        <div class="shell chapter-grid">
+          <div class="chapter-copy reveal">
+            <span class="section-number">01</span>
+            <p class="kicker light">HOME & CONTENT HUB</p>
+            <h2>首页既是服务总入口，也是持续发现西岸的内容窗口。</h2>
+            <p>首屏优先呈现会员身份、活力值与高频城市服务，向下延展周游地图、展览演出、活动与餐饮内容。任务入口与内容运营互不抢夺，让用户既能快速办事，也愿意继续浏览。</p>
+            <ul>
+              <li><b>任务优先</b><span>停车、展览、巴士与体育服务在首屏直接触达。</span></li>
+              <li><b>会员可见</b><span>活力值、兑换与会员身份持续保持反馈。</span></li>
+              <li><b>内容延展</b><span>展览、演出与生活推荐形成长期内容流。</span></li>
+            </ul>
+          </div>
+          <div class="screen-pair reveal">
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/home.webp" data-caption="首页首屏：会员身份、活力值与高频服务" type="button"><img src="../assets/westbund/home.webp" alt="西岸生活首页首屏" /></button><div class="screen-label"><b>首页首屏</b><span>HOME</span></div></article>
+            <article class="screen-card screen-card-offset"><button class="device device-light zoomable" data-src="../assets/westbund/home-long.webp" data-caption="首页完整长页：城市服务、展览演出与生活内容" type="button"><img src="../assets/westbund/home-long.webp" alt="西岸生活首页完整长页" /></button><div class="screen-label"><b>完整内容流</b><span>LONG VIEW</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-map chapter-stacked" id="map">
+        <div class="shell">
+          <div class="chapter-head reveal">
+            <div><span class="section-number">02</span><p class="kicker">MAP-FIRST EXPLORATION</p><h2>地图不是结果页，而是所有城市服务的统一操作台。</h2></div>
+            <div class="chapter-summary"><p>点位图标、数量聚合、列表筛选与底部详情卡保持连续反馈。用户不离开地图，就能比较地点、查看距离并发起导航或预约。</p><div class="chapter-points"><span>多级点位聚合</span><span>场景化筛选</span><span>卡片联动</span></div></div>
+          </div>
+          <div class="screen-row screen-row-4 reveal">
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/map-01.webp" data-caption="全域地图：城市服务点位总览" type="button"><img src="../assets/westbund/map-01.webp" alt="全域地图总览" /></button><div class="screen-label"><b>全域总览</b><span>01</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/map-02.webp" data-caption="地图点位：选择地点并查看内容卡片" type="button"><img src="../assets/westbund/map-02.webp" alt="地图点位与卡片" /></button><div class="screen-label"><b>点位联动</b><span>02</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/map-04.webp" data-caption="地图列表：比较距离、状态与可执行操作" type="button"><img src="../assets/westbund/map-04.webp" alt="地图地点列表" /></button><div class="screen-label"><b>列表比较</b><span>03</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/map-05.webp" data-caption="地点详情：地址、距离与导航入口" type="button"><img src="../assets/westbund/map-05.webp" alt="地图地点详情" /></button><div class="screen-label"><b>地点详情</b><span>04</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-sand chapter-stacked" id="culture">
+        <div class="shell">
+          <div class="chapter-head reveal">
+            <div><span class="section-number">03</span><p class="kicker">CULTURE & MOBILITY</p><h2>文化内容与停车出行，共用一套清晰的地图语言。</h2></div>
+            <div class="chapter-summary"><p>展览演出与停车看似属于不同业务，但用户都需要筛选类型、比较距离、理解状态并立即行动。统一结构降低跨场景学习成本。</p><div class="chapter-points"><span>海报与票价</span><span>空闲车位</span><span>状态与行动</span></div></div>
+          </div>
+          <div class="screen-row screen-row-4 reveal">
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/culture-01.webp" data-caption="展览演出地图：文化内容点位与分类" type="button"><img src="../assets/westbund/culture-01.webp" alt="展览演出地图" /></button><div class="screen-label"><b>展览地图</b><span>CULTURE</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/culture-03.webp" data-caption="展览演出列表：时间、场馆、票价与状态" type="button"><img src="../assets/westbund/culture-03.webp" alt="展览演出列表" /></button><div class="screen-label"><b>内容列表</b><span>CULTURE</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/parking-01.webp" data-caption="停车地图：空闲车位与停车场分布" type="button"><img src="../assets/westbund/parking-01.webp" alt="停车场地图" /></button><div class="screen-label"><b>停车地图</b><span>PARKING</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/parking-05.webp" data-caption="停车详情：位置、空闲车位与导航操作" type="button"><img src="../assets/westbund/parking-05.webp" alt="停车场详情" /></button><div class="screen-label"><b>停车详情</b><span>PARKING</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-dark chapter-stacked" id="booking">
+        <div class="shell">
+          <div class="chapter-head light reveal">
+            <div><span class="section-number">04</span><p class="kicker light">BOOKING & ONSITE CHECK-IN</p><h2>把内容浏览、场馆预约与到场核验连接起来。</h2></div>
+            <div class="chapter-summary"><p>活动和文化场馆使用一致的日期、状态与预约入口。完成预约后，二维码凭证与活力码统一沉淀在“我的西岸生活”，现场打开即可核验。</p><div class="chapter-points"><span>日历筛选</span><span>场馆预约</span><span>二维码核验</span></div></div>
+          </div>
+          <div class="screen-row screen-row-4 reveal">
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/culture-home.webp" data-caption="展览首页：内容发现与活动入口" type="button"><img src="../assets/westbund/culture-home.webp" alt="展览活动首页" /></button><div class="screen-label"><b>活动发现</b><span>01</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/culture-calendar.webp" data-caption="活动日历：按时间查看展览演出" type="button"><img src="../assets/westbund/culture-calendar.webp" alt="活动日历筛选" /></button><div class="screen-label"><b>日期筛选</b><span>02</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/venue-booking.webp" data-caption="文化场馆预约：场馆、地址与预约状态" type="button"><img src="../assets/westbund/venue-booking.webp" alt="文化场馆预约" /></button><div class="screen-label"><b>场馆预约</b><span>03</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/vitality-code.webp" data-caption="活力码：会员身份与现场核验二维码" type="button"><img src="../assets/westbund/vitality-code.webp" alt="西岸生活活力码" /></button><div class="screen-label"><b>到场核验</b><span>04</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-hotel chapter-stacked" id="hotel">
+        <div class="shell">
+          <div class="chapter-head reveal">
+            <div><span class="section-number">05</span><p class="kicker">HOTEL BOOKING</p><h2>从浏览房型，到填写订单与支付完成的住宿闭环。</h2></div>
+            <div class="chapter-summary"><p>酒店模块延续小程序统一设计语言，通过大图、房型价格、入住信息与订单状态，建立更适合住宿决策的内容层级。</p><div class="chapter-points"><span>房型与日期</span><span>入住信息</span><span>订单状态</span></div></div>
+          </div>
+          <div class="flow-labels reveal"><span>酒店详情</span><i>→</i><span>填写订单</span><i>→</i><span>确认信息</span><i>→</i><span>预订成功</span><i>→</i><span>支付完成</span></div>
+          <div class="screen-row screen-row-5 reveal">
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/hotel-detail.webp" data-caption="上海西岸美高梅酒店：房型、价格与预订入口" type="button"><img src="../assets/westbund/hotel-detail.webp" alt="酒店详情" /></button><div class="screen-label"><b>酒店详情</b><span>01</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/hotel-form-empty.webp" data-caption="填写订单：入住人、房间数量与发票信息" type="button"><img src="../assets/westbund/hotel-form-empty.webp" alt="酒店订单填写" /></button><div class="screen-label"><b>填写订单</b><span>02</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/hotel-form-filled.webp" data-caption="确认信息：入住信息填写完成状态" type="button"><img src="../assets/westbund/hotel-form-filled.webp" alt="酒店订单确认" /></button><div class="screen-label"><b>确认信息</b><span>03</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/hotel-success.webp" data-caption="预订成功：入住日期、房型与订单入口" type="button"><img src="../assets/westbund/hotel-success.webp" alt="酒店预订成功" /></button><div class="screen-label"><b>预订成功</b><span>04</span></div></article>
+            <article class="screen-card"><button class="device zoomable" data-src="../assets/westbund/hotel-paid.webp" data-caption="支付完成：订单金额、酒店地址与联系方式" type="button"><img src="../assets/westbund/hotel-paid.webp" alt="酒店订单支付完成" /></button><div class="screen-label"><b>支付完成</b><span>05</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-member chapter-stacked" id="member">
+        <div class="shell">
+          <div class="chapter-head light reveal">
+            <div><span class="section-number">06</span><p class="kicker light">MEMBERSHIP & LOYALTY</p><h2>让会员身份、活力值和专属权益持续可见。</h2></div>
+            <div class="chapter-summary"><p>个人中心集中订单、票券、卡包与常用服务；会员中心则通过等级、活力值、专属权益与兑换礼遇，建立长期回访动力。</p><div class="chapter-points"><span>身份统一</span><span>价值可见</span><span>权益归档</span></div></div>
+          </div>
+          <div class="screen-row screen-row-4 reveal">
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/profile.webp" data-caption="个人中心：订单、卡包、票券与常用服务" type="button"><img src="../assets/westbund/profile.webp" alt="西岸生活个人中心" /></button><div class="screen-label"><b>个人中心</b><span>PROFILE</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/profile-member.webp" data-caption="我的西岸会员：会员入口与服务归档" type="button"><img src="../assets/westbund/profile-member.webp" alt="我的西岸会员" /></button><div class="screen-label"><b>会员入口</b><span>MEMBER</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/member-wb1.webp" data-caption="WB1 会员中心：等级权益与专属礼遇" type="button"><img src="../assets/westbund/member-wb1.webp" alt="WB1会员中心" /></button><div class="screen-label"><b>WB1 会员</b><span>LEVEL 01</span></div></article>
+            <article class="screen-card"><button class="device device-light zoomable" data-src="../assets/westbund/member-wb3.webp" data-caption="WB3 会员中心：成长等级与高级权益" type="button"><img src="../assets/westbund/member-wb3.webp" alt="WB3会员中心" /></button><div class="screen-label"><b>WB3 会员</b><span>LEVEL 03</span></div></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="principles shell">
+      <div class="section-label reveal">03 / DESIGN PRINCIPLES</div>
+      <div class="principles-head reveal">
+        <h2>城市服务复杂，但每一步都应该容易理解。</h2>
+        <p>设计重点不是增加更多入口，而是在地图、内容、交易与会员之间建立稳定的操作语言。</p>
+      </div>
+      <div class="principle-grid">
+        <article class="reveal"><span>01</span><h3>地图做主轴</h3><p>不同业务共享位置、距离、筛选和导航能力。</p></article>
+        <article class="reveal"><span>02</span><h3>任务与内容分层</h3><p>高频操作在前，文化内容提供持续探索价值。</p></article>
+        <article class="reveal"><span>03</span><h3>状态保持统一</h3><p>预约、支付、核验和会员权益采用一致反馈。</p></article>
+        <article class="reveal"><span>04</span><h3>线上线下闭环</h3><p>二维码、地址、导航和入场须知支持现场执行。</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-label light reveal">04 / SELECTED CORE SCREENS</div>
+        <div class="gallery-head reveal">
+          <div><p class="kicker light">CORE PAGE COLLECTION</p><h2>38 个最新核心页面，覆盖西岸生活服务全链路。</h2></div>
+          <p>所有图片均替换为本次提供的最新设计稿。长页面在列表中只展示首屏，点击后可以查看完整内容。</p>
+        </div>
+        <div class="gallery-filters reveal" role="group" aria-label="核心页面筛选">
+          <button class="active" data-gallery-filter="all" type="button">全部 <span>38</span></button>
+          <button data-gallery-filter="home" type="button">首页 <span>4</span></button>
+          <button data-gallery-filter="map" type="button">地图 <span>8</span></button>
+          <button data-gallery-filter="culture" type="button">文化与出行 <span>10</span></button>
+          <button data-gallery-filter="booking" type="button">预约与酒店 <span>9</span></button>
+          <button data-gallery-filter="member" type="button">会员 <span>7</span></button>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/westbund/home.webp" data-caption="首页首屏：会员、城市服务与内容入口" type="button"><span class="gallery-index">01</span><span class="gallery-image"><img src="../assets/westbund/home.webp" alt="首页首屏" loading="lazy" /></span><span class="gallery-meta"><b>首页首屏</b><small>会员、城市服务与内容入口</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/westbund/home-long.webp" data-caption="首页完整长页：展览、演出、活动与推荐内容" type="button"><span class="gallery-index">02</span><span class="gallery-image"><img src="../assets/westbund/home-long.webp" alt="首页完整长页" loading="lazy" /></span><span class="gallery-meta"><b>首页完整长页</b><small>完整城市内容流</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/westbund/dining-home.webp" data-caption="餐饮美食：品牌推荐与商户列表" type="button"><span class="gallery-index">03</span><span class="gallery-image"><img src="../assets/westbund/dining-home.webp" alt="餐饮美食首页" loading="lazy" /></span><span class="gallery-meta"><b>餐饮美食</b><small>品牌推荐与商户列表</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/westbund/worker-guide.webp" data-caption="西岸打工人：生活服务与福利内容合集" type="button"><span class="gallery-index">04</span><span class="gallery-image"><img src="../assets/westbund/worker-guide.webp" alt="西岸打工人长页" loading="lazy" /></span><span class="gallery-meta"><b>西岸打工人</b><small>生活服务与福利合集</small></span></button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-01.webp" data-caption="全域地图：多类城市服务点位总览" type="button"><span class="gallery-index">05</span><span class="gallery-image"><img src="../assets/westbund/map-01.webp" alt="全域地图总览" loading="lazy" /></span><span class="gallery-meta"><b>全域地图</b><small>多类城市服务点位</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-02.webp" data-caption="全域地图：点位选择与内容卡片" type="button"><span class="gallery-index">06</span><span class="gallery-image"><img src="../assets/westbund/map-02.webp" alt="地图点位卡片" loading="lazy" /></span><span class="gallery-meta"><b>点位卡片</b><small>选择地点并查看内容</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-03.webp" data-caption="全域地图：停车场点位与距离" type="button"><span class="gallery-index">07</span><span class="gallery-image"><img src="../assets/westbund/map-03.webp" alt="地图停车点位" loading="lazy" /></span><span class="gallery-meta"><b>停车点位</b><small>位置、距离与车位</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-04.webp" data-caption="全域地图：地点列表与状态比较" type="button"><span class="gallery-index">08</span><span class="gallery-image"><img src="../assets/westbund/map-04.webp" alt="地图地点列表" loading="lazy" /></span><span class="gallery-meta"><b>地点列表</b><small>距离、状态与操作</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-05.webp" data-caption="全域地图：地点详情与导航操作" type="button"><span class="gallery-index">09</span><span class="gallery-image"><img src="../assets/westbund/map-05.webp" alt="地图地点详情" loading="lazy" /></span><span class="gallery-meta"><b>地点详情</b><small>地址、距离与导航</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-06.webp" data-caption="全域地图：活动点位与底部详情卡" type="button"><span class="gallery-index">10</span><span class="gallery-image"><img src="../assets/westbund/map-06.webp" alt="活动点位详情" loading="lazy" /></span><span class="gallery-meta"><b>活动点位</b><small>地图与内容卡联动</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-07.webp" data-caption="全域地图：周边内容推荐" type="button"><span class="gallery-index">11</span><span class="gallery-image"><img src="../assets/westbund/map-07.webp" alt="全域地图周边推荐" loading="lazy" /></span><span class="gallery-meta"><b>周边推荐</b><small>地点与内容发现</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="map" data-src="../assets/westbund/map-07-alt.webp" data-caption="全域地图：精选活动卡片" type="button"><span class="gallery-index">12</span><span class="gallery-image"><img src="../assets/westbund/map-07-alt.webp" alt="地图精选活动" loading="lazy" /></span><span class="gallery-meta"><b>精选活动</b><small>地图内快速决策</small></span></button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-01.webp" data-caption="展览演出地图：热门展览点位" type="button"><span class="gallery-index">13</span><span class="gallery-image"><img src="../assets/westbund/culture-01.webp" alt="展览演出地图" loading="lazy" /></span><span class="gallery-meta"><b>展览地图</b><small>热门内容点位</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-02.webp" data-caption="展览演出地图：内容卡片与立即购票" type="button"><span class="gallery-index">14</span><span class="gallery-image"><img src="../assets/westbund/culture-02.webp" alt="展览内容卡片" loading="lazy" /></span><span class="gallery-meta"><b>展览卡片</b><small>内容、票价与操作</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-03.webp" data-caption="展览演出列表：时间、场馆与票价" type="button"><span class="gallery-index">15</span><span class="gallery-image"><img src="../assets/westbund/culture-03.webp" alt="展览演出列表" loading="lazy" /></span><span class="gallery-meta"><b>展演列表</b><small>时间、场馆与票价</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-04.webp" data-caption="展览演出详情：内容介绍与购票入口" type="button"><span class="gallery-index">16</span><span class="gallery-image"><img src="../assets/westbund/culture-04.webp" alt="展览演出详情" loading="lazy" /></span><span class="gallery-meta"><b>展演详情</b><small>内容介绍与购票</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-home.webp" data-caption="展览首页：推荐内容与活动入口" type="button"><span class="gallery-index">17</span><span class="gallery-image"><img src="../assets/westbund/culture-home.webp" alt="展览活动首页" loading="lazy" /></span><span class="gallery-meta"><b>展览首页</b><small>推荐内容与活动入口</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/culture-calendar.webp" data-caption="展览日历：按日期筛选内容" type="button"><span class="gallery-index">18</span><span class="gallery-image"><img src="../assets/westbund/culture-calendar.webp" alt="展览日历" loading="lazy" /></span><span class="gallery-meta"><b>展览日历</b><small>按日期筛选内容</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/parking-01.webp" data-caption="停车地图：空闲车位与位置分布" type="button"><span class="gallery-index">19</span><span class="gallery-image"><img src="../assets/westbund/parking-01.webp" alt="停车地图" loading="lazy" /></span><span class="gallery-meta"><b>停车地图</b><small>空闲车位与位置</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/parking-03.webp" data-caption="停车地图：当前位置与附近停车场" type="button"><span class="gallery-index">20</span><span class="gallery-image"><img src="../assets/westbund/parking-03.webp" alt="附近停车场地图" loading="lazy" /></span><span class="gallery-meta"><b>附近停车</b><small>当前位置与周边车场</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/parking-04.webp" data-caption="停车列表：停车场、距离与剩余车位" type="button"><span class="gallery-index">21</span><span class="gallery-image"><img src="../assets/westbund/parking-04.webp" alt="停车场列表" loading="lazy" /></span><span class="gallery-meta"><b>停车列表</b><small>距离与剩余车位</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="culture" data-src="../assets/westbund/parking-05.webp" data-caption="停车详情：地址、状态与导航操作" type="button"><span class="gallery-index">22</span><span class="gallery-image"><img src="../assets/westbund/parking-05.webp" alt="停车场详情" loading="lazy" /></span><span class="gallery-meta"><b>停车详情</b><small>地址、状态与导航</small></span></button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/venue-booking.webp" data-caption="文化场馆预约：场馆列表与预约状态" type="button"><span class="gallery-index">23</span><span class="gallery-image"><img src="../assets/westbund/venue-booking.webp" alt="文化场馆预约" loading="lazy" /></span><span class="gallery-meta"><b>场馆预约</b><small>场馆、地址与状态</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-detail.webp" data-caption="上海西岸美高梅酒店：房型、价格与服务" type="button"><span class="gallery-index">24</span><span class="gallery-image"><img src="../assets/westbund/hotel-detail.webp" alt="酒店详情长页" loading="lazy" /></span><span class="gallery-meta"><b>酒店详情</b><small>房型、价格与服务</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-form-empty.webp" data-caption="酒店订单填写：未输入状态" type="button"><span class="gallery-index">25</span><span class="gallery-image"><img src="../assets/westbund/hotel-form-empty.webp" alt="酒店订单未填写" loading="lazy" /></span><span class="gallery-meta"><b>订单填写</b><small>未输入状态</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-form-filled.webp" data-caption="酒店订单填写：信息完成状态" type="button"><span class="gallery-index">26</span><span class="gallery-image"><img src="../assets/westbund/hotel-form-filled.webp" alt="酒店订单已填写" loading="lazy" /></span><span class="gallery-meta"><b>确认信息</b><small>信息完成状态</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-success.webp" data-caption="酒店预订成功：入住信息与订单入口" type="button"><span class="gallery-index">27</span><span class="gallery-image"><img src="../assets/westbund/hotel-success.webp" alt="酒店预订成功" loading="lazy" /></span><span class="gallery-meta"><b>预订成功</b><small>入住信息与订单</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-pending.webp" data-caption="酒店订单待支付：价格明细与支付入口" type="button"><span class="gallery-index">28</span><span class="gallery-image"><img src="../assets/westbund/hotel-pending.webp" alt="酒店订单待支付" loading="lazy" /></span><span class="gallery-meta"><b>订单待支付</b><small>价格明细与支付</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-pending-compact.webp" data-caption="酒店订单待支付：紧凑信息版本" type="button"><span class="gallery-index">29</span><span class="gallery-image"><img src="../assets/westbund/hotel-pending-compact.webp" alt="酒店订单待支付版本二" loading="lazy" /></span><span class="gallery-meta"><b>待支付状态</b><small>紧凑信息版本</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-paid.webp" data-caption="酒店订单已支付：订单明细与酒店联系" type="button"><span class="gallery-index">30</span><span class="gallery-image"><img src="../assets/westbund/hotel-paid.webp" alt="酒店订单已支付" loading="lazy" /></span><span class="gallery-meta"><b>支付完成</b><small>订单明细与联系</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="booking" data-src="../assets/westbund/hotel-paid-compact.webp" data-caption="酒店订单已支付：紧凑信息版本" type="button"><span class="gallery-index">31</span><span class="gallery-image"><img src="../assets/westbund/hotel-paid-compact.webp" alt="酒店订单已支付版本二" loading="lazy" /></span><span class="gallery-meta"><b>已支付状态</b><small>紧凑信息版本</small></span></button>
+
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/profile.webp" data-caption="个人中心：订单、卡包与常用服务" type="button"><span class="gallery-index">32</span><span class="gallery-image"><img src="../assets/westbund/profile.webp" alt="个人中心" loading="lazy" /></span><span class="gallery-meta"><b>个人中心</b><small>订单、卡包与服务</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/vitality-code.webp" data-caption="活力码：会员身份与现场核验" type="button"><span class="gallery-index">33</span><span class="gallery-image"><img src="../assets/westbund/vitality-code.webp" alt="西岸活力码" loading="lazy" /></span><span class="gallery-meta"><b>活力码</b><small>会员身份与核验</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/profile-member.webp" data-caption="我的西岸会员：会员入口与权益归档" type="button"><span class="gallery-index">34</span><span class="gallery-image"><img src="../assets/westbund/profile-member.webp" alt="我的西岸会员" loading="lazy" /></span><span class="gallery-meta"><b>我的会员</b><small>会员入口与权益</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/member-wb1-popup.webp" data-caption="WB1 会员：等级信息弹窗" type="button"><span class="gallery-index">35</span><span class="gallery-image"><img src="../assets/westbund/member-wb1-popup.webp" alt="WB1会员弹窗" loading="lazy" /></span><span class="gallery-meta"><b>WB1 等级</b><small>会员等级弹窗</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/member-wb1.webp" data-caption="WB1 会员中心：基础等级与专属权益" type="button"><span class="gallery-index">36</span><span class="gallery-image"><img src="../assets/westbund/member-wb1.webp" alt="WB1会员中心" loading="lazy" /></span><span class="gallery-meta"><b>WB1 会员</b><small>基础等级与权益</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/member-wb2.webp" data-caption="WB2 会员中心：进阶等级与专属权益" type="button"><span class="gallery-index">37</span><span class="gallery-image"><img src="../assets/westbund/member-wb2.webp" alt="WB2会员中心" loading="lazy" /></span><span class="gallery-meta"><b>WB2 会员</b><small>进阶等级与权益</small></span></button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="member" data-src="../assets/westbund/member-wb3.webp" data-caption="WB3 会员中心：高级等级与专属权益" type="button"><span class="gallery-index">38</span><span class="gallery-image"><img src="../assets/westbund/member-wb3.webp" alt="WB3会员中心" loading="lazy" /></span><span class="gallery-meta"><b>WB3 会员</b><small>高级等级与权益</small></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcome shell">
+      <div class="section-label reveal">05 / PROJECT SUMMARY</div>
+      <div class="outcome-grid reveal">
+        <h2>用一张地图串起城市内容，用会员体系延续每次到访。</h2>
+        <div><p>西岸生活覆盖首页内容发现、全域地图、展览演出、停车导航、场馆预约、酒店交易与会员成长等核心场景。</p><p>案例重点展示如何在多业务产品中控制信息层级，让内容发现、服务使用、交易转化与长期会员经营各自清晰，同时保持统一的品牌与交互语言。</p></div>
+      </div>
+      <div class="next-project reveal">
+        <a href="zheli-ticketing-mini-program.html"><span>REFERENCE CASE</span><b>← 浙里票务小程序</b></a>
+        <a href="liangshan-new-city-mini-program.html"><span>NEXT PROJECT</span><b>吉客小程序 →</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>杨双军 · UI/UX DESIGNER</span><span>WEST BUND LIFE · 2025</span></div></footer>
+
+  <dialog class="lightbox">
+    <button class="lightbox-close" type="button" aria-label="关闭">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张">←</button>
+    <figure><img src="../assets/westbund/home.webp" alt="完整设计稿" /><figcaption></figcaption></figure>
+    <button class="lightbox-nav next" type="button" aria-label="下一张">→</button>
+  </dialog>
+  <script src="westbund-life-mini-program.js"></script>
+</body>
+</html>

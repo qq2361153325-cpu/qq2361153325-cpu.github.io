@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfaf4"/><stop offset=".55" stop-color="#f5f2e6"/><stop offset="1" stop-color="#dce5c9"/></linearGradient>
+    <linearGradient id="podium" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef8"/><stop offset="1" stop-color="#d8dfc9"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7faf7"/><stop offset=".18" stop-color="#929b94"/><stop offset=".45" stop-color="#e8ece8"/><stop offset=".72" stop-color="#727a74"/><stop offset="1" stop-color="#fbfdfb"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#d7e5b8" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="210%"><feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#31422a" flood-opacity=".28"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="screenL"><rect x="740" y="259" width="277" height="601" rx="39"/></clipPath>
+    <clipPath id="screenC"><rect x="969" y="146" width="329" height="713" rx="47"/></clipPath>
+    <clipPath id="screenR"><rect x="1285" y="278" width="267" height="578" rx="38"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1380" cy="90" r="360" fill="url(#sun)"/>
+  <path d="M0 760C180 674 345 710 505 785S790 894 960 808s340-120 640-29v221H0Z" fill="#d2ddc1" opacity=".72"/>
+  <path d="M0 825C215 742 385 772 547 837s331 104 497 27 335-74 556-20v156H0Z" fill="#becdad" opacity=".74"/>
+  <g opacity=".35" fill="#91a384">
+    <rect x="46" y="676" width="58" height="166" rx="4"/><rect x="111" y="718" width="74" height="124" rx="4"/><rect x="192" y="643" width="105" height="199" rx="4"/><rect x="307" y="690" width="66" height="152" rx="4"/><rect x="382" y="619" width="121" height="223" rx="4"/><rect x="514" y="708" width="83" height="134" rx="4"/><rect x="607" y="654" width="72" height="188" rx="4"/>
+  </g>
+  <g opacity=".18" stroke="#fff" stroke-width="4"><path d="M70 712h26M70 739h26M225 682h40M225 714h40M410 663h62M410 700h62M410 737h62M535 742h38"/></g>
+  <g opacity=".55"><circle cx="94" cy="833" r="36" fill="#7b986b"/><circle cx="151" cy="842" r="52" fill="#8da77a"/><circle cx="570" cy="843" r="57" fill="#79936a"/><circle cx="635" cy="850" r="42" fill="#91a77c"/></g>
+
+  <g transform="translate(112 103)">
+    <rect width="70" height="70" rx="17" fill="#fff" filter="url(#shadow)"/>
+    <image x="6" y="6" width="58" height="58" href="logo.png"/>
+    <text x="92" y="28" fill="#496344" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="4">XINCHENGSHE</text>
+    <text x="92" y="53" fill="#798875" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="5">COMMUNITY APP</text>
+  </g>
+  <text x="112" y="330" fill="#273b2e" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif" font-size="116" font-weight="800" letter-spacing="-9">新城社</text>
+  <text x="116" y="390" fill="#50634f" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif" font-size="30" font-weight="500" letter-spacing="4">一站式物业社区生活服务平台</text>
+  <rect x="116" y="432" width="48" height="4" rx="2" fill="#f7aa35"/>
+
+  <g transform="translate(112 494)" font-family="PingFang SC,Hiragino Sans GB,Arial,sans-serif">
+    <g><circle cx="34" cy="34" r="34" fill="#e9eedc"/><path d="M20 38c8-18 23-18 29 0M25 25h18" fill="none" stroke="#789557" stroke-width="5" stroke-linecap="round"/><text x="0" y="92" fill="#314631" font-size="19" font-weight="700">物业服务</text><text x="0" y="120" fill="#879084" font-size="14">事务一站聚合</text></g>
+    <g transform="translate(155 0)"><circle cx="34" cy="34" r="34" fill="#e9eedc"/><path d="M18 29c0-9 13-12 16-2 4-10 17-7 17 2 0 10-17 20-17 20S18 39 18 29Z" fill="none" stroke="#789557" stroke-width="4"/><text x="0" y="92" fill="#314631" font-size="19" font-weight="700">社区生活</text><text x="0" y="120" fill="#879084" font-size="14">发现身边精彩</text></g>
+    <g transform="translate(310 0)"><circle cx="34" cy="34" r="34" fill="#e9eedc"/><path d="M18 38 34 22l16 16v15H18Z" fill="none" stroke="#789557" stroke-width="4" stroke-linejoin="round"/><text x="0" y="92" fill="#314631" font-size="19" font-weight="700">邻里互动</text><text x="0" y="120" fill="#879084" font-size="14">连接真实邻里</text></g>
+  </g>
+
+  <ellipse cx="1145" cy="906" rx="520" ry="68" fill="#6c7e60" opacity=".23" filter="url(#soft)"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="878" cy="875" rx="172" ry="58" fill="#f7f7ef"/><path d="M706 875v66c0 32 344 32 344 0v-66c-35 43-311 45-344 0Z" fill="url(#podium)"/>
+    <ellipse cx="1138" cy="880" rx="207" ry="68" fill="#fffef8"/><path d="M931 880v72c0 37 414 37 414 0v-72c-42 49-372 50-414 0Z" fill="url(#podium)"/>
+    <ellipse cx="1413" cy="881" rx="145" ry="52" fill="#f7f7ef"/><path d="M1268 881v61c0 29 290 29 290 0v-61c-29 39-261 40-290 0Z" fill="url(#podium)"/>
+  </g>
+
+  <g transform="rotate(-5 879 560)" filter="url(#shadow)"><rect x="734" y="253" width="289" height="613" rx="46" fill="url(#edge)" stroke="#eef1ee" stroke-width="1.5"/><rect x="739" y="258" width="279" height="603" rx="41" fill="#111"/><rect x="740" y="259" width="277" height="601" rx="39" fill="#fff"/><image x="740" y="259" width="277" height="601" preserveAspectRatio="xMidYMid slice" clip-path="url(#screenL)" href="cover-community.png"/><rect x="842" y="271" width="76" height="22" rx="11" fill="#090a09"/><rect x="731" y="350" width="4" height="56" rx="2" fill="#657068"/><rect x="1022" y="372" width="4" height="91" rx="2" fill="#5f6861"/></g>
+  <g transform="rotate(6 1419 570)" filter="url(#shadow)"><rect x="1278" y="271" width="281" height="592" rx="45" fill="url(#edge)" stroke="#eef1ee" stroke-width="1.5"/><rect x="1284" y="277" width="269" height="580" rx="40" fill="#111"/><rect x="1285" y="278" width="267" height="578" rx="38" fill="#fff"/><image x="1285" y="278" width="267" height="578" preserveAspectRatio="xMidYMid slice" clip-path="url(#screenR)" href="cover-home-02.png"/><rect x="1381" y="291" width="76" height="22" rx="11" fill="#090a09"/><rect x="1275" y="360" width="4" height="52" rx="2" fill="#657068"/><rect x="1558" y="384" width="4" height="84" rx="2" fill="#5f6861"/></g>
+  <g filter="url(#shadow)"><rect x="962" y="139" width="343" height="727" rx="55" fill="url(#edge)" stroke="#eef1ee" stroke-width="1.5"/><rect x="968" y="145" width="331" height="715" rx="49" fill="#111"/><rect x="969" y="146" width="329" height="713" rx="47" fill="#fff"/><image x="969" y="146" width="329" height="713" preserveAspectRatio="xMidYMid slice" clip-path="url(#screenC)" href="cover-home-01.png"/><rect x="1092" y="160" width="84" height="24" rx="12" fill="#090a09"/><rect x="958" y="255" width="5" height="64" rx="2.5" fill="#657068"/><rect x="1304" y="282" width="5" height="102" rx="2.5" fill="#5f6861"/></g>
+</svg>

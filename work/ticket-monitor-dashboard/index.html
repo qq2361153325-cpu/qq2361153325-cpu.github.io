@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>检票监控看板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="screen-wrapper">
+    <main id="dashboard" class="relative overflow-hidden">
+      <div class="top-theme" aria-hidden="true"></div>
+
+      <header class="header-layer">
+        <section class="title-block">
+          <h1 id="pageTitle" contenteditable="true">票务平台实时监测系统</h1>
+          <span class="title-line"></span>
+        </section>
+
+        <section class="status-bar">
+          <span class="muted">当前时间：</span>
+          <strong id="currentTime">2026-06-06 15:43:56</strong>
+          <span class="muted ml-8">场次已开始：</span>
+          <strong id="elapsed">5天20小时45分钟27秒</strong>
+          <button id="refreshBtn" class="ghost-button" type="button" aria-label="刷新数据">
+            <img class="button-icon" src="./assets/refresh-icon.png?v=refresh-png-1" alt="" aria-hidden="true" />
+            刷新数据
+          </button>
+        </section>
+      </header>
+
+      <section class="kpi-grid">
+        <article class="kpi-card accent-green">
+          <div class="glass-icon">
+            <img src="./assets/kpi-sold-icon.png?v=transparent-4" alt="已售票数" />
+          </div>
+          <div>
+            <h2 contenteditable="true">已售票数</h2>
+            <strong class="roll-number" data-value="11909">0</strong>
+            <p><span>较昨日</span><b>+1,258</b><b>↑ 12.35%</b></p>
+          </div>
+        </article>
+
+        <article class="kpi-card accent-blue">
+          <div class="glass-icon">
+            <img src="./assets/kpi-verified-icon.png?v=transparent-4" alt="已实名票数" />
+          </div>
+          <div>
+            <h2 contenteditable="true">已实名票数</h2>
+            <strong class="roll-number" data-value="7190">0</strong>
+            <p><span>较昨日</span><b>+856</b><b>↑ 13.53%</b></p>
+          </div>
+        </article>
+
+        <article class="gauge-card">
+          <h2 contenteditable="true">已售票入场占比</h2>
+          <div class="gauge-wrap">
+            <img class="gauge-arc-img" src="./assets/gauge-arc.png?v=transparent-3" alt="" aria-hidden="true" />
+            <img class="gauge-pointer-img" src="./assets/gauge-pointer.png?v=transparent-3" alt="" aria-hidden="true" />
+            <div id="gaugeChart"></div>
+            <span class="gauge-tick t0">0%</span>
+            <span class="gauge-tick t25">25%</span>
+            <span class="gauge-tick t50">50%</span>
+            <span class="gauge-tick t75">75%</span>
+            <span class="gauge-tick t100">100%</span>
+          </div>
+          <div class="gauge-subtitle">已入场票数 3393</div>
+        </article>
+
+        <article class="kpi-card accent-purple">
+          <div class="glass-icon">
+            <img src="./assets/kpi-entered-icon.png?v=transparent-4" alt="已入场实名票数" />
+          </div>
+          <div>
+            <h2 contenteditable="true">已入场实名票数</h2>
+            <strong class="roll-number" data-value="3393">0</strong>
+            <p><span>较昨日</span><b>+512</b><b>↑ 17.79%</b></p>
+          </div>
+        </article>
+
+        <article class="kpi-card accent-cyan">
+          <div class="glass-icon">
+            <img src="./assets/kpi-not-entered-icon.png?v=transparent-4" alt="已实名未入场票数" />
+          </div>
+          <div>
+            <h2 contenteditable="true">已实名未入场票数</h2>
+            <strong class="roll-number" data-value="3797">0</strong>
+            <p><span>较昨日</span><b>-128</b><b>↓ 3.25%</b></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel area-panel">
+        <div class="panel-title-row">
+          <h2 contenteditable="true">各地区入场/未入场票数</h2>
+          <div class="chart-actions">
+            <button id="seatBtn" class="seat-button" type="button">
+              <span class="seat-button-icon" aria-hidden="true"></span>
+              查看入座实况
+            </button>
+            <select aria-label="区域筛选">
+              <option>全部区域</option>
+              <option>A1区</option>
+              <option>H区</option>
+              <option>D区</option>
+            </select>
+          </div>
+        </div>
+        <div id="barChart" class="chart"></div>
+      </section>
+
+      <section class="bottom-grid">
+        <aside class="left-stack">
+          <section class="panel gender-panel">
+            <h2 contenteditable="true">性别占比</h2>
+            <div class="gender-cards">
+              <div class="gender-card male">
+                <img class="gender-icon" src="./assets/male-icon.png?v=transparent-3" alt="男生占比" />
+                <div><b>57.35%</b><span>男生占比</span></div>
+              </div>
+              <div class="gender-card female">
+                <img class="gender-icon" src="./assets/female-icon.png?v=transparent-3" alt="女生占比" />
+                <div><b>42.65%</b><span>女生占比</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel donut-panel">
+            <div class="donut-item">
+              <h2 contenteditable="true">入场票数省内外占比</h2>
+              <div id="provinceChart" class="donut-chart"></div>
+              <p><i class="dot mint"></i>省内：29.89%</p>
+              <p><i class="dot blue"></i>省外：70.11%</p>
+            </div>
+            <div class="donut-divider"></div>
+            <div class="donut-item">
+              <h2 contenteditable="true">入场票数市内外占比</h2>
+              <div id="cityChart" class="donut-chart"></div>
+              <p><i class="dot mint"></i>市内：50.99%</p>
+              <p><i class="dot blue"></i>市外：49.01%</p>
+            </div>
+          </section>
+        </aside>
+
+        <section class="panel trend-panel">
+          <div class="panel-title-row">
+            <h2 contenteditable="true">入场时间趋势</h2>
+            <div class="switcher" role="tablist" aria-label="趋势切换">
+              <button class="active" type="button" data-mode="minute">按分钟</button>
+              <button type="button" data-mode="ten">按10分钟</button>
+            </div>
+          </div>
+          <div id="trendChart" class="chart"></div>
+        </section>
+      </section>
+
+      <div id="seatPopover" class="seat-popover" aria-hidden="true">
+        <div class="seat-popover-inner">
+          <div class="seat-map" id="seatMap"></div>
+        </div>
+      </div>
+    </main>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>

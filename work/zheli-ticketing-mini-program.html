@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="浙里票务小程序 UI/UX 设计案例：演出内容发现、活动详情、场次票档、选座购票、实名与订单管理。" />
+  <title>浙里票务小程序 · 杨双军 UI/UX 设计作品集</title>
+  <link rel="stylesheet" href="zheli-ticketing-mini-program.css" />
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html#works" aria-label="返回作品集首页"><span>YSJ</span><b>Portfolio</b></a>
+    <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false"><i></i><i></i></button>
+    <nav class="case-header-nav" aria-label="项目导航">
+      <a href="#overview">项目概览</a><a href="#experience">体验路径</a><a href="#screens">核心页面</a><a href="#gallery">页面合集</a>
+      <a class="back-link" href="../index.html#works">全部案例 ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy shell reveal">
+        <p class="eyebrow">ZHELI TICKETING · MINI PROGRAM</p>
+        <h1>浙里票务<br/>演出购票小程序</h1>
+        <p class="hero-lead">以演出内容发现为入口，把项目详情、日期场次、票档选择、实名验证、选座与订单管理串联为清晰的购票闭环。</p>
+        <div class="hero-tags"><span>Mini Program</span><span>Ticketing</span><span>UX / UI</span><span>Content Discovery</span></div>
+      </div>
+      <div class="hero-stage shell reveal" data-parallax>
+        <div class="hero-glow one"></div><div class="hero-glow two"></div>
+        <button class="screen-frame hero-screen hero-a zoomable" data-src="../assets/zheli/home-red.webp" data-caption="浙里票务首页最终视觉方向" type="button"><img src="../assets/zheli/home-red.webp" alt="浙里票务首页单屏"/></button>
+        <button class="screen-frame hero-screen hero-b zoomable" data-src="../assets/zheli/detail-video.webp" data-caption="带视频氛围的演出详情首屏" type="button"><img src="../assets/zheli/detail-video.webp" alt="演出详情页单屏"/></button>
+        <div class="hero-note"><b>从“找演出”到“完成购票”</b><span>覆盖高频内容消费与高压力购票场景</span></div>
+      </div>
+    </section>
+
+    <section class="overview shell" id="overview">
+      <div class="section-label reveal">01 / PROJECT OVERVIEW</div>
+      <div class="overview-grid">
+        <div class="overview-copy reveal"><p class="kicker">PROJECT BACKGROUND</p><h2>为浙江地区演出用户，建立统一、快速的票务入口。</h2><p>项目围绕演出浏览与购票场景展开。用户既需要按城市、时间和类型快速找到内容，也需要在热门演出开票时完成日期、场次、票档、实名与座位等连续决策。</p><p>设计重点不是单独美化页面，而是降低信息理解成本，在内容丰富度、购票效率与交易安全之间找到平衡。</p></div>
+        <div class="overview-data reveal">
+          <article><span>Platform</span><strong>微信小程序</strong><p>面向移动端演出消费场景</p></article>
+          <article><span>Scope</span><strong>全链路体验</strong><p>发现、详情、购票、订单与个人中心</p></article>
+          <article><span>Role</span><strong>UI / UX Design</strong><p>信息结构、交互路径与视觉设计</p></article>
+          <article><span>Core</span><strong>高效决策</strong><p>压缩热门票务场景的操作路径</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="challenge-band">
+      <div class="shell challenge-grid">
+        <div class="challenge-title reveal"><p class="kicker light">DESIGN CHALLENGES</p><h2>票务体验的难点，集中在三次关键决策。</h2></div>
+        <div class="challenge-list">
+          <article class="reveal"><b>01</b><div><h3>先找到想看的内容</h3><p>演出品类多、城市跨度大，首页需要兼顾运营曝光、分类浏览和个性化发现。</p></div></article>
+          <article class="reveal"><b>02</b><div><h3>再判断是否值得购买</h3><p>项目详情要同时呈现内容氛围、价格、场馆、服务保障、优惠和用户反馈。</p></div></article>
+          <article class="reveal"><b>03</b><div><h3>最后快速完成购票</h3><p>日期、场次、票档、实名、座位和库存状态必须在有限时间内被准确理解。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience shell" id="experience">
+      <div class="section-label reveal">02 / EXPERIENCE MAP</div>
+      <div class="experience-head reveal"><div><p class="kicker">FULL JOURNEY</p><h2>将复杂票务流程拆解为六个连续阶段。</h2></div><p>用户在每个阶段只处理当前最重要的信息，页面通过固定操作区、明确状态和渐进式披露减少反复确认。</p></div>
+      <div class="journey reveal">
+        <article><span>01</span><b>发现演出</b><small>首页 / 分类 / 城市</small></article><i>→</i>
+        <article><span>02</span><b>了解项目</b><small>内容 / 场馆 / 保障</small></article><i>→</i>
+        <article><span>03</span><b>选择场次</b><small>日期 / 时间 / 票档</small></article><i>→</i>
+        <article><span>04</span><b>确认资格</b><small>实名 / 优惠 / 攻略</small></article><i>→</i>
+        <article><span>05</span><b>选座购票</b><small>区域 / 座位 / 价格</small></article><i>→</i>
+        <article><span>06</span><b>管理订单</b><small>订单 / 收藏 / 个人中心</small></article>
+      </div>
+      <nav class="journey-nav reveal" aria-label="核心章节导航">
+        <a href="#home">内容发现</a><a href="#detail">项目详情</a><a href="#purchase">票务决策</a><a href="#seat">选座与实名</a><a href="#account">订单与账户</a>
+      </nav>
+    </section>
+
+    <section class="feature feature-dark" id="home">
+      <div class="shell feature-grid">
+        <div class="feature-copy reveal"><span class="section-number">01</span><p class="kicker light">CONTENT DISCOVERY</p><h2>首页从功能聚合，逐步收敛为更强的文化内容入口。</h2><p>最终方案以鲜明的戏曲主题建立地域文化识别，同时保留城市搜索、演出分类、抢票倒计时、专题推荐、演出日历和场馆入口。</p><ul><li><b>强运营首屏</b><span>大幅主题 Banner 承载重点演出和城市文化表达。</span></li><li><b>快速分类</b><span>舞蹈、戏曲、音乐、亲子等高频品类一屏可达。</span></li><li><b>分层内容</b><span>抢票、专题、日历、榜单与推荐形成不同浏览深度。</span></li></ul></div>
+        <div class="home-showcase reveal">
+          <button class="screen-frame white zoomable" data-src="../assets/zheli/home-red.webp" data-caption="首页最终版本：文化视觉与业务入口融合" type="button"><img src="../assets/zheli/home-red.webp" alt="浙里票务最终首页单屏"/></button>
+          <button class="screen-frame white offset zoomable" data-src="../assets/zheli/home-blue-full.webp" data-caption="早期首页长页：完整内容模块与推荐流" type="button"><img src="../assets/zheli/home-blue-full-viewport.webp" alt="浙里票务早期首页单屏"/></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature shell" id="screens" data-section="内容发现">
+      <div class="feature-grid reverse">
+        <div class="screen-row reveal">
+          <button class="screen-frame zoomable" data-src="../assets/zheli/home-city.webp" data-caption="城市频道：按城市聚合演出内容" type="button"><img src="../assets/zheli/home-city.webp" alt="城市频道单屏"/></button>
+          <button class="screen-frame zoomable" data-src="../assets/zheli/home-list.webp" data-caption="演出列表：分类、时间与排序筛选" type="button"><img src="../assets/zheli/home-list.webp" alt="演出列表单屏"/></button>
+          <button class="screen-frame zoomable" data-src="../assets/zheli/home-no-date.webp" data-caption="无排期状态：保留推荐内容避免页面中断" type="button"><img src="../assets/zheli/home-no-date.webp" alt="无排期状态单屏"/></button>
+        </div>
+        <div class="feature-copy reveal"><span class="section-number">02</span><p class="kicker">CITY & LIST</p><h2>用城市、日期和品类，帮助用户缩短搜索路径。</h2><p>列表页强调演出海报、项目名称、时间、场馆、价格和状态标签。无演出日期时不留空白，而是继续提供猜你想看，保持内容探索连续性。</p><div class="insights"><article><b>城市定位</b><p>搜索框与城市切换并列，明确内容归属。</p></article><article><b>状态清晰</b><p>预售、售罄、可选座等状态贴近价格区展示。</p></article><article><b>空态续接</b><p>无匹配结果时推荐相关演出，降低跳失。</p></article></div></div>
+      </div>
+    </section>
+
+    <section class="feature feature-soft" id="detail" data-section="项目详情">
+      <div class="shell feature-grid">
+        <div class="feature-copy reveal"><span class="section-number">03</span><p class="kicker">EVENT DETAIL</p><h2>将内容氛围与购票信息放在同一条决策线上。</h2><p>详情首屏根据项目素材支持视频或静态视觉。核心价格、日期、场馆、服务保障和预约入口始终保持稳定，避免营销内容打断购买判断。</p><ul><li><b>视频氛围</b><span>适合明星演唱会等高情绪内容，增强临场感。</span></li><li><b>静态主视觉</b><span>适合戏曲与舞台项目，保证项目信息识别效率。</span></li><li><b>可信信息</b><span>场馆地址、服务保障、抢票攻略和用户想看数据集中呈现。</span></li></ul></div>
+        <div class="detail-pair reveal">
+          <button class="screen-frame zoomable" data-src="../assets/zheli/detail-video.webp" data-caption="视频型项目详情首屏" type="button"><img src="../assets/zheli/detail-video.webp" alt="视频项目详情单屏"/></button>
+          <button class="screen-frame zoomable" data-src="../assets/zheli/detail-no-video.webp" data-caption="静态型项目详情首屏" type="button"><img src="../assets/zheli/detail-no-video.webp" alt="静态项目详情单屏"/></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature shell" id="purchase" data-section="票务决策">
+      <div class="feature-grid reverse">
+        <div class="purchase-flow reveal">
+          <button class="flow-card zoomable" data-src="../assets/zheli/date-select.webp" data-caption="选择演出日期" type="button"><span class="screen-frame"><img src="../assets/zheli/date-select.webp" alt="选择日期单屏"/></span><b>01 · 日期</b></button>
+          <button class="flow-card zoomable" data-src="../assets/zheli/session-a.webp" data-caption="选择演出场次" type="button"><span class="screen-frame"><img src="../assets/zheli/session-a.webp" alt="选择场次单屏"/></span><b>02 · 场次</b></button>
+          <button class="flow-card zoomable" data-src="../assets/zheli/ticket-tags-a.webp" data-caption="选择票档与优惠组合" type="button"><span class="screen-frame"><img src="../assets/zheli/ticket-tags-a-viewport.webp" alt="选择票档"/></span><b>03 · 票档</b></button>
+          <button class="flow-card zoomable" data-src="../assets/zheli/discounts.webp" data-caption="查看可用优惠活动" type="button"><span class="screen-frame"><img src="../assets/zheli/discounts-viewport.webp" alt="优惠活动"/></span><b>04 · 优惠</b></button>
+        </div>
+        <div class="feature-copy reveal"><span class="section-number">04</span><p class="kicker">TICKET DECISION</p><h2>把日期、场次、票档和优惠拆成可扫描的选择层级。</h2><p>选项采用标签与卡片组合，已选、可选、售罄和优惠状态通过颜色与边框区分。固定底部按钮同步显示当前选择和价格，减少用户回看。</p><div class="insights"><article><b>渐进选择</b><p>只有完成上一步后才展开后续选项。</p></article><article><b>库存反馈</b><p>场次和票档直接显示剩余状态，避免无效点击。</p></article><article><b>价格透明</b><p>优惠标签贴近票档，最终金额持续可见。</p></article></div></div>
+      </div>
+    </section>
+
+    <section class="feature feature-dark" id="seat" data-section="选座与实名">
+      <div class="shell feature-grid">
+        <div class="feature-copy reveal"><span class="section-number">05</span><p class="kicker light">SEAT & IDENTITY</p><h2>在高压力购票环节，优先保证状态可见与操作确定性。</h2><p>选座页面保留完整视野图、价格图例、已选座位和确认按钮。实名与抢票攻略提前承接规则说明，让用户在开票前完成准备。</p><ul><li><b>座位地图</b><span>区域、价格和已选状态保持一致的视觉编码。</span></li><li><b>实名校验</b><span>在进入购票前解释身份信息用途与填写要求。</span></li><li><b>抢票准备</b><span>通过攻略和预设减少开票时重复输入。</span></li></ul></div>
+        <div class="seat-grid reveal">
+          <button class="screen-frame white zoomable" data-src="../assets/zheli/seat-map.webp" data-caption="选座购票：区域、座位与价格状态" type="button"><img src="../assets/zheli/seat-map.webp" alt="选座购票单屏"/></button>
+          <button class="screen-frame white zoomable" data-src="../assets/zheli/real-name.webp" data-caption="实名信息确认" type="button"><img src="../assets/zheli/real-name.webp" alt="实名信息单屏"/></button>
+          <button class="screen-frame white zoomable" data-src="../assets/zheli/rush-guide.webp" data-caption="抢票攻略与预设入口" type="button"><img src="../assets/zheli/rush-guide.webp" alt="抢票攻略单屏"/></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature shell" id="account" data-section="订单与账户">
+      <div class="feature-grid reverse">
+        <div class="account-pair reveal">
+          <button class="screen-frame zoomable" data-src="../assets/zheli/orders.webp" data-caption="我的订单：待付款、已完成与售后状态" type="button"><img src="../assets/zheli/orders-viewport.webp" alt="我的订单"/></button>
+          <button class="screen-frame zoomable" data-src="../assets/zheli/profile-user-replacement.webp" data-caption="个人中心：订单、收藏、地址与常用服务" type="button"><img src="../assets/zheli/profile-user-replacement.webp" alt="个人中心单屏"/></button>
+        </div>
+        <div class="feature-copy reveal"><span class="section-number">06</span><p class="kicker">ORDER & PROFILE</p><h2>交易完成后，仍然保留清晰的订单回访路径。</h2><p>个人中心以订单和常用票务服务为核心，减少与购票无关的信息干扰。订单列表通过状态筛选、演出摘要和操作按钮帮助用户继续付款、查看详情或处理售后。</p><div class="insights"><article><b>状态优先</b><p>订单状态和可执行操作出现在同一视觉区域。</p></article><article><b>内容回忆</b><p>海报、场馆、日期与金额帮助快速识别订单。</p></article><article><b>常用服务</b><p>实名、地址、优惠和收藏集中在个人中心。</p></article></div></div>
+      </div>
+    </section>
+
+    <section class="principles shell">
+      <div class="section-label reveal">03 / DESIGN PRINCIPLES</div>
+      <div class="principles-head reveal"><h2>用内容氛围吸引，用稳定结构完成交易。</h2><p>项目在视觉上允许不同演出保持个性，但所有交易节点必须遵循相同的信息层级与状态规则。</p></div>
+      <div class="principle-grid">
+        <article class="reveal"><span>01</span><h3>内容先吸引</h3><p>首页和详情用主题视觉建立情绪，关键购买信息始终清晰。</p></article>
+        <article class="reveal"><span>02</span><h3>选择可扫描</h3><p>日期、场次、票档和优惠使用一致的卡片与标签语法。</p></article>
+        <article class="reveal"><span>03</span><h3>状态不含糊</h3><p>可选、已选、售罄、无排期和待付款均提供明确反馈。</p></article>
+        <article class="reveal"><span>04</span><h3>高压场景减负</h3><p>通过实名、攻略和信息预设减少抢票时的输入与判断。</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-label light reveal">04 / SELECTED CORE SCREENS</div>
+        <div class="gallery-head reveal"><div><p class="kicker light">CORE PAGE COLLECTION</p><h2>精选 20 个核心页面，<br/>展示票务产品完整覆盖度。</h2></div><p>长页面在列表中统一展示单屏内容，点击后查看完整设计稿。页面按首页、发现、详情、购票和账户五类整理。</p></div>
+        <div class="gallery-filters reveal" role="group" aria-label="核心页面筛选">
+          <button class="active" data-gallery-filter="all" type="button">全部 <span>20</span></button>
+          <button data-gallery-filter="home" type="button">首页 <span>3</span></button>
+          <button data-gallery-filter="discover" type="button">发现 <span>3</span></button>
+          <button data-gallery-filter="detail" type="button">详情 <span>4</span></button>
+          <button data-gallery-filter="purchase" type="button">购票 <span>7</span></button>
+          <button data-gallery-filter="account" type="button">账户 <span>3</span></button>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/zheli/home-red.webp" data-caption="首页最终版：文化主题与核心业务入口" type="button">
+            <span class="gallery-index">01</span><span class="gallery-image"><img src="../assets/zheli/home-red.webp" alt="首页最终版" loading="lazy"/></span>
+            <span class="gallery-meta"><b>首页最终版</b><small>文化主题与核心业务入口</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/zheli/home-blue-full.webp" data-caption="首页内容长页：完整推荐流与场馆内容" type="button">
+            <span class="gallery-index">02</span><span class="gallery-image"><img src="../assets/zheli/home-blue-full-viewport.webp" alt="首页内容长页" loading="lazy"/></span>
+            <span class="gallery-meta"><b>首页内容长页</b><small>完整推荐流与场馆内容</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="home" data-src="../assets/zheli/home-city.webp" data-caption="城市频道：按城市聚合演出" type="button">
+            <span class="gallery-index">03</span><span class="gallery-image"><img src="../assets/zheli/home-city.webp" alt="城市频道" loading="lazy"/></span>
+            <span class="gallery-meta"><b>城市频道</b><small>按城市聚合演出</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="discover" data-src="../assets/zheli/home-list.webp" data-caption="演出列表：筛选与内容浏览" type="button">
+            <span class="gallery-index">04</span><span class="gallery-image"><img src="../assets/zheli/home-list.webp" alt="演出列表" loading="lazy"/></span>
+            <span class="gallery-meta"><b>演出列表</b><small>筛选与内容浏览</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="discover" data-src="../assets/zheli/home-no-date.webp" data-caption="无排期状态：空态推荐与内容续接" type="button">
+            <span class="gallery-index">05</span><span class="gallery-image"><img src="../assets/zheli/home-no-date.webp" alt="无排期状态" loading="lazy"/></span>
+            <span class="gallery-meta"><b>无排期状态</b><small>空态推荐与内容续接</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="discover" data-src="../assets/zheli/event-list.webp" data-caption="项目列表：价格、时间与状态" type="button">
+            <span class="gallery-index">06</span><span class="gallery-image"><img src="../assets/zheli/event-list.webp" alt="项目列表" loading="lazy"/></span>
+            <span class="gallery-meta"><b>项目列表</b><small>价格、时间与状态</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="detail" data-src="../assets/zheli/detail-video.webp" data-caption="视频详情：明星演出氛围首屏" type="button">
+            <span class="gallery-index">07</span><span class="gallery-image"><img src="../assets/zheli/detail-video.webp" alt="视频详情" loading="lazy"/></span>
+            <span class="gallery-meta"><b>视频详情</b><small>明星演出氛围首屏</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="detail" data-src="../assets/zheli/detail-no-video.webp" data-caption="静态详情：戏曲项目首屏" type="button">
+            <span class="gallery-index">08</span><span class="gallery-image"><img src="../assets/zheli/detail-no-video.webp" alt="静态详情" loading="lazy"/></span>
+            <span class="gallery-meta"><b>静态详情</b><small>戏曲项目首屏</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="detail" data-src="../assets/zheli/detail-style3.webp" data-caption="详情样式方案：另一种视觉表达" type="button">
+            <span class="gallery-index">09</span><span class="gallery-image"><img src="../assets/zheli/detail-style3.webp" alt="详情样式方案" loading="lazy"/></span>
+            <span class="gallery-meta"><b>详情样式方案</b><small>另一种视觉表达</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="detail" data-src="../assets/zheli/detail-full.webp" data-caption="完整详情长页：项目介绍与相关推荐" type="button">
+            <span class="gallery-index">10</span><span class="gallery-image"><img src="../assets/zheli/detail-full-viewport.webp" alt="完整详情长页" loading="lazy"/></span>
+            <span class="gallery-meta"><b>完整详情长页</b><small>项目介绍与相关推荐</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/date-select.webp" data-caption="日期选择：日历与日期确认" type="button">
+            <span class="gallery-index">11</span><span class="gallery-image"><img src="../assets/zheli/date-select.webp" alt="日期选择" loading="lazy"/></span>
+            <span class="gallery-meta"><b>日期选择</b><small>日历与日期确认</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/session-a.webp" data-caption="场次选择：时间与价格信息" type="button">
+            <span class="gallery-index">12</span><span class="gallery-image"><img src="../assets/zheli/session-a.webp" alt="场次选择" loading="lazy"/></span>
+            <span class="gallery-meta"><b>场次选择</b><small>时间与价格信息</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/session-b.webp" data-caption="场次状态：多场次选择状态" type="button">
+            <span class="gallery-index">13</span><span class="gallery-image"><img src="../assets/zheli/session-b.webp" alt="场次状态" loading="lazy"/></span>
+            <span class="gallery-meta"><b>场次状态</b><small>多场次选择状态</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/ticket-tags-a.webp" data-caption="票档选择：全量票档与优惠标签" type="button">
+            <span class="gallery-index">14</span><span class="gallery-image"><img src="../assets/zheli/ticket-tags-a-viewport.webp" alt="票档选择" loading="lazy"/></span>
+            <span class="gallery-meta"><b>票档选择</b><small>全量票档与优惠标签</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/discounts.webp" data-caption="优惠活动：可用权益说明" type="button">
+            <span class="gallery-index">15</span><span class="gallery-image"><img src="../assets/zheli/discounts-viewport.webp" alt="优惠活动" loading="lazy"/></span>
+            <span class="gallery-meta"><b>优惠活动</b><small>可用权益说明</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/real-name.webp" data-caption="实名确认：购票身份校验" type="button">
+            <span class="gallery-index">16</span><span class="gallery-image"><img src="../assets/zheli/real-name.webp" alt="实名确认" loading="lazy"/></span>
+            <span class="gallery-meta"><b>实名确认</b><small>购票身份校验</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="purchase" data-src="../assets/zheli/seat-map.webp" data-caption="选座购票：座区、价格与已选状态" type="button">
+            <span class="gallery-index">17</span><span class="gallery-image"><img src="../assets/zheli/seat-map.webp" alt="选座购票" loading="lazy"/></span>
+            <span class="gallery-meta"><b>选座购票</b><small>座区、价格与已选状态</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/zheli/rush-guide.webp" data-caption="抢票攻略：开票前的信息准备" type="button">
+            <span class="gallery-index">18</span><span class="gallery-image"><img src="../assets/zheli/rush-guide.webp" alt="抢票攻略" loading="lazy"/></span>
+            <span class="gallery-meta"><b>抢票攻略</b><small>开票前的信息准备</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/zheli/orders.webp" data-caption="我的订单：订单状态与后续操作" type="button">
+            <span class="gallery-index">19</span><span class="gallery-image"><img src="../assets/zheli/orders-viewport.webp" alt="我的订单" loading="lazy"/></span>
+            <span class="gallery-meta"><b>我的订单</b><small>订单状态与后续操作</small></span>
+          </button>
+          <button class="gallery-item zoomable reveal" data-gallery-category="account" data-src="../assets/zheli/profile-user-replacement.webp" data-caption="个人中心：常用票务服务入口" type="button">
+            <span class="gallery-index">20</span><span class="gallery-image"><img src="../assets/zheli/profile-user-replacement.webp" alt="个人中心" loading="lazy"/></span>
+            <span class="gallery-meta"><b>个人中心</b><small>常用票务服务入口</small></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcome shell">
+      <div class="section-label reveal">05 / PROJECT SUMMARY</div>
+      <div class="outcome-grid reveal"><h2>从内容发现到订单管理，建立统一的票务体验框架。</h2><div><p>本项目覆盖首页、城市频道、项目详情、日期场次、票档优惠、实名、选座、抢票攻略、订单与个人中心等关键场景。</p><p>设计通过“内容氛围负责吸引、结构规则负责交易”的方式，在丰富运营内容与高效率购票之间保持平衡，也为不同演出类型和后续业务扩展提供了稳定基础。</p></div></div>
+      <div class="next-project reveal"><a href="houhai-mini-program.html"><span>PREVIOUS CASE</span><b>看后海城市生活小程序</b></a><a href="../index.html#works"><span>BACK TO</span><b>全部设计案例</b></a></div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>© 2026 YANG SHUANGJUN</span><a href="#top">返回顶部 ↑</a></div></footer>
+
+  <dialog class="lightbox"><button class="lightbox-close" type="button" aria-label="关闭">×</button><button class="lightbox-nav prev" type="button" aria-label="上一张">←</button><figure><img src="" alt=""/><figcaption></figcaption></figure><button class="lightbox-nav next" type="button" aria-label="下一张">→</button></dialog>
+  <script src="zheli-ticketing-mini-program.js"></script>
+</body>
+</html>

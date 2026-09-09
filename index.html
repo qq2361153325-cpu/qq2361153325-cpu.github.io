@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="杨双军 UI/UX 设计作品集：复杂 B 端系统、购票官网、城市小程序、票务小程序、城市生活服务、数据可视化、移动端产品与 AIGC 视觉探索。" />
+  <title>杨双军 · UI/UX Designer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="hmi-home.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span>VIEW</span></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark">YSJ</span>
+      <span class="brand-copy">UI/UX Designer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" aria-label="主导航">
+      <a href="#about">关于我</a>
+      <a href="#capabilities">设计能力</a>
+      <a href="#works">设计案例</a>
+      <a class="nav-cta" href="assets/Yang-Shuangjun-Portfolio.pdf" download>下载作品集 ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Available for product design opportunities</p>
+        <h1 id="hero-title">
+          把复杂业务，<br />
+          设计得<span class="accent-word">清晰</span>、<br />
+          善用AI提升设计效率。
+        </h1>
+        <p class="hero-en">Designing clear and intuitive experiences for complex digital products.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#works">查看设计案例 <span>↘</span></a>
+          <div class="contact-trigger-wrap" data-contact-wrap>
+            <button class="button button-ghost contact-trigger" type="button" data-contact-trigger aria-expanded="false" aria-controls="hero-contact-popover">联系我</button>
+            <div class="contact-popover" id="hero-contact-popover" data-contact-popover aria-label="联系方式">
+              <a class="contact-popover-item" href="tel:13995570116">
+                <span class="contact-popover-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.06 21 3 13.94 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <strong>13995570116</strong>
+              </a>
+              <a class="contact-popover-item" href="mailto:qq2361153325@gmail.com">
+                <span class="contact-popover-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <strong>qq2361153325@gmail.com</strong>
+              </a>
+              <div class="contact-popover-item contact-popover-qr">
+                <img src="assets/contact-wechat-qr.png" alt="微信二维码" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual hero-poster-carousel reveal" aria-label="精选项目三维环形轮播">
+        <div class="poster-carousel-scene">
+          <span class="poster-carousel-orbit poster-carousel-orbit-a" aria-hidden="true"></span>
+          <span class="poster-carousel-orbit poster-carousel-orbit-b" aria-hidden="true"></span>
+          <div class="poster-carousel-ring">
+            <a class="poster-card" href="work/westk-ticketing.html" style="--poster-index:0" aria-label="查看西九购票官网项目">
+              <img src="assets/westk/westk-cover.webp" alt="西九购票官网" />
+              <span><small>01 · WEBSITE</small><b>西九购票官网</b></span>
+            </a>
+            <a class="poster-card" href="work/nike-data-monitoring-system.html" style="--poster-index:1" aria-label="查看 Nike 数据监控系统项目">
+              <img src="assets/nike-cover.webp" alt="Nike 数据监控系统" />
+              <span><small>02 · DATA SYSTEM</small><b>Nike 数据监控</b></span>
+            </a>
+            <a class="poster-card" href="work/geely-big-data-research.html" style="--poster-index:2" aria-label="查看吉利大数据调研平台项目">
+              <img src="assets/geely-research/home-cover-v4-dark-bg.jpg" alt="吉利大数据调研平台" />
+              <span><small>03 · ENTERPRISE</small><b>吉利大数据平台</b></span>
+            </a>
+            <a class="poster-card" href="work/zheli-ticketing-mini-program.html" style="--poster-index:3" aria-label="查看浙里票务小程序项目">
+              <img src="assets/zheli/zheli-cover.webp" alt="浙里票务小程序" />
+              <span><small>04 · MINI PROGRAM</small><b>浙里票务</b></span>
+            </a>
+            <a class="poster-card" href="work/ai-dashboard-workflow/index.html" style="--poster-index:4" aria-label="查看西岸综合运营驾驶舱项目">
+              <img src="assets/ai-dashboard-workflow-cover.webp" alt="西岸综合运营驾驶舱" />
+              <span><small>05 · DASHBOARD</small><b>西岸驾驶舱</b></span>
+            </a>
+            <a class="poster-card" href="work/liangshan-new-city-mini-program.html" style="--poster-index:5" aria-label="查看吉客小程序项目">
+              <img src="assets/liangshan/liangshan-cover.webp" alt="吉客小程序" />
+              <span><small>06 · MOBILE</small><b>吉客小程序</b></span>
+            </a>
+          </div>
+          <div class="poster-carousel-center" aria-hidden="true">
+            <strong>06</strong>
+            <span>SELECTED<br />WORKS</span>
+          </div>
+          <span class="poster-carousel-note"><i></i> Hover to pause</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="设计领域">
+      <div class="marquee-track">
+        <span>B2B SaaS</span><i>✦</i><span>Data Visualization</span><i>✦</i><span>Mobile App</span><i>✦</i><span>Design System</span><i>✦</i><span>Dashboard</span><i>✦</i><span>AIGC</span><i>✦</i>
+        <span>B2B SaaS</span><i>✦</i><span>Data Visualization</span><i>✦</i><span>Mobile App</span><i>✦</i><span>Design System</span><i>✦</i><span>Dashboard</span><i>✦</i><span>AIGC</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="section-index reveal">01 / ABOUT</div>
+      <div class="about-grid">
+        <div class="about-title reveal">
+          <p class="about-kicker">Designer Profile</p>
+          <h2>不止于美感，<br />更注重交互与结果。</h2>
+          <div class="about-portrait-card">
+            <img class="about-portrait-photo" src="assets/about-portrait.webp" alt="杨双军头像照片" loading="lazy" />
+            <div class="about-portrait-copy">
+              <strong>UI / UX Designer</strong>
+              <span>Complex System · Mobile App · Dashboard · AI Workflow</span>
+            </div>
+            <div class="about-portrait-badge">10+ YEARS</div>
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">我是一名拥有 10+ 年经验的 UI/UX 设计师，擅长从复杂需求中梳理产品结构，将业务逻辑转化为清晰、统一、可落地的设计方案。</p>
+          <p>长期参与企业后台、数据监控、金融科技、移动端产品与设计系统建设，能够覆盖需求分析、体验策略、视觉设计、高保真原型以及跨团队协作。</p>
+          <div class="workflow-card">
+            <div class="workflow-head">
+              <span>AI DESIGN WORKFLOW</span>
+              <strong>ChatGPT + Codex + Figma MCP</strong>
+            </div>
+            <div class="workflow-steps">
+              <div class="workflow-step"><b>01</b><p>梳理需求与结构</p></div>
+              <div class="workflow-step"><b>02</b><p>快速生成方案方向</p></div>
+              <div class="workflow-step"><b>03</b><p>在 Figma 中高保真落地</p></div>
+              <div class="workflow-step"><b>04</b><p>补齐交互与开发交付</p></div>
+            </div>
+          </div>
+          <div class="metrics">
+            <div><strong>10+</strong><span>年设计经验</span></div>
+            <div><strong>5</strong><span>类核心产品方向</span></div>
+            <div><strong>Multi</strong><span>Web / App / Dashboard</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities section-shell" id="capabilities">
+      <div class="section-index reveal">02 / CAPABILITIES</div>
+      <div class="section-heading reveal">
+        <h2>从业务问题到产品体验，<br />建立完整设计闭环。</h2>
+        <p>将策略、交互、视觉与设计规范连接起来，让设计不仅好看，也能支撑业务增长和团队协作。</p>
+      </div>
+      <div class="capability-list">
+        <article class="capability reveal">
+          <span class="cap-num">01</span>
+          <div><h3>复杂系统与后台设计</h3><p>企业管理平台、监控系统、数据看板、复杂表格与多角色业务流程。</p></div>
+          <span class="cap-arrow">↗</span>
+        </article>
+        <article class="capability reveal">
+          <span class="cap-num">02</span>
+          <div><h3>移动端产品体验</h3><p>教育、社区、金融等场景的用户路径、增长转化和全链路体验设计。</p></div>
+          <span class="cap-arrow">↗</span>
+        </article>
+        <article class="capability reveal">
+          <span class="cap-num">03</span>
+          <div><h3>数据可视化与大屏</h3><p>把复杂数据转化为可理解、可操作、能支持决策的信息界面。</p></div>
+          <span class="cap-arrow">↗</span>
+        </article>
+        <article class="capability reveal">
+          <span class="cap-num">04</span>
+          <div><h3>设计系统与 AIGC</h3><p>组件规范、跨端一致性，以及 AIGC 在视觉探索与效率提升中的应用。</p></div>
+          <span class="cap-arrow">↗</span>
+        </article>
+        <article class="capability reveal">
+          <span class="cap-num">05</span>
+          <div><h3>智能座舱与车载 HMI</h3><p>围绕驾驶任务、车辆状态与沉浸体验，构建高识别度的仪表和中控界面。</p></div>
+          <span class="cap-arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="works section-shell" id="works">
+      <div class="section-index reveal">03 / SELECTED WORKS</div>
+      <div class="works-heading reveal">
+        <div>
+          <h2>精选设计案例</h2>
+          <p>Selected works, 2020—2026</p>
+        </div>
+        <div class="works-heading-side">
+          <div class="works-stats">
+            <span>22 个项目 · 6 个分类</span>
+            <span>Web / App / Dashboard / HMI / Visual</span>
+            <span>Strategy to Delivery</span>
+          </div>
+          <div class="layout-switcher" role="group" aria-label="项目卡片排版">
+            <button class="layout-option" type="button" data-work-layout="large" aria-pressed="false" title="大图排版：每行一个项目">
+              <i class="layout-icon layout-icon-large" aria-hidden="true"></i><span>大</span>
+            </button>
+            <button class="layout-option is-active" type="button" data-work-layout="medium" aria-pressed="true" title="中图排版：每行两个项目">
+              <i class="layout-icon layout-icon-medium" aria-hidden="true"></i><span>中</span>
+            </button>
+            <button class="layout-option" type="button" data-work-layout="small" aria-pressed="false" title="小图排版：每行四个项目">
+              <i class="layout-icon layout-icon-small" aria-hidden="true"></i><span>小</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="works-nav work-filters reveal" role="group" aria-label="案例分类">
+        <button class="work-filter is-active" type="button" data-work-filter="all" aria-pressed="true">全部 <span>22</span></button>
+        <button class="work-filter" type="button" data-work-filter="mobile" aria-pressed="false">手机端 <span>08</span></button>
+        <button class="work-filter" type="button" data-work-filter="desktop" aria-pressed="false">电脑端 <span>06</span></button>
+        <button class="work-filter" type="button" data-work-filter="dashboard" aria-pressed="false">大屏 <span>04</span></button>
+        <button class="work-filter" type="button" data-work-filter="hmi" aria-pressed="false">HMI <span>02</span></button>
+        <button class="work-filter" type="button" data-work-filter="aigc" aria-pressed="false">AIGC <span>01</span></button>
+        <button class="work-filter" type="button" data-work-filter="visual" aria-pressed="false">视觉 <span>01</span></button>
+      </div>
+
+      <div class="work-grid layout-medium" id="selected-cases" data-work-grid>
+        <div class="category-anchor" data-category-anchor="mobile"><span>01</span><div><b>手机端</b><small>Mobile · Mini Program · App</small></div></div>
+        <div class="category-anchor" data-category-anchor="desktop"><span>02</span><div><b>电脑端</b><small>Desktop · Website · Enterprise SaaS</small></div></div>
+        <div class="category-anchor" data-category-anchor="dashboard"><span>03</span><div><b>大屏</b><small>Dashboard · Data Visualization</small></div></div>
+        <div class="category-anchor" data-category-anchor="hmi"><span>04</span><div><b>HMI设计</b><small>Automotive · Smart Cockpit · Digital Cluster</small></div></div>
+        <div class="category-anchor" data-category-anchor="aigc"><span>05</span><div><b>AIGC</b><small>Generative Visual · AI Workflow</small></div></div>
+        <div class="category-anchor" data-category-anchor="visual"><span>06</span><div><b>视觉</b><small>Brand Identity · Logo · Visual System</small></div></div>
+        <a class="work-card work-wide theme-westk reveal" data-category="desktop" data-order="1" href="work/westk-ticketing.html" aria-label="查看香港西九文化区购票官网完整案例">
+          <div class="work-image"><img src="assets/westk/westk-cover.webp" alt="香港西九文化区购票官网桌面端与移动端界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>01 · Ticketing Website / Responsive Web</p><h3>香港西九文化区购票官网</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-houhai reveal" href="work/houhai-mini-program.html" aria-label="查看看后海城市生活小程序完整案例">
+          <div class="work-image"><img src="assets/houhai/houhai-cover.webp" alt="看后海城市生活与文化服务小程序界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>02 · Mini Program / Local Service</p><h3>看后海城市生活小程序</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-zheli reveal" data-category="mobile" data-order="1" href="work/zheli-ticketing-mini-program.html" aria-label="查看浙里票务小程序完整案例">
+          <div class="work-image"><img src="assets/zheli/zheli-cover.webp" alt="浙里票务小程序首页、项目详情与选座购票界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>03 · Mini Program / Ticketing</p><h3>浙里票务演出购票小程序</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-westbund reveal" data-category="mobile" data-order="3" href="work/westbund-life-mini-program.html" aria-label="查看西岸生活小程序完整案例">
+          <div class="work-image"><img src="assets/westbund/westbund-cover.webp" alt="西岸生活小程序首页、全域地图与会员服务界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>04 · Mini Program / Urban Service</p><h3>西岸生活城市服务小程序</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-liangshan reveal" data-category="mobile" data-order="2" href="work/liangshan-new-city-mini-program.html" aria-label="查看吉客小程序完整案例">
+          <div class="work-image"><img src="assets/liangshan/liangshan-cover.webp" alt="吉客小程序首页、酒店、会员与城市服务界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>05 · Mini Program / Urban Commerce</p><h3>吉客小程序</h3><small class="work-subtitle">安吉两山新城</small></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-xicen reveal" data-category="mobile" data-order="5" href="work/xicen-life-circle-mini-program.html" aria-label="查看青浦西岑生活圈小程序完整案例">
+          <div class="work-image"><img src="assets/xicen/xicen-cover.webp" alt="青浦西岑生活圈小程序首页、生活地图、企业认证与个人中心界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>06 · Mini Program / Life Circle</p><h3>青浦西岑生活圈小程序</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+        <a class="work-card work-wide theme-panlong reveal" data-category="mobile" data-order="6" href="work/panlong-tiandi-mini-program.html" aria-label="查看蟠龙天地小程序完整案例">
+          <div class="work-image"><img src="assets/panlong/panlong-cover.webp" alt="蟠龙天地小程序社区首页、活动票务、地图导览与票夹订单界面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>07 · Mini Program / Lifestyle Park</p><h3>蟠龙天地小程序</h3><small class="work-subtitle">社区内容 · 活动票务 · 地图导览 · 商城积分</small></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <div class="work-group-row reveal" id="recent-redesign">
+          <div class="work-group-label">RECENT REDESIGN</div>
+          <div class="work-group-copy">
+            <h3>近期精修项目</h3>
+            <p>聚焦近期完成的一轮案例升级：统一封面视觉、详情页叙事与首页卡片表现，让项目更像完整的作品展示而不是单纯截图堆叠。</p>
+          </div>
+        </div>
+
+        <a class="work-card work-wide theme-dark reveal" data-category="desktop" data-order="2" href="work/nike-data-monitoring-system.html" aria-label="查看 Nike 数据监控系统完整案例">
+          <div class="work-image"><img src="assets/nike-cover.webp" alt="Nike 数据监控系统多页面展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>07 · Retail Data / B2B SaaS</p><h3>Nike 多品牌数据监控系统</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-blue reveal" data-category="desktop" data-order="3" href="work/geely-big-data-research.html" aria-label="查看吉利大数据调研平台完整案例">
+          <div class="work-image"><img src="assets/geely-research/home-cover-v4-dark-bg.jpg" alt="吉利大数据调研平台浅色界面与深色科技背景封面" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>08 · Research Platform / Enterprise SaaS</p><h3>吉利大数据调研平台</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-tall theme-blue reveal" data-category="desktop" data-order="4" href="work/geely-cem-system.html" aria-label="查看吉利 CEM 系统完整案例">
+          <div class="work-image"><img src="assets/geely-cover.webp" alt="吉利 CEM 系统页面概览" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>09 · Customer Experience / Enterprise SaaS</p><h3>吉利客户体验管理系统</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-green reveal" data-category="mobile" data-order="4" href="work/quqinghui-app.html" aria-label="查看趣青汇完整案例">
+          <div class="work-image"><img src="assets/quqinghui-cover.webp" alt="趣青汇亲子教育平台界面" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>10 · Parenting / Education App</p><h3>趣青汇亲子教育平台</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="work-card work-wide theme-orange reveal" data-category="mobile" data-order="7" href="work/doudouqian-app.html" aria-label="查看豆豆钱完整案例">
+          <div class="work-image portrait-wide"><img src="assets/doudou-cover-new.webp" alt="豆豆钱金融服务 App 首页、会员中心与个人中心展示" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>11 · Fintech App / Growth Conversion</p><h3>豆豆钱金融服务 App 2.0</h3></div>
+            <span class="case-link">完整案例 <b>↗</b></span>
+          </div>
+        </a>
+
+        <div class="work-group-row work-group-compact reveal" id="more-works">
+          <div class="work-group-label">MORE WORKS</div>
+          <div class="work-group-copy">
+            <h3>更多探索</h3>
+            <p>收录数据可视化与 AIGC 方向的探索型项目，作为方法论与视觉表达的延伸补充。</p>
+          </div>
+        </div>
+
+        <a class="work-card work-half theme-violet reveal" data-category="dashboard" data-order="1" href="work/weixin-finance-dashboard.html" aria-label="查看维信金科数据可视化完整案例">
+          <div class="work-image"><img src="assets/dashboard-cover.webp" alt="维信金科数据大屏" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>11 · Data Visualization</p><h3>维信金科数据可视化中心</h3></div>
+            <span class="round-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="work-card work-half theme-yellow reveal" data-category="aigc" data-order="1" href="work/aigc-visual-lab.html" aria-label="查看品牌视觉与 AIGC 探索完整案例">
+          <div class="work-image"><img src="assets/aigc-cover.webp" alt="AIGC 视觉探索作品" loading="lazy" /></div>
+          <div class="work-meta">
+            <div><p>12 · Visual / AIGC Lab</p><h3>品牌视觉与 AIGC 探索</h3></div>
+            <span class="round-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="work-card work-half theme-ai-dashboard reveal dashboard-home-cover" data-category="dashboard" data-order="2" href="work/ai-dashboard-workflow/index.html" target="_blank" rel="noopener" aria-label="在新页面打开 AI 可视化大屏生成工作流">
+          <div class="work-image dashboard-live-cover" data-frame-width="1920" data-frame-height="996" aria-label="西岸综合运营驾驶舱首页实时预览">
+            <iframe
+              src="work/ai-dashboard-workflow/index.html"
+              title="西岸综合运营驾驶舱首页实时预览"
+              loading="lazy"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="work-meta">
+            <div><p>13 · AI Workflow / Interactive Dashboard</p><h3>西岸综合运营驾驶舱</h3></div>
+            <span class="round-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="work-card work-half theme-ticket-dashboard reveal dashboard-home-cover" data-category="dashboard" data-order="3" href="work/ticket-monitor-dashboard/index.html" target="_blank" rel="noopener" aria-label="在新页面打开检票监测大屏模版">
+          <div class="work-image dashboard-live-cover" data-frame-width="2304" data-frame-height="1280" aria-label="检票监测大屏实时预览">
+            <iframe
+              src="work/ticket-monitor-dashboard/index.html"
+              title="检票监测大屏实时预览"
+              loading="lazy"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="work-meta">
+            <div><p>14 · Ticketing / Monitoring Dashboard</p><h3>检票监测大屏模版</h3></div>
+            <span class="round-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="work-card work-half theme-chengdu-dashboard reveal dashboard-home-cover" data-category="dashboard" data-order="4" href="work/chengdu-finance-expo.html" aria-label="查看成都金博会可视化完整案例">
+          <div class="work-image"><img src="assets/chengdu-finance-expo/07-overview-b.webp" alt="成都金博会可视化大屏" loading="lazy" /></div>
+          <div class="work-meta"><div><p>15 · Finance Expo / Data Visualization</p><h3>成都金博会可视化</h3></div><span class="round-arrow">↗</span></div>
+        </a>
+
+        <a class="work-card work-half theme-hmi theme-hmi-01 reveal" data-category="hmi" data-order="1" href="work/gwm-hmi-01.html" aria-label="查看长城汽车皮卡越野HMI-01完整案例">
+          <div class="work-image hmi-home-cover">
+            <span class="hmi-cover-label">HMI CONCEPT 01</span>
+            <figure class="hmi-cover-cluster"><img src="assets/gwm-hmi/01/cluster.jpg" alt="机械越野数字仪表" loading="lazy" /></figure>
+            <figure class="hmi-cover-center"><img src="assets/gwm-hmi/01/center.jpg" alt="机械越野智能座舱中控" loading="lazy" /></figure>
+          </div>
+          <div class="work-meta"><div><p>19 · Mechanical Expedition / Automotive HMI</p><h3>长城汽车皮卡越野HMI-01</h3></div><span class="round-arrow">↗</span></div>
+        </a>
+
+        <a class="work-card work-half theme-hmi theme-hmi-03 reveal" data-category="hmi" data-order="3" href="work/gwm-hmi-03.html" aria-label="查看长城汽车皮卡越野HMI-03完整案例">
+          <div class="work-image hmi-home-cover">
+            <span class="hmi-cover-label">HMI CONCEPT 03</span>
+            <figure class="hmi-cover-cluster"><img src="assets/gwm-hmi/03/cluster.jpg" alt="地形智能数字仪表" loading="lazy" /></figure>
+            <figure class="hmi-cover-center"><img src="assets/gwm-hmi/03/center.jpg" alt="地形智能座舱中控" loading="lazy" /></figure>
+          </div>
+          <div class="work-meta"><div><p>21 · Terrain Intelligence / Automotive HMI</p><h3>长城汽车皮卡越野HMI-03</h3></div><span class="round-arrow">↗</span></div>
+        </a>
+
+        <a class="work-card work-wide theme-museum reveal work-cover-clean" data-category="desktop" data-order="5" href="work/nanjing-museum-website.html" aria-label="查看南京市博物总馆网站完整案例">
+          <div class="work-image"><img src="assets/nanjing-museum/nanjing-museum-cover.svg" alt="南京市博物总馆官网桌面端文化数字体验封面" loading="lazy" /></div>
+          <div class="work-meta"><div><p>16 · Museum Website / Cultural Digital Experience</p><h3>南京市博物总馆网站</h3></div><span class="case-link">完整案例 <b>↗</b></span></div>
+        </a>
+
+        <a class="work-card work-wide theme-accounting dashboard-home-cover reveal" data-category="desktop" data-order="6" href="work/vibe-coding-accounting-master.html" target="_blank" rel="noopener" aria-label="在新页面打开 Vibe coding 账大师小程序推广网页">
+          <div class="work-image dashboard-live-cover" data-frame-width="1440" data-frame-height="900" aria-label="账大师小程序推广网页实时预览">
+            <iframe
+              src="work/vibe-coding-accounting-master.html"
+              title="账大师小程序推广网页实时预览"
+              loading="lazy"
+              tabindex="-1"
+              aria-hidden="true"
+            ></iframe>
+          </div>
+          <div class="work-meta"><div><p>19 · Vibe Coding / Responsive Web</p><h3>Vibe coding 账大师小程序推广网页</h3><small class="work-subtitle">Interactive · Responsive · Product Promotion</small></div><span class="case-link">进入网页 <b>↗</b></span></div>
+        </a>
+
+        <a class="work-card work-wide theme-xinchengshe work-cover-clean reveal" data-category="mobile" data-order="8" href="work/xinchengshe-app.html" aria-label="查看新城社 App 完整案例">
+          <div class="work-image"><img src="assets/xinchengshe/xinchengshe-cover-v2.svg" alt="新城社物业社区 App 三页面样机展示" loading="lazy" /></div>
+          <div class="work-meta"><div><p>17 · Property Service / Community App</p><h3>新城社 App</h3></div><span class="case-link">完整案例 <b>↗</b></span></div>
+        </a>
+
+        <a class="work-card work-wide theme-taiyan work-cover-clean reveal" data-category="visual" data-order="1" href="work/taiyan-technology-brand.html" aria-label="查看太炎科技 Logo 品牌视觉完整案例">
+          <div class="work-image"><img src="assets/taiyan-vi/01.webp" alt="太炎科技 Logo 品牌视觉识别系统" loading="lazy" /></div>
+          <div class="work-meta"><div><p>18 · Technology / Brand Visual Identity</p><h3>太炎科技 Logo 品牌视觉</h3><small class="work-subtitle">Logo · VI System · Brand Application</small></div><span class="case-link">完整案例 <b>↗</b></span></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell" id="footer-contact">
+    <div>
+      <p class="footer-kicker">LET'S CREATE SOMETHING MEANINGFUL.</p>
+      <h2>期待与你一起，<br />把复杂问题变成好体验。</h2>
+    </div>
+    <div class="footer-contact-board" aria-label="底部联系方式">
+      <a class="footer-contact-cell" href="tel:13995570116">
+        <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.06 21 3 13.94 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <strong>13995570116</strong>
+      </a>
+      <a class="footer-contact-cell" href="mailto:qq2361153325@gmail.com">
+        <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <strong>qq2361153325@gmail.com</strong>
+      </a>
+      <div class="footer-contact-cell footer-contact-cell-qr">
+        <img src="assets/contact-wechat-qr.png" alt="微信二维码" loading="lazy" />
+      </div>
+    </div>
+    <div class="footer-links footer-links-flat">
+      <a class="footer-download" href="assets/Yang-Shuangjun-Portfolio.pdf" download>下载 PDF 作品集 ↗</a>
+      <span>Shanghai · 2026</span>
+    </div>
+    <div class="footer-bottom"><span>© 2026 YANG SHUANGJUN</span><a href="#top">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <dialog class="project-dialog" aria-label="项目详情">
+    <button class="dialog-close" type="button" aria-label="关闭项目详情">×</button>
+    <div class="dialog-scroll">
+      <header class="dialog-hero">
+        <p class="dialog-kicker"></p>
+        <h2 class="dialog-title"></h2>
+        <p class="dialog-summary"></p>
+        <div class="dialog-tags"></div>
+      </header>
+      <div class="dialog-gallery"></div>
+      <div class="dialog-outcome">
+        <span>DESIGN FOCUS</span>
+        <p class="dialog-focus"></p>
+      </div>
+      <button class="dialog-next" type="button">查看下一个项目 <span>→</span></button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
