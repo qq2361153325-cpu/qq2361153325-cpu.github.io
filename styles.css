@@ -1156,3 +1156,7 @@ body{background:radial-gradient(42rem 30rem at -6% 14%, rgba(191,255,86,.16), rg
   pointer-events:none;
   transform-origin:top left;
 }
+
+/* Keep the open contact panel above the hero carousel and sticky navigation. */
+.hero:has(.contact-trigger-wrap.is-open){z-index:40}
+.hero-copy:has(.contact-trigger-wrap.is-open){z-index:10}
