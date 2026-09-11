@@ -6,3 +6,10 @@
   .creation-row strong { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .creation-row > button:last-child { flex: 0 0 auto; }
 }
+
+@media (min-width: 761px) {
+  .creation-row > button:first-child { flex: 1 1 0%; min-width: 0; overflow: hidden; }
+  .creation-row > button:first-child > span:last-child { flex: 1 1 0%; min-width: 0; }
+  .creation-row .creation-icon, .creation-row > button:last-child { flex: 0 0 auto; }
+  .creation-row strong { display: block; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+}
