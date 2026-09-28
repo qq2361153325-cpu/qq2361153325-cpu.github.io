@@ -1164,3 +1164,17 @@ body{background:radial-gradient(42rem 30rem at -6% 14%, rgba(191,255,86,.16), rg
 /* Clip composited iframe content to the same corners as image covers. */
 .dashboard-live-cover{clip-path:inset(0 round 18px)}
 .work-grid.layout-small > .work-card .dashboard-live-cover{clip-path:inset(0 round 15px)}
+
+/* Yuewu visual IP case cover */
+.work-card.work-cover-clean .work-image.yuewu-cover{position:relative;isolation:isolate;background:linear-gradient(125deg,#edf3e5,#d2e5be) !important;color:#1b4e2c}
+.yuewu-cover::before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(90deg,rgba(239,246,231,.98),rgba(239,246,231,.86) 31%,transparent 62%);pointer-events:none}
+.work-card.work-cover-clean .yuewu-cover img.yuewu-cover-store{position:absolute;z-index:1;right:0;top:0;width:70%;height:100%;object-fit:cover;object-position:center}
+.work-card.work-cover-clean .yuewu-cover img.yuewu-cover-mascot{position:absolute;z-index:3;left:34%;bottom:-8%;width:30%;height:94%;object-fit:contain;object-position:center bottom;mix-blend-mode:multiply;filter:drop-shadow(10px 14px 14px rgba(27,79,37,.14))}
+.yuewu-cover-copy{position:absolute;z-index:4;left:6%;top:11%;width:40%;display:flex;flex-direction:column;align-items:flex-start}
+.yuewu-cover-copy>span{font-size:10px;font-weight:800;letter-spacing:.17em;color:#558364}
+.yuewu-cover-copy strong{margin-top:10%;font-size:clamp(55px,7.5vw,112px);line-height:1;letter-spacing:-.13em}
+.yuewu-cover-copy strong span{display:inline-block;margin-left:.1em;color:#eca8b9;font-size:.5em;vertical-align:top;transform:rotate(-15deg)}
+.yuewu-cover-copy small{max-width:260px;margin-top:15px;font-size:clamp(11px,1.2vw,17px);line-height:1.6;font-weight:700}
+.yuewu-cover-tag{position:absolute;z-index:4;right:3%;bottom:5%;padding:9px 13px;border-radius:100px;background:#f9fbf1ee;color:#1b4e2c;font-size:8px;font-weight:800;letter-spacing:.11em}
+.theme-yuewu .work-meta{color:#183c25}
+@media(max-width:680px){.yuewu-cover-copy>span{font-size:8px}.yuewu-cover-copy strong{font-size:clamp(46px,13vw,72px)}.yuewu-cover-copy small{font-size:11px;max-width:130px}.work-card.work-cover-clean .yuewu-cover img.yuewu-cover-mascot{left:34%;width:36%;height:90%}.work-card.work-cover-clean .yuewu-cover img.yuewu-cover-store{width:65%}.yuewu-cover-tag{font-size:6px;padding:6px 9px}}
